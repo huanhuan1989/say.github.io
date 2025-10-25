@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童自然拼读学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background-color: #f0f9ff;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6ecbf5, #059ee3);
+            border-radius: 15px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stages-section {
+            flex: 1;
+            min-width: 300px;
+            background-color: #e6f7ff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .details-section {
+            flex: 2;
+            min-width: 400px;
+            background-color: #fff9e6;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #059ee3;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #b3e5fc;
+        }
+
+        .stage-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stage-btn {
+            padding: 10px 15px;
+            background-color: #4fc3f7;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stage-btn:hover {
+            background-color: #039be5;
+            transform: translateY(-2px);
+        }
+
+        .stage-btn.active {
+            background-color: #0288d1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .letters-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            background-color: #ffcc80;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-item:hover {
+            transform: scale(1.05);
+            background-color: #ffb74d;
+        }
+
+        .letter-item.active {
+            background-color: #ff9800;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .details-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .current-item {
+            font-size: 4rem;
+            color: #ff5722;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pronunciation {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .sound-btn {
+            padding: 12px 25px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-bottom: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sound-btn:hover {
+            background-color: #388e3c;
+            transform: translateY(-2px);
+        }
+
+        .sound-btn-item {
+            margin-bottom: 0;
+            margin-left: 10px;
+            padding: 6px 16px;
+            font-size: 16px;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .example-word {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .examples {
+                grid-template-columns: 1fr;
+            }
+            
+            .current-item {
+                font-size: 3rem;
+            }
+        }
+
+        /* 基础样式不变，只在末尾增加适配 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stages-section,
+    .details-section {
+        min-width: unset;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .stage-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .stage-btn {
+        flex: 1 1 45%;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        border-radius: 25px;
+    }
+
+    .letters-list {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        max-height: 250px;
+    }
+
+    .letter-item {
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .current-item {
+        font-size: 2.5rem;
+    }
+
+    .pronunciation {
+        font-size: 1.2rem;
+    }
+
+    .sound-btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+        border-radius: 30px;
+    }
+
+    .sound-btn-item {
+        font-size: 14px;
+        padding: 5px 12px;
+        margin-left: 5px;
+    }
+
+    .examples {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .example-word {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .current-item {
+        font-size: 2rem;
+    }
+
+    .letters-list {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        gap: 8px;
+    }
+
+    .letter-item {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .sound-btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    .sound-btn-item {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .example-word {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>儿童自然拼读学习</h1>
+            <p class="subtitle">通过有趣的互动方式学习英语发音</p>
+        </header>
+
+        <div class="main-content">
+            <section class="stages-section">
+                <h2>学习阶段</h2>
+                <div class="stage-buttons">
+                    <button class="stage-btn active" data-stage="1">字母发音</button>
+                    <button class="stage-btn" data-stage="2">短音组合</button>
+                    <button class="stage-btn" data-stage="3">长音组合</button>
+                    <button class="stage-btn" data-stage="4">辅音组合</button>
+                    <button class="stage-btn" data-stage="5">元音组合</button>
+                    <button class="stage-btn" data-stage="6">特殊辅音</button>
+                </div>
+
+                <div class="letters-list" id="lettersList">
+                    <!-- 字母列表将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <section class="details-section">
+                <h2>发音详情</h2>
+                <div class="details-container">
+                    <div class="current-item" id="currentItem">A</div>
+                    <div class="pronunciation" id="pronunciation">/æ/</div>
+                    <button class="sound-btn" id="soundBtn">
+                        🔊 播放单词
+                    </button>
+                    <button class="sound-btn" id="makeSoundBtn">
+                        🔊 播放发音
+                    </button>
+                    
+                    <div class="examples" id="examples">
+                        <!-- 示例单词将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // 自然拼读数据
+        const phonicsData = {
+            1: { // 字母发音
+                name: "26个字母发音",
+                items: [
+                    { item: "A", pronunciation: "/æ/", type: 'letter', examples: ["Apple", "Ant", "Alligator", "Ax"] },
+                    { item: "B", pronunciation: "/b/", type: 'letter', examples: ["Ball", "Bat", "Bird", "Book"] },
+                    { item: "C", pronunciation: "/k/", type: 'letter', examples: ["Cat", "Car", "Cup", "Cake"] },
+                    { item: "D", pronunciation: "/d/", type: 'letter', examples: ["Dog", "Duck", "Door", "Desk"] },
+                    { item: "E", pronunciation: "/e/", type: 'letter', examples: ["Egg", "Elephant", "Elbow", "End"] },
+                    { item: "F", pronunciation: "/f/", type: 'letter', examples: ["Fish", "Fan", "Fox", "Foot"] },
+                    { item: "G", pronunciation: "/g/", type: 'letter', examples: ["Goat", "Game", "Girl", "Gum"] },
+                    { item: "H", pronunciation: "/h/", type: 'letter', examples: ["Hat", "House", "Hand", "Hen"] },
+                    { item: "I", pronunciation: "/ɪ/", type: 'letter', examples: ["Igloo", "Ink", "Insect", "Igloo"] },
+                    { item: "J", pronunciation: "/dʒ/",type: 'letter',  examples: ["Jam", "Jar", "Jet", "Jump"] },
+                    { item: "K", pronunciation: "/k/", type: 'letter', examples: ["Kite", "King", "Key", "Kitten"] },
+                    { item: "L", pronunciation: "/l/", type: 'letter', examples: ["Lion", "Leaf", "Lamp", "Leg"] },
+                    { item: "M", pronunciation: "/m/", type: 'letter', examples: ["Moon", "Monkey", "Milk", "Map"] },
+                    { item: "N", pronunciation: "/n/", type: 'letter', examples: ["Nest", "Net", "Nose", "Nut"] },
+                    { item: "O", pronunciation: "/ɒ/", type: 'letter', examples: ["Orange", "Octopus", "Ox", "On"] },
+                    { item: "P", pronunciation: "/p/", type: 'letter', examples: ["Pig", "Pen", "Pizza", "Park"] },
+                    { item: "Q", pronunciation: "/kw/",type: 'letter',  examples: ["Queen", "Quilt", "Quiz", "Quick"] },
+                    { item: "R", pronunciation: "/r/", type: 'letter', examples: ["Rabbit", "Rain", "Robot", "Red"] },
+                    { item: "S", pronunciation: "/s/", type: 'letter', examples: ["Sun", "Snake", "Star", "Sock"] },
+                    { item: "T", pronunciation: "/t/", type: 'letter', examples: ["Tiger", "Table", "Ten", "Top"] },
+                    { item: "U", pronunciation: "/ʌ/", type: 'letter', examples: ["Umbrella", "Up", "Under", "Us"] },
+                    { item: "V", pronunciation: "/v/", type: 'letter', examples: ["Van", "Vase", "Vest", "Vine"] },
+                    { item: "W", pronunciation: "/w/", type: 'letter', examples: ["Water", "Window", "Wolf", "Wig"] },
+                    { item: "X", pronunciation: "/ks/", type: 'letter', examples: ["Box", "Fox", "Six", "Mix"] },
+                    { item: "Y", pronunciation: "/j/", type: 'letter', examples: ["Yoyo", "Yellow", "Yes", "Yak"] },
+                    { item: "Z", pronunciation: "/z/", type: 'letter', examples: ["Zebra", "Zoo", "Zip", "Zero"] }
+                ]
+            },
+            2: { // 短音组合
+                name: "短音组合",
+                items: [
+                    { item: "at", pronunciation: "/æt/", examples: ["Cat", "Hat", "Rat", "Mat"] },
+                    { item: "an", pronunciation: "/æn/", examples: ["Can", "Fan", "Man", "Pan"] },
+                    { item: "ap", pronunciation: "/æp/", examples: ["Cap", "Map", "Nap", "Tap"] },
+                    { item: "ad", pronunciation: "/æd/", examples: ["Dad", "Mad", "Sad", "Bad"] },
+                    { item: "am", pronunciation: "/æm/", examples: ["Ham", "Jam", "Ram", "Yam"] },
+                    { item: "ag", pronunciation: "/æg/", examples: ["Bag", "Tag", "Wag", "Rag"] },
+                    { item: "ed", pronunciation: "/ed/", examples: ["Bed", "Red", "Wed", "Fed"] },
+                    { item: "en", pronunciation: "/en/", examples: ["Hen", "Pen", "Ten", "Men"] },
+                    { item: "et", pronunciation: "/et/", examples: ["Net", "Pet", "Wet", "Get"] },
+                    { item: "ig", pronunciation: "/ɪg/", examples: ["Big", "Pig", "Wig", "Dig"] },
+                    { item: "in", pronunciation: "/ɪn/", examples: ["Bin", "Pin", "Tin", "Win"] },
+                    { item: "ip", pronunciation: "/ɪp/", examples: ["Lip", "Tip", "Sip", "Rip"] },
+                    { item: "it", pronunciation: "/ɪt/", examples: ["Sit", "Hit", "Fit", "Bit"] },
+                    { item: "og", pronunciation: "/ɒg/", examples: ["Dog", "Log", "Fog", "Jog"] },
+                    { item: "op", pronunciation: "/ɒp/", examples: ["Top", "Mop", "Hop", "Pop"] },
+                    { item: "ot", pronunciation: "/ɒt/", examples: ["Dot", "Hot", "Pot", "Cot"] },
+                    { item: "ug", pronunciation: "/ʌg/", examples: ["Bug", "Mug", "Rug", "Hug"] },
+                    { item: "un", pronunciation: "/ʌn/", examples: ["Sun", "Fun", "Run", "Bun"] },
+                    { item: "ut", pronunciation: "/ʌt/", examples: ["Cut", "Nut", "Hut", "But"] }
+                ]
+            },
+            3: { // 长音组合
+                name: "长音组合",
+                items: [
+                    { item: "a_e", pronunciation: "/eɪ/", examples: ["Cake", "Lake", "Make", "Take"] },
+                    { item: "ai", pronunciation: "/eɪ/", examples: ["Rain", "Tail", "Pain", "Sail"] },
+                    { item: "ay", pronunciation: "/eɪ/", examples: ["Day", "Play", "Say", "May"] },
+                    { item: "ee", pronunciation: "/i:/", examples: ["Bee", "See", "Tree", "Feet"] },
+                    { item: "ea", pronunciation: "/i:/", examples: ["Sea", "Tea", "Pea", "Beach"] },
+                    { item: "y", pronunciation: "/i:/", examples: ["Baby", "Happy", "Candy", "Sunny"] },
+                    { item: "i_e", pronunciation: "/aɪ/", examples: ["Kite", "Bike", "Five", "Nine"] },
+                    { item: "ie", pronunciation: "/aɪ/", examples: ["Pie", "Tie", "Lie", "Die"] },
+                    { item: "igh", pronunciation: "/aɪ/", examples: ["Night", "Light", "Right", "High"] },
+                    { item: "o_e", pronunciation: "/əʊ/", examples: ["Bone", "Home", "Rose", "Note"] },
+                    { item: "oa", pronunciation: "/əʊ/", examples: ["Boat", "Coat", "Road", "Soap"] },
+                    { item: "ow", pronunciation: "/əʊ/", examples: ["Snow", "Bow", "Show", "Grow"] },
+                    { item: "u_e", pronunciation: "/ju:/", examples: ["Cube", "Tune", "Mule", "Fuse"] },
+                    { item: "ue", pronunciation: "/ju:/", examples: ["Blue", "Glue", "True", "Clue"] },
+                    { item: "ew", pronunciation: "/ju:/", examples: ["New", "Few", "Dew", "Chew"] }
+                ]
+            },
+            4: { // 辅音字母组合
+                name: "辅音字母组合",
+                items: [
+                    { item: "bl", pronunciation: "/bl/", examples: ["Blue", "Black", "Blow", "Block"] },
+                    { item: "br", pronunciation: "/br/", examples: ["Brown", "Bread", "Brick", "Brush"] },
+                    { item: "cl", pronunciation: "/kl/", examples: ["Clap", "Cloud", "Clock", "Class"] },
+                    { item: "cr", pronunciation: "/kr/", examples: ["Crab", "Cry", "Crown", "Crop"] },
+                    { item: "dr", pronunciation: "/dr/", examples: ["Dress", "Drink", "Dream", "Drop"] },
+                    { item: "fl", pronunciation: "/fl/", examples: ["Flag", "Flower", "Fly", "Flat"] },
+                    { item: "fr", pronunciation: "/fr/", examples: ["Frog", "Fruit", "Friend", "From"] },
+                    { item: "gl", pronunciation: "/gl/", examples: ["Glad", "Glass", "Glow", "Glue"] },
+                    { item: "gr", pronunciation: "/gr/", examples: ["Green", "Grape", "Grass", "Grow"] },
+                    { item: "pl", pronunciation: "/pl/", examples: ["Play", "Plant", "Plan", "Plum"] },
+                    { item: "pr", pronunciation: "/pr/", examples: ["Proud", "Pray", "Price", "Print"] },
+                    { item: "sc", pronunciation: "/sk/", examples: ["School", "Scare", "Score", "Scarf"] },
+                    { item: "sk", pronunciation: "/sk/", examples: ["Skip", "Sky", "Skin", "Skate"] },
+                    { item: "sl", pronunciation: "/sl/", examples: ["Sleep", "Slow", "Slide", "Slip"] },
+                    { item: "sm", pronunciation: "/sm/", examples: ["Smile", "Small", "Smell", "Smart"] },
+                    { item: "sn", pronunciation: "/sn/", examples: ["Snake", "Snow", "Snail", "Snap"] },
+                    { item: "sp", pronunciation: "/sp/", examples: ["Spider", "Spoon", "Spot", "Spin"] },
+                    { item: "st", pronunciation: "/st/", examples: ["Star", "Stop", "Stone", "Stick"] },
+                    { item: "sw", pronunciation: "/sw/", examples: ["Swan", "Sweet", "Swim", "Swing"] },
+                    { item: "tr", pronunciation: "/tr/", examples: ["Tree", "Train", "Truck", "Trick"] },
+                    { item: "tw", pronunciation: "/tw/", examples: ["Twelve", "Twice", "Twist", "Twin"] }
+                ]
+            },
+            5: { // 元音字母组合
+                name: "元音字母组合",
+                items: [
+                    { item: "ar", pronunciation: "/ɑː/", examples: ["Car", "Star", "Farm", "Park"] },
+                    { item: "er", pronunciation: "/ɜː/", examples: ["Her", "Sister", "Water", "Teacher"] },
+                    { item: "ir", pronunciation: "/ɜː/", examples: ["Bird", "Girl", "Shirt", "First"] },
+                    { item: "or", pronunciation: "/ɔː/", examples: ["Horse", "Fork", "Corn", "Storm"] },
+                    { item: "ur", pronunciation: "/ɜː/", examples: ["Turn", "Nurse", "Curtain", "Turtle"] },
+                    { item: "oo", pronunciation: "/ʊ/", examples: ["Book", "Look", "Cook", "Foot"] },
+                    { item: "oo", pronunciation: "/u:/", examples: ["Moon", "Spoon", "Room", "Boot"] },
+                    { item: "ou", pronunciation: "/aʊ/", examples: ["House", "Mouse", "Cloud", "Out"] },
+                    { item: "ow", pronunciation: "/aʊ/", examples: ["Cow", "Flower", "Down", "Brown"] },
+                    { item: "oi", pronunciation: "/ɔɪ/", examples: ["Coin", "Oil", "Point", "Boil"] },
+                    { item: "oy", pronunciation: "/ɔɪ/", examples: ["Boy", "Toy", "Joy", "Enjoy"] },
+                    { item: "au", pronunciation: "/ɔː/", examples: ["Autumn", "Caught", "Fault", "Laundry"] },
+                    { item: "aw", pronunciation: "/ɔː/", examples: ["Saw", "Paw", "Draw", "Straw"] },
+                    { item: "al", pronunciation: "/ɔː/", examples: ["Ball", "Tall", "Wall", "Call"] },
+                    { item: "all", pronunciation: "/ɔːl/", examples: ["Ball", "Tall", "Wall", "Call"] }
+                ]
+            },
+            6: { // 特殊辅音字群及音节
+                name: "特殊辅音字群及音节",
+                items: [
+                    { item: "ch", pronunciation: "/tʃ/", examples: ["Chair", "Cheese", "Chicken", "Church"] },
+                    { item: "sh", pronunciation: "/ʃ/", examples: ["Ship", "Fish", "Sheep", "Shoe"] },
+                    { item: "th", pronunciation: "/θ/", examples: ["Thumb", "Bath", "Math", "Thin"] },
+                    { item: "th", pronunciation: "/ð/", examples: ["This", "That", "Then", "There"] },
+                    { item: "wh", pronunciation: "/w/", examples: ["What", "When", "Where", "Why"] },
+                    { item: "ph", pronunciation: "/f/", examples: ["Phone", "Photo", "Elephant", "Alphabet"] },
+                    { item: "ck", pronunciation: "/k/", examples: ["Duck", "Sock", "Clock", "Rock"] },
+                    { item: "ng", pronunciation: "/ŋ/", examples: ["King", "Sing", "Ring", "Long"] },
+                    { item: "nk", pronunciation: "/ŋk/", examples: ["Bank", "Pink", "Sink", "Think"] },
+                    { item: "dge", pronunciation: "/dʒ/", examples: ["Bridge", "Fridge", "Badge", "Edge"] },
+                    { item: "tch", pronunciation: "/tʃ/", examples: ["Watch", "Catch", "Match", "Patch"] },
+                    { item: "sion", pronunciation: "/ʒən/", examples: ["Television", "Vision", "Decision", "Division"] },
+                    { item: "tion", pronunciation: "/ʃən/", examples: ["Station", "Action", "Nation", "Question"] }
+                ]
+            }
+        };
+
+        // 获取DOM元素
+        const stageButtons = document.querySelectorAll('.stage-btn');
+        const lettersList = document.getElementById('lettersList');
+        const currentItem = document.getElementById('currentItem');
+        const pronunciation = document.getElementById('pronunciation');
+        const soundBtn = document.getElementById('soundBtn');
+        const makeSoundBtn = document.getElementById('makeSoundBtn');
+        const examples = document.getElementById('examples');
+
+        // 当前选中的阶段和字母
+        let currentStage = 1;
+        let currentPhonicsItem = phonicsData[1].items[0];
+
+        // 初始化页面
+        function initPage() {
+            // 默认显示第一阶段
+            updateStageButtons();
+            updateLettersList();
+            updateDetails();
+        }
+
+        // 更新阶段按钮状态
+        function updateStageButtons() {
+            stageButtons.forEach(button => {
+                if (parseInt(button.dataset.stage) === currentStage) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+
+        // 更新字母列表
+        function updateLettersList() {
+            lettersList.innerHTML = '';
+            const stageData = phonicsData[currentStage];
+            
+            stageData.items.forEach(item => {
+                const letterElement = document.createElement('div');
+                letterElement.className = 'letter-item';
+                if (item === currentPhonicsItem) {
+                    letterElement.classList.add('active');
+                }
+                letterElement.textContent = item.item;
+                letterElement.addEventListener('click', () => {
+                    // 移除所有active类
+                    document.querySelectorAll('.letter-item').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    // 添加active类到当前项
+                    letterElement.classList.add('active');
+                    // 更新详情
+                    currentPhonicsItem = item;
+                    updateDetails();
+                });
+                lettersList.appendChild(letterElement);
+            });
+        }
+
+        // 更新详情区域
+        function updateDetails() {
+            currentItem.textContent = currentPhonicsItem.item;
+            pronunciation.textContent = currentPhonicsItem.pronunciation;
+            
+            // 更新示例单词
+            examples.innerHTML = '';
+            currentPhonicsItem.examples.forEach(word => {
+                const soundButtonText = `<button class="sound-btn sound-btn-item" data-word="${word}" data-id="soundItemBtn">
+                    🔊 播放
+                </button>`;
+                const exampleElement = document.createElement('div');
+                exampleElement.className = 'example-word';
+                exampleElement.setAttribute('data-text', word)
+                
+                // 高亮显示目标字母/组合
+                const target = currentPhonicsItem.item.toLowerCase();
+                const wordLower = word.toLowerCase();
+                const index = wordLower.indexOf(target);
+                
+                if (index !== -1) {
+                    const before = word.substring(0, index);
+                    const highlight = word.substring(index, index + target.length);
+                    const after = word.substring(index + target.length);
+                    
+                    exampleElement.innerHTML = `${before}<span class="highlight">${highlight}</span>${after}${soundButtonText}`;
+                } else {
+                    exampleElement.innerHTML = `${word}${soundButtonText}`;
+                }
+
+                console.log('---exampleElement--', exampleElement)
+                
+                examples.appendChild(exampleElement);
+            });
+        }
+
+        // 为阶段按钮添加事件监听
+        stageButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentStage = parseInt(button.dataset.stage);
+                currentPhonicsItem = phonicsData[currentStage].items[0];
+                updateStageButtons();
+                updateLettersList();
+                updateDetails();
+            });
+        });
+
+        // 为发音按钮添加事件监听
+        soundBtn.addEventListener('click', () => {
+            speakText(currentPhonicsItem, 'letter');
+        });
+
+        makeSoundBtn.addEventListener('click', () => {
+            console.log('--currentPhonicsItem--', currentPhonicsItem)
+            speakText(currentPhonicsItem, 'sound');
+        })
+
+        document.addEventListener('click', (ev) => {
+            const dataId = ev.target.getAttribute('data-id')
+            if ( dataId && dataId === 'soundItemBtn') {
+                const word = ev.target.getAttribute('data-word');
+                word && speakText({
+                    item: word
+                });
+            }
+        })
+
+        // 使用Web Speech API朗读文本
+        function speakText(options, type) {
+            if ('speechSynthesis' in window) {
+
+                const word = type === 'sound' ? options.pronunciation : options.item;
+
+
+                const utterance = new SpeechSynthesisUtterance(options.type ? `${options.type} ${word}`: word);
+                utterance.lang = "en-US";  // 设置语言
+                utterance.rate = 1;        // 语速 (0.1 ~ 10)
+                utterance.pitch = 1;       // 音调 (0 ~ 2)
+                utterance.volume = 1;      // 音量 (0 ~ 1)
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('您的浏览器不支持语音合成功能，请使用Chrome或Edge浏览器。');
+            }
+        }
+
+        // 初始化页面
+        initPage();
+    </script>
+</body>
+</html>
