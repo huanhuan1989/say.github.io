@@ -133,11 +133,12 @@
         
         data.forEach(animal => {
             const card = document.createElement('div');
+            card.setAttribute('data-word', animal.word);
             card.className = 'animal-card';
             card.innerHTML = `
-                <img src="${animal.img}" alt="${animal.cn}" class="animal-img">
-                <div><strong>${animal.word}</strong></div>
-                <div>${animal.cn}</div>
+                <img src="${animal.img}" data-word="${animal.word}" alt="${animal.cn}" class="animal-img">
+                <div data-word="${animal.word}"><strong data-word="${animal.word}">${animal.word}</strong></div>
+                <div data-word="${animal.word}">${animal.cn}</div>
             `;
             container.appendChild(card);
         });
@@ -157,9 +158,11 @@
           renderCategory(data[currentCategory]);
 
           // 朗读事件
-          document.querySelectorAll('.animal-card').forEach((card, index) => {
-            card.onclick = () => speak(data[currentCategory][index].word);
-          });
+          document.addEventListener("click", function(event) {
+            const tabStr = event.target.classList.toString()
+            if (tabStr.includes('tab')) return;
+            speak(event.target.getAttribute('data-word'));
+          }, false);
         }).fail(function() {
           console.error("Error fetching data");
         });
