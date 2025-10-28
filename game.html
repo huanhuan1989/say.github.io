@@ -5,74 +5,237 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <title>少儿英语翻牌（完整版）</title>
 <style>
-  :root{
-    --bg:#fbfdff; --primary:#66aaff; --accent:#ffb86b;
-    --card-back:#76b6ff; --card-front:#fff7d6;
+  :root {
+    --bg:#fbfdff;
+    --primary:#66aaff;
+    --accent:#ffb86b;
+    --card-back:#76b6ff;
+    --card-front:#fff7d6;
   }
-  html,body{height:100%;margin:0;font-family: "Helvetica Neue", Arial, sans-serif;background:var(--bg);color:#222}
-  .app{max-width:980px;margin:8px auto;padding:12px;box-sizing:border-box}
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-  h1{font-size:18px;margin:0}
-  .controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .tabs{display:flex;gap:6px;flex-wrap:wrap}
-  .tab{padding:6px 10px;border-radius:8px;background:#f0f0f0;cursor:pointer}
-  .tab.active{background:var(--primary);color:#fff;font-weight:600}
-  .small{font-size:13px;color:#555}
-  .board-wrap{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
-  .left{flex:1;min-width:260px}
-  .right{width:260px;min-width:220px}
-  #grid{display:grid;gap:10px;width:100%}
+  html,body {
+    height:100%;
+    margin:0;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);
+    color:#222
+  }
+  .app {
+    max-width:980px;
+    margin:8px auto;
+    padding:12px;
+    box-sizing:border-box
+  }
+  header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px
+  }
+  h1 {
+    font-size:18px;
+    margin:0
+  }
+  .controls {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    align-items:center
+  }
+  .tabs {
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap
+  }
+  .tab {
+    padding:6px 10px;
+    border-radius:8px;
+    background:#f0f0f0;
+    cursor:pointer
+  }
+  .tab.active {
+    background:var(--primary);
+    color:#fff;
+    font-weight:600
+  }
+  .small {
+    font-size:13px;
+    color:#555
+  }
+  .board-wrap {
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:12px
+  }
+  .left {
+    flex:1;
+    min-width:260px
+  }
+  .right {
+    width:260px;
+    min-width:220px
+  }
+  #grid {
+    display:grid;
+    gap:10px;
+    width:100%
+  }
   /* grid columns responsive */
-  @media(min-width:480px){ #grid{grid-template-columns:repeat(4,1fr)}}
-  @media(max-width:479px){ #grid{grid-template-columns:repeat(3,1fr)}}
-
-  /* card */
-  .card {
+    @media(min-width:480px) {
+    #grid {
+    grid-template-columns:repeat(4,1fr)
+  }
+  }@media(max-width:479px) {
+    #grid {
+    grid-template-columns:repeat(3,1fr)
+  }
+  }/* card */
+    .card {
     perspective:900px;
     width:100%;
   }
-  .card-inner{
-    position:relative;width:100%;padding-top:100%; /* square via padding hack */
-    transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.9,.3,1);
+  .card-inner {
+    position:relative;
+    width:100%;
+    padding-top:100%;
+    /* square via padding hack */
+      transform-style:preserve-3d;
+    transition:transform .5s cubic-bezier(.2,.9,.3,1);
     border-radius:12px;
   }
-  .card.open .card-inner{ transform: rotateY(180deg) }
-  .face{
-    position:absolute;left:0;top:0;right:0;bottom:0;border-radius:12px;
-    display:flex;align-items:center;justify-content:center;backface-visibility:hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,.08);
+  .card.open .card-inner {
+    transform:rotateY(180deg)
+  }
+  .face {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backface-visibility:hidden;
+    box-shadow:0 4px 8px rgba(0,0,0,.08);
     user-select:none;
   }
-  .face.front{
-    background:var(--card-front);color:#333;border:2px solid #ffc77d;transform:rotateY(180deg);
-    padding:6px;text-align:center;font-size:16px;
+  .face.front {
+    background:var(--card-front);
+    color:#333;
+    border:2px solid #ffc77d;
+    transform:rotateY(180deg);
+    padding:6px;
+    text-align:center;
+    font-size:16px;
+    cursor:pointer;
   }
-  .face.back{
-    background:var(--card-back);color:#fff;font-size:28px;
+  .face.back {
+    background:var(--card-back);
+    color:#fff;
+    font-size:28px;
   }
-  .face img{max-width:70%;max-height:70%;object-fit:contain}
-
-  .hidden-mask{background:#dcdcdc;color:transparent}
-  .matched .card-inner{transform:rotateY(180deg)}
-  .matched .face.front{background:#c6ffd6;border-color: #77d36b}
-  .checkmark{position:absolute;right:6px;bottom:6px;font-size:18px;color:green}
-
+  .face img {
+    max-width:70%;
+    max-height:70%;
+    object-fit:contain
+  }
+  .hidden-mask {
+    background:#dcdcdc;
+    color:transparent
+  }
+  .matched .card-inner {
+    transform:rotateY(180deg)
+  }
+  .matched .face.front {
+    background:#c6ffd6;
+    border-color:#77d36b;
+    display:flex;
+    flex-direction:column;
+    cursor: pointer;
+  }
+  .checkmark {
+    position:absolute;
+    right:6px;
+    bottom:6px;
+    font-size:18px;
+    color:green
+  }
   /* top-right music toggle */
-  .music-toggle{display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:8px;background:#fff;border:1px solid #eee;cursor:pointer}
-  .scorecard{background:#fff;padding:10px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,20,.04)}
-  .meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
-  .btn{padding:6px 10px;border-radius:8px;background:var(--primary);color:#fff;border:none;cursor:pointer}
-  .btn.secondary{background:#eee;color:#333}
-  .controls-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  .star{position:absolute;pointer-events:none}
+    .music-toggle {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 8px;
+    border-radius:8px;
+    background:#fff;
+    border:1px solid #eee;
+    cursor:pointer
+  }
+  .scorecard {
+    background:#fff;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(10,10,20,.04)
+  }
+  .meta {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px
+  }
+  .btn {
+    padding:6px 10px;
+    border-radius:8px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    cursor:pointer
+  }
+  .btn.secondary {
+    background:#eee;
+    color:#333
+  }
+  .controls-row {
+    display:flex;
+    gap:8px;
+    align-items:center;
+    flex-wrap:wrap
+  }
+  .star {
+    position:absolute;
+    pointer-events:none
+  }
   /* fireworks canvas */
-  #fxCanvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:9999;display:none}
-
+    #fxCanvas {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:9999;
+    display:none
+  }
   /* difficulty / timer */
-  .option {padding:6px;border-radius:6px;background:#fff;border:1px solid #eee;cursor:pointer}
-  .option.active{background:var(--accent);color:#fff}
+    .option {
+    padding:6px;
+    border-radius:6px;
+    background:#fff;
+    border:1px solid #eee;
+    cursor:pointer
+  }
+  .option.active {
+    background:var(--accent);
+    color:#fff
+  }
+  footer {
+    margin-top:18px;
+    font-size:13px;
+    color:#666;
+    text-align:center
+  }
 
-  footer{margin-top:18px;font-size:13px;color:#666;text-align:center}
 </style>
 </head>
 <body>
@@ -164,347 +327,224 @@
 
 <!-- 音频资源（可替换为本地文件） -->
 <!-- 背景音乐：轻快卡通 loop (mixkit preview) -->
-<audio id="bgMusic" loop crossorigin="anonymous" src="https://assets.mixkit.co/music/preview/mixkit-happy-upbeat-children-2018.mp3"></audio>
+<audio id="bgMusic" loop crossorigin="anonymous" src="./files/music.mp3"></audio>
 <!-- 正确/错误音效 -->
-<audio id="sndCorrect" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3"></audio>
-<audio id="sndWrong" src="https://assets.mixkit.co/active_storage/sfx/1109/1109-preview.mp3"></audio>
+<audio id="sndCorrect" src="./files/correct.mp3"></audio>
+<audio id="sndWrong" src="./files/wrong.mp3"></audio>
 
+<script src="./js/jQuery.min.js"></script>
 <script>
-/* ---------- 配置区: 分类与资源 (可以按需替换图片 URL) ---------- */
-const CATEGORIES = {
-  "动物": [
-    { img:"./img/cat.png", word:"cat", cn:"猫" },
-    { img:"./img/dog.png", word:"dog", cn:"狗" },
-    { img:"./img/monkey.png", word:"monkey", cn:"猴子" },
-    { img:"./img/lion.png", word:"lion", cn:"狮子" },
-    { img:"./img/panda.png", word:"panda", cn:"熊猫" },
-    { img:"./img/rabbit.png", word:"rabbit", cn:"兔子" },
-    { img:"./img/elephant.png", word:"elephant", cn:"大象" },
-    { img:"./img/horse.png", word:"horse", cn:"马" },
-    { img:"./img/giraffe.png", word:"giraffe", cn:"长颈鹿" },
-    { img:"./img/fish.png", word:"fish", cn:"鱼" },
-    { img:"./img/goldfish.png", word:"goldfish", cn:"金鱼" },
-    {img:"./img/dolphin.png",word:"dolphin",cn:"海豚"},
-    {img:"./img/penguin.png",word:"penguin",cn:"企鹅"},
-    {img:"./img/koala.png",word:"koala",cn:"树袋熊"},
-    {img:"./img/kangaroo.png",word:"kangaroo",cn:"袋鼠"},
-    {img:"./img/rhino.png",word:"rhino",cn:"犀牛"},
-    {img:"./img/polar-bear.png",word:"polar bear",cn:"北极熊"},
-    {img:"./img/zebra.png",word:"zebra",cn:"斑马"},
-    {img:"./img/owl.png",word:"owl",cn:"猫头鹰"},
-    {img:"./img/crocodile.png",word:"crocodile",cn:"鳄鱼"},
-    {img:"./img/eagle.png",word:"eagle",cn:"老鹰"},
-    {img:"./img/bee.png",word:"bee",cn:"蜜蜂"},
-    {img:"./img/butterfly.png",word:"butterfly",cn:"蝴蝶"},
-    {img:"./img/cow.png",word:"cow",cn:"牛"},
-    {img:"./img/chick.png",word:"chick",cn:"小鸡"},
-    {img:"./img/ox.png",word:"ox",cn:"牛"},
-    {img:"./img/duck.png",word:"duck",cn:"鸭子"},
-    {img:"./img/shark.png",word:"shark",cn:"鲨鱼"},
-    {img:"./img/jellyfish.png",word:"jellyfish",cn:"水母"},
-    {img:"./img/octopus.png",word:"octopus",cn:"章鱼"},
-    {img:"./img/snail.png",word:"snail",cn:"蜗牛"},
-    {img:"./img/goldfish.png",word:"goldfish",cn:"金鱼"},
-    {img:"./img/frog.png",word:"frog",cn:"青蛙"},
-    {img:"./img/hedgehog.png",word:"hedgehog",cn:"刺猬"},
-    {img:"./img/turtle.png",word:"turtle",cn:"乌龟"},
-    {img:"./img/ostrich.png",word:"ostrich",cn:"鸵鸟"},
-    {img:"./img/peacock.png",word:"peacock",cn:"孔雀"},
-    {img:"./img/camel.png",word:"camel",cn:"骆驼"},,
-    {img:"./img/parrot.png",word:"parrot",cn:"鹦鹉"},
-    {img:"./img/hippopotamus.png",word:"hippopotamus",cn:"河马"},
-    {img:"./img/walrus",word:"walrus",cn:"海象"}
-  ],
-  "交通": [
-    { img:"./img/car.png", word:"car", cn:"汽车" },
-    { img:"./img/bus.png", word:"bus", cn:"公交车" },
-    { img:"./img/bike.png", word:"bike", cn:"自行车" },
-    { img:"./img/train.png", word:"train", cn:"火车" },
-    { img:"./img/airplane.png", word:"airplane", cn:"飞机" },
-    { img:"./img/ship.png", word:"ship", cn:"船" },
-    { img:"./img/taxi.png", word:"taxi", cn:"出租车" },
-    { img:"./img/truck.png", word:"truck", cn:"卡车" },
-    { img:"./img/motorbike.png", word:"motorbike", cn:"摩托车" },
-    { img:"./img/subway.png", word:"subway", cn:"地铁" }
-  ],
-  "颜色": [
-    { img:"./img/red.png", word:"red", "cn":"红色" },
-    { img:"./img/blue.png",word:"blue", "cn":"蓝色" },
-    { img:"./img/yellow.png", word:"yellow", "cn":"黄色" },
-    { img:"./img/green.png", word:"green", "cn":"绿色" },
-    { img:"./img/purple.png", word:"purple", "cn":"紫色" },
-    { img:"./img/orange.png", word:"orange", "cn":"橙色" },
-    { img:"./img/black.png", word:"black", "cn":"黑色" },
-    { img:"./img/white.png", word:"white", "cn":"白色" },
-    { img:"./img/brown.png", word:"brown", "cn":"棕色" },
-    { img:"./img/grey.png", word:"grey", "cn":"灰色" }
-  ],
-  "教具": [
-    { img:"./img/pencil.png", word:"pencil", "cn":"铅笔" },
-    { img:"./img/book.png", word:"book", "cn":"书" },
-    { img:"./img/crayon.png", word:"crayon", "cn":"蜡笔" },
-    { img:"./img/ruler.png", word:"ruler", "cn":"尺子" },
-    { img:"./img/notebook.png", word:"notebook", "cn":"笔记本" },
-    { img:"./img/schoolbag.png", word:"schoolbag", "cn":"书包" },
-    { img:"./img/scissors.png", word:"scissors", "cn":"剪刀" },
-    { img:"./img/eraser.png", word:"eraser", "cn":"橡皮" },
-    { img:"./img/pen.png", word:"pen", "cn":"钢笔" },
-    { img:"./img/pencil-case.png", word:"pencil case", "cn":"铅笔盒" },
-    { img:"./img/drawing-book.png", word:"drawing book", "cn":"画画本" }
-  ],
-  "家庭": [
-    { img:"./img/mother.png", word:"mother", "cn":"妈妈" },
-    { img:"./img/father.png", word:"father", "cn":"爸爸" },
-    { img:"./img/baby.png", word:"baby", "cn":"婴儿" },
-    { img:"./img/grandma.png", word:"grandma", "cn":"奶奶/外婆" },
-    { img:"./img/grandpa.png", word:"grandpa", "cn":"爷爷/外公" },
-    { img:"./img/brother.png", word:"brother", "cn":"兄弟/弟弟" },
-    { img:"./img/sister.png", word:"sister", "cn":"姐妹/姐姐" },
-    { img:"./img/uncle.png", word:"uncle", "cn":"舅舅/叔叔" },
-    { img:"./img/aunt.png", word:"aunt", "cn":"姑姑/阿姨" },
-    { img:"./img/eldest-brother.png", word:"eldest brother", "cn":"大哥" }
-  ],
-  "玩具": [
-    { img:"./img/teddy-bear.png", word:"teddy bear", "cn":"泰迪熊" },
-    { img:"./img/ball.png", word:"ball", "cn":"球" },
-    { img:"./img/toy-car.png", word:"toy car", "cn":"玩具车" },
-    { img:"./img/robot.png", word:"robot", "cn":"机器人" },
-    { img:"./img/top.png", word:"top", "cn":"陀螺" },
-    { img:"./img/blocks.png", word:"blocks", "cn":"积木" },
-    { img:"./img/puzzle.png", word:"puzzle", "cn":"拼图" },
-    { img:"./img/kite.png", word:"kite", "cn":"风筝" },
-    { img:"./img/skateboard.png", word:"skateboard", "cn":"滑板" },
-    { img:"./img/model-car.png", word:"model car", "cn":"汽车模型" }
-  ],
-  "乐器": [
-    { img:"./img/guitar.png", word:"guitar", "cn":"吉他" },
-    { img:"./img/piano.png", word:"piano", "cn":"钢琴" },
-    { img:"./img/drum.png", word:"drum", "cn":"鼓/架子鼓" },
-    { img:"./img/trumpet.png", word:"trumpet", "cn":"小号" },
-    { img:"./img/violin.png", word:"violin", "cn":"小提琴" },
-    { img:"./img/maracas.png", word:"maracas", "cn":"沙锤" },
-    { img:"./img/accordion.png", word:"accordion", "cn":"手风琴" },
-    { img:"./img/oboe.png", word:"oboe", "cn":"双簧管" },
-    { img:"./img/flute.png", word:"flute", "cn":"长笛" },
-    { img:"./img/cello.png", word:"cello", "cn":"大提琴" },
-    { img:"./img/trumpet.png", word:"trumpet", "cn":"小号" },
-    { img:"./img/saxophone.png", word:"saxophone", "cn":"萨克斯管" },
-    { img:"./img/harp.png", word:"harp", "cn":"竖琴" },
-    { img:"./img/harmonica.png", word:"harmonica", "cn":"口琴" }
-  ]
-};
+  let CATEGORIES = null;
+  let currentCategory = '';
+  let difficulty = 6; // 对数（6对默认）
+  let autoUpgrade = false;
+  let timerMode = false;
+  let timeLimit = 60; // 默认60s，按难度也可调
+  let gameCards = []; // 牌池
+  let flipped = [];
+  let matched = new Set();
+  let score = 0;
+  let bestScores = {}; // 存 localStorage
+  const STORAGE_KEY = "kids_match_best_v1";
 
-/* ---------- 状态 ---------- */
-let currentCategory = Object.keys(CATEGORIES)[0];
-let difficulty = 6; // 对数（6对默认）
-let autoUpgrade = false;
-let timerMode = false;
-let timeLimit = 60; // 默认60s，按难度也可调
-let gameCards = []; // 牌池
-let flipped = [];
-let matched = new Set();
-let score = 0;
-let bestScores = {}; // 存 localStorage
-const STORAGE_KEY = "kids_match_best_v1";
+  /* ---------- DOM ---------- */
+  const tabsDiv = document.getElementById("tabs");
+  const grid = document.getElementById("grid");
+  const currentCatEl = document.getElementById("currentCat");
+  const scoreNowEl = document.getElementById("scoreNow");
+  const bestScoreEl = document.getElementById("bestScore");
+  const timeLeftEl = document.getElementById("timeLeft");
+  const restartBtn = document.getElementById("restartBtn");
+  const musicToggle = document.getElementById("musicToggle");
+  const muteSfxBtn = document.getElementById("muteSfx");
+  const bgMusic = document.getElementById("bgMusic");
+  const sndCorrect = document.getElementById("sndCorrect");
+  const sndWrong = document.getElementById("sndWrong");
+  const hintBtn = document.getElementById("hintBtn");
+  const timerToggle = document.getElementById("timerToggle");
+  const fxCanvas = document.getElementById("fxCanvas");
 
-/* ---------- DOM ---------- */
-const tabsDiv = document.getElementById("tabs");
-const grid = document.getElementById("grid");
-const currentCatEl = document.getElementById("currentCat");
-const scoreNowEl = document.getElementById("scoreNow");
-const bestScoreEl = document.getElementById("bestScore");
-const timeLeftEl = document.getElementById("timeLeft");
-const restartBtn = document.getElementById("restartBtn");
-const musicToggle = document.getElementById("musicToggle");
-const muteSfxBtn = document.getElementById("muteSfx");
-const bgMusic = document.getElementById("bgMusic");
-const sndCorrect = document.getElementById("sndCorrect");
-const sndWrong = document.getElementById("sndWrong");
-const hintBtn = document.getElementById("hintBtn");
-const timerToggle = document.getElementById("timerToggle");
-const fxCanvas = document.getElementById("fxCanvas");
+  let timerInterval = null;
+  let remaining = 0;
+  let sfxMuted = false;
+  let musicOn = false;
 
-let timerInterval = null;
-let remaining = 0;
-let sfxMuted = false;
-let musicOn = false;
+  /* ---------- 初始化 UI ---------- */
+  function initUI(data){
+    // tabs
+    tabsDiv.innerHTML = "";
+    for(let k of Object.keys(data)){
+      const d = document.createElement("div");
+      d.className = "tab" + (k===currentCategory ? " active" : "");
+      d.innerText = k;
+      d.onclick = ()=> {
+        currentCategory = k;
+        renderTabs();
+        startGame(); // 切换 Tab 时重新开始游戏
+      };
+      tabsDiv.appendChild(d);
+    }
+    renderDifficultyOptions();
+    renderTabs();
 
-/* ---------- 初始化 UI ---------- */
-function initUI(){
-  // tabs
-  tabsDiv.innerHTML = "";
-  for(let k of Object.keys(CATEGORIES)){
-    const d = document.createElement("div");
-    d.className = "tab" + (k===currentCategory ? " active" : "");
-    d.innerText = k;
-    d.onclick = ()=> {
-      currentCategory = k;
-      renderTabs();
-      startGame(); // 切换 Tab 时重新开始游戏
+    // controls
+    restartBtn.onclick = startGame;
+    musicToggle.onclick = toggleMusic;
+    muteSfxBtn.onclick = ()=>{ sfxMuted = !sfxMuted; updateSfxBtn(); };
+    hintBtn.onclick = ()=> speakSample();
+
+    // difficulty buttons
+    document.querySelectorAll('.option[data-diff]').forEach(el=>{
+      el.onclick = ()=> {
+        difficulty = Number(el.dataset.diff);
+        document.querySelectorAll('.option[data-diff]').forEach(x=>x.classList.remove('active'));
+        el.classList.add('active');
+        startGame();
+      };
+    });
+    // auto upgrade
+    document.getElementById('autoUp').onclick = e=>{
+      autoUpgrade = !autoUpgrade;
+      e.target.classList.toggle('active', autoUpgrade);
     };
-    tabsDiv.appendChild(d);
-  }
-  renderDifficultyOptions();
-  renderTabs();
-
-  // controls
-  restartBtn.onclick = startGame;
-  musicToggle.onclick = toggleMusic;
-  muteSfxBtn.onclick = ()=>{ sfxMuted = !sfxMuted; updateSfxBtn(); };
-  hintBtn.onclick = ()=>{ speakSample(); };
-
-  // difficulty buttons
-  document.querySelectorAll('.option[data-diff]').forEach(el=>{
-    el.onclick = ()=> {
-      difficulty = Number(el.dataset.diff);
-      document.querySelectorAll('.option[data-diff]').forEach(x=>x.classList.remove('active'));
-      el.classList.add('active');
+    // timer toggle
+    timerToggle.onclick = ()=>{
+      timerMode = !timerMode;
+      timerToggle.innerText = timerMode ? "开启" : "关闭";
+      if(timerMode){ timeLimit = Math.max(30, difficulty*8); } // example calc
       startGame();
     };
-  });
-  // auto upgrade
-  document.getElementById('autoUp').onclick = e=>{
-    autoUpgrade = !autoUpgrade;
-    e.target.classList.toggle('active', autoUpgrade);
-  };
-  // timer toggle
-  timerToggle.onclick = ()=>{
-    timerMode = !timerMode;
-    timerToggle.innerText = timerMode ? "开启" : "关闭";
-    if(timerMode){ timeLimit = Math.max(30, difficulty*8); } // example calc
-    startGame();
-  };
 
-  // load best scores
-  try{
-    const raw=localStorage.getItem(STORAGE_KEY);
-    if(raw) bestScores = JSON.parse(raw);
-  }catch(e){ bestScores = {} }
-  updateBestDisplay();
-}
-
-/* ---------- 辅助：朗读 ---------- */
-function speak(text){
-  if(!('speechSynthesis' in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'en-US';
-  speechSynthesis.cancel(); // 取消上一个，避免堆积
-  speechSynthesis.speak(u);
-}
-
-/* ---------- 渲染 tabs active ---------- */
-function renderTabs(){
-  document.querySelectorAll('.tab').forEach(t=>{
-    t.classList.toggle('active', t.innerText===currentCategory);
-  });
-  currentCatEl.innerText = currentCategory;
-  updateBestDisplay();
-}
-
-/* ---------- 游戏逻辑 ---------- */
-function startGame(){
-  // reset
-  clearInterval(timerInterval);    // 清除旧计时
-  matched.clear();
-  flipped = [];
-  score = 0;
-  updateScore();
-  timeLeftEl.innerText = '--';
-  grid.innerHTML = "";
-
-  // prepare card pool based on difficulty
-  const pool = CATEGORIES[currentCategory].slice(); // clone
-  // ensure pool has at least difficulty entries; if not, wrap
-  while(pool.length < difficulty){
-    pool.push(...CATEGORIES[currentCategory].slice());
+    // load best scores
+    try{
+      const raw=localStorage.getItem(STORAGE_KEY);
+      if(raw) bestScores = JSON.parse(raw);
+    }catch(e){ bestScores = {} }
+    updateBestDisplay();
   }
-  // take first `difficulty` unique (shuffle first)
-  shuffle(pool);
-  const pick = pool.slice(0, difficulty);
 
-  // form cards: for each pick create img-card and word-card (pair by 'word')
-  gameCards = [];
-  pick.forEach(item => {
-    // image card
-    gameCards.push({
-      id: uniqueId(),
-      pair: item.word,
-      kind: 'img',
-      img: item.img,
-      word: item.word,
-      cn: item.cn
+  /* ---------- 辅助：朗读 ---------- */
+  function speak(text){
+    if(!('speechSynthesis' in window)) return;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    speechSynthesis.cancel(); // 取消上一个，避免堆积
+    speechSynthesis.speak(u);
+  }
+
+  /* ---------- 渲染 tabs active ---------- */
+  function renderTabs(){
+    document.querySelectorAll('.tab').forEach(t=>{
+      t.classList.toggle('active', t.innerText===currentCategory);
     });
-    // word card
-    gameCards.push({
-      id: uniqueId(),
-      pair: item.word,
-      kind: 'word',
-      text: item.word,
-      word: item.word,
-      cn: item.cn
-    });
-  });
+    currentCatEl.innerText = currentCategory;
+    updateBestDisplay();
+  }
 
-  shuffle(gameCards);
+  /* ---------- 游戏逻辑 ---------- */
+  function startGame(){
+    // reset
+    clearInterval(timerInterval);    // 清除旧计时
+    matched.clear();
+    flipped = [];
+    score = 0;
+    updateScore();
+    timeLeftEl.innerText = '--';
+    grid.innerHTML = "";
 
-  // render grid columns adapt to count
-  const cols = Math.min(4, Math.max(2, Math.ceil(Math.sqrt(gameCards.length))));
-  grid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
-
-  gameCards.forEach(card => {
-    const el = document.createElement('div');
-    el.className = 'card';
-    el.dataset.id = card.id;
-    el.dataset.pair = card.pair;
-    el.dataset.kind = card.kind;
-    // inner wrapper for flip effect
-    const inner = document.createElement('div');
-    inner.className = 'card-inner';
-    // front (shows content when face-up)
-    const front = document.createElement('div');
-    front.className = 'face front';
-    if(card.kind === 'img'){
-      front.innerHTML = `<img src="${card.img}" alt="${card.word}">`;
-    } else {
-      front.innerHTML = `<div style="font-size:16px">${escapeHtml(card.text)}</div>`;
+    // prepare card pool based on difficulty
+    const pool = CATEGORIES[currentCategory].slice(); // clone
+    // ensure pool has at least difficulty entries; if not, wrap
+    while(pool.length < difficulty){
+      pool.push(...CATEGORIES[currentCategory].slice());
     }
-    // back (what's visible when face-down)
-    const back = document.createElement('div');
-    back.className = 'face back';
-    back.innerHTML = '?';
-    inner.appendChild(front);
-    inner.appendChild(back);
-    el.appendChild(inner);
+    // take first `difficulty` unique (shuffle first)
+    shuffle(pool);
+    const pick = pool.slice(0, difficulty);
 
-    // attach event
-    el.onclick = ()=> onCardClick(el, card);
+    // form cards: for each pick create img-card and word-card (pair by 'word')
+    gameCards = [];
+    pick.forEach(item => {
+      // image card
+      gameCards.push({
+        id: uniqueId(),
+        pair: item.word,
+        kind: 'img',
+        img: item.img,
+        word: item.word,
+        cn: item.cn
+      });
+      // word card
+      gameCards.push({
+        id: uniqueId(),
+        pair: item.word,
+        kind: 'word',
+        text: item.word,
+        word: item.word,
+        cn: item.cn
+      });
+    });
 
-    // start open (show) state for 5s
-    el.classList.add('open');
-    grid.appendChild(el);
-  });
+    shuffle(gameCards);
 
-  // 显示全部牌
-  document.querySelectorAll('.card').forEach(c => c.classList.add('open'));
+    // render grid columns adapt to count
+    const cols = Math.min(4, Math.max(2, Math.ceil(Math.sqrt(gameCards.length))));
+    grid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
 
-  // after 30s hide all
-  setTimeout(()=> {
-    document.querySelectorAll('.card').forEach(c=> c.classList.remove('open'));
-    // start timer if enabled
-    if(timerMode){
-      remaining = timeLimit;
-      timeLeftEl.innerText = remaining + 's';
-      timerInterval = setInterval(()=>{
-        remaining--;
+    gameCards.forEach(card => {
+      const el = document.createElement('div');
+      el.className = 'card';
+      el.dataset.id = card.id;
+      el.dataset.pair = card.pair;
+      el.dataset.kind = card.kind;
+      // inner wrapper for flip effect
+      const inner = document.createElement('div');
+      inner.className = 'card-inner';
+      // front (shows content when face-up)
+      const front = document.createElement('div');
+      front.className = 'face front';
+      if(card.kind === 'img'){
+        front.innerHTML = `<img src="${card.img}" alt="${card.word}">`;
+      } else {
+        front.innerHTML = `<div style="font-size:16px">${escapeHtml(card.text)}</div>`;
+      }
+      // back (what's visible when face-down)
+      const back = document.createElement('div');
+      back.className = 'face back';
+      back.innerHTML = '?';
+      inner.appendChild(front);
+      inner.appendChild(back);
+      el.appendChild(inner);
+
+      // attach event
+      el.onclick = ()=> onCardClick(el, card);
+
+      // start open (show) state for 5s
+      el.classList.add('open');
+      grid.appendChild(el);
+    });
+
+    // 显示全部牌
+    document.querySelectorAll('.card').forEach(c => c.classList.add('open'));
+
+    // after 30s hide all
+    setTimeout(()=> {
+      document.querySelectorAll('.card').forEach(c=> c.classList.remove('open'));
+      // start timer if enabled
+      if(timerMode){
+        remaining = timeLimit;
         timeLeftEl.innerText = remaining + 's';
-        if(remaining <= 0){
-          clearInterval(timerInterval);
-          failGameByTime();
-        }
-      }, 1000);
-    }
-  }, 30000);
-}
+        timerInterval = setInterval(()=>{
+          remaining--;
+          timeLeftEl.innerText = remaining + 's';
+          if(remaining <= 0){
+            clearInterval(timerInterval);
+            failGameByTime();
+          }
+        }, 1000);
+      }
+    }, 8000);
+  }
 
 /* ---------- 点击牌逻辑 ---------- */
 function onCardClick(el, card){
@@ -757,13 +797,26 @@ function renderDifficultyOptions(){
   }, 60);
 }
 
-/* ---------- startup ---------- */
-initUI();
-startGame();
-updateSfxBtn();
-
+$.ajax({
+  url: './data.json',
+  type: 'GET',
+  dataType: 'json',
+  async: false
+}).done(function(data) {
+  if (!data) return;
+  CATEGORIES = data;
+  currentCategory = Object.keys(data)[0];
+  initUI(data);
+  startGame();
+  updateSfxBtn();
+}).fail(function() {
+  console.error("Error fetching data");
+});
 /* ---------- keyboard shortcuts for dev convenience (optional) ---------- */
-window.addEventListener('resize', ()=> { fxCanvas.width = window.innerWidth; fxCanvas.height = window.innerHeight; });
+window.addEventListener('resize', ()=> { 
+  fxCanvas.width = window.innerWidth;
+  fxCanvas.height = window.innerHeight; 
+});
 
 </script>
 </body>
