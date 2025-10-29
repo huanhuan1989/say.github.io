@@ -56,6 +56,7 @@
       background:#eee;
       cursor:pointer;
       border-radius:6px;
+      max-width: 200px;
     }
     .tabs button.active {
       background:#007bff;
@@ -135,6 +136,7 @@
     @media(max-width: 900px) {
       body {
         padding: 0;
+        overflow: auto;
       }
 
       .appContainer {
@@ -144,7 +146,7 @@
       .tabs,
       .tabs .tabs-main {
         display: block;
-        height: auto;
+        height: 400px;
       }
 
       .mainContainer {
@@ -383,7 +385,7 @@
     }
 
     $.ajax({
-      url: './data/ketJsonAll.json',
+      url: './data/ketEnglish.json',
       type: 'GET',
       dataType: 'json',
       async: false
