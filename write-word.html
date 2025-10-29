@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang = "zh">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width = device-width,initial-scale = 1.0" />
+  <title>默写单词小游戏</title>
+  <style>
+    body {
+      font-family:Arial,sans-serif;
+      text-align:center;
+      padding:12px;
+      background:#f7f7f7;
+    }
+    .tabs button {
+      margin:4px;
+      padding:10px 14px;
+      border:none;
+      background:#eee;
+      cursor:pointer;
+      border-radius:6px;
+    }
+    .tabs button.active {
+      background:#007bff;
+      color:#fff;
+    }
+    #levelSelect {
+      margin-top:10px;
+      padding:6px 10px;
+      border-radius:6px;
+    }
+    #wordDisplay {
+      font-size:36px;
+      margin:22px 0;
+      font-weight:bold;
+    }
+    #inputContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #inputContainer input {
+      width:40px;
+      height:50px;
+      font-size:30px;
+      text-align:center;
+      margin:3px;
+      padding:4px;
+      text-transform:lowercase;
+      border-radius:6px;
+      border:2px solid #ccc;
+    }
+
+    #inputContainer .placeholder {
+      width: 30px;
+      height: 52px;
+      display: block;
+    }
+    
+    .correct {
+      border-color:green;
+      color:green;
+    }
+    .wrong {
+      border-color:red;
+      color:red;
+    }
+    #meaning {
+      font-size:26px;
+      margin-top:6px;
+      display:none;
+      color:#444;
+    }
+    button.control-btn {
+      padding:10px 14px;
+      background:#007bff;
+      color:white;
+      border:none;
+      margin:10px 4px;
+      cursor:pointer;
+      border-radius:8px;
+      font-size:18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs" id="tabContainer"></div>
+  <!-- <select id="levelSelect">
+    <option value="easy">简单(多提示)</option>
+    <option value="medium" selected>中等</option>
+    <option value="hard">困难(少提示)</option>
+  </select> -->
+
+  <div id="wordDisplay"></div>
+  <div id="inputContainer"></div>
+  <div id="meaning"></div>
+
+  <button class="control-btn" id="toggleMeaningBtn">翻译</button>
+  <button class="control-btn" id="nextBtn">换一换</button>
+
+  <audio id="soundCorrect" src = "./files/correct.mp3"></audio>
+  <audio id="soundWrong" src = "./files/wrong.mp3"></audio>
+
+  <script src = "./js/jQuery.min.js"></script>
+
+  <script>
+    // 分类数据
+    let categories = {};
+    let words = [];
+    let currentIndex = 0;
+    let showMeaning = false;
+    let reviewList = [];
+    const wrongCountMap = {};
+    
+    const inputContainer = document.getElementById('inputContainer');
+    const meaningEl = document.getElementById('meaning');
+    const soundCorrect = document.getElementById('soundCorrect');
+    const soundWrong = document.getElementById('soundWrong');
+
+    function tabEvents() {
+      const tabContainer = document.getElementById('tabContainer');
+      for(let cat in categories){
+        const btn = document.createElement('button');
+        btn.textContent = cat;
+        btn.onclick = () => {
+          document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          words = categories[cat];
+          currentIndex = 0;
+          reviewList = [];
+          loadWord();
+        };
+        tabContainer.appendChild(btn);
+      }
+      tabContainer.firstChild.classList.add('active');
+    }
+
+    function getNextWord(){
+      if(reviewList.length > 0) return reviewList.shift();
+      currentIndex = (currentIndex + 1) % words.length;
+      return words[currentIndex];
+    }
+
+    function speak(word){
+      const msg = new SpeechSynthesisUtterance(word);
+      msg.lang='en-US';
+      speechSynthesis.speak(msg);
+    }
+
+    function loadWord(){
+      const wordDisplay = document.getElementById('wordDisplay');
+      const data = words[currentIndex];
+      const word = data.word;
+      wordDisplay.textContent = word;
+      meaningEl.textContent = data.cn;
+      meaningEl.style.display = showMeaning ? 'block' : 'none';
+      inputContainer.innerHTML = '';
+
+      const level = 'medium'; // document.getElementById('levelSelect').value;
+      let lettersToShow = level === 'easy' ? Math.floor(word.replace(/\s/g,'').length / 2) : (level === 'medium' ? Math.floor(word.replace(/\s/g,'').length / 3) : 1);
+
+      const revealIndexes = [];
+      while (revealIndexes.length < lettersToShow) {
+        const i = Math.floor(Math.random() * word.length);
+        if (word[i].trim() && !revealIndexes.includes(i)) revealIndexes.push(i);
+      }
+
+      for (let i = 0; i < word.length; i++) {
+        let elem;
+        if (!word[i].trim()) {
+          elem = document.createElement('span');
+          elem.textContent = word[i];
+          elem.classList.add('placeholder');
+        } else {
+          elem = document.createElement('input');
+          elem.maxLength = 1;
+          elem.dataset.index = i;
+          if (revealIndexes.includes(i)) {
+            elem.value = word[i];
+            elem.disabled = true;
+            elem.classList.add('correct');
+          }
+          elem.addEventListener('input', handleInput);
+          elem.addEventListener('keydown', handleDelete);
+        }
+        inputContainer.appendChild(elem);
+      }
+      inputContainer.querySelector('input:not([disabled])')?.focus();
+    }
+
+    function handleDelete(e) {
+      if (e.key === 'Backspace' && !e.target.value) {
+        const elements = [...inputContainer.children];
+        let i = Number(e.target.dataset.index) - 1;
+        while (i >= 0 && (elements[i].tagName.toLowerCase() !== 'input' || elements[i].disabled)) i--;
+        if (i >= 0) {
+          const prev = elements[i];
+          prev.focus();
+          prev.value = '';
+          prev.classList.remove('wrong', 'correct');
+        }
+      }
+    }
+
+    function handleInput(e){
+      const input = e.target;
+      input.value = input.value.toLowerCase();
+      const word = words[currentIndex].word;
+
+      if(!inputContainer) return;
+      const elements = [...inputContainer.children];
+      if(!elements.length) return;
+
+      let wordIndex = 0;
+      let hasError = false;
+
+      elements.forEach(elem => {
+        if (elem.tagName.toLowerCase() !== 'input') {
+          wordIndex++;
+          return;
+        }
+        elem.classList.remove('wrong', 'correct');
+        if (elem.value) {
+            elem.classList.add(elem.value === word[wordIndex] ?'correct' : 'wrong');
+            elem.value !== word[wordIndex] && (hasError = true)
+        } else {
+          hasError = true;
+        }
+        wordIndex++;
+      });
+
+      // 自动跳到下一个 input
+      let nextIndex = Number(input.dataset.index) + 1;
+      while (nextIndex < elements.length) {
+        const nextElem = elements[nextIndex];
+        if (nextElem.tagName.toLowerCase() === 'input' && !nextElem.disabled) break;
+        nextIndex++;
+      }
+      if (nextIndex < elements.length) elements[nextIndex].focus();
+
+      if (!hasError && elements.every(el => el.tagName.toLowerCase() !== 'input' || el.value !== '')) {
+        wrongCountMap[word] = 0;
+        soundCorrect.play();
+        speak(word);
+        setTimeout(() => {
+          const nextWord = getNextWord();
+          words[currentIndex] = nextWord;
+          loadWord();
+        }, 2000);
+      } else if (hasError && nextIndex === elements.length) {
+        soundWrong.play();
+      } else if (hasError) {
+        wrongCountMap[word] = (wrongCountMap[word] || 0) + 1;
+        if (wrongCountMap[word] >= 2 && !reviewList.includes(words[currentIndex])) reviewList.push(words[currentIndex]);
+      }
+    }
+
+    document.getElementById('toggleMeaningBtn').onclick = () => {
+      showMeaning = !showMeaning;
+      meaningEl.style.display = showMeaning ? 'block' : 'none';
+    };
+
+    document.getElementById('nextBtn').onclick = () => {
+      wrongCountMap[words[currentIndex].word] = 0;
+      const nextWord = getNextWord();
+      words[currentIndex] = nextWord;
+      loadWord();
+    };
+
+    $.ajax({
+      url: './ketJson.json',
+      type: 'GET',
+      dataType: 'json',
+      async: false
+    }).done(function(data) {
+      if (!data) return;
+      categories = data;
+      const firstWord = Object.keys(data)[0]
+      words = data[firstWord]
+      loadWord(data, firstWord);
+      tabEvents();
+    }).fail(function() {
+      console.error('Error fetching data');
+    });
+  </script>
+</body>
+</html>
