@@ -173,7 +173,7 @@
       </select> -->
       <button class="control-btn toggleLanguage active" data-word="en">英文</button>
       <button class="control-btn toggleLanguage" data-word="cn">中文</button>
-      <button class="control-btn changeIt active" id="nextBtn">换一换</button>
+      <button class="control-btn changeIt active" id="nextBtn">下一个单词</button>
 
       <div class="wordContainer">
         <div id="wordDisplay"></div>
@@ -385,7 +385,7 @@
     }
 
     $.ajax({
-      url: './data/ketEnglish.json',
+      url: './data/ketJson.json',
       type: 'GET',
       dataType: 'json',
       async: false
