@@ -197,7 +197,7 @@
     }
     let reviewList = [];
     const wrongCountMap = {};
-    
+    let timer = null;
     const wordDisplay = document.getElementById('wordDisplay');
     const inputContainer = document.getElementById('inputContainer');
     const meaningEl = document.getElementById('meaning');
@@ -297,6 +297,7 @@
     }
 
     function handleInput(e){
+      clearTimeout(timer);
       const input = e.target;
       input.value = input.value.toLowerCase();
       const word = words[currentIndex].word;
@@ -338,7 +339,7 @@
         delete wrongCountMap[word]
         reviewList = reviewList.filter(item => item.word !== word)
         soundCorrect.play();
-        setTimeout(() => {
+        timer = setTimeout(() => {
           nextRender();
         }, 2000);
       } else if (hasError && nextIndex === elements.length) {
@@ -370,8 +371,10 @@
     }, false);
 
     document.addEventListener('keydown', (ev) => {
-      // 回车 | 空格 换下一个单词
-      (ev.key === 'Enter' || ev.key === ' ') && nextRender();
+      if (ev.key === 'Enter') {
+        clearTimeout(timer);
+        nextRender();
+      }
     });
 
     function toggleVisible(key, dom) {
