@@ -141,6 +141,13 @@
       return words[currentIndex];
     }
 
+    function nextRender() {
+      delete wrongCountMap[words[currentIndex].word]
+      const nextWord = getNextWord();
+      words[currentIndex] = nextWord;
+      loadWord();
+    }
+
     function speak(word){
       const msg = new SpeechSynthesisUtterance(word);
       msg.lang='en-US';
@@ -236,16 +243,16 @@
         if (nextElem.tagName.toLowerCase() === 'input' && !nextElem.disabled) break;
         nextIndex++;
       }
-      if (nextIndex < elements.length) elements[nextIndex].focus();
 
+      (nextIndex < elements.length) && elements[nextIndex].focus();
+      
       if (!hasError && elements.every(el => el.tagName.toLowerCase() !== 'input' || el.value !== '')) {
-        wrongCountMap[word] = 0;
-        soundCorrect.play();
         speak(word);
+        delete wrongCountMap[word]
+        reviewList = reviewList.filter(item => item.word !== word)
+        soundCorrect.play();
         setTimeout(() => {
-          const nextWord = getNextWord();
-          words[currentIndex] = nextWord;
-          loadWord();
+          nextRender();
         }, 2000);
       } else if (hasError && nextIndex === elements.length) {
         soundWrong.play();
@@ -261,10 +268,7 @@
     };
 
     document.getElementById('nextBtn').onclick = () => {
-      wrongCountMap[words[currentIndex].word] = 0;
-      const nextWord = getNextWord();
-      words[currentIndex] = nextWord;
-      loadWord();
+      nextRender();
     };
 
     $.ajax({
