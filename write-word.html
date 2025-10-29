@@ -231,7 +231,7 @@
     }
 
     function nextRender() {
-      delete wrongCountMap[words[currentIndex].word]
+      delete wrongCountMap[words[currentIndex].word.toLowerCase()]
       const nextWord = getNextWord();
       words[currentIndex] = nextWord;
       loadWord();
@@ -246,7 +246,7 @@
     function loadWord(){
       const wordDisplay = document.getElementById('wordDisplay');
       const data = words[currentIndex];
-      const word = data.word;
+      const word = data.word.toLowerCase();
       wordDisplay.textContent = word;
       meaningEl.textContent = `/  ${data.cn}`;
       meaningEl.classList[visible.cnWord ? 'remove' : 'add']('hide');
@@ -302,7 +302,7 @@
       clearTimeout(timer);
       const input = e.target;
       input.value = input.value.toLowerCase();
-      const word = words[currentIndex].word;
+      const word = words[currentIndex].word.toLowerCase();
 
       if(!inputContainer) return;
       const elements = [...inputContainer.children];
@@ -339,7 +339,7 @@
       if (!hasError && elements.every(el => el.tagName.toLowerCase() !== 'input' || el.value !== '')) {
         speak(word);
         delete wrongCountMap[word]
-        reviewList = reviewList.filter(item => item.word !== word)
+        reviewList = reviewList.filter(item => item.word.toLowerCase() !== word)
         soundCorrect.play();
         timer = setTimeout(() => {
           nextRender();
