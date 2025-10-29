@@ -208,7 +208,7 @@
       const tabContainer = document.getElementById('tabContainer');
       for(let cat in categories){
         const btn = document.createElement('button');
-        btn.textContent = cat;
+        btn.textContent = `${cat}(${categories[cat].length})`;
         btn.onclick = () => {
           document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
