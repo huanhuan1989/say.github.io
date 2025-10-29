@@ -5,11 +5,49 @@
   <meta name = "viewport" content = "width = device-width,initial-scale = 1.0" />
   <title>默写单词小游戏</title>
   <style>
+    /* 整个滚动条 */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    /* 滚动条轨道 */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    /* 滑块在鼠标悬停时的样式 */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+      cursor: pointer;
+    }
     body {
       font-family:Arial,sans-serif;
       text-align:center;
       padding:12px;
       background:#f7f7f7;
+      overflow: hidden;
+    }
+    .appContainer {
+      display: flex;
+    }
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 90vh;
+    }
+    .tabs .tabs-main {
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
     }
     .tabs button {
       margin:4px;
@@ -23,22 +61,21 @@
       background:#007bff;
       color:#fff;
     }
+    .mainContainer {
+      margin: auto 12px;
+      flex: 1;
+      font-size: 0;
+    }
     #levelSelect {
       margin-top:10px;
       padding:6px 10px;
       border-radius:6px;
-    }
-    #wordDisplay {
-      font-size:36px;
-      margin:22px 0;
-      font-weight:bold;
     }
     #inputContainer {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
     #inputContainer input {
       width:40px;
       height:50px;
@@ -65,53 +102,103 @@
       border-color:red;
       color:red;
     }
-    #meaning {
-      font-size:26px;
-      margin-top:6px;
-      display:none;
-      color:#444;
-    }
     button.control-btn {
       padding:10px 14px;
-      background:#007bff;
-      color:white;
+      background: #eee;
+      color: #333;
       border:none;
-      margin:10px 4px;
       cursor:pointer;
       border-radius:8px;
-      font-size:18px;
+      font-size:12px;
+      margin: 12px;
+    }
+    button.control-btn:hover,
+    button.active {
+      background: #007bff;
+      color: #fff;
+    }
+    .wordContainer {
+      display: flex;
+      font-size: 26px;
+      color: #333;
+      margin: 24px 0;
+      justify-content: center;
+    }
+    .hide {
+      display: none;
+    }
+    #wordDisplay {
+      font-size: 30px;
+      margin-right: 12px;
+    }
+
+    @media(max-width: 900px) {
+      body {
+        padding: 0;
+      }
+
+      .appContainer {
+        display: block;
+      }
+
+      .tabs,
+      .tabs .tabs-main {
+        display: block;
+        height: auto;
+      }
+
+      .mainContainer {
+        margin: 30px 0;
+        width: 100%;
+      }
+
+      #inputContainer input {
+        width: 15%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="tabs" id="tabContainer"></div>
-  <!-- <select id="levelSelect">
-    <option value="easy">简单(多提示)</option>
-    <option value="medium" selected>中等</option>
-    <option value="hard">困难(少提示)</option>
-  </select> -->
+  <div class="appContainer">
+    <div class="tabs">
+      <div class="tabs-main" id="tabContainer"></div>
+    </div>
+    <div class="mainContainer">
+      <!-- <select id="levelSelect">
+        <option value="easy">简单(多提示)</option>
+        <option value="medium" selected>中等</option>
+        <option value="hard">困难(少提示)</option>
+      </select> -->
+      <button class="control-btn toggleLanguage active" data-word="en">英文</button>
+      <button class="control-btn toggleLanguage" data-word="cn">中文</button>
+      <button class="control-btn changeIt active" id="nextBtn">换一换</button>
 
-  <div id="wordDisplay"></div>
-  <div id="inputContainer"></div>
-  <div id="meaning"></div>
+      <div class="wordContainer">
+        <div id="wordDisplay"></div>
+        <div id="meaning" class="hide"></div>
+      </div>
+      <div id="inputContainer"></div>
+    </div>
+  </div>
 
-  <button class="control-btn" id="toggleMeaningBtn">翻译</button>
-  <button class="control-btn" id="nextBtn">换一换</button>
+  <audio id="soundCorrect" src="./files/correct.mp3"></audio>
+  <audio id="soundWrong" src="./files/wrong.mp3"></audio>
 
-  <audio id="soundCorrect" src = "./files/correct.mp3"></audio>
-  <audio id="soundWrong" src = "./files/wrong.mp3"></audio>
-
-  <script src = "./js/jQuery.min.js"></script>
+  <script src="./js/jQuery.min.js"></script>
 
   <script>
     // 分类数据
     let categories = {};
     let words = [];
     let currentIndex = 0;
-    let showMeaning = false;
+    const visible = {
+      cnWord: false,
+      enWord: true
+    }
     let reviewList = [];
     const wrongCountMap = {};
     
+    const wordDisplay = document.getElementById('wordDisplay');
     const inputContainer = document.getElementById('inputContainer');
     const meaningEl = document.getElementById('meaning');
     const soundCorrect = document.getElementById('soundCorrect');
@@ -159,8 +246,8 @@
       const data = words[currentIndex];
       const word = data.word;
       wordDisplay.textContent = word;
-      meaningEl.textContent = data.cn;
-      meaningEl.style.display = showMeaning ? 'block' : 'none';
+      meaningEl.textContent = `/  ${data.cn}`;
+      meaningEl.classList[visible.cnWord ? 'remove' : 'add']('hide');
       inputContainer.innerHTML = '';
 
       const level = 'medium'; // document.getElementById('levelSelect').value;
@@ -262,17 +349,38 @@
       }
     }
 
-    document.getElementById('toggleMeaningBtn').onclick = () => {
-      showMeaning = !showMeaning;
-      meaningEl.style.display = showMeaning ? 'block' : 'none';
-    };
+    document.addEventListener("click", function(ev) {
+      const className = event.target.classList.toString();
+      const dataWord = event.target.getAttribute('data-word');
 
-    document.getElementById('nextBtn').onclick = () => {
-      nextRender();
-    };
+      className.includes('changeIt') && nextRender();
+
+      if (!className.includes('toggleLanguage')) return;
+      const key = dataWord === 'cn' ? 'cnWord' : 'enWord';
+      const dom = dataWord === 'cn' ? meaningEl : wordDisplay
+      const otherDom = dataWord === 'en' ? meaningEl : wordDisplay;
+      toggleVisible(key, dom);
+      ev.target.classList[visible[key] ? 'add' : 'remove']('active');
+      const isHide = otherDom.classList.length && otherDom.classList.toString().includes('hide')
+      if (dataWord === 'cn') {
+        dom.textContent = !isHide ? `/  ${words[currentIndex].cn}` : words[currentIndex].cn
+      } else {
+        otherDom.textContent = visible[key] ? `/  ${words[currentIndex].cn}` : words[currentIndex].cn
+      }
+    }, false);
+
+    document.addEventListener('keydown', (ev) => {
+      // 回车 | 空格 换下一个单词
+      (ev.key === 'Enter' || ev.key === ' ') && nextRender();
+    });
+
+    function toggleVisible(key, dom) {
+      visible[key] = !visible[key];
+      dom.classList[visible[key] ? 'remove' : 'add']('hide');
+    }
 
     $.ajax({
-      url: './ketJson.json',
+      url: './ketJsonAll.json',
       type: 'GET',
       dataType: 'json',
       async: false
@@ -283,8 +391,8 @@
       words = data[firstWord]
       loadWord(data, firstWord);
       tabEvents();
-    }).fail(function() {
-      console.error('Error fetching data');
+    }).fail(function(error) {
+      console.error('Error fetching data', error);
     });
   </script>
 </body>
