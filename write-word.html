@@ -146,7 +146,7 @@
       .tabs,
       .tabs .tabs-main {
         display: block;
-        height: 400px;
+        height: 40vh;
       }
 
       .mainContainer {
@@ -299,7 +299,6 @@
     }
 
     function handleInput(e){
-      clearTimeout(timer);
       const input = e.target;
       input.value = input.value.toLowerCase();
       const word = words[currentIndex].word.toLowerCase();
@@ -337,6 +336,7 @@
       (nextIndex < elements.length) && elements[nextIndex].focus();
       
       if (!hasError && elements.every(el => el.tagName.toLowerCase() !== 'input' || el.value !== '')) {
+        clearTimeout(timer);
         speak(word);
         delete wrongCountMap[word]
         reviewList = reviewList.filter(item => item.word.toLowerCase() !== word)
