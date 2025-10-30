@@ -161,8 +161,7 @@
       font-size:18px;
       color:green
     }
-    /* top-right music toggle */
-        .music-toggle {
+    .music-toggle {
       display:flex;
       align-items:center;
       gap:6px;
@@ -312,7 +311,7 @@
 
       <div style="margin-top:12px;font-size:13px;color:#555">
         <div style="font-weight:600;margin-bottom:6px">操作说明</div>
-        <div>1) 页面顶部选择分类。 <br/>2) 选择难度/计时后点击开始或重新开始。 <br/>3) 开局显示 5 秒后翻面。 <br/>4) 点击图或单词配对，答对后显示中文并得分。 </div>
+        <div>1) 页面顶部选择分类。 <br/>2) 选择难度/计时后点击开始或重新开始。 <br/>3) 开局显示 6 秒后翻面。 <br/>4) 点击图或单词配对，答对后显示中文并得分。 </div>
       </div>
     </div>
   </div>
@@ -356,6 +355,7 @@
   const fxCanvas = document.getElementById("fxCanvas");
 
   let timerInterval = null;
+  let timerOuter = null;
   let remaining = 0;
   let sfxMuted = false;
   let musicOn = false;
@@ -370,6 +370,7 @@
       d.innerText = k;
       d.onclick = ()=> {
         currentCategory = k;
+        clearTimeout(timerOuter);
         renderTabs();
         startGame(); // 切换 Tab 时重新开始游戏
       };
@@ -435,6 +436,7 @@
   /* ---------- 游戏逻辑 ---------- */
   function startGame(){
     // reset
+    clearTimeout(timerOuter);
     clearInterval(timerInterval);    // 清除旧计时
     matched.clear();
     flipped = [];
@@ -519,7 +521,7 @@
     document.querySelectorAll('.card').forEach(c => c.classList.add('open'));
 
     // after 30s hide all
-    setTimeout(()=> {
+    timerOuter = setTimeout(()=> {
       document.querySelectorAll('.card').forEach(c=> c.classList.remove('open'));
       // start timer if enabled
       if(timerMode){
@@ -534,7 +536,7 @@
           }
         }, 1000);
       }
-    }, 8000);
+    }, 5000);
   }
 
   /* ---------- 点击牌逻辑 ---------- */

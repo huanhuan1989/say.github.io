@@ -66,6 +66,10 @@
       button:hover {
         background: #0056b3;
       }
+      button.sound-btn {
+        padding: 4px 20px;
+        margin-bottom: 10px;
+      }
       .tabs{display:flex;gap:6px;flex-wrap:wrap}
       .tab{padding:6px 10px;border-radius:8px;background:#f0f0f0;cursor:pointer}
       .tab.active{background:var(--primary);color:#fff;font-weight:600}
@@ -136,6 +140,7 @@
             card.setAttribute('data-word', animal.word);
             card.className = 'animal-card';
             card.innerHTML = `
+                <button class="sound-btn" data-word="${animal.word}"> 🔊 播放</button>
                 <img src="${animal.img}" data-word="${animal.word}" alt="${animal.cn}" class="animal-img">
                 <div data-word="${animal.word}"><strong data-word="${animal.word}">${animal.word}</strong></div>
                 <div data-word="${animal.word}">${animal.cn}</div>
