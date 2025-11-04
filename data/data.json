@@ -118,7 +118,7 @@
     {
       "img": "./img/cow.png",
       "word": "cow",
-      "cn": "牛"
+      "cn": "母牛"
     },
     {
       "img": "./img/chick.png",
@@ -128,7 +128,7 @@
     {
       "img": "./img/ox.png",
       "word": "ox",
-      "cn": "牛"
+      "cn": "公牛"
     },
     {
       "img": "./img/duck.png",
