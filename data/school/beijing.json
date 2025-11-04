@@ -1,0 +1,365 @@
+{
+  "一年级上册": [
+    {
+      "name": "star",
+      "trans": [
+        "n. 星，恒星；明星；星形物",
+        "adj. 明星的，主角的；星形的",
+        "vt. 用星号标于；由...主演，由...担任主角"
+      ],
+      "usphone": "[stɑːr]",
+      "ukphone": "[stɑː(r)]"
+    },
+    {
+      "name": "moon",
+      "trans": [
+        "n. 月亮；月球；月光；卫星",
+        "vi. 闲荡；出神",
+        "vt. 虚度"
+      ],
+      "usphone": "[mun]",
+      "ukphone": "[muːn]"
+    },
+    {
+      "name": "night",
+      "trans": [
+        "n. 夜晚，晚上；黑暗，黑夜",
+        "adj. 夜晚的，夜间的"
+      ],
+      "usphone": "[naɪt]",
+      "ukphone": "[naɪt]"
+    },
+    {
+      "name": "lake",
+      "trans": [
+        "n. 湖；深红色颜料；胭脂红",
+        "vt. （使）血球溶解",
+        "vi. （使）血球溶解"
+      ],
+      "usphone": "[leɪk]",
+      "ukphone": "[leɪk]"
+    },
+    {
+      "name": "house",
+      "trans": [
+        "n. 住宅；家庭；机构；议会；某种用途的建筑物",
+        "vt. 覆盖；给...房子住；把...储藏在房内",
+        "vi. 住"
+      ],
+      "usphone": "[haʊs]",
+      "ukphone": "[haʊs]"
+    },
+    {
+      "name": "boat",
+      "trans": [
+        "n. 小船；轮船",
+        "vi. 划船"
+      ],
+      "usphone": "[boʊt]",
+      "ukphone": "[bəʊt]"
+    },
+    {
+      "name": "key",
+      "trans": [
+        "n. （打字机等的）键；关键；钥匙",
+        "vt. 键入；锁上；调节...的音调；提供线索",
+        "vi. 使用钥匙"
+      ],
+      "usphone": "[kiː]",
+      "ukphone": "[kiː]"
+    },
+    {
+      "name": "car",
+      "trans": [
+        "n. 汽车；车厢"
+      ],
+      "usphone": "[kɑːr]",
+      "ukphone": "[kɑː(r)]"
+    },
+    {
+      "name": "gate",
+      "trans": [
+        "n. 大门；出入口；门道",
+        "vt. 给...装大门"
+      ],
+      "usphone": "[ɡeɪt]",
+      "ukphone": "[ɡeɪt]"
+    },
+    {
+      "name": "kite",
+      "trans": [
+        "n. 风筝",
+        "vi. 使用空头支票；像风筝一样飞；轻快地移动",
+        "vt. 骗钱；涂改(支票)"
+      ],
+      "usphone": "[kaɪt]",
+      "ukphone": "[kaɪt]"
+    },
+    {
+      "name": "girl",
+      "trans": [
+        "n.女孩；姑娘，未婚女子；女职员，女演员",
+        "（男人的）女朋友n．（捷）吉尔"
+      ],
+      "usphone": "[g3:rl]",
+      "ukphone": "[g3:]"
+    },
+    {
+      "name": "bike",
+      "trans": [
+        "n.自行车；脚踏车vi.骑自行车 (或摩托车)"
+      ],
+      "usphone": "[baik]",
+      "ukphone": "[baik]"
+    },
+    {
+      "name": "uniform",
+      "trans": [
+        "n.制服 adj.统一的；一致的；相同的；均衡的；始终如一的vt.使穿制服；使成一样"
+      ],
+      "usphone": "[ju:nrfos:rm]",
+      "ukphone": "[ju:nifo:m]"
+    },
+    {
+      "name": "bag",
+      "trans": [
+        "n.袋；猎获物；（俚）一瓶啤酒vt.猎获；把...装入袋中；占据，私吞；使膨大vi.松垂"
+      ],
+      "usphone": "[baeg]",
+      "ukphone": "[beg]"
+    },
+    {
+      "name": "cake",
+      "trans": [
+        "n.蛋糕；块状物；利益总额vt.使结块vi.结成块状"
+      ],
+      "usphone": "[kerk]",
+      "ukphone": "[kerk]"
+    },
+    {
+      "name": "dish",
+      "trans": [
+        "n.盘；餐具；一盘食物；外貌有吸引力的人vt.盛于碟盘中；分发；使某人的希望破灭"
+      ],
+      "usphone": "[dj]",
+      "ukphone": "[dj]"
+    },
+    {
+      "name": "cup",
+      "trans": [
+        "n.杯子；奖杯；酒杯vt.使成杯状；为...拔罐"
+      ],
+      "usphone": "[kp]",
+      "ukphone": "[kp]"
+    },
+    {
+      "name": "nut",
+      "trans": [
+        "n.螺母，螺帽；坚果；难对付的人，难解的问题vi.采坚果"
+      ],
+      "usphone": "[nat]",
+      "ukphone": "[nat]"
+    },
+    {
+      "name": "spoon",
+      "trans": [
+        "n.匙，勺子；一的量vt.用匙；使成匙状vi. 轻轻向上击"
+      ],
+      "usphone": "[spu:n]",
+      "ukphone": "[spu:n]"
+    },
+    {
+      "name": "eye",
+      "trans": [
+        "n.眼睛；视力；眼光；见解，观点vt.注视看"
+      ],
+      "usphone": "[a]",
+      "ukphone": "[ai]"
+    },
+    {
+      "name": "ear",
+      "trans": [
+        "n.耳朵；穗；听觉；倾听vi．（美俚）听见；抽穗"
+      ],
+      "usphone": "[r]",
+      "ukphone": "[re(r)]"
+    },
+    {
+      "name": "knee",
+      "trans": [
+        "n.膝盖，膝vt.用膝盖碰"
+      ],
+      "usphone": "[ni:]",
+      "ukphone": "[ni:]"
+    },
+    {
+      "name": "foot",
+      "trans": [
+        "n. 脚；英尺；步调；末尾",
+        "vt. 支付；给...换底",
+        "vi. 步行；跳舞；总计"
+      ],
+      "usphone": "[fut]",
+      "ukphone": "[fʊt]"
+    },
+    {
+      "name": "bed",
+      "trans": [
+        "n. 床；基础；河底，海底",
+        "vt. 使睡觉；安置，嵌入；栽种",
+        "vi. 上床；分层"
+      ],
+      "usphone": "[bed]",
+      "ukphone": "[bed]"
+    },
+    {
+      "name": "box",
+      "trans": [
+        "n. 箱，盒子；包厢；一拳",
+        "vt. 拳击；装...入盒中；打耳光",
+        "vi. 拳击"
+      ],
+      "usphone": "[bɑ:ks]",
+      "ukphone": "[bɒks]"
+    },
+    {
+      "name": "pen",
+      "trans": [
+        "n. 钢笔；作家；围栏",
+        "vt. 写；关入栏中"
+      ],
+      "usphone": "[pen]",
+      "ukphone": "[pen]"
+    },
+    {
+      "name": "book",
+      "trans": [
+        "n. 书籍；卷；帐簿；名册；工作簿",
+        "vt. 预订；登记"
+      ],
+      "usphone": "[bʊk]",
+      "ukphone": "[bʊk]"
+    },
+    {
+      "name": "coat",
+      "trans": [
+        "n. 外套",
+        "vt. 覆盖...的表面"
+      ],
+      "usphone": "[koʊt]",
+      "ukphone": "[kəʊt]"
+    },
+    {
+      "name": "UFO",
+      "trans": [
+        "abbr. 不明飞行物（Unidentified Flying Object）"
+      ],
+      "usphone": "[ju: ef'ou, ju:fou]",
+      "ukphone": "[juː efˈuː; juːfou]"
+    },
+    {
+      "name": "hut",
+      "trans": [
+        "n. 小屋；临时营房",
+        "vt. 使住在小屋中；驻扎",
+        "vi. 住在小屋中；驻扎"
+      ],
+      "usphone": "[hʌt]",
+      "ukphone": "[hʌt]"
+    },
+    {
+      "name": "skirt",
+      "trans": [
+        "n. 裙子",
+        "vt. 绕过，回避；位于...边缘",
+        "vi. 沿边走，绕开；环绕"
+      ],
+      "usphone": "[skɜːrt]",
+      "ukphone": "[skɜːt]"
+    },
+    {
+      "name": "wood",
+      "trans": [
+        "n. 木材；木制品；树林",
+        "vt. 植林于；给...添加木柴",
+        "vi. 收集木材"
+      ],
+      "usphone": "[wʊd]",
+      "ukphone": "[wʊd]"
+    },
+    {
+      "name": "bird",
+      "trans": [
+        "n. 鸟；家伙；羽毛球",
+        "vt. 向...喝倒彩；起哄",
+        "vi. 猎鸟；观察研究野鸟"
+      ],
+      "usphone": "[bɜːrd]",
+      "ukphone": "[bɜːd]"
+    },
+    {
+      "name": "bee",
+      "trans": [
+        "n. 蜜蜂，蜂；勤劳的人"
+      ],
+      "usphone": "[bi:]",
+      "ukphone": "[bi:]"
+    },
+    {
+      "name": "deer",
+      "trans": [
+        "n. 鹿"
+      ],
+      "usphone": "[dɪr]",
+      "ukphone": "[dɪə(r)]"
+    },
+    {
+      "name": "cat",
+      "trans": [
+        "n. 猫，猫科动物"
+      ],
+      "usphone": "[kæt]",
+      "ukphone": "[kæt]"
+    },
+    {
+      "name": "dog",
+      "trans": [
+        "n. 狗；丑女人；卑鄙的人；(俚)朋友",
+        "vt. 跟踪；尾随"
+      ],
+      "usphone": "[dɔːɡ]",
+      "ukphone": "[dɒɡ]"
+    },
+    {
+      "name": "fish",
+      "trans": [
+        "n. 鱼，鱼类",
+        "vt. 钓鱼，捕鱼；搜寻",
+        "vi. 捕鱼；钓鱼；用钩捞取"
+      ],
+      "usphone": "[fɪʃ]",
+      "ukphone": "[fɪʃ]"
+    },
+    {
+      "name": "mouse",
+      "trans": [
+        "n. 鼠标；老鼠；胆小羞怯的人",
+        "vt. 探出",
+        "vi. 捕鼠；窥探"
+      ],
+      "usphone": "[maʊs]",
+      "ukphone": "[maʊs]"
+    }
+  ],
+  "一年级下册": [],
+  "二年级上册": [],
+  "二年级下册": [],
+  "三年级上册": [],
+  "三年级下册": [],
+  "四年级上册": [],
+  "四年级下册": [],
+  "五年级上册": [],
+  "五年级下册": [],
+  "六年级上册": [],
+  "六年级下册": []
+}

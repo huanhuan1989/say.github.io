@@ -6,6 +6,10 @@
     "key": "waiYanShe"
   },
   {
+    "name": "北京版",
+    "key": "beijing"
+  },
+  {
     "name": "人教版",
     "key": "renJiao"
   }
