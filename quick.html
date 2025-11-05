@@ -280,6 +280,12 @@
         font-size: 20px;
         margin: 12px 0 20px;
       }
+      #board {
+        padding: 0;
+      }
+      #quizPanel .controls { 
+        padding: 0;
+      }
       .controls {
         gap: 20px 8px;
         background: transparent;
@@ -338,7 +344,13 @@
       }
       .expr { font-size: 18px; }
       .ans, .expr .ans { max-width: 70px; }
-      .controls{ 
+      #board {
+        padding: 0;
+      }
+      #quizPanel .controls { 
+        padding: 0;
+      }
+      .controls {
         background: transparent;
       }
       .controls label {
@@ -395,10 +407,10 @@
             <option value="20" selected>20题</option>
             <option value="25">25题</option>
             <option value="30">30题</option>
-            <option value="50">50以内</option>
-            <option value="70">70以内</option>
-            <option value="90">90以内</option>
-            <option value="100">100以内</option>
+            <option value="50">50题</option>
+            <option value="70">70题</option>
+            <option value="90">90题</option>
+            <option value="100">100题</option>
             <option value="custom">自定义</option>
           </select>
           <input
