@@ -363,6 +363,40 @@
         width: 100%;
       }
     }
+    /* 打印样式 */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      #quizPanel .controls,
+      #settingsPanel,
+      #resultsPanel {
+        display: none !important;
+      }
+      #board {
+        margin: 0;
+        padding: 0;
+      }
+      .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+      .ans {
+        border: 2px solid #333 !important;
+        background: transparent !important;
+        color: #000 !important;
+      }
+      .ans.correct,
+      .ans.wrong {
+        border: 2px solid #333 !important;
+        background: transparent !important;
+        color: #000 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -468,8 +502,12 @@
     <div id="quizPanel" style="display:none;">
       <div class="controls" style="flex-direction: initial; width: 98.5%;">
         <div id="timer" class="timer">00:00</div>
-        <!-- <button id="checkBtn" class="btn">判分</button> -->
-        <button id="resetTimerBtn" class="btn">重新计时</button>
+        <div style="width: 92%; display: flex; gap: 1rem;">
+          <!-- <button id="checkBtn" class="btn">判分</button> -->
+          <button id="resetTimerBtn" class="btn">重新计时</button>
+          <button id="printBtn" class="btn">打印</button>
+          <button id="downBtn" class="btn">下载</button>
+        </div>
       </div>
 
       <div id="board" style="margin-top: 1rem;"></div>
@@ -1242,6 +1280,104 @@
           first && first.focus();
         }
       });
+      
+      // 导出 Word 文档功能（顶层）
+      function exportToWord() {
+        if (!currentProblems || currentProblems.length === 0) {
+          alert('请先生成题目！');
+          return;
+        }
+        
+        // 生成 Word 文档内容
+        let htmlContent = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">';
+        htmlContent += '<head><meta charset="utf-8">';
+        htmlContent += '<style>body { font-family: "Microsoft YaHei", Arial, sans-serif; padding: 8px; }';
+        htmlContent += 'table { border-collapse: collapse; width: 100%; margin: 8px 0; }';
+        htmlContent += 'td { padding: 6px; border: 1px solid #ddd; font-size: 16px; }';
+        htmlContent += '.expr { font-size: 18px; font-weight: bold; }';
+        htmlContent += 'h1 { text-align: center; color: #3498db; }</style></head><body>';
+        htmlContent += '<h1>口算练习题</h1>';
+        htmlContent += '<table>';
+        
+        // 每行显示 4 道题
+        const colsPerRow = 4;
+        for (let i = 0; i < currentProblems.length; i += colsPerRow) {
+          htmlContent += '<tr>';
+          for (let j = 0; j < colsPerRow && i + j < currentProblems.length; j++) {
+            const p = currentProblems[i + j];
+            let exprText = '';
+            
+            if (p.nums && p.ops) {
+              // 多步骤运算
+              const nums = [...p.nums];
+              const ops = [...p.ops];
+              
+              for (let k = 0; k < nums.length; k++) {
+                if (p.blank === 0) {
+                  // 结果为空
+                  exprText += nums[k];
+                } else if (p.blank === k + 1) {
+                  // 当前数字为空
+                  exprText += '（　　）';
+                } else {
+                  exprText += nums[k];
+                }
+                if (k < ops.length) {
+                  exprText += ' ' + ops[k] + ' ';
+                }
+              }
+              
+              if (p.blank === 0) {
+                exprText += ' = （　　）';
+              } else {
+                exprText += ' = ' + p.result;
+              }
+            } else {
+              // 两位运算
+              const opSymbol = p.op === '+' ? '+' : (p.op === '-' ? '−' : (p.op === '*' ? '×' : '÷'));
+              if (p.blank === 'a') {
+                exprText = `（　　） ${opSymbol} ${p.b} = ${p.result}`;
+              } else if (p.blank === 'b') {
+                exprText = `${p.a} ${opSymbol} （　　） = ${p.result}`;
+              } else {
+                exprText = `${p.a} ${opSymbol} ${p.b} = （　　）`;
+              }
+            }
+            
+            htmlContent += `<td class="expr">${exprText}</td>`;
+          }
+          // 如果最后一行不足 4 列，填充空单元格
+          const remainingCols = colsPerRow - (currentProblems.length - i);
+          for (let k = 0; k < remainingCols && remainingCols < colsPerRow; k++) {
+            htmlContent += '<td></td>';
+          }
+          htmlContent += '</tr>';
+        }
+        
+        htmlContent += '</table>';
+        htmlContent += '<p style="text-align: center; margin-top: 30px; color: #7f8c8d;">共 ' + currentProblems.length + ' 道题</p>';
+        htmlContent += '</body></html>';
+        
+        // 创建 Blob 并下载
+        const blob = new Blob(['\ufeff', htmlContent], {
+          type: 'application/msword'
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = '口算练习题_' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '.doc';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      // 绑定打印与下载按钮
+      const printBtn = document.getElementById('printBtn');
+      const downBtn = document.getElementById('downBtn');
+      printBtn && printBtn.addEventListener('click', function(){ window.print(); });
+      downBtn && downBtn.addEventListener('click', function(){ exportToWord(); });
+      
       maxSel.addEventListener('change', function(){
         const isCustom = maxSel.value === 'custom';
         customMax.disabled = !isCustom;
