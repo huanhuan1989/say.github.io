@@ -17,11 +17,17 @@
       -moz-osx-font-smoothing: grayscale;
     }
     .container {
-      max-width: 980px;
+      max-width: 1280px;
       margin: 0 auto;
       background: transparent;
       border-radius: 16px;
       padding: 12px;
+    }
+    #settingsPanel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     h1 {
       margin: 8px 0 20px;
@@ -34,6 +40,12 @@
       align-items: center;
       gap: 20px 12px;
       margin: auto 12px;
+      flex-direction: column;
+      align-items: stretch;
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      width: 360px;
     }
     .controls label {
       font-size: 14px;
@@ -72,7 +84,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
     .card {
@@ -232,6 +244,10 @@
       font-weight: 800;
       color: #34495e;
     }
+    #board {
+      margin-top: 1rem;
+      padding: 0.5rem;
+    }
     /* 平板适配 */
     @media (max-width: 900px) {
       .grid { 
@@ -239,7 +255,7 @@
         gap: 8px;
       }
       .card {
-        padding: 14px 12px;
+        padding: 12px;
       }
       .expr {
         font-size: 24px;
@@ -266,9 +282,7 @@
       }
       .controls {
         gap: 20px 8px;
-      }
-      .controls label {
-        font-size: 14px;
+        background: transparent;
       }
       .select, .input, .btn {
         padding: 8px 12px;
@@ -280,7 +294,7 @@
         gap: 8px;
       }
       .card {
-        padding: 16px 12px;
+        padding: 12px;
         flex-direction: column;
         gap: 10px;
       }
@@ -324,13 +338,11 @@
       }
       .expr { font-size: 18px; }
       .ans, .expr .ans { max-width: 70px; }
-      .controls {
-        flex-direction: column;
-        align-items: stretch;
+      .controls{ 
+        background: transparent;
       }
       .controls label {
         width: 100%;
-        justify-content: space-between;
       }
       .select, .input {
         width: 100%;
@@ -356,9 +368,12 @@
           <span>上限：</span>
           <select id="maxSel" class="select">
             <option value="5">5以内</option>
-            <option value="10" selected>10以内</option>
-            <option value="20">20以内</option>
+            <option value="10">10以内</option>
+            <option value="20" selected>20以内</option>
             <option value="50">50以内</option>
+            <option value="70">70以内</option>
+            <option value="90">90以内</option>
+            <option value="100">100以内</option>
             <option value="custom">自定义</option>
           </select>
           <input
@@ -380,6 +395,10 @@
             <option value="20" selected>20题</option>
             <option value="25">25题</option>
             <option value="30">30题</option>
+            <option value="50">50以内</option>
+            <option value="70">70以内</option>
+            <option value="90">90以内</option>
+            <option value="100">100以内</option>
             <option value="custom">自定义</option>
           </select>
           <input
@@ -393,27 +412,49 @@
             style="display:none;"
             />
         </label>
-        <label style="justify-content: left;">
-          <p>
-            <input id="minusCb" type="checkbox" checked /> 减法
-          </p>
-          <p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <label style="gap: 0; cursor: pointer;">
             <input id="plusCb" type="checkbox" checked /> 加法
-          </p>
+          </label>
+          <label style="gap: 0; cursor: pointer;">
+            <input id="minusCb" type="checkbox" checked /> 减法
+          </label>
+          <label style="gap: 0; cursor: pointer;">
+            <input id="mulCb" type="checkbox" /> 乘法
+          </label>
+          <label style="gap: 0; cursor: pointer;">
+            <input id="divCb" type="checkbox" /> 除法
+          </label>
+        </div>
+        <label>
+          <span>类型：</span>
+          <select id="typeSel" class="select">
+            <option value="custom" selected>默认</option>
+            <option value="addsub">混合加减法</option>
+            <option value="all">混合加减乘除</option>
+          </select>
+        </label>
+        <label id="digitLabel" style="display:none;">
+          <span>位数：</span>
+          <select id="digitSel" class="select">
+            <option value="2" selected>两位运算</option>
+            <option value="3">三位运算</option>
+            <option value="4">四位运算</option>
+          </select>
         </label>
         <label style="margin-top: 0.25rem;">
-          <button id="genBtn" class="btn">生成题目</button>
+          <button id="genBtn" class="btn" style="width: 100%;">生成题目</button>
         </label>
       </div>
 
       <div id="customEditor" style="display:none; margin: 8px 0;">
-      <textarea id="customProblems" class="input" placeholder="每行一题，例如：\n3 + 4\n10 - 口 = 5\n口 + 7 = 12\n8 + 6 = 口" rows="6" style="width:100%; resize: vertical;"></textarea>
-      <div class="tip">提示：支持“+/-”，支持在任意一侧用“口”留空（a、b、或结果）。</div>
+      <textarea id="customProblems" class="input" placeholder="每行一题，例如：\n3 + 4\n10 - 口 = 5\n口 + 7 = 12\n8 + 6 = 口\n3 × 4 = 口\n口 × 5 = 15\n20 ÷ 口 = 4" rows="6" style="width:100%; resize: vertical;"></textarea>
+      <div class="tip">提示：支持“+/-/×/÷”或“*//”，支持在任意一侧用“口”留空（a、b、或结果）。</div>
       </div>
     </div>
 
     <div id="quizPanel" style="display:none;">
-      <div class="controls" style="flex-direction: initial; flex-wrap: nowrap;">
+      <div class="controls" style="flex-direction: initial; width: 98.5%;">
         <div id="timer" class="timer">00:00</div>
         <!-- <button id="checkBtn" class="btn">判分</button> -->
         <button id="resetTimerBtn" class="btn">重新计时</button>
@@ -423,16 +464,16 @@
     </div>
 
     <div id="resultsPanel" style="display:none; flex-direction: column;">
-      <div class="result-card result-card-none">
+      <!-- <div class="result-card result-card-none">
         <div class="result-icon"></div>
         <div class="result-title">结果</div>
-      </div>
+      </div> -->
       <div class="results-header">
         <div id="finalScore" class="final-score">成绩：0 / 0</div>
       </div>
       <div id="wrongList" style="margin-top:10px;"></div>
       <div style="margin-top:12px;">
-        <button id="backToSettings" class="btn">重新出题</button>
+        <button id="backToSettings" class="btn" style="width: 100%;">重新出题</button>
       </div>
     </div>
   </div>
@@ -445,22 +486,299 @@
     function randInt(min, max){
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    function makeAdd(max){
+    // 计算多步骤运算结果（考虑运算优先级：先乘除后加减）
+    function calculateMultiStep(nums, ops){
+      // 先计算所有乘除（从左到右）
+      const values = [...nums];
+      const operators = [...ops];
+      
+      // 先处理乘除
+      let i = 0;
+      while (i < operators.length) {
+        if (operators[i] === '×' || operators[i] === '÷') {
+          const left = values[i];
+          const right = values[i + 1];
+          let result;
+          if (operators[i] === '×') {
+            result = left * right;
+          } else {
+            result = left / right;
+            // 确保除法结果是整数
+            if (result % 1 !== 0) {
+              return NaN; // 不是整数，返回NaN
+            }
+          }
+          // 替换两个数字为一个结果
+          values.splice(i, 2, result);
+          operators.splice(i, 1);
+        } else {
+          i++;
+        }
+      }
+      
+      // 再计算所有加减（从左到右）
+      let result = values[0];
+      for (let j = 0; j < operators.length; j++) {
+        if (operators[j] === '+') {
+          result = result + values[j + 1];
+        } else if (operators[j] === '-') {
+          result = result - values[j + 1];
+        }
+      }
+      return result;
+    }
+    
+    // 生成多步骤运算题目（两位=a+b，三位=a+b-c，四位=a+b×c-d）
+    function makeMultiStep(max, steps, ops, type, retryCount = 0){
+      if (retryCount > 20) {
+        // 防止无限递归，如果重试超过20次，降级为两位运算
+        return makeMultiStep(max, 2, ['+'], 'addsub', 0);
+      }
+      
+      const stepsNum = steps || 2; // 默认两位运算
+      const availableOps = ops || [];
+      if (availableOps.length === 0) availableOps.push('+'); // 至少加法
+      
+      const nums = [];
+      const operators = [];
+      
+      // 生成第一个数字
+      const firstNum = randInt(1, Math.min(max, 50));
+      nums.push(firstNum);
+      
+      // 生成后续数字和运算符
+      for (let i = 1; i < stepsNum; i++) {
+        const op = availableOps[randInt(0, availableOps.length - 1)];
+        operators.push(op);
+        
+        let nextNum;
+        if (op === '+') {
+          nextNum = randInt(1, Math.min(max, 50));
+        } else if (op === '-') {
+          nextNum = randInt(1, Math.min(max, 50));
+        } else if (op === '×') {
+          nextNum = randInt(1, Math.min(10, max));
+        } else if (op === '÷') {
+          // 对于除法，需要确保能够整除
+          // 先计算当前的结果，然后选择一个能整除的数作为除数
+          const currentResult = calculateMultiStep([...nums], [...operators]);
+          if (isNaN(currentResult) || currentResult <= 0) {
+            // 如果当前结果不合理，重新生成
+            return makeMultiStep(max, steps, ops, type, retryCount + 1);
+          }
+          // 选择一个能整除 currentResult 的除数
+          const divisors = [];
+          for (let d = 1; d <= Math.min(10, currentResult); d++) {
+            if (currentResult % d === 0) {
+              divisors.push(d);
+            }
+          }
+          if (divisors.length === 0) {
+            // 如果没有合适的除数，重新生成
+            return makeMultiStep(max, steps, ops, type, retryCount + 1);
+          }
+          nextNum = divisors[randInt(0, divisors.length - 1)];
+        }
+        nums.push(nextNum);
+      }
+      
+      // 计算最终结果（考虑运算优先级）
+      let result = calculateMultiStep([...nums], [...operators]);
+      
+      // 检查结果是否合理
+      if (result > max || result < 0 || isNaN(result) || !isFinite(result) || result % 1 !== 0) {
+        // 如果结果超出范围或不是整数，重新生成
+        return makeMultiStep(max, steps, ops, type, retryCount + 1);
+      }
+      
+      // 随机决定空位位置（0表示结果，1-4表示第几个数字）
+      const blankPos = randInt(0, stepsNum);
+      
+      return {
+        nums: nums,
+        ops: operators,
+        result: Math.round(result),
+        blank: blankPos,
+        steps: stepsNum
+      };
+    }
+
+    function makeAdd(max, digits = null){
+      if (digits) {
+        const range = getRangeByDigits(digits);
+        // 确保 a 和 b 的和不会超过 max
+        const aMax = Math.min(range.max, max - range.min);
+        if (aMax < range.min) {
+          // 如果上限太小，无法生成符合位数的加法，降级处理
+          const a = randInt(0, max);
+          const b = randInt(0, max - a);
+          return { a, b, op: '+', result: a + b };
+        }
+        const a = randInt(range.min, aMax);
+        const bMax = Math.min(range.max, max - a);
+        const b = bMax >= range.min ? randInt(range.min, bMax) : randInt(range.min, Math.min(max - a, range.max));
+        // 确保结果不超过 max
+        if (a + b > max) {
+          const bAdjusted = Math.max(0, max - a);
+          return { a, b: bAdjusted, op: '+', result: a + bAdjusted };
+        }
+        return { a, b, op: '+', result: a + b };
+      }
       const a = randInt(0, max);
       const b = randInt(0, max - a); // 保证和不超上限
       return { a, b, op: '+', result: a + b };
     }
-    function makeSub(max){
+    function makeSub(max, digits = null){
+      if (digits) {
+        const range = getRangeByDigits(digits);
+        // 确保 a >= b，且结果在合理范围
+        const aMax = Math.min(range.max, max + range.max); // a 可以超过 max，只要 b 也大
+        if (aMax < range.min) {
+          // 如果上限太小，无法生成符合位数的减法，降级处理
+          const a = randInt(0, max);
+          const b = randInt(0, a);
+          return { a, b, op: '-', result: a - b };
+        }
+        const a = randInt(range.min, Math.min(aMax, max + range.max));
+        const b = randInt(range.min, Math.min(a, range.max)); // 保证不为负
+        return { a, b, op: '-', result: a - b };
+      }
       const a = randInt(0, max);
       const b = randInt(0, a); // 保证不为负
       return { a, b, op: '-', result: a - b };
     }
-    function genProblems(count, max, useAdd, useSub){
+    function makeMul(max, digits = null, retryCount = 0){
+      if (retryCount > 10) {
+        // 防止无限递归，如果重试超过10次，降低要求
+        const a = randInt(1, Math.min(max, 10));
+        const bMax = Math.floor(max / a);
+        const b = randInt(1, Math.max(1, bMax));
+        return { a, b, op: '×', result: a * b };
+      }
+      
+      if (digits) {
+        const range = getRangeByDigits(digits);
+        // 确保 a 不会太大，导致结果必然超过 max
+        const aMax = Math.min(range.max, Math.floor(max / range.min));
+        if (aMax < range.min) {
+          // 如果上限太小，无法生成符合位数的乘法，降级处理
+          const a = randInt(1, Math.min(max, 10));
+          const bMax = Math.floor(max / a);
+          const b = randInt(1, Math.max(1, bMax));
+          return { a, b, op: '×', result: a * b };
+        }
+        const a = randInt(range.min, aMax);
+        const bMax = Math.min(Math.floor(max / a), range.max);
+        if (bMax < 1) {
+          // 如果 bMax 小于 1，重新生成（降低要求）
+          return makeMul(max, digits, retryCount + 1);
+        }
+        const b = bMax >= range.min ? randInt(range.min, bMax) : randInt(1, bMax);
+        const result = a * b;
+        if (result > max) {
+          // 如果结果超出上限，重新生成
+          return makeMul(max, digits, retryCount + 1);
+        }
+        return { a, b, op: '×', result: result };
+      }
+      const a = randInt(1, Math.min(max, 10)); // 乘数限制在1-10，避免结果过大
+      const bMax = Math.floor(max / a); // 保证积不超过上限
+      const b = randInt(1, Math.max(1, bMax));
+      return { a, b, op: '×', result: a * b };
+    }
+    function makeDiv(max, digits = null, retryCount = 0){
+      if (retryCount > 10) {
+        // 防止无限递归，如果重试超过10次，降低要求
+        const result = randInt(1, Math.min(max, 10));
+        const b = randInt(1, Math.min(max, 10));
+        const a = result * b;
+        return { a, b, op: '÷', result: result };
+      }
+      
+      if (digits) {
+        const range = getRangeByDigits(digits);
+        // 确保除数不会太大，导致被除数必然超过 max
+        const bMax = Math.min(range.max, Math.floor(max / 1));
+        if (bMax < range.min) {
+          // 如果上限太小，无法生成符合位数的除法，降级处理
+          const result = randInt(1, Math.min(max, 10));
+          const b = randInt(1, Math.min(max, 10));
+          const a = result * b;
+          return { a, b, op: '÷', result: result };
+        }
+        // 先确定除数（在位数范围内），再确定商，最后计算被除数
+        const b = randInt(range.min, bMax);
+        const maxResult = Math.min(Math.floor(max / b), 10); // 商限制在合理范围
+        if (maxResult < 1) {
+          // 如果 maxResult 小于 1，重新生成（降低要求）
+          return makeDiv(max, digits, retryCount + 1);
+        }
+        const result = randInt(1, Math.max(1, maxResult));
+        const a = result * b;
+        if (a > range.max || a > max) {
+          // 如果超出上限，重新生成
+          return makeDiv(max, digits, retryCount + 1);
+        }
+        return { a, b, op: '÷', result: result };
+      }
+      // 先确定结果，再反推被除数和除数
+      const result = randInt(1, Math.min(max, 10));
+      const b = randInt(1, Math.min(max, 10));
+      const a = result * b;
+      if (a > max) {
+        // 如果超出上限，重新生成
+        return makeDiv(max, null, retryCount + 1);
+      }
+      return { a, b, op: '÷', result: result };
+    }
+    function genProblems(count, max, type, useAdd, useSub, useMul, useDiv, steps = null){
       const list = [];
+      
+      // 如果选择了混合类型且有步数选择，使用多步骤运算
+      if ((type === 'addsub' || type === 'all') && steps) {
+        const availableOps = [];
+        if (type === 'addsub') {
+          availableOps.push('+', '-');
+        } else {
+          availableOps.push('+', '-', '×', '÷');
+        }
+        
+        const seen = new Set();
+        let guard = 0;
+        while(list.length < count && guard < count * 50){
+          guard++;
+          const p = makeMultiStep(max, steps, availableOps, type);
+          const key = JSON.stringify(p);
+          if (seen.has(key)) continue;
+          seen.add(key);
+          list.push(p);
+        }
+        return list;
+      }
+      
+      // 否则使用原来的两位运算逻辑
       const makers = [];
-      if (useAdd) makers.push(makeAdd);
-      if (useSub) makers.push(makeSub);
-      if (!makers.length) makers.push(makeAdd); // 至少加法
+      if (type === 'addsub') {
+        makers.push(
+          (max) => makeAdd(max, null),
+          (max) => makeSub(max, null)
+        );
+      } else if (type === 'all') {
+        makers.push(
+          (max) => makeAdd(max, null),
+          (max) => makeSub(max, null),
+          (max) => makeMul(max, null),
+          (max) => makeDiv(max, null)
+        );
+      } else {
+        // 自定义：根据复选框选择
+        if (useAdd) makers.push((max) => makeAdd(max, null));
+        if (useSub) makers.push((max) => makeSub(max, null));
+        if (useMul) makers.push((max) => makeMul(max, null));
+        if (useDiv) makers.push((max) => makeDiv(max, null));
+      }
+      
+      if (!makers.length) makers.push((max) => makeAdd(max, null)); // 至少加法
       const seen = new Set();
       let guard = 0;
       while(list.length < count && guard < count * 50){
@@ -484,15 +802,19 @@
       const result = [];
       for (const line of lines) {
         try {
-          // 支持三种：
+          // 支持四种运算符：+ - * / 或 × ÷
           // 1) a op b
           // 2) a op b = 口
           // 3) 口 op b = c / a op 口 = c
           const eqParts = line.split('=').map(s => s.trim());
           let a, b, op, res, blank;
-          if (eqParts.length === 1) {
+          // 统一运算符：* 转 ×，/ 转 ÷
+          const normalizedLine = line.replace(/\*/g, '×').replace(/\//g, '÷');
+          const normalizedParts = normalizedLine.split('=').map(s => s.trim());
+          
+          if (normalizedParts.length === 1) {
             // 只有左侧：a op b
-            const m = eqParts[0].match(/^(.+)([+\-])(.*)$/);
+            const m = normalizedParts[0].match(/^(.+)([+\-×÷])(.*)$/);
             if (!m) continue;
             a = m[1].trim(); op = m[2]; b = m[3].trim();
             if (a === '口') { blank = 'a'; a = NaN; }
@@ -501,12 +823,16 @@
             if (!blank) blank = 'result';
             a = Number(a); b = Number(b);
             if (Number.isNaN(a) || Number.isNaN(b)) continue;
-            res = op === '+' ? a + b : a - b;
+            if (op === '+') res = a + b;
+            else if (op === '-') res = a - b;
+            else if (op === '×') res = a * b;
+            else if (op === '÷') res = a / b;
+            else continue;
           } else {
             // 含等号：LHS = RHS
-            const lhs = eqParts[0];
-            const rhs = eqParts[1];
-            const m = lhs.match(/^(.+)([+\-])(.*)$/);
+            const lhs = normalizedParts[0];
+            const rhs = normalizedParts[1];
+            const m = lhs.match(/^(.+)([+\-×÷])(.*)$/);
             if (!m) continue;
             let la = m[1].trim(), lop = m[2], lb = m[3].trim();
             op = lop;
@@ -515,7 +841,11 @@
               blank = 'result';
               a = Number(la); b = Number(lb);
               if (Number.isNaN(a) || Number.isNaN(b)) continue;
-              res = op === '+' ? a + b : a - b;
+              if (op === '+') res = a + b;
+              else if (op === '-') res = a - b;
+              else if (op === '×') res = a * b;
+              else if (op === '÷') res = a / b;
+              else continue;
             } else if (la === '口' || lb === '口') {
               // 口 op b = c  或 a op 口 = c
               const c = Number(rhs);
@@ -525,13 +855,21 @@
                 b = Number(lb);
                 if (Number.isNaN(b)) continue;
                 res = c;
-                a = op === '+' ? c - b : c + b;
+                if (op === '+') a = c - b;
+                else if (op === '-') a = c + b;
+                else if (op === '×') a = c / b;
+                else if (op === '÷') a = c * b;
+                else continue;
               } else {
                 blank = 'b';
                 a = Number(la);
                 if (Number.isNaN(a)) continue;
                 res = c;
-                b = op === '+' ? c - a : a - c;
+                if (op === '+') b = c - a;
+                else if (op === '-') b = a - c;
+                else if (op === '×') b = c / a;
+                else if (op === '÷') b = a / c;
+                else continue;
               }
             } else {
               // a op b = c
@@ -612,8 +950,36 @@
             const ok = val !== '' && Number(val) === Number(inp.dataset.correct);
             if (!ok) {
               const p = currentProblems[idx];
-              const holeText = p.blank === 'a' ? `口 ${p.op} ${p.b} = ${p.result}`
-                : (p.blank === 'b' ? `${p.a} ${p.op} 口 = ${p.result}` : `${p.a} ${p.op} ${p.b} = 口`);
+              let holeText;
+              
+              // 判断是否为多步骤运算
+              if (p.nums && p.ops) {
+                // 多步骤运算
+                const nums = p.nums;
+                const ops = p.ops;
+                let exprParts = [];
+                for (let i = 0; i < nums.length; i++) {
+                  if (p.blank === i + 1) {
+                    exprParts.push('口');
+                  } else {
+                    exprParts.push(String(nums[i]));
+                  }
+                  if (i < ops.length) {
+                    exprParts.push(` ${ops[i]} `);
+                  }
+                }
+                if (p.blank === 0) {
+                  exprParts.push(' = 口');
+                } else {
+                  exprParts.push(` = ${p.result}`);
+                }
+                holeText = exprParts.join('');
+              } else {
+                // 两位运算
+                holeText = p.blank === 'a' ? `口 ${p.op} ${p.b} = ${p.result}`
+                  : (p.blank === 'b' ? `${p.a} ${p.op} 口 = ${p.result}` : `${p.a} ${p.op} ${p.b} = 口`);
+              }
+              
               const row = document.createElement('div');
               row.className = 'card';
               row.style.flexDirection = 'column';
@@ -683,24 +1049,66 @@
         input.setAttribute('type', 'number');
         input.setAttribute('inputmode', 'numeric');
         input.setAttribute('aria-label', `第${idx+1}题`);
-        // 设置正确答案为空位对应的值
-        const correctValue = p.blank === 'a' ? p.a : (p.blank === 'b' ? p.b : p.result);
-        input.dataset.correct = String(correctValue);
-
-        // 根据空位位置渲染：当空在 a/b 时，把 input 嵌入表达式；空在 result 时，input 放等号后
-        if (p.blank === 'a') {
-          // [input] op b = result
-          expr.appendChild(input);
-          expr.appendChild(document.createTextNode(` ${p.op} ${p.b} = ${p.result}`));
-        } else if (p.blank === 'b') {
-          // a op [input] = result
-          expr.appendChild(document.createTextNode(`${p.a} ${p.op} `));
-          expr.appendChild(input);
-          expr.appendChild(document.createTextNode(` = ${p.result}`));
+        
+        // 判断是否为多步骤运算
+        if (p.nums && p.ops) {
+          // 多步骤运算：p.nums = [a, b, c, d], p.ops = ['+', '-', '×'], p.blank = 0-4
+          const nums = p.nums;
+          const ops = p.ops;
+          let correctValue;
+          
+          if (p.blank === 0) {
+            // 结果为空
+            correctValue = p.result;
+          } else {
+            // 某个数字为空（blank 是 1-based 索引）
+            correctValue = nums[p.blank - 1];
+          }
+          input.dataset.correct = String(correctValue);
+          
+          // 渲染多步骤表达式
+          for (let i = 0; i < nums.length; i++) {
+            if (p.blank === i + 1) {
+              // 当前数字为空，插入输入框
+              expr.appendChild(input);
+            } else {
+              // 显示数字
+              expr.appendChild(document.createTextNode(String(nums[i])));
+            }
+            // 添加运算符（除了最后一个数字）
+            if (i < ops.length) {
+              expr.appendChild(document.createTextNode(` ${ops[i]} `));
+            }
+          }
+          // 添加等号和结果（或输入框）
+          if (p.blank === 0) {
+            // 结果为空，在等号后添加输入框
+            expr.appendChild(document.createTextNode(' = '));
+            expr.appendChild(input);
+          } else {
+            // 数字为空，显示结果
+            expr.appendChild(document.createTextNode(` = ${p.result}`));
+          }
         } else {
-          // a op b = [input]（将输入框嵌入表达式内部，避免右侧分离）
-          expr.appendChild(document.createTextNode(`${p.a} ${p.op} ${p.b} = `));
-          expr.appendChild(input);
+          // 两位运算：原有的逻辑
+          const correctValue = p.blank === 'a' ? p.a : (p.blank === 'b' ? p.b : p.result);
+          input.dataset.correct = String(correctValue);
+
+          // 根据空位位置渲染：当空在 a/b 时，把 input 嵌入表达式；空在 result 时，input 放等号后
+          if (p.blank === 'a') {
+            // [input] op b = result
+            expr.appendChild(input);
+            expr.appendChild(document.createTextNode(` ${p.op} ${p.b} = ${p.result}`));
+          } else if (p.blank === 'b') {
+            // a op [input] = result
+            expr.appendChild(document.createTextNode(`${p.a} ${p.op} `));
+            expr.appendChild(input);
+            expr.appendChild(document.createTextNode(` = ${p.result}`));
+          } else {
+            // a op b = [input]（将输入框嵌入表达式内部，避免右侧分离）
+            expr.appendChild(document.createTextNode(`${p.a} ${p.op} ${p.b} = `));
+            expr.appendChild(input);
+          }
         }
         
         // 输入完成时立即判分（失去焦点时）
@@ -761,6 +1169,11 @@
       const countSel = document.getElementById('countSel');
       const plusCb = document.getElementById('plusCb');
       const minusCb = document.getElementById('minusCb');
+      const mulCb = document.getElementById('mulCb');
+      const divCb = document.getElementById('divCb');
+      const typeSel = document.getElementById('typeSel');
+      const digitSel = document.getElementById('digitSel');
+      const digitLabel = document.getElementById('digitLabel');
       const genBtn = document.getElementById('genBtn');
       const checkBtn = document.getElementById('checkBtn');
       const resetTimerBtn = document.getElementById('resetTimerBtn');
@@ -776,6 +1189,8 @@
     function generate(){
         const max = currentMax();
         const countValue = countSel.value;
+        const type = typeSel.value;
+        const steps = (type === 'addsub' || type === 'all') ? Number(digitSel.value) : null;
         let problems = [];
         if (countValue === 'custom') {
           const customText = document.getElementById('customProblems').value.trim();
@@ -784,13 +1199,13 @@
           const customCount = clamp(customCountInput || (parsed.length || 25), 1, 200);
           if (!parsed.length) {
             // 文本为空或解析结果为 0，则自动生成
-            problems = genProblems(customCount, max, plusCb.checked, minusCb.checked);
+            problems = genProblems(customCount, max, type, plusCb.checked, minusCb.checked, mulCb.checked, divCb.checked, steps);
           } else {
             problems = parsed.length > customCount ? parsed.slice(0, customCount) : parsed;
           }
         } else {
           const count = clamp(countValue || 25, 5, 100);
-          problems = genProblems(count, max, plusCb.checked, minusCb.checked);
+          problems = genProblems(count, max, type, plusCb.checked, minusCb.checked, mulCb.checked, divCb.checked, steps);
         }
       resetTimer(timer);
       renderProblems(board, problems, timer);
@@ -828,6 +1243,20 @@
         customCount.disabled = !isCustom;
         customCount.style.display = isCustom ? '' : 'none';
         editor.style.display = isCustom ? '' : 'none';
+      });
+
+      typeSel.addEventListener('change', function(e){
+        const type = typeSel.value;
+        const isMixed = type === 'addsub' || type === 'all';
+        digitLabel.style.display = isMixed ? '' : 'none';
+      });
+      
+      // 监听checkbox变化，但不触发typeSel的change
+      [plusCb, minusCb, mulCb, divCb].forEach(cb => {
+        cb.addEventListener('change', function(e){
+          // 阻止事件冒泡，避免触发typeSel的change
+          e.stopPropagation();
+        });
       });
 
     // 初始展示设置面板
