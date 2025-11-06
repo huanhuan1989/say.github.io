@@ -1,7 +1,7 @@
 // 替换 翻译内容
 const fs=require('fs');
 const https=require('https');
-const pathKet='/Users/qihoo/Documents/study/say.github.io/data/school/a.json';
+const pathKet='/Users/qihoo/Documents/study/say.github.io/data/school/english-for-little-ones.json';
 const ket=JSON.parse(fs.readFileSync(pathKet,'utf8'));
 
 function normalizeWord(name){

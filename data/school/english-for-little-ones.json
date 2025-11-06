@@ -1,0 +1,825 @@
+{
+  "Lesson 1": [
+    {
+      "name": "apple",
+      "topic": "Fruits",
+      "lyrics": "It's an apple. Apple, apple, apple, apple, apple.",
+      "usphone": "ˈæp(ə)l",
+      "ukphone": "ˈæp(ə)l",
+      "trans": [
+        "n. 苹果"
+      ],
+      "img": "./img/apple.png"
+    },
+    {
+      "name": "banana",
+      "topic": "Fruits",
+      "lyrics": "It's a banana. Banana, banana, banana, banana.",
+      "usphone": "bəˈnænə",
+      "ukphone": "bəˈnɑːnə",
+      "trans": [
+        "n. 香蕉；香蕉树",
+        "adj. 愚蠢的，发狂的",
+        "n. （Banana）巴纳纳（姓氏）"
+      ],
+      "img": "./img/banana.png"
+    }
+  ],
+  "Lesson 2": [
+    {
+      "name": "orange",
+      "topic": "Fruits",
+      "lyrics": "It's an orange. Orange, orange, orange, orange, orange.",
+      "usphone": "ˈɔrɪndʒ",
+      "ukphone": "ˈɒrɪndʒ",
+      "trans": [
+        "n. 橙，柑橘；橙汁，橘汁饮料；橙树，橘树；橙色，橘黄色；橙黄色蝴蝶",
+        "adj. 橙红色的，橘黄色的；奥兰治党或社团的",
+        "n. （Orange）（美、法、俄、英）奥林奇（人名）"
+      ],
+      "img": "./img/orange.png"
+    },
+    {
+      "name": "pear",
+      "topic": "Fruits",
+      "lyrics": "It's a pear. Pear, pear, pear, pear, pear.",
+      "usphone": "per",
+      "ukphone": "peə(r)",
+      "trans": [
+        "n. 梨，梨树",
+        "【名】 （Pear）（英）皮尔（人名）"
+      ],
+      "img": "./img/pear.png"
+    }
+  ],
+  "Lesson 3": [
+    {
+      "name": "ear",
+      "topic": "Body Parts",
+      "lyrics": "Touch your ear. Ear, ear, ear.",
+      "usphone": "ɪr",
+      "ukphone": "ɪə(r)",
+      "trans": [
+        "n. 耳朵；灵敏的听力；倾听；穗；耳状物",
+        "【名】 （Ear）（柬）伊（人名）"
+      ],
+      "img": "./img/ear.png"
+    },
+    {
+      "name": "eye",
+      "topic": "Body Parts",
+      "lyrics": "Touch your eye. Eye, eye, eye.",
+      "usphone": "aɪ",
+      "ukphone": "aɪ",
+      "trans": [
+        "n. 眼睛；目光，所看之处；眼力，鉴赏力；眼光，视角；观点，态度；（钩）环，扣眼；（马铃薯上的）芽眼，芽；（飓风等风暴的）风眼；拍摄对象，取景器；（电）眼，（红外）眼，眼状探测装置；针眼，针鼻儿",
+        "v. 注视，仔细打量",
+        "【名】 （Eye）（英）艾，（德）艾厄（人名）"
+      ],
+      "img": "./img/eye.png"
+    }
+  ],
+  "Lesson 4": [
+    {
+      "name": "nose",
+      "topic": "Body Parts",
+      "lyrics": "Touch your nose. Nose, nose, nose.",
+      "usphone": "noʊz",
+      "ukphone": "nəʊz",
+      "trans": [
+        "n. 鼻子；（飞机、火箭等的）头部，机首；嗅觉；觉察力；（酒的）特有的气味；<非正式>警方线人；探听，探问",
+        "v. （车辆、船只等）缓慢地前行；（动物用鼻子）拱，嗅；勉强领先（或获胜）；<非正式>窥探，搜寻"
+      ],
+      "img": "./img/nose.png"
+    },
+    {
+      "name": "mouth",
+      "topic": "Body Parts",
+      "lyrics": "Touch your mouth. Mouth, mouth, mouth.",
+      "usphone": "maʊθ",
+      "ukphone": "maʊθ",
+      "trans": [
+        "n. 嘴，口腔；需要供养的人，食客；入口，开口；入海口，河口；讲话方式，言谈；<非正式>饶舌，出言不逊；（受嚼子控制的）马口；（葡萄酒的不同于气味的）口感",
+        "v. 不出声地说，用口型默示；言不由衷地说，（自己并不明白却）信口开河；（清晰明确地）说，发……的音；吃，用嘴触碰；训练（马）使之习惯于服从嚼子",
+        "comb. 有……嘴的，……口的(-mouthed)；言谈……的，口齿……的(-mouthed)"
+      ],
+      "img": "./img/mouth.png"
+    }
+  ],
+  "Lesson 5": [
+    {
+      "name": "hand",
+      "topic": "Body Parts",
+      "lyrics": "Show your hand. Hand, hand, hand.",
+      "usphone": "hænd",
+      "ukphone": "hænd",
+      "trans": [
+        "n. 手；（钟表的）指针；一局牌，一手牌；帮助，援手；工人；船员，水手；支配，掌管；作用，影响；鼓掌，拍手喝彩；<文>字迹；一手之宽（用来测量马匹的高度）；<旧>（女方的）允婚；表演艺人，制作工匠",
+        "comb. 用……手的；手工",
+        "v. 交，递；支持，搀扶；卷（帆）",
+        "【名】 （Hand）（英、瑞典）汉德（人名）"
+      ],
+      "img": "./img/hand.png"
+    },
+    {
+      "name": "arm",
+      "topic": "Body Parts",
+      "lyrics": "show your arm. Arm, arm, arm.",
+      "usphone": "ɑːrm",
+      "ukphone": "ɑːm",
+      "trans": [
+        "n. 手臂，上肢；武器，军备；扶手；袖子；职能部门；臂（状部件）；盾徽，纹章；狭长港湾；臂力",
+        "v. 武装，备战；提供，配备；使（炸弹等）随时爆炸，准备发射"
+      ],
+      "img": "./img/arm.png"
+    }
+  ],
+  "Lesson 6": [
+    {
+      "name": "leg",
+      "topic": "Body Parts",
+      "lyrics": "show your leg. Leg, leg, leg.",
+      "usphone": "leɡ",
+      "ukphone": "leɡ",
+      "trans": [
+        "n. 腿；动物腿，腿肉；裤腿；家具的腿，支撑柱条；（旅程或赛程的）一段，一程；<非正式>（球，尤指高尔夫球）力度不够；<非正式>（产品或想法的）持久流行或成功；（板球）腿侧区；叉状物的一分支；<古>屈膝礼",
+        "comb. 有……腿的(-legged)",
+        "v. （撑船者）用腿蹬洞顶或洞壁使（船）通过运河隧洞"
+      ],
+      "img": "./img/leg.png"
+    },
+    {
+      "name": "foot",
+      "topic": "Body Parts",
+      "lyrics": "show your foot. Foot, foot, foot.",
+      "usphone": "fʊt",
+      "ukphone": "fʊt",
+      "trans": [
+        "n. 脚，足；英尺；基础，底部；袜底；音步；<文>步态，步伐；（缝纫机的）压脚板",
+        "comb. 有……只脚（的），用……脚（或足的）(-footed)；……英尺高的人(或东西)，……英尺长的东西(-footer)",
+        "adj. （刹车或泵）用脚操作的，脚踏的；（巡逻队）步行的，步（兵）的",
+        "v. <非正式>支付（尤指大额或不合理账单）",
+        "【名】 （Foot）（英）富特（人名）"
+      ],
+      "img": "./img/foot.png"
+    }
+  ],
+  "Lesson 7": [
+    {
+      "name": "circle",
+      "topic": "Shapes",
+      "lyrics": "A circle, a circle. It's a circle.",
+      "usphone": "ˈsɜːrk(ə)l",
+      "ukphone": "ˈsɜːk(ə)l",
+      "trans": [
+        "n. 圆，圆形物；圈子，阶层；弧形楼座；黑眼圈；循环，周期",
+        "v. 盘旋，环行；围绕，圈起"
+      ],
+      "img": "./img/circle.png"
+    },
+    {
+      "name": "square",
+      "topic": "Shapes",
+      "lyrics": "A square, a square. It's a square.",
+      "usphone": "skwer",
+      "ukphone": "skweə(r)",
+      "trans": [
+        "adj. 正方形的，四方形的；成直角的；平方的；两清的，互不欠账的；诚实公正的；<非正式>古板守旧的；平行的，水平的；宽阔结实的；打平的，平局的；一致的，可共存的；长宽为…...的；整齐的；（韵律）简单易懂的",
+        "n. 正方形，四方形；广场；平方，二次幂；<非正式>古板守旧的人；（棋盘上的）方格；直角尺，丁字尺；<史>（步兵的）方阵；方围巾；<英>托灰板，灰浆板；（板球）内场；（军营中的）操练场；<美>街区；（占星）90度星位；<美，非正式>美餐，饱餐",
+        "v. 使成平方，使成二次幂；使（比赛的比分）打平；挺起胸膛；使成正方形，使成方形；<非正式>贿赂，收买；使谐调，符合；就…...征得…...的同意；结账，付清欠款；横（向）传（球）；（占星）处于方照位置",
+        "adv. 直接地；成直角，垂直地；<非正式>公正地，诚实地"
+      ],
+      "img": "./img/square.png"
+    }
+  ],
+  "Lesson 8": [
+    {
+      "name": "rectangle",
+      "topic": "Shapes",
+      "lyrics": "A rectangle, a rectangle. It's a rectangle.",
+      "usphone": "ˈrektæŋɡ(ə)l",
+      "ukphone": "ˈrektæŋɡl",
+      "trans": [
+        "n. 矩形，长方形"
+      ],
+      "img": "./img/rectangle.png"
+    },
+    {
+      "name": "triangle",
+      "topic": "Shapes",
+      "lyrics": "A triangle, a triangle. It's a triangle.",
+      "usphone": "ˈtraɪæŋɡ(ə)l",
+      "ukphone": "ˈtraɪæŋɡ(ə)l",
+      "trans": [
+        "n. 三角形；三角形物体；三角铁（打击乐器）；<美>三角板，三角尺；三角关系；（摆放斯诺克和落袋台球撞球位置的）三角框；小型欧亚紫刺蛾；<史>（系缚士兵以鞭打的）三戟刑具"
+      ],
+      "img": "./img/triangle.png"
+    }
+  ],
+  "Lesson 9": [
+    {
+      "name": "heart",
+      "topic": "Shapes",
+      "lyrics": "A heart, a heart. It's a heart.",
+      "usphone": "hɑːrt",
+      "ukphone": "hɑːt",
+      "trans": [
+        "n. 心，心脏；内心，感情；胸前；重点，核心；中心，中央；信心，勇气；（表示爱的）心形物；红桃牌，红心牌；菜心；同情，怜悯；爱情，情爱；（土地的）肥力",
+        "v. <非正式>喜爱，深爱",
+        "【名】 （Heart）（英）哈特（人名）"
+      ],
+      "img": "./img/heart.png"
+    },
+    {
+      "name": "star",
+      "topic": "Shapes",
+      "lyrics": "A star, a star. It's a star.",
+      "usphone": "stɑːr",
+      "ukphone": "stɑː(r)",
+      "trans": [
+        "n. 星，恒星；演艺界明星，体坛名将；（电影、戏剧中的）主角，主演；重要人物，优秀人士；星状，星形物；星号；（饭店、宾馆等的）星级标志；（占星术的）星相，星座（stars）；一定会发生；<非正式>好心的人，乐于助人者；星章；Y形三相电绕组；星状网；用于海星或类似的棘皮动物的名字中",
+        "v. 主演，使主演；给……加上星号；表现杰出；用星形物装饰（或覆盖）",
+        "adj. 最好的，最出色的",
+        "【名】 （Star）（瑞典）斯塔尔，（德）施塔尔（人名）"
+      ],
+      "img": "./img/star.png"
+    }
+  ],
+  "Lesson 10": [
+    {
+      "name": "one",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "wʌn",
+      "ukphone": "wʌn",
+      "trans": [
+        "num. 一；一个；一岁；一点钟",
+        "pron. 一个人；任何人，人们（表泛指）；那个人；（特指的）那种人",
+        "det. 一个（强调某人或某事）；一个（用于比较相似的人或物）；某个（用于不认识的人的名字前）",
+        "adj. 唯一的；一的",
+        "n. 一；一美元纸币",
+        "n. （One）（印、马、美）温（人名）"
+      ],
+      "img": "./img/one.png"
+    },
+    {
+      "name": "two",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "tuː",
+      "ukphone": "tuː",
+      "trans": [
+        "n. 两个",
+        "adj. 两个的",
+        "num. 二"
+      ],
+      "img": "./img/two.png"
+    }
+  ],
+  "Lesson 11": [
+    {
+      "name": "three",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "θriː",
+      "ukphone": "θriː",
+      "trans": [
+        "n. 三，三个",
+        "num. 三",
+        "adj. 三的，三个的"
+      ],
+      "img": "./img/three.png"
+    },
+    {
+      "name": "four",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "fɔːr",
+      "ukphone": "fɔː(r)",
+      "trans": [
+        "num. 四，四个",
+        "n. 四个人（或事）的一组；（板球）四分的一击；（衣服等）四号；四点的纸牌；四浆赛艇，四人划船队",
+        "adj. 四的；四个的",
+        "n. （Four）（法、美）福尔（人名）"
+      ],
+      "img": "./img/four.png"
+    }
+  ],
+  "Lesson 12": [
+    {
+      "name": "five",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "faɪv",
+      "ukphone": "faɪv",
+      "trans": [
+        "n. 五，五个；五美元钞票",
+        "num. 五，五个",
+        "adj. 五的；五个的",
+        "n. （Five）人名；（挪）菲弗"
+      ],
+      "img": "./img/five.png"
+    },
+    {
+      "name": "six",
+      "topic": "Numbers",
+      "lyrics": "one, two, three, four, five, and six. one, two, three, four, five, and six. How many? How many? How many? How many?",
+      "usphone": "sɪks",
+      "ukphone": "sɪks",
+      "trans": [
+        "num. 数字6；六个；六个人（或物）一组；六岁；六点钟",
+        "n. （Six）（美、德）西克斯（人名）"
+      ],
+      "img": "./img/six.png"
+    }
+  ],
+  "Lesson 13": [
+    {
+      "name": "red",
+      "topic": "Colors",
+      "lyrics": "Red, green, yellow, blue. I like colors.",
+      "usphone": "red",
+      "ukphone": "red",
+      "trans": [
+        "adj. 红的，红色的；（毛发）红褐色的；（脸）涨红的；（眼睛）红肿的；革命的，激进的；（人）红种的；（纸牌中）红桃的，红方块的；（葡萄酒）红的；（表示停止）红（灯），红（旗）；被禁止的，危险的；（滑雪道上用红色标志指示）第二高难度的；（物理）表示夸克三种颜色之一的红色；赤色的（尤指冷战期间用于指前苏联）；沾有鲜血的；（古或诗/文）流血的；（科萨人）来自传统部落文化的",
+        "n. 红色，红颜料；红衣；红葡萄酒；红色物（或人）；赤字，亏空；激进分子",
+        "v. 整理（同 redd）",
+        "n. （Red）雷德（人名）"
+      ],
+      "img": "./img/red.png"
+    },
+    {
+      "name": "green",
+      "topic": "Colors",
+      "lyrics": "Red, green, yellow, blue. I like colors.",
+      "usphone": "ɡriːn",
+      "ukphone": "ɡriːn",
+      "trans": [
+        "adj. 绿色的；青春的",
+        "n. 绿色；青春",
+        "vt. 使……变绿色",
+        "vi. 变绿色",
+        "n. （Green）人名；（英、意）格林；（瑞典、芬）格伦"
+      ],
+      "img": "./img/green.png"
+    }
+  ],
+  "Lesson 14": [
+    {
+      "name": "yellow",
+      "topic": "Colors",
+      "lyrics": "Red, green, yellow, blue. I like colors.",
+      "usphone": "ˈjeloʊ",
+      "ukphone": "ˈjeləʊ",
+      "trans": [
+        "adj. 黄的，黄色的；黄色人种的，黄皮肤的；<非正式>胆怯的；（新闻报道）夸张失实的，耸人听闻的；黄色危险警报的；嫉妒的，猜疑的",
+        "n. 黄色，黄颜料；黄色衣服，黄色衣料；（运动或比赛中的）黄色球，黄色物（尤指斯诺克的黄球）；黄蛾（或黄蝴蝶）；（植物的）黄化病",
+        "v. （使）变黄"
+      ],
+      "img": "./img/yellow.png"
+    },
+    {
+      "name": "blue",
+      "topic": "Colors",
+      "lyrics": "Red, green, yellow, blue. I like colors.",
+      "usphone": "bluː",
+      "ukphone": "bluː",
+      "trans": [
+        "adj. 蓝色的；忧郁的，沮丧的；<英，非正式> 保守的，守旧的；（笑话、故事等）黄色的，色情的；（由于冷或呼吸困难）发青的，青紫的",
+        "n. 天蓝色，蓝色；天空，大海；<英>（剑桥或牛津大学的）校队运动员，蓝色荣誉者；<澳新>红头发者；<澳新>错误，纰漏；<澳新>争论，殴打；近生的牛排",
+        "v. （使）变成蓝色；<史>用蓝色漂白剂洗（白色衣服）；<英，非正式>挥霍，乱花（钱财）",
+        "【名】 （Blue）（英、美、加、澳、新）布卢（人名）"
+      ],
+      "img": "./img/blue.png"
+    }
+  ],
+  "Lesson 15": [
+    {
+      "name": "white",
+      "topic": "Colors",
+      "lyrics": "Pink, purple, white, black. I like colors.",
+      "usphone": "waɪt",
+      "ukphone": "waɪt",
+      "trans": [
+        "adj. 白色的；白种人的，白肤色的；苍白的；加牛奶（或奶油）的；（葡萄酒）白的，淡黄色的；（面粉）精白的；<美>空白的；树皮淡色的；（玻璃）透明的，无色的；<非正式>完全公正的，非常诚实的；（魔法）善意的；（血细胞）白的；<史>（政治）反动的；纯洁的",
+        "n. 白色，白颜料；白种人，白人；白葡萄酒；眼白；蛋清，蛋白；白色运动服（whites）；要洗涤的白色织物（whites）；白衣服；执白棋者，白方；白色的东西，白球；白粉蝶",
+        "v. <古>把……漆成白色，使变白",
+        "【名】 （White）怀特（人名）"
+      ],
+      "img": "./img/white.png"
+    },
+    {
+      "name": "black",
+      "topic": "Colors",
+      "lyrics": "Pink, purple, white, black. I like colors.",
+      "usphone": "blæk",
+      "ukphone": "blæk",
+      "trans": [
+        "adj. 黑的，黑色的；黑色人种的；不加牛奶的；脏的，布满污垢的；悲伤的，无望的；愤怒的，仇恨的；罪恶的，邪恶的；（幽默）黑色的；（滑雪道）难度最大的；（军事活动）秘密的；黑桃和梅花组牌的",
+        "n. 黑，黑色；<冒犯>黑人；黑色衣服；黑色的东西（尤指斯诺克中的黑球）；执黑子的一方",
+        "v. 使变黑，弄黑；<英>抵制，拒绝（货品或公司）",
+        "【名】 （Black）（英、西）布莱克，（德、葡、捷）布拉克"
+      ],
+      "img": "./img/black.png"
+    }
+  ],
+  "Lesson 16": [
+    {
+      "name": "pink",
+      "topic": "Colors",
+      "lyrics": "Pink, purple, white, black. I like colors.",
+      "usphone": "pɪŋk",
+      "ukphone": "pɪŋk",
+      "trans": [
+        "adj. 粉红色的；（因窘迫、愤怒或剧烈活动而）脸色发红的；同性恋的；<非正式，贬>左倾的；石竹科的；兴奋的（tickled pink）",
+        "n. 粉红色；粉红色衣服或衣料；<非正式>粉红色葡萄酒；石竹；<史>尖尾帆船；满面红光，容光焕发（in the pink (of)）；粉红色桌球；<旧>微黄颜料；<非正式>左倾的人；<旧>精英，典范",
+        "v. <英>（车辆引擎）发响爆声，爆震；变成粉红色；<澳新>（贴身地）剪（羊毛）；剪成锯齿状；<罕>（用武器或投掷物）刺，戳，扎；嘲笑，批评；<古>装饰",
+        "【名】 （Pink）（美、英、加、德、菲）平克（人名）"
+      ],
+      "img": "./img/pink.png"
+    },
+    {
+      "name": "purple",
+      "topic": "Colors",
+      "lyrics": "Pink, purple, white, black. I like colors.",
+      "usphone": "ˈpɜːrp(ə)l",
+      "ukphone": "ˈpɜːp(ə)l",
+      "trans": [
+        "adj. 紫色的，紫红色的；（作品）词藻华丽的，华而不实的；帝王的",
+        "n. 紫色，紫红色；紫色衣服（或料子）；（古罗马，拜占庭）紫色衣服（the purple）；（从某些软体动物提取的）深红色染料；（古罗马）要职，高位，拥有特权的职位（the purple）；（红衣主教的）大红袍（the purple）",
+        "v. （使）成紫色，（使）发紫"
+      ],
+      "img": "./img/purple.png"
+    }
+  ],
+  "Lesson 17": [
+    {
+      "name": "cat",
+      "topic": "Animals",
+      "lyrics": "Meow, meow, meow. It's a cat.",
+      "usphone": "kæt",
+      "ukphone": "kæt",
+      "trans": [
+        "n. 猫，猫科动物"
+      ],
+      "img": "./img/cat.png"
+    },
+    {
+      "name": "dog",
+      "topic": "Animals",
+      "lyrics": "Woof, woof, woof. It's a dog.",
+      "usphone": "dɔːɡ",
+      "ukphone": "dɒɡ",
+      "trans": [
+        "n. 狗，犬；公狗，公狐，公狼；质量极差的东西；卑鄙小人，无赖；<美，非正式>朋友",
+        "v. 困扰，纠缠；跟踪，尾随"
+      ],
+      "img": "./img/dog.png"
+    }
+  ],
+  "Lesson 18": [
+    {
+      "name": "pig",
+      "topic": "Animals",
+      "lyrics": "Oink, oink, oink. It's a pig.",
+      "usphone": "pɪɡ",
+      "ukphone": "pɪɡ",
+      "trans": [
+        "n. 猪；<非正式>令人讨厌的人，猪猡；<俚>警官（侮辱性用语）；<英>难办的事，不愉快的事；<非正式>贪吃的人；生铁块，生铅锭；清管器",
+        "v. <非正式>狼吞虎咽；<非正式>像猪一样挤在一起；（母猪）生小猪；（在石油或天然气管道中）操作清管器"
+      ],
+      "img": "./img/pig.png"
+    },
+    {
+      "name": "cow",
+      "topic": "Animals",
+      "lyrics": "Moo, moo, moo. It's a cow.",
+      "usphone": "kaʊ",
+      "ukphone": "kaʊ",
+      "trans": [
+        "n. 母牛，奶牛；雌性动物；<非正式>婆娘，娘儿们；<澳新>讨厌的人（或事物、情况）",
+        "v. 恐吓，威胁"
+      ],
+      "img": "./img/cow.png"
+    }
+  ],
+  "Lesson 19": [
+    {
+      "name": "duck",
+      "topic": "Animals",
+      "lyrics": "Quack, quack, quack. It's a duck.",
+      "usphone": "dʌk",
+      "ukphone": "dʌk",
+      "trans": [
+        "n. 鸭子；鸭肉；母鸭；（板球）零分；<非正式>幸运儿，不寻常的人；<英，非正式>宝贝儿，亲爱的；突然的低头；帆布，粗布",
+        "v. 逃避，回避；躲避；（开玩笑地）把（人）按入水中；迅速移动；（桥牌）放掉；（迅速）低头，弯身",
+        "【名】 （Duck）（德、葡、匈）杜克（人名）"
+      ],
+      "img": "./img/duck.png"
+    },
+    {
+      "name": "hen",
+      "topic": "Animals",
+      "lyrics": "Cluck, cluck, cluck. It's a hen.",
+      "usphone": "hen",
+      "ukphone": "hen",
+      "trans": [
+        "n. 母鸡；雌禽；<苏格兰>（小）姑娘；用于其他鸟的名称（尤指秧鸡科水鸟）；雌龙虾（或螃蟹、鲑鱼）",
+        "【名】 （Hen）（法）昂，（波、柬）亨，（日）边（人名）"
+      ],
+      "img": "./img/hen.png"
+    }
+  ],
+  "Lesson 20": [
+    {
+      "name": "horse",
+      "topic": "Animals",
+      "lyrics": "Neigh, neigh, neigh. It's a horse.",
+      "usphone": "hɔːrs",
+      "ukphone": "hɔːs",
+      "trans": [
+        "n. 马；<非正式>赛马；跳马，鞍马；锯木架；<非正式>马力；<美，非正式>主力队员；<非正式>海洛因；夹块，夹石；骑兵",
+        "v. 给（人或车辆）提供马；使骑马"
+      ],
+      "img": "./img/horse.png"
+    },
+    {
+      "name": "sheep",
+      "topic": "Animals",
+      "lyrics": "Baa, baa, baa. It's a sheep.",
+      "usphone": "ʃiːp",
+      "ukphone": "ʃiːp",
+      "trans": [
+        "n. 羊，绵羊；胆小鬼"
+      ],
+      "img": "./img/sheep.png"
+    }
+  ],
+  "Lesson 21": [
+    {
+      "name": "doll",
+      "topic": "Toys",
+      "lyrics": "It's a doll. It's a doll, It's a doll. It's a balloon. It's a balloon. It's a balloon.",
+      "usphone": "dɑːl",
+      "ukphone": "dɒl",
+      "trans": [
+        "n. 洋娃娃，玩偶；<旧，非正式>美人儿(现多认为含冒犯意)；<美，非正式>大方的人，体贴的人；赛马场（或马奔驰道路中）的临时障碍；<非正式>乐于助人的人",
+        "v.  <非正式>把……打扮得花枝招展；在（需跳跃的地方或跑道上其他不需跑的部分）前放置障碍物",
+        "【名】 （Doll）（英）多尔（女子教名 Dorothea 和 Dorothy 的昵称），（西）多利（人名）"
+      ],
+      "img": "./img/doll.png"
+    },
+    {
+      "name": "balloon",
+      "topic": "Toys",
+      "lyrics": "It's a doll. It's a doll, It's a doll. It's a balloon. It's a balloon. It's a balloon.",
+      "usphone": "bəˈluːn",
+      "ukphone": "bəˈluːn",
+      "trans": [
+        "n. 气球；热气球；气球状对话框；球形大酒杯；<非正式>蠢人；分期付款中最后一笔数目特大的还款",
+        "v. 激增；突然长胖；膨胀，鼓起来；乘热气球旅行；（球）被踢（或打）得腾空飞起；（把球）踢飞，打飞",
+        "adj. 像气球般鼓起的",
+        "【名】 （Balloon）（美、印、泰、俄、巴）巴隆（人名）"
+      ],
+      "img": "./img/balloon.png"
+    }
+  ],
+  "Lesson 22": [
+    {
+      "name": "robot",
+      "topic": "Toys",
+      "lyrics": "It's a robot. It's a robot. It's a robot. It's a ball. It's a ball. It's a ball.",
+      "usphone": "ˈroʊbɑːt",
+      "ukphone": "ˈrəʊbɒt",
+      "trans": [
+        "n. 机器人，自动操作装置；机器般的人；<南非>自动交通信号机；（计算机）爬虫程序"
+      ],
+      "img": "./img/robot.png"
+    },
+    {
+      "name": "ball",
+      "topic": "Toys",
+      "lyrics": "It's a robot. It's a robot. It's a robot. It's a ball. It's a ball. It's a ball.",
+      "usphone": "bɔːl",
+      "ukphone": "bɔːl",
+      "trans": [
+        "n. 球，球状物；球类运动；踢出（或击出、投出）的一球；舞会；脚趾球，拇指球；勇气；弹丸；睾丸",
+        "v. （使）成球状（或团块）；和（女人）发生性关系",
+        "【名】 （Ball）（英、西）鲍尔，（法、德、俄、罗、捷）巴尔，（土）巴勒（人名）"
+      ],
+      "img": "./img/ball.png"
+    }
+  ],
+  "Lesson 23": [
+    {
+      "name": "guitar",
+      "topic": "Music Instrument",
+      "lyrics": "Plink, plink, plink, plink, plink, plink, plink, plink, plink, piano. La, la, la, la, la, la, la, la, la, violin.",
+      "usphone": "ɡɪˈtɑːr",
+      "ukphone": "ɡɪˈtɑː(r)",
+      "trans": [
+        "n. 吉他，六弦琴"
+      ],
+      "img": "./img/guitar.png"
+    },
+    {
+      "name": "piano",
+      "topic": "Music Instrument",
+      "lyrics": "Plink, plink, plink, plink, plink, plink, plink, plink, plink, piano. La, la, la, la, la, la, la, la, la, violin.",
+      "usphone": "piˈænoʊ",
+      "ukphone": "piˈænəʊ",
+      "trans": [
+        "n. 钢琴",
+        "n. （Piano）人名；（法、意、葡）皮亚诺"
+      ],
+      "img": "./img/piano.png"
+    }
+  ],
+  "Lesson 24": [
+    {
+      "name": "drum",
+      "topic": "Music Instrument",
+      "lyrics": "La, la, la, la, la, la, la, la, la, violin. Bum, bum, bum, bum, bum, bum, drum, drum, drum, drum. Dinga, dinga, dinga, dinga, ding, guitar.",
+      "usphone": "drʌm",
+      "ukphone": "drʌm",
+      "trans": [
+        "n. 鼓；大桶；敲击声；鼓状物；<史>军鼓手；<英，非正式>一套房间，（公寓）套间；<澳，非正式>（可靠的）内部消息；（18世纪末、19世纪初流行的）傍晚茶会，下午茶会",
+        "v. 不停地击打；击鼓，打鼓",
+        "【名】 （Drum）（美、俄、澳等）德拉姆（人名）"
+      ],
+      "img": "./img/drum.png"
+    },
+    {
+      "name": "violin",
+      "topic": "Music Instrument",
+      "lyrics": "La, la, la, la, la, la, la, la, la, violin. Bum, bum, bum, bum, bum, bum, drum, drum, drum, drum. Dinga, dinga, dinga, dinga, ding, guitar.",
+      "usphone": "ˌvaɪəˈlɪn",
+      "ukphone": "ˌvaɪəˈlɪn",
+      "trans": [
+        "n. 小提琴；小提琴手",
+        "n. (Violin)（意）维奥林（人名）"
+      ],
+      "img": "./img/violin.png"
+    }
+  ],
+  "Lesson 25": [
+    {
+      "name": "car",
+      "topic": "Vehicles",
+      "lyrics": "Beep, beep, beep, beep. I'm in the car. ",
+      "usphone": "kɑːr",
+      "ukphone": "kɑː(r)",
+      "trans": [
+        "n. 汽车，轿车；<美>（火车的）车厢；（火车上作特殊用途的）车厢（如餐车、卧铺车厢）；（电梯的）梯厢，（索道或气球的）吊舱；<文>战车",
+        "【名】 （Car）（土）贾尔，（法、西）卡尔，（塞）察尔（人名）"
+      ],
+      "img": "./img/car.png"
+    },
+    {
+      "name": "bike",
+      "topic": "Vehicles",
+      "lyrics": "Ding, ding, ding, ding. I'm on the bike. ",
+      "usphone": "baɪk",
+      "ukphone": "baɪk",
+      "trans": [
+        "n. 自行车，脚踏车，单车；摩托车",
+        "v. <非正式>骑自行车（单车）；<英> 用自行车（或摩托车）投递（信件，包裹）；<英>用自行车（或摩托车）投递（信件，包裹）",
+        "n. （Bike)（土、土库、塞）比克"
+      ],
+      "img": "./img/bike.png"
+    }
+  ],
+  "Lesson 26": [
+    {
+      "name": "train",
+      "topic": "Vehicles",
+      "lyrics": "Chug, chug, chug, chug. I'm on the train.",
+      "usphone": "treɪn",
+      "ukphone": "treɪn",
+      "trans": [
+        "n. 火车，列车；（行进中的）行列，队列；随从，扈从；一系列，一连串（事件或想法）；裙裾，拖裾；（转动的）轮系，齿轮组；（引爆炸药用的）导火线",
+        "v. 培训，训练；（为准备体育赛事而）操练；锻炼，培养（某一素质或能力）；训（兽）；（尤指用枪、照相机）对准，瞄准；使（植物）朝某方向生长，修整",
+        "【名】 （Train）（英）特雷恩，（法）特兰，（意）特拉因（人名）"
+      ],
+      "img": "./img/train.png"
+    },
+    {
+      "name": "plane",
+      "topic": "Vehicles",
+      "lyrics": "Whirr, whirr, whirr. I'm on the plane. Bike, car, train, and plane.",
+      "usphone": "pleɪn",
+      "ukphone": "pleɪn",
+      "trans": [
+        "n. 飞机；（几何学中的）平面；（物体的）平面；（穿过或连接物体的）虚构平面；（存在、思想或发展）水平；木工刨，刨子；悬铃木；翼面",
+        "adj. 平的，平坦的；二维平面的，二维空间的",
+        "v. 滑翔；擦着水面疾驶；刨平；刨除；<罕>乘飞机旅行",
+        "【名】 （Plane）（塞、瑞典、法）普拉内（人名）"
+      ],
+      "img": "./img/plane.png"
+    }
+  ],
+  "Lesson 27": [
+    {
+      "name": "pizza",
+      "topic": "Food",
+      "lyrics": "I like pizzas. Pizzas, pizzas. I like cookies. Cookies, cookies.",
+      "usphone": "ˈpiːtsə",
+      "ukphone": "ˈpiːtsə",
+      "trans": [
+        "n. 比萨饼（一种涂有乳酪和番茄酱的意大利式有馅烘饼）；（Pizza）（意）皮扎（人名）"
+      ],
+      "img": "./img/pizza.png"
+    },
+    {
+      "name": "sandwich",
+      "topic": "Food",
+      "lyrics": "I like sandwiches. Sandwiches, sandwiches. I like cookies. Cookies, cookies.",
+      "usphone": "ˈsænwɪtʃ",
+      "ukphone": "ˈsænwɪtʃ",
+      "trans": [
+        "n. 三明治，夹心面包片；<英>果酱（或奶油）夹心松蛋糕；<美>夹心饼干；三明治状物；<英>教学与实习交替培训课程",
+        "v. 插入，夹入；粘合（sandwich sth. together）；把……做成三明治"
+      ],
+      "img": "./img/sandwich.png"
+    }
+  ],
+  "Lesson 28": [
+    {
+      "name": "rice",
+      "topic": "Food",
+      "lyrics": "I like lollipops. Lollipops, lollipops. I like rice. Rice, rice. I like bread. Bread, bread.",
+      "usphone": "raɪs",
+      "ukphone": "raɪs",
+      "trans": [
+        "n. 稻；米饭",
+        "vt. 把……捣成米糊状",
+        "n. （Rice）人名；（瑞典）里瑟；（塞）里采；（英）赖斯"
+      ],
+      "img": "./img/rice.png"
+    },
+    {
+      "name": "bread",
+      "topic": "Food",
+      "lyrics": "I like lollipops. Lollipops, lollipops. I like rice. Rice, rice. I like bread. Bread, bread.",
+      "usphone": "bred",
+      "ukphone": "bred",
+      "trans": [
+        "n. 面包；（通过工作等挣得的）钱财",
+        "v. 在……上撒面包屑"
+      ],
+      "img": "./img/bread.png"
+    }
+  ],
+  "Lesson 29": [
+    {
+      "name": "milk",
+      "topic": "Food",
+      "lyrics": "I like milk. Milk, milk. I like water. Water, water. I like all! Yummy, yummy!",
+      "usphone": "mɪlk",
+      "ukphone": "mɪlk",
+      "trans": [
+        "n. （牛或羊等的）奶；奶汁，母乳；乳液（用于清洁或保护皮肤）；（椰子等植物的）白色汁液",
+        "v. 挤奶；榨取，勒索；充分利用；迎合（观众）；（动物，尤指母牛）产奶，出奶；从……抽取液汁（或毒液等）",
+        "【名】 （Milk）（英）米尔克（人名）"
+      ],
+      "img": "./img/milk.png"
+    },
+    {
+      "name": "water",
+      "topic": "Food",
+      "lyrics": "I like milk. Milk, milk. I like water. Water, water. I like all! Yummy, yummy!",
+      "usphone": "ˈwɔːtər",
+      "ukphone": "ˈwɔːtə(r)",
+      "trans": [
+        "n. 水，雨水；水域，（江、河、湖、海等）大片的水；（某个国家的）领海，海域（waters）；不明朗（或未知的、困难、危险等）局面（waters）；羊水（waters）；（湖、海的）水面；水位；乘船，走水路",
+        "v. 给……浇水，灌溉；给…...水喝，饮（动物）；（风等使眼睛）流泪；流口水；（江河）流经并给（某地区）供水；加水冲淡，稀释",
+        "【名】 （Water）（英）沃特（人名）"
+      ],
+      "img": "./img/water.png"
+    }
+  ],
+  "Lesson 30": [
+    {
+      "name": "cookie",
+      "topic": "Food",
+      "lyrics": "I like cookies. Cookies, cookies.",
+      "usphone": "ˈkʊki",
+      "ukphone": "ˈkʊki",
+      "trans": [
+        "n. 曲奇饼，小甜饼；……样的人；（浏览网页后存储在计算机的）缓存文件；<苏格兰>淡面包；漂亮的年轻女子"
+      ],
+      "img": "./img/cookie.png"
+    },
+    {
+      "name": "lollipop",
+      "topic": "Food",
+      "lyrics": "I like lollipops. Lollipops, lollipops.",
+      "usphone": "ˈlɑːlipɑːp",
+      "ukphone": "ˈlɒlipɒp",
+      "trans": [
+        "n. 棒棒糖（=lollypop）；<英>棒冰；<非正式>通俗易懂的短小古典音乐乐曲"
+      ],
+      "img": "./img/lollipop.png"
+    }
+  ]
+}

@@ -65,9 +65,11 @@
       color:#fff;
     }
     .mainContainer {
-      margin: 20% 12px auto 12px;
+      margin: auto 12px;
       flex: 1;
       font-size: 0;
+      overflow-y: auto;           /* 内容多时允许滚动 */
+      max-height: 84vh;           /* 与左侧 tabs 高度一致，防止超出视窗 */
     }
     .control-select {
       cursor: pointer;
@@ -297,33 +299,81 @@
     .hide {
       display: none;
     }
+    /* 列表版样式（尽量不影响现有样式） */
+    #listContainer { 
+      display: block;
+      padding: 12px;
+    }
+    .list-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+    .list-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .list-card .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+      margin-top: 6px;
+    }
+    .list-card .sub {
+      margin-top: 6px;
+      color: #666;
+      font-size: 14px;
+      text-align: center;
+    }
+    .list-card img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      display: block;
+      margin: 8px auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .play-mini {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    /* 让播放按钮里的喇叭变为白色 */
+    .play-mini .speaker { stroke: #fff; }
+    /* 卡片可点击播放整体 */
+    .list-card { cursor: pointer; }
+    .list-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.09); }
   </style>
 </head>
 <body>
   <div class="head" id="navbar">
-    <!-- <select id="wordSelect" placeholder="词典切换" class="control-select"></select>
-    <select id="classSelect" placeholder="年级" class="control-select"></select> -->
-    <select id="languageSelect" class="control-select" data-type="soundSelect">
-      <option value="en-GB" selected>英音</option>
-      <option value="en-US">美音</option>
-    </select>
-    <!-- <select id="levelSelect">
-      <option value="easy">简单(多提示)</option>
-      <option value="medium" selected>中等</option>
-      <option value="hard">困难(少提示)</option>
-    </select> -->
-    <button class="control-btn toggleLanguage active" data-type="word" data-level="easy">单词拼写</button>
-    <button class="control-btn toggleLanguage" data-type="word" data-level="medium">单词跳词拼写</button>
-    <button class="control-btn toggleLanguage" data-type="word" data-level="hard">默写</button>
-    <button class="control-btn changeIt active" data-type="next" id="nextBtn">下一个单词</button>
+    <button class="control-btn changeIt active" data-type="next" id="nextBtn" style="display:none;">下一个单词</button>
   </div>
   
   <div class="appContainer">
     <div class="tabs">
-      <div class="tabs-main" id="tabContainer"></div>
+      <div class="tabs-main" id="tabContainer">
+        <button class="active" data-type="tabBtn" data-index="2">列表版</button>
+        <button class="" data-type="tabBtn" data-index="1">简便版</button>
+      </div>
     </div>
     <div class="mainContainer">
-      <div class="wordContainer">
+      <div class="wordContainer" style="display:none;">
         <div id="wordDisplay" class="hide"></div>
         <div class="toolContainer">
           <div id="inputContainer" class="hard"></div>
@@ -340,6 +390,10 @@
         <div id="meaning"></div>
         <div id="example"></div>
       </div>
+      <!-- 列表版容器 -->
+      <div id="listContainer">
+        <div class="list-grid" id="listGrid"></div>
+      </div>
       
     </div>
   </div>
@@ -351,8 +405,6 @@
   <script src="./js/base.js"></script>
 
   <script>
-    // 分类数据
-    let categories = {};
     let words = [];
     let currentIndex = 0;
     let dataType = 'easy';  // easy|medium|hard
@@ -411,16 +463,6 @@
         </svg>
       </button>`);
 
-      const revealIndexes = [];
-      if (dataType === 'medium') {
-        const level = 'medium';
-        const lettersToShow = level === 'easy' ? Math.floor(word.replace(/\s/g,'').length / 2) : (level === 'medium' ? Math.floor(word.replace(/\s/g,'').length / 3) : 1);
-        while (revealIndexes.length < lettersToShow) {
-          const i = Math.floor(Math.random() * word.length);
-          if (word[i].trim() && !revealIndexes.includes(i)) revealIndexes.push(i);
-        }
-      }
-
       for (let i = 0; i < word.length; i++) {
         let elem;
         if (!word[i].trim()) {
@@ -431,111 +473,116 @@
           elem = document.createElement('input');
           elem.maxLength = 1;
           elem.placeholder = word[i];
-          dataType === 'hard' && elem.classList.add('hidden-placeholder');
-          elem.dataset.index = i;
-          if (revealIndexes.includes(i)) {
-            elem.value = word[i];
-            elem.disabled = true;
-            elem.classList.add('correct');
-          }
-          elem.addEventListener('input', handleInput);
-          elem.addEventListener('keydown', handleDelete);
+          elem.value = word[i];
         }
         inputContainer.appendChild(elem);
       }
-      inputContainer.querySelector('input:not([disabled])')?.focus();
 
       speakFemale(word, currentLang, document.getElementById('speaker'), document.getElementById('waves'));
     }
 
-    function handleDelete(e) {
-      if (e.key === 'Backspace' && !e.target.value) {
-        const elements = [...inputContainer.children];
-        let i = Number(e.target.dataset.index) - 1;
-        while (i >= 0 && (elements[i].tagName.toLowerCase() !== 'input' || elements[i].disabled)) i--;
-        if (i >= 0) {
-          const prev = elements[i];
-          prev.focus();
-          prev.value = '';
-          prev.classList.remove('wrong', 'correct');
+    // 渲染“列表版”
+    function renderListView() {
+      const grid = document.getElementById('listGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      words.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'list-card';
+
+        // 顶部播放按钮（与 loadWord 的喇叭一致）
+        const playBtn = document.createElement('button');
+        playBtn.className = 'play-mini';
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 64 64');
+        svg.setAttribute('class', 'speaker');
+        const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        polygon.setAttribute('points', '16,24 28,24 40,12 40,52 28,40 16,40');
+        polygon.setAttribute('stroke-linejoin', 'round');
+        const waves = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        waves.setAttribute('class', 'waves');
+        waves.setAttribute('style', 'transform: translateX(6px);');
+        svg.appendChild(polygon);
+        svg.appendChild(waves);
+        playBtn.appendChild(svg);
+        playBtn.addEventListener('click', (ev) => {
+          ev.stopPropagation(); // 与卡片点击区分
+          ev.preventDefault();
+          speakFemale(item.name, currentLang, svg, waves);
+        });
+
+        // 图片（如果有）
+        if (item.img) {
+          const img = document.createElement('img');
+          img.src = item.img;
+          img.alt = item.name || '';
+          img.loading = 'lazy';
+          card.appendChild(img);
         }
-      }
-    }
 
-    function handleInput(e){
-      const soundWrong = document.getElementById('soundWrong');
-      const soundCorrect = document.getElementById('soundCorrect');
-      const input = e.target;
-      input.value = input.value.toLowerCase();
-      const word = words[currentIndex].name.toLowerCase();
+        // 英文单词（与 loadWord 的 wordDisplay 一致）
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = (item.name || '').toLowerCase();
 
-      if(!inputContainer) return;
-      const elements = [...inputContainer.children];
-      if(!elements.length) return;
+        // 音标（与 loadWord 中 soundmark 一致）
+        const sound = document.createElement('div');
+        sound.style.marginTop = '6px';
+        sound.style.color = '#777';
+        sound.style.fontSize = '14px';
+        const typeLang = ({ 'en-US': 'usphone', 'en-GB': 'ukphone' }[currentLang]) || 'ukphone';
+        const languageStart = { ukphone: '英: ', usphone: '美: ' };
+        const phone = item[typeLang] ? `/${item[typeLang]}/` : '';
+        sound.innerHTML = `${languageStart[typeLang]}&nbsp;${phone}`;
 
-      let wordIndex = 0;
-      let hasError = false;
+        // 中文释义（与 loadWord 的 getTrans 一致）
+        // const sub = document.createElement('div');
+        // sub.className = 'sub';
+        // sub.innerHTML = (Array.isArray(item.trans) ? item.trans.map(t => `<span>${t}</span>`).join('<br/>') : '');
 
-      elements.forEach(elem => {
-        if (elem.tagName.toLowerCase() !== 'input') {
-          wordIndex++;
-          return;
+        // 歌词按钮（如果有 lyrics）
+        if (item.lyrics) {
+          const lyrBtn = document.createElement('button');
+          lyrBtn.className = 'play-mini';
+          lyrBtn.style.marginTop = '8px';
+          lyrBtn.style.backgroundColor = '#3498db';
+          // 添加播放图标
+          const lsvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          lsvg.setAttribute('viewBox', '0 0 64 64');
+          lsvg.setAttribute('class', 'speaker');
+          const lpoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+          lpoly.setAttribute('points', '16,24 28,24 40,12 40,52 28,40 16,40');
+          lpoly.setAttribute('stroke-linejoin', 'round');
+          const lwaves = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          lwaves.setAttribute('class', 'waves');
+          lwaves.setAttribute('style', 'transform: translateX(6px);');
+          lsvg.appendChild(lpoly);
+          lsvg.appendChild(lwaves);
+          const ltext = document.createElement('span');
+          ltext.textContent = ' 播放例句';
+          ltext.style.marginLeft = '8px';
+          lyrBtn.appendChild(lsvg);
+          lyrBtn.appendChild(ltext);
+          lyrBtn.addEventListener('click', (ev) => {
+            ev.stopPropagation(); // 与卡片点击区分
+            ev.preventDefault();
+            speakFemale(item.lyrics, currentLang, lsvg, lwaves);
+          });
+          card.appendChild(lyrBtn);
         }
-        elem.classList.remove('wrong', 'correct');
-        if (elem.value) {
-            elem.classList.add(elem.value === word[wordIndex] ?'correct' : 'wrong');
-            elem.value !== word[wordIndex] && (hasError = true)
-        } else {
-          hasError = true;
-        }
-        wordIndex++;
+
+        card.appendChild(playBtn);
+        card.appendChild(title);
+        card.appendChild(sound);
+        // card.appendChild(sub);
+        // 点击卡片：播放 name + lyrics（若有）
+        card.addEventListener('click', () => {
+          const fullText = item.name + (item.lyrics ? ('. ' + item.lyrics) : '');
+          speakFemale(fullText, currentLang, svg, waves);
+        });
+        grid.appendChild(card);
       });
-
-      // 自动跳到下一个 input
-      let nextIndex = Number(input.dataset.index) + 1;
-      while (nextIndex < elements.length) {
-        const nextElem = elements[nextIndex];
-        if (nextElem.tagName.toLowerCase() === 'input' && !nextElem.disabled) break;
-        nextIndex++;
-      }
-
-      (nextIndex < elements.length) && elements[nextIndex].focus();
-      
-      if (!hasError && elements.every(el => el.tagName.toLowerCase() !== 'input' || el.value !== '')) {
-        clearTimeout(timer);
-        speakFemale(word, currentLang, document.getElementById('speaker'), document.getElementById('waves'));
-        delete wrongCountMap[word]
-        reviewList = reviewList.filter(item => item.name.toLowerCase() !== word)
-        soundCorrect.play();
-        timer = setTimeout(() => {
-          nextRender();
-        }, 2000);
-      } else if (hasError && nextIndex === elements.length) {
-        soundWrong.play();
-      } else if (hasError) {
-        wrongCountMap[word] = (wrongCountMap[word] || 0) + 1;
-        if (wrongCountMap[word] >= 2 && !reviewList.includes(words[currentIndex])) reviewList.push(words[currentIndex]);
-      }
-    }
-
-    function resetBtnDom(className = '.toggleLanguage[data-type]') {
-      const btns = document.querySelectorAll(className);
-      btns.forEach(btn => btn.classList.remove('active'));
-    }
-
-    function tabsRender(key = '一年级上册') {
-      const tabContainer = document.getElementById('tabContainer');
-      tabContainer.innerHTML = '';
-      Object.keys(categories).forEach((cat, index) => {
-        const tabBtn = document.createElement('button');
-        tabBtn.setAttribute('class', cat === key ? 'active' : '');
-        tabBtn.setAttribute('data-type', 'tabBtn');
-        tabBtn.setAttribute('data-class', cat);
-        tabBtn.setAttribute('data-index', index);
-        cat === key && (words = categories[cat]);
-        tabBtn.textContent = `${cat}(${categories[cat].length})`;
-        tabContainer.appendChild(tabBtn);
-      })
     }
 
     document.addEventListener("click", function(ev) {
@@ -544,15 +591,6 @@
       type = type || ev.target.parentNode.getAttribute('data-type')
 
       switch (type) {
-        case 'tabBtn':
-          const btnClassName = event.target.getAttribute('data-class');
-          const btnIndex = event.target.getAttribute('data-index');
-          resetBtnDom('[data-type="tabBtn"]');
-          event.target.classList.add('active');
-          document.querySelector('[data-type="class"]').selectedIndex = btnIndex || 0;
-          words = categories[btnClassName];
-          loadWord();
-          break;
         case 'sound':
           speakFemale(words[currentIndex].name, currentLang, ev.target, document.getElementById('waves'));
           break;
@@ -562,75 +600,34 @@
         case 'next':
           nextRender();
           break;
-        case 'word':
-          const level = event.target.getAttribute('data-level');
-          resetBtnDom();
-          dataType = level;
-          event.target.classList.add('active');
-          loadWord();
+        case 'tabBtn': {
+          // 切换 tab 样式
+          const idx = ev.target.getAttribute('data-index');
+          document.querySelectorAll('#tabContainer [data-type="tabBtn"]').forEach(btn => btn.classList.remove('active'));
+          ev.target.classList.add('active');
+
+          const wordWrap = document.querySelector('.wordContainer');
+          const listWrap = document.getElementById('listContainer');
+
+          if (idx === '1') {
+            // 简便版
+            listWrap.style.display = 'none';
+            wordWrap.style.display = 'block';
+            const next = document.getElementById('nextBtn');
+            if (next) next.style.display = 'inline-block';
+            // 切换到简便版时重新渲染一次
+            try { loadWord(); } catch(e) {}
+          } else {
+            // 列表版
+            wordWrap.style.display = 'none';
+            listWrap.style.display = 'block';
+            document.getElementById('nextBtn').style.display = 'none';
+            renderListView();
+          }
           break;
+        }
       }
     }, false);
-
-    document.addEventListener('keydown', (ev) => {
-      if (ev.key === 'Enter') {
-        clearTimeout(timer);
-        nextRender();
-      }
-
-      const inputs = document.querySelectorAll(['#inputContainer input']);
-      const firstInput = inputs[0];
-      firstInput && !firstInput.value && firstInput.focus();
-    });
-
-    document.addEventListener('change', function(ev) {
-      const dataType = ev.target.getAttribute('data-type');
-
-      switch (dataType) {
-        case 'class':
-          tabsRender(ev.target.value);
-          loadWord();
-          break;
-        case 'book':
-          const url = `./data/school/${ev.target.value || 'waiYanShe'}.json`
-          renderClassInfo(url);
-          break;
-        case 'soundSelect':
-          currentLang = ev.target.value || 'en-GB';
-          loadWord();
-          break;
-        default:
-          break;
-      }
-    })
-
-    function createSelect(data, targetId, placeholder, dataType, callBack) {
-      if (!Array.isArray(data) || !targetId) return;
-
-      const container = document.getElementById(targetId);
-      if (!container) return;
-
-      // reset select
-      const allSelectDom = document.querySelectorAll(`.control-select[data-type="${dataType}"]`);
-      if (allSelectDom.length) {
-        allSelectDom.forEach(function(item) {
-          item.remove();
-        })
-      }
-
-      const select = document.createElement('select');
-      select.className = 'control-select';
-      select.setAttribute('placeholder', placeholder)
-      select.setAttribute('data-type', dataType)
-      data.forEach(function(item){
-        const option = document.createElement('option');
-        option.value = String(item.key);
-        option.textContent = String(item.name);
-        select.appendChild(option);
-      });
-      callBack ? callBack(container, select) : container['insertBefore'](select, container.firstChild);
-      return select;
-    }
 
     function renderClassInfo(url = './data/school/waiYanShe.json') {
       $.ajax({
@@ -640,40 +637,24 @@
         async: false
       }).done(function(data) {
         if (!data) return;
-        categories = data;
-        const firstWord = Object.keys(data)[0]
-        words = data[firstWord]
-        createSelect(Object.keys(data).map(item => ({
-          name: item,
-          key: item
-        })), 'navbar', '年级切换', 'class', ((container, dom)=> {
-          const schoolDom = document.querySelector('.control-select[placeholder="词典切换"]');
-          // 在schoolDom 节点的后面增加
-          schoolDom.parentNode.insertBefore(dom, schoolDom.nextSibling);
-        }));
-        loadWord();
-        tabsRender(firstWord);
+        words = Object.keys(data).reduce((acc, cur)=> [...acc, ...data[cur]], []);
+        // 默认展示列表版
+        try {
+          renderListView();
+          document.querySelector('.wordContainer').style.display = 'none';
+          document.getElementById('listContainer').style.display = 'block';
+          const next = document.getElementById('nextBtn');
+          if (next) next.style.display = 'none';
+        } catch (e) {
+          // 兜底仍能正常显示单词
+          loadWord();
+        }
       }).fail(function(error) {
         console.error('Error fetching data', error);
       });
     }
 
-    function getSchoolType() {
-      $.ajax({
-        url: './data/school/schoolBook.json',
-        type: 'GET',
-        dataType: 'json',
-        async: false
-      }).done(function(data) {
-        if (!data) return;
-        createSelect(data, 'navbar', '词典切换', 'book');
-        renderClassInfo(`./data/school/${data[0].key}.json`);
-      }).fail(function(error) {
-        console.error('Error fetching data', error);
-      });
-    }
-
-    getSchoolType();
+    renderClassInfo(`./data/school/english-for-little-ones.json`);
   </script>
 </body>
 </html>
