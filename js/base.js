@@ -95,8 +95,12 @@ function stopWaves(waveGroup) {
 
 /** ✅ 播放 */
 function speakFemale(content, langType, speaker, waveGroup) {
-  if (!voices.length) {
-    return soundCallBack(playSpeech(content, langType, speaker, waveGroup));
+  if ('speechSynthesis' in window) {
+    if (!voices.length) {
+      return soundCallBack(playSpeech(content, langType, speaker, waveGroup));
+    }
+    playSpeech(content, langType, speaker, waveGroup);
+  } else {
+    alert('您的浏览器不支持语音合成功能，请使用Chrome或Edge浏览器。');
   }
-  playSpeech(content, langType, speaker, waveGroup);
 }

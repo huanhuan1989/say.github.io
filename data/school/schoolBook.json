@@ -1,5 +1,3 @@
-
-
 [
   {
     "name": "外研社",
@@ -12,5 +10,17 @@
   {
     "name": "人教版",
     "key": "renJiao"
+  },
+  {
+    "name": "KET",
+    "key": "ket"
+  },
+  {
+    "name": "PET-2024",
+    "key": "pet2024"
+  },
+  {
+    "name": "GRE-6515",
+    "key": "gre6515"
   }
 ]

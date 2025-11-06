@@ -89,6 +89,7 @@
       </div>
     </div>
     <script src="./js/jQuery.min.js"></script>
+    <script src="./js/base.js"></script>
     <script>
       let currentCategory = '';
 
@@ -99,15 +100,6 @@
         });
       }
       
-      /* ---------- 辅助：朗读 ---------- */
-      function speak(text){
-        if(!('speechSynthesis' in window)) return;
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'en-US';
-        speechSynthesis.cancel(); // 取消上一个，避免堆积
-        speechSynthesis.speak(u);
-      }
-
       function initTabsUI(data){
         if (!data) return;
 
@@ -166,7 +158,7 @@
           document.addEventListener("click", function(event) {
             const tabStr = event.target.classList.toString()
             if (tabStr.includes('tab')) return;
-            speak(event.target.getAttribute('data-word'));
+            speakFemale(event.target.getAttribute('data-word'), 'en-GB');
           }, false);
         }).fail(function() {
           console.error("Error fetching data");

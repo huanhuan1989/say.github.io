@@ -75,6 +75,7 @@
       padding: 9px 14px;
       border: 1px solid #666;
       margin: 0 6px;
+      max-width: 200px;
     }
     #levelSelect {
       padding: 6px 10px;
@@ -389,10 +390,10 @@
       }[currentLang] || 'ukphone'
 
       const languageStart = {
-        'ukphone': 'BrE: ',
-        'usphone': 'AmE: '
+        'ukphone': '英: ', // BrE: 
+        'usphone': '美: ' // AmE: 
       }
-      soundMark.textContent = `${languageStart[typeLang]} ${data[typeLang]}`
+      soundMark.innerHTML = `${languageStart[typeLang]}&nbsp;/${data[typeLang]}/`
 
       const revealIndexes = [];
       if (dataType === 'medium') {

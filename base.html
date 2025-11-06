@@ -393,7 +393,9 @@
       </section>
     </div>
   </div>
-<script>
+
+  <script src="./js/base.js"></script>
+  <script>
   // 自然拼读数据
   const phonicsData = {
     1: { // 字母发音
@@ -646,17 +648,8 @@
 
   // 使用Web Speech API朗读文本
   function speakText(options, type) {
-    if ('speechSynthesis' in window) {
-      const word = type === 'sound' ? options.pronunciation : options.item;
-      const utterance = new SpeechSynthesisUtterance(options.type ? `${options.type} ${word}`: word);
-      utterance.lang = "en-US";  // 设置语言
-      utterance.rate = 1;        // 语速 (0.1 ~ 10)
-      utterance.pitch = 1;       // 音调 (0 ~ 2)
-      utterance.volume = 1;      // 音量 (0 ~ 1)
-      speechSynthesis.speak(utterance);
-    } else {
-      alert('您的浏览器不支持语音合成功能，请使用Chrome或Edge浏览器。');
-    }
+    const word = type === 'sound' ? options.pronunciation : options.item;
+    speakFemale(options.type ? `${options.type} ${word}`: word, 'en-GB')
   }
 
   // 初始化页面

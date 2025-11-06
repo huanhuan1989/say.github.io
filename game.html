@@ -323,6 +323,7 @@
 <audio id="sndWrong" src="./files/wrong.mp3"></audio>
 
 <script src="./js/jQuery.min.js"></script>
+<script src="./js/base.js"></script>
 <script>
   let CATEGORIES = null;
   let currentCategory = '';
@@ -413,15 +414,6 @@
       if(raw) bestScores = JSON.parse(raw);
     }catch(e){ bestScores = {} }
     updateBestDisplay();
-  }
-
-  /* ---------- 辅助：朗读 ---------- */
-  function speak(text){
-    if(!('speechSynthesis' in window)) return;
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    speechSynthesis.cancel(); // 取消上一个，避免堆积
-    speechSynthesis.speak(u);
   }
 
   /* ---------- 渲染 tabs active ---------- */
@@ -550,7 +542,7 @@
     flipped.push({el, card});
     // if word-card opened, speak immediately
     if(card.kind === 'word'){
-      speak(card.word);
+      speakFemale(card.word, 'en-GB')
     }
 
     if(flipped.length === 2){
@@ -585,7 +577,7 @@
 
       // audio & speak
       if(!sfxMuted) sndCorrect.play();
-      speak(a.card.word);
+      speakFemale(a.card.word, 'en-GB')
 
       // score update
       const perPair = Math.floor(100 / (gameCards.length / 2));
@@ -769,7 +761,7 @@
     let idx=0;
     function next(){
       if(idx>=items.length) return;
-      speak(items[idx].word);
+      speakFemale(items[idx].word, 'en-GB')
       idx++;
       setTimeout(next,800);
     }

@@ -62,8 +62,8 @@
       "trans": [
         "一 ( 个 )"
       ],
-      "usphone": "",
-      "ukphone": ""
+      "usphone": "ə; eɪ æn; ən",
+      "ukphone": "ə; eɪ æn; ən"
     },
     {
       "name": "face",
@@ -4023,7 +4023,7 @@
       "trans": [
         "有病的"
       ],
-      "usphone": "sɪk ",
+      "usphone": "sɪk",
       "ukphone": "sɪk"
     },
     {
@@ -6219,7 +6219,8 @@
         "西"
       ],
       "usphone": "wɛst",
-      "phone": "wɛst"
+      "phone": "wɛst",
+      "ukphone": "west"
     },
     {
       "name": "famous",
@@ -6795,7 +6796,8 @@
         "发明"
       ],
       "usphone": "ɪnˈvɛn.ʃən",
-      "uk": "ɪnˈven.ʃən"
+      "uk": "ɪnˈven.ʃən",
+      "ukphone": "ɪnˈvenʃ(ə)n"
     },
     {
       "name": "invent",
@@ -7162,7 +7164,8 @@
         "特别"
       ],
       "usphone": "ˈspɛʃ.əl",
-      "phone": "ˈspɛʃ.əl"
+      "phone": "ˈspɛʃ.əl",
+      "ukphone": "ˈspeʃ(ə)l"
     },
     {
       "name": "beaver",
