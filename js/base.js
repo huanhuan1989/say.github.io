@@ -101,6 +101,6 @@ function speakFemale(content, langType, speaker, waveGroup) {
     }
     playSpeech(content, langType, speaker, waveGroup);
   } else {
-    alert('您的浏览器不支持语音合成功能，请使用Chrome或Edge浏览器。');
+    alert('您的浏览器不支持语音合成功能，请使用Chrome、Safari、Firefox、Edge浏览器等webKit内核高版本浏览器。');
   }
 }
