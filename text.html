@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+  // 健康检查
+  // $.ajax({
+  //   url: 'http://11.43.178.189:5002/health',
+  //     type: 'GET',
+  //     dataType: 'json',
+  //     async: false
+  //   }).done(function(data) {
+  //     console.log('--data--', data)
+  //   }).fail(function(error) {
+  //     console.error('Error fetching data', error);
+  //   });
+
+  // 文本转语音 http://11.43.178.189:5002/tts post
+
+  const requestDataList = [
+    {
+      name: 'cat',
+      data: `Today, let’s talk about the cat.
+
+      This is a cat.
+      The cat says meow meow.
+
+      The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.
+
+      Cats are gentle and quiet.
+      Many people keep a cat as a pet.
+      They are very curious.
+      They like to explore.
+      They love to climb trees.
+      They can jump high and run fast.
+      They love to sleep for much of the day.
+      They like to eat fish and meat.
+
+      This is a baby cat; we call it kitten.`
+    },
+    {
+      name: 'dog',
+      data: `Today, let's talk about the dog.
+
+      This is a dog.
+      The dog says woof woof.
+
+      The dog has one nose, two big ears, soft fur, four paws and one tail.
+
+      They are very smart.
+      Many people keep a dog as a pet.
+      Dogs love to play games.
+      They love to roll in sticky mud.
+      They have a good sense of smell.
+      They love to have a walk every day.
+
+      They eat meat and plants.
+
+      This is a baby dog; we call it puppy.`
+    },
+    {
+      name: 'giraffe',
+      data: `Today, let's talk about the giraffe.
+
+      This is a giraffe.
+
+      The giraffe has two horns, two big eyes, one long neck, four long legs and one long tail.
+
+      Giraffes are the tallest animals in the world.
+      An adult giraffe can be 4 meters to 6 meters tall.
+      A baby giraffe can be 1 meter to 2 meters tall.
+      They run very fast.
+      They love to explore.
+      They live in groups in Africa.
+
+      They eat leaves, flowers and fruits.
+
+      This is a baby giraffe; we call it calf.`
+    },
+    {
+      name: 'shark',
+      data: `Today, let's talk about the shark.
+
+      This is a shark.
+
+      The shark has two eyes, one first dorsal fin, one second dorsal fin, two pectoral fins, a tail and many sharp teeth.
+
+      The shark is one of the biggest fish on earth.
+      Sharks live in the ocean.
+      They like to swim in cool water.
+      Sharks can swim very fast.
+      Their tails are long and powerful.
+      They can be very dangerous.
+      Their teeth are very sharp.
+      They have about three hundred teeth.
+
+      They eat fish, sea lions, dolphins and sea turtles.`
+    },
+    {
+      name: 'frog',
+      data: `Today, let's talk about the frog.
+
+        This is a frog.
+        The frog says ribbit ribbit.
+
+        The frog has two big eyes, a long tongue, smooth skin, four long legs and a white belly.
+
+        Frogs can live both in water and on land.
+        They have strong back legs.
+        They are good at jumping.
+        Frogs come in different colors.
+        Green frogs, brown frogs and grey frogs.
+        Frogs are interesting and important creatures in nature.
+
+        They eat insects such as mosquitoes, flies and ants.`
+      },
+      {
+        name: 'flamingo',
+        data: `Today, let's talk about the flamingo.
+
+        This is a flamingo.
+        It is a big bird.
+
+        The flamingo has one curved bill, one long neck, two wings, pink feathers, two long legs and two webbed feet.
+
+        Flamingos are pink and tall.
+        They can swim and fly.
+        They live near shallow water.
+        They like lakes, ponds and oceans.
+        They live together in big groups.
+        They stand on one leg to rest.
+        They stand on two legs to eat.
+
+        They love to eat snails, plants, fish and shrimps.`
+      },
+      {
+        name: 'chicken',
+        data: `Today, let's talk about the chicken.
+
+        This is a boy chicken; we call it rooster.
+        The rooster says cock-a-doodle-doo.
+        The rooster has one red comb, one red wattle, one sharp beak, two wings, two legs and one big tail.
+
+        This is a girl chicken; we call it hen.
+        The hen says cluck cluck.
+        The hen has a small comb, and the rooster has a big one.
+        The rooster's tail is bigger than the hen's.
+        Their beaks are very sharp.
+
+        They eat grains, grass and worms.
+
+        Look, this is a baby chicken; we call it chick.`
+      },
+      {
+        name: 'ostrich',
+        data: `Today, let's talk about the ostrich.
+
+        This is an ostrich.
+
+        The ostrich has one small head, one hard beak, one long neck, two wings, soft feathers and two long legs.
+
+        The ostrich is the largest bird in the world.
+        Ostrich eggs are large.
+        They live in groups in Africa.
+        They like the savanna and the desert.
+        They have wings, but can't fly.
+        Their legs are very strong.
+        They can run very fast.
+
+        They eat plants, grass, bugs and lizards.`
+      },
+      {
+        name: 'duck',
+        data: `Today, let's talk about the duck.
+
+        This is a duck.
+        The duck says quack quack.
+
+        The duck has a yellow bill, a long neck, two wings, waterproof feathers, a tail and two webbed feet.
+
+        We often keep ducks on a farm.
+        The ducks are good at swimming.
+        They love to swim in lakes, ponds and rivers.
+        Their webbed feet help them swim fast.
+
+        The ducks like to eat grains, vegetables, worms, shrimps and insects.
+
+        Look, there is a baby duck swimming in the river.`
+      },
+    {
+      name: 'chick',
+      data: `Today, let's talk about the chick.
+
+      Look, this is an egg.
+      A hen sits on her eggs in the nest to keep them nice and warm.
+      The egg cracks.
+      The chick hatches from the egg.
+      Look at that little chick, it is stretching its body.
+      The chick will grow into a rooster or a hen.
+      The hen will lay eggs again.`
+    },
+    {
+      name: 'hippo',
+      data: `Today, let's talk about the hippo.
+
+      This is a hippo.
+      The hippo has two small ears, two eyes, one big mouth and a short tail, but it is a big guy.
+
+      Hippos are very big land mammals.
+      They are so heavy.
+      They live in Africa.
+      They stay near swamps, lakes and rivers.
+      They like water, the water keeps hippos cool.
+      They spend almost all time in the water.
+      Their jaws can open very wide.
+      Their teeth are long and sharp.
+
+      Hippos eat grass and fruits.`
+    },
+    {
+      name: 'elephant',
+      data: `Today, let's talk about the elephant.
+
+      This is an elephant.
+      The elephant says toot toot.
+
+      The elephant has two eyes, two large ears, one long nose, two tusks and one long tail.
+      The elephant has a long nose, we call it trunk.
+      The elephant has two long teeth, we call them tusks.
+      Elephants are grey.
+      Elephants are the biggest animals on the land.
+      Elephants have large ears.
+      They keep cool by flapping them.
+
+      Elephants like to eat grass, leaves, fruits and flowers.
+
+      Look at the baby elephants, we call them calves.`
+    },
+    {
+      name: 'whale',
+      data: `Today, let's talk about the whale.
+
+      This is a whale.
+      The Whale has one large mouth, two eyes, one or two blow holes, one back fin, two flippers and one tail.
+
+      Whales are large sea mammals.
+      They are the largest animals on earth.
+      They live in the ocean.
+      They can spray water from the blowhole.
+      They have a streamlined body.
+      They can swim fast and travel a long distance.
+      They communicate through sounds.
+
+      They eat small sea creatures, such as fish, squid and shrimps.`
+    },
+    {
+      name: 'rhino',
+      data: `Today, let's talk about the rhino.
+
+      This is a rhino.
+      The rhino has one or two horns, two ears, one wide mouth, four legs and a tail.
+
+      Rhinos are grey.
+      Rhinos live on the grassland.
+      You may see a rhino in the zoo.
+      Rhinos like to roll in mud.
+      Mud can protect them from the hot sun.
+      Rhinos can run very fast.
+      But they are too big to run for long.
+
+      They love to eat leaves, grass and bushes.`
+    },
+    {
+      name: 'cow',
+      data: `Today, let's talk about the cow.
+
+      This is a cow.
+      The cow says Moo moo.
+
+      The cow has two horns, two ears, four hooves and a tail.
+
+      Cows live on a farm.
+      They are farm animals.
+      There are many different kinds of cows.
+      This one is a dairy cow.
+      It is black and white.
+      Dairy cows can provide us with milk.
+
+      They eat hay, grass and grain.
+
+      Look, there is a cute baby cow, we call it calf.`
+    },
+    {
+      name: 'rabbit',
+      data: `Today, let's talk about the rabbit.
+
+      This is a Rabbit.
+      The rabbit says squeak squeak.
+
+      The rabbit has two long ears, two big eyes and one short tail.
+
+      Rabbits can be white, black, grey and brown.
+      They live in a hollow tree or a cave.
+      They are very cute.
+      They can run fast and jump high.
+
+      They like to eat carrots, grass and vegetables.
+
+      Look, there is a baby rabbit; we call it bunny.`
+    }
+  ]
+
+  /**
+   * simulationClick  模拟A标签
+   * @param {String} url  地址
+   */
+  const simulationTheATag = (url, isTarget = false) => {
+    const aDom = document.createElement('a')
+    const fileName = url.substring(url.lastIndexOf('/') + 1).split('?')[0]
+    aDom.href = url
+    isTarget && (aDom.target = '_blank')
+    aDom.download = fileName
+    document.body.appendChild(aDom)
+    aDom.click()
+
+    setTimeout(() => {
+      document.body.removeChild(aDom)
+    }, 1000)
+  }
+
+  // 优化后的 FormData 构建函数
+  const createFormData = (params) => {
+    const formData = new FormData();
+    Object.keys(params).forEach((el) => {
+      const value = params[el];
+      // 处理复杂类型（当前示例用不到，仅增强鲁棒性）
+      if (Array.isArray(value) || (typeof value === 'object' && value !== null)) {
+        formData.append(el, JSON.stringify(value));
+      } else {
+        formData.append(el, value);
+      }
+    });
+    return formData;
+  };
+
+  // 保存 Blob 为本地文件的通用工具函数
+  const saveBlobToLocal = (blob, fileName) => {
+    // 封装为 MP3 格式的 Blob
+    const mp3Blob = new Blob([blob], { type: 'audio/wav' });
+
+    // 兼容 IE 10+
+    if (window.navigator.msSaveBlob) {
+      window.navigator.msSaveBlob(mp3Blob, fileName);
+      return;
+    }
+
+    // 现代浏览器（Chrome/Firefox/Edge 等）
+    // 1. 创建临时下载链接
+    const downloadLink = document.createElement('a');
+    // 2. 生成 Blob 临时 URL（浏览器内存中，不会上传服务器）
+    const blobUrl = URL.createObjectURL(mp3Blob);
+
+    // 3. 设置下载属性
+    downloadLink.href = blobUrl;
+    downloadLink.download = fileName; // 自定义下载的文件名
+    downloadLink.style.display = 'none'; // 隐藏标签
+
+    // 4. 插入页面并模拟点击
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+
+    // 5. 清理资源（避免内存泄漏）
+    document.body.removeChild(downloadLink);
+    URL.revokeObjectURL(blobUrl); // 释放临时 URL
+  };
+
+  function singleRequest(params, index) {
+    return new Promise((resolve, reject) => {
+      console.log(`准备发送请求 ${index}：${params.target}`, {
+        text: params.data,
+        target: `${params.name}.mp3`
+      });
+      $.ajax({
+        url: 'http://11.43.178.189:5002/tts',
+        type: 'POST',
+        data: createFormData({
+          text: params.data,
+          target: `${params.name}.mp3`
+        }),
+        processData: false,
+        contentType: false,
+        xhrFields: {
+          responseType: 'blob' 
+        },
+        timeout: 0, // 超时时间
+      })
+      .done(function(blobData){
+        console.log(`请求 ${index} 成功：${params.name}`);
+        resolve({ blob: blobData, target: `${params.name}.mp3` });
+      }).fail(function(error){
+          console.error(`请求 ${index} 失败：${params.name}，原因：${error}`);
+          reject({ err, status, target: `${params.name}.mp3` });
+      });
+    });
+  }
+
+  /**
+   * 严格分组并发请求（每组完成再发下一组）
+   * @param {Array} requestList - 请求参数数组
+   * @param {Function} requestFn - 单个请求函数（返回Promise）
+   * @param {Number} concurrency - 每次并发数（默认3）
+   * @returns {Promise} 所有请求完成的结果
+   */
+  function batchRequest(requestList, requestFn, concurrency = 3) {
+    // 深拷贝数组，避免修改原数据
+    const pendingList = JSON.parse(JSON.stringify(requestList));
+    const allResults = []; // 存储所有请求结果
+
+    // 执行单组请求的核心函数
+    function executeOneBatch() {
+      // 取出当前组的请求（最多3个）
+      const currentBatch = pendingList.splice(0, concurrency);
+      // 没有待执行请求，返回所有结果
+      if (currentBatch.length === 0) {
+        return Promise.resolve(allResults);
+      }
+
+      console.log(`\n开始执行第 ${Math.ceil(allResults.length/concurrency) + 1} 组请求，共 ${currentBatch.length} 个`);
+
+      // 为当前组的每个请求创建Promise（手动捕获错误，确保Promise.all不中断）
+      const batchPromises = currentBatch.map((params, batchIndex) => {
+        const globalIndex = allResults.length + batchIndex; // 全局请求索引
+        return requestFn(params, globalIndex) // 执行单个请求
+          .then((res) => {
+            // 成功结果
+            return {
+              index: globalIndex,
+              params,
+              status: 'success',
+              data: res
+            };
+          })
+          .catch((err) => {
+            // 失败结果（手动catch，避免Promise.all失败）
+            return {
+              index: globalIndex,
+              params,
+              status: 'fail',
+              error: err
+            };
+          });
+      });
+
+      // 等待当前组所有请求完成（成功/失败都等），再执行下一组
+      return Promise.all(batchPromises)
+        .then((batchResults) => {
+          // 将当前组结果存入总结果
+          allResults.push(...batchResults);
+          console.log(`第 ${Math.ceil(allResults.length/concurrency)} 组请求完成，结果：`, batchResults);
+          // 递归执行下一组
+          return executeOneBatch();
+        });
+    }
+
+    // 启动第一组请求
+    return executeOneBatch();
+  }
+
+  // 4. 执行并发请求（每次3个，完成一组再下一组）
+  batchRequest(requestDataList, singleRequest, 3)
+    .then((allResults) => {
+      console.log('所有请求完成，结果列表：', allResults);
+      // 遍历结果，处理成功/失败的请求
+      allResults.forEach((result) => {
+        if (result.status === 'success') {
+          console.log(`请求成功（${result.data.target}）：`, result.data.blob);
+          // 可选：下载成功的 MP3
+          saveBlobToLocal(result.data.blob, result.data.target);
+        } else {
+          console.error(`请求失败（${result.data.target}）：`, result.error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语语法学习助手 - 帮助孩子学习英语</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5D9CEC;
+            --secondary: #FFCE54;
+            --accent: #A0D468;
+            --danger: #ED5565;
+            --light: #F5F7FA;
+            --dark: #434A54;
+            --success: #48CFAD;
+            --purple: #AC92EC;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, #4b6cb7 100%);
+            color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white" fill-opacity="0.05"/></svg>');
+            background-size: 80px 80px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+        }
+        
+        .header-icon {
+            font-size: 3rem;
+            margin-right: 15px;
+            vertical-align: middle;
+            color: var(--secondary);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .tabs-container {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .tabs-header {
+            display: flex;
+            background-color: white;
+            overflow-x: auto;
+            border-bottom: 3px solid var(--light);
+            padding: 5px;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            min-width: 180px;
+            padding: 22px 15px;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            border-radius: 12px 12px 0 0;
+            margin: 0 5px;
+        }
+        
+        .tab-btn:hover {
+            background-color: rgba(93, 156, 236, 0.1);
+            color: var(--primary);
+        }
+        
+        .tab-btn.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(93, 156, 236, 0.3);
+        }
+        
+        .tab-btn i {
+            margin-right: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .audio-player {
+            display: flex;
+            align-items: center;
+            background: var(--light);
+            border-radius: 50px;
+            padding: 8px 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .play-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            margin-right: 10px;
+        }
+        
+        .play-btn:hover {
+            background: #4b6cb7;
+            transform: scale(1.05);
+        }
+        
+        .play-btn.playing {
+            background: var(--accent);
+        }
+        
+        .audio-time {
+            font-size: 0.9rem;
+            color: var(--dark);
+            font-weight: 600;
+            min-width: 45px;
+        }
+        
+        h3 {
+            color: var(--accent);
+            margin: 30px 0 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--accent);
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .rule-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--purple);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .rule-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .rule-box-header {
+            color: var(--purple);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.4rem;
+        }
+        
+        .rule-box-header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rule-box-header i {
+            margin-right: 12px;
+            background: var(--purple);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section-play-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            margin-left: 15px;
+        }
+        
+        .section-play-btn:hover {
+            background: #8bc34a;
+            transform: scale(1.05);
+        }
+        
+        .section-play-btn.playing {
+            background: var(--primary);
+        }
+        
+        .sub-rule-title {
+            color: var(--primary);
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eef2f7;
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--primary) 0%, #4b6cb7 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: var(--transition);
+        }
+        
+        tr:hover td {
+            background-color: rgba(93, 156, 236, 0.05);
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .example {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid var(--primary);
+            position: relative;
+        }
+        
+        .example::before {
+            content: "例子";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        .highlight {
+            background-color: var(--secondary);
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .mnemonic {
+            background: linear-gradient(135deg, #e6f7e9 0%, #d4f1d8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 6px solid var(--accent);
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mnemonic::before {
+            content: "\f0eb";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            font-size: 3rem;
+            color: rgba(160, 212, 104, 0.2);
+        }
+        
+        .exercise {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            border: 2px solid #f1f5f9;
+            position: relative;
+        }
+        
+        .exercise h3 {
+            color: var(--danger);
+            border-left-color: var(--danger);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px dashed #eef2f7;
+            position: relative;
+        }
+        
+        .question:last-child {
+            border-bottom: none;
+        }
+        
+        .question-number {
+            position: absolute;
+            left: -15px;
+            top: -5px;
+            background: var(--danger);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .question-title {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--dark);
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .question-content {
+            padding-left: 30px;
+        }
+        
+        .question-play-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            margin-left: 10px;
+        }
+        
+        .question-play-btn:hover {
+            background: #8bc34a;
+            transform: scale(1.05);
+        }
+        
+        .question-play-btn.playing {
+            background: var(--primary);
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .option {
+            padding: 18px 20px;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .option:hover {
+            background-color: #edf2f7;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .option.selected {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(93, 156, 236, 0.2);
+        }
+        
+        .option.correct {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .option.wrong {
+            background-color: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+        
+        .option-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .image-option {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 120px;
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        .feedback {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feedback.correct {
+            background-color: rgba(160, 212, 104, 0.15);
+            color: #2d5a27;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .feedback.wrong {
+            background-color: rgba(237, 85, 101, 0.15);
+            color: #a81c2d;
+            border-left: 4px solid var(--danger);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: var(--transition);
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(93, 156, 236, 0.3);
+        }
+        
+        .btn:hover {
+            background: #4b6cb7;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(93, 156, 236, 0.4);
+        }
+        
+        .btn i {
+            margin-right: 10px;
+        }
+        
+        .btn-check {
+            background: var(--accent);
+            box-shadow: 0 5px 15px rgba(160, 212, 104, 0.3);
+        }
+        
+        .btn-check:hover {
+            background: #8bc34a;
+            box-shadow: 0 8px 20px rgba(160, 212, 104, 0.4);
+        }
+        
+        .btn-reset {
+            background: var(--danger);
+            box-shadow: 0 5px 15px rgba(237, 85, 101, 0.3);
+        }
+        
+        .btn-reset:hover {
+            background: #d32f2f;
+            box-shadow: 0 8px 20px rgba(237, 85, 101, 0.4);
+        }
+        
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eef2f7;
+        }
+        
+        #scoreDisplay {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--primary);
+            background: rgba(93, 156, 236, 0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 25px;
+            color: #7f8c8d;
+            font-size: 1rem;
+            border-top: 2px solid #eef2f7;
+        }
+        
+        .floating-animation {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(255, 206, 84, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @media (max-width: 768px) {
+            .tabs-header {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                min-width: 100%;
+                margin: 5px 0;
+                border-radius: 10px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header-icon {
+                font-size: 2.5rem;
+            }
+            
+            h2, h3 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .audio-player, .question-title, .rule-box-header, .sub-rule-title {
+                margin-top: 15px;
+                align-self: flex-start;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            #scoreDisplay {
+                width: 100%;
+            }
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: #e0e6ed;
+            border-radius: 2px;
+            margin-top: 5px;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="floating-animation">
+                <i class="fas fa-star"></i>
+            </div>
+            <h1><i class="fas fa-language header-icon"></i> 英语语法学习助手</h1>
+            <p class="subtitle">帮助孩子理解、记忆和使用英语名词的单复数、量词和冠词用法</p>
+            <p class="subtitle">基于 Smart Kids Level-Up 2 课程内容设计</p>
+        </header>
+        
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">
+                    <i class="fas fa-list-ol"></i> 一、单数与复数
+                </button>
+                <button class="tab-btn" data-tab="tab2">
+                    <i class="fas fa-article"></i> 二、a/an的用法
+                </button>
+                <button class="tab-btn" data-tab="tab3">
+                    <i class="fas fa-balance-scale"></i> 三、可数与不可数对比
+                </button>
+                <button class="tab-btn" data-tab="tab4">
+                    <i class="fas fa-pen-alt"></i> 四、练习题
+                </button>
+            </div>
+            
+            <div class="tab-content active" id="tab1">
+                <h2>
+                    <span>名词单数变复数规则汇总</span>
+                    <div class="audio-player">
+                        <button class="play-btn" data-audio="tab1-audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-time">0:00</div>
+                    </div>
+                </h2>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-check-circle"></i> A. 规则变化 (大多数情况)
+                        </div>
+                        <button class="section-play-btn" data-audio="tab1-rule1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="sub-rule-title">
+                        <span>1. 直接加 s</span>
+                        <button class="section-play-btn" data-audio="tab1-rule1-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>toy → toys (玩具)</p>
+                        <p>pear → pears (梨)</p>
+                        <p>orange → oranges (橙子)</p>
+                        <p>puppet → puppets (木偶)</p>
+                    </div>
+                    
+                    <div class="sub-rule-title">
+                        <span>2. 以 s, x, ch, sh 结尾，加 es</span>
+                        <button class="section-play-btn" data-audio="tab1-rule1-2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>bus → buses (公交车)</p>
+                        <p>box → boxes (盒子)</p>
+                        <p>sandwich → sandwiches (三明治)</p>
+                        <p>brush → brushes (刷子)</p>
+                    </div>
+                    
+                    <div class="sub-rule-title">
+                        <span>3. 以"辅音字母 + y"结尾，变 y 为 i 再加 es</span>
+                        <button class="section-play-btn" data-audio="tab1-rule1-3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>fly → <span class="highlight">flies</span> (苍蝇)</p>
+                        <p>candy → candies (糖果)</p>
+                        <p>puppy → puppies (小狗)</p>
+                        <p>family → families (家庭)</p>
+                    </div>
+                    
+                    <div class="sub-rule-title">
+                        <span>4. 以 f 或 fe 结尾，变 f/fe 为 v 再加 es</span>
+                        <button class="section-play-btn" data-audio="tab1-rule1-4">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>knife → knives (刀)</p>
+                        <p>leaf → leaves (叶子)</p>
+                        <p>wolf → wolves (狼)</p>
+                    </div>
+                </div>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-exclamation-circle"></i> B. 不规则变化 (需特别记忆)
+                        </div>
+                        <button class="section-play-btn" data-audio="tab1-rule2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <p>这是孩子容易混淆的重点，可以将它们编成一组记忆：</p>
+                    
+                    <div class="sub-rule-title">
+                        <span>oo → ee 变化</span>
+                        <button class="section-play-btn" data-audio="tab1-rule2-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子 (单数 → 复数)</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>goose → <span class="highlight">geese</span></td>
+                                <td>鹅</td>
+                            </tr>
+                            <tr>
+                                <td>foot → feet</td>
+                                <td>脚</td>
+                            </tr>
+                            <tr>
+                                <td>tooth → teeth</td>
+                                <td>牙齿</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="sub-rule-title">
+                        <span>单复数同形</span>
+                        <button class="section-play-btn" data-audio="tab1-rule2-2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子 (单数 → 复数)</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>deer → deer</td>
+                                <td>鹿</td>
+                            </tr>
+                            <tr>
+                                <td>sheep → sheep</td>
+                                <td>羊</td>
+                            </tr>
+                            <tr>
+                                <td>fish → fish (通常)</td>
+                                <td>鱼</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="sub-rule-title">
+                        <span>特殊变化</span>
+                        <button class="section-play-btn" data-audio="tab1-rule2-3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子 (单数 → 复数)</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>child → children</td>
+                                <td>孩子</td>
+                            </tr>
+                            <tr>
+                                <td>man → men</td>
+                                <td>男人</td>
+                            </tr>
+                            <tr>
+                                <td>woman → women</td>
+                                <td>女人</td>
+                            </tr>
+                            <tr>
+                                <td>mouse → mice</td>
+                                <td>老鼠</td>
+                            </tr>
+                            <tr>
+                                <td>person → people</td>
+                                <td>人</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mnemonic">
+                        <p><i class="fas fa-lightbulb"></i> <strong>记忆口诀：</strong> "鹅鹿羊，很特别，要么变ee要么不变。小孩男女老鼠人，变化特殊要记牢。"</p>
+                    </div>
+                </div>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-ban"></i> C. 不可数名词 (没有复数形式)
+                        </div>
+                        <button class="section-play-btn" data-audio="tab1-rule3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <p>不可数名词不能直接加s变复数，需要用"量词"来表示数量。</p>
+                    
+                    <div class="sub-rule-title">
+                        <span>液体类</span>
+                        <button class="section-play-btn" data-audio="tab1-rule3-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>juice, soup, milk, lemonade, water, tea, coffee</td>
+                                <td>果汁、汤、牛奶、柠檬水、水、茶、咖啡</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="sub-rule-title">
+                        <span>物质/食材类</span>
+                        <button class="section-play-btn" data-audio="tab1-rule3-2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bread, paper, rice, chocolate, sugar, salt, butter</td>
+                                <td>面包、纸、米饭、巧克力、糖、盐、黄油</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="sub-rule-title">
+                        <span>抽象概念类</span>
+                        <button class="section-play-btn" data-audio="tab1-rule3-3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>例子</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>homework, music, time, love, happiness</td>
+                                <td>作业、音乐、时间、爱、幸福</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mnemonic">
+                        <p><i class="fas fa-lightbulb"></i> <strong>记忆口诀：</strong> "面包果汁不可数，糖盐米饭纸和布。作业音乐和时间，想数它们靠杯碗。"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab2">
+                <h2>
+                    <span>a / an 的使用规则汇总</span>
+                    <div class="audio-player">
+                        <button class="play-btn" data-audio="tab2-audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-time">0:00</div>
+                    </div>
+                </h2>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-volume-up"></i> 核心规则
+                        </div>
+                        <button class="section-play-btn" data-audio="tab2-rule1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <p><strong>看开头发音，不是看开头字母！</strong></p>
+                    
+                    <div class="sub-rule-title">
+                        <span>单数可数名词前</span>
+                        <button class="section-play-btn" data-audio="tab2-rule1-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>规则</th>
+                                <th>例子</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="highlight">a</span> + 辅音<b>音</b>开头的单词</td>
+                                <td>a pear, a fly, a puppet, a teddy bear</td>
+                                <td>注意：<span class="highlight">a university</span> (u发/ju:/，为辅音音)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="highlight">an</span> + 元音<b>音</b>开头的单词</td>
+                                <td>an orange, an onion, an apple, an egg</td>
+                                <td>注意：<span class="highlight">an hour</span> (h不发音，开头音为/аʊ/)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="sub-rule-title">
+                        <span>复数名词前</span>
+                        <button class="section-play-btn" data-audio="tab2-rule1-2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>不加 a/an，可用 some, any, 数词等</p>
+                        <p>I see <span class="highlight">two geese</span>.</p>
+                        <p>I have <span class="highlight">some oranges</span>.</p>
+                        <p>There are <span class="highlight">many toys</span>.</p>
+                    </div>
+                    
+                    <div class="sub-rule-title">
+                        <span>不可数名词前</span>
+                        <button class="section-play-btn" data-audio="tab2-rule1-3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="example">
+                        <p>不加 a/an (除非与量词连用)</p>
+                        <p>I like <span class="highlight">bread</span>. (❌ a bread)</p>
+                        <p>I want <span class="highlight">a piece of bread</span>. (✅)</p>
+                        <p>He drinks <span class="highlight">milk</span>. (❌ a milk)</p>
+                    </div>
+                    
+                    <div class="example">
+                        <p><strong>更多示例：</strong></p>
+                        <p><strong>用 a 的情况：</strong> a book (书), a cat (猫), a dog (狗), a flower (花), a house (房子), a kite (风筝), a lion (狮子), a monkey (猴子), a nurse (护士), a pencil (铅笔), a queen (女王), a robot (机器人), a tiger (老虎), a uniform (制服), a vegetable (蔬菜), a window (窗户), a yellow ball (黄色的球), a zoo (动物园)</p>
+                        <p><strong>用 an 的情况：</strong> an apple (苹果), an elephant (大象), an ice cream (冰淇淋), an orange (橙子), an umbrella (雨伞), an hour (小时), an honest boy (诚实的男孩), an egg (鸡蛋), an eye (眼睛), an ear (耳朵), an ant (蚂蚁), an insect (昆虫)</p>
+                    </div>
+                    
+                    <div class="mnemonic">
+                        <p><i class="fas fa-lightbulb"></i> <strong>记忆口诀：</strong> "a和an很简单，听音不看字母面。辅音音前用a帽，元音音前an来抱。"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab3">
+                <h2>
+                    <span>可数名词 vs. 不可数名词+量词 多维度对比</span>
+                    <div class="audio-player">
+                        <button class="play-btn" data-audio="tab3-audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-time">0:00</div>
+                    </div>
+                </h2>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-lightbulb"></i> 对比表格
+                        </div>
+                        <button class="section-play-btn" data-audio="tab3-rule1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <p>这个对比表格能让孩子一目了然地看到核心区别。</p>
+                    
+                    <div class="sub-rule-title">
+                        <span>可数名词与不可数名词对比</span>
+                        <button class="section-play-btn" data-audio="tab3-rule1-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>对比维度</th>
+                                <th>可数名词 (Countable Nouns)</th>
+                                <th>不可数名词 + 量词 (Uncountable + Measure Words)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>特点</strong></td>
+                                <td>可以一个个数</td>
+                                <td>不能一个个数，是物质或整体</td>
+                            </tr>
+                            <tr>
+                                <td><strong>举例</strong></td>
+                                <td>a doll, an orange, a fly, a teddy bear</td>
+                                <td>bread, juice, paper, soup, rice</td>
+                            </tr>
+                            <tr>
+                                <td><strong>如何表示"一个"？</strong></td>
+                                <td>直接用 a/an + 单数名词<br>a <span class="highlight">doll</span>, an <span class="highlight">orange</span></td>
+                                <td><span class="highlight">a + 量词 + of</span> + 不可数名词<br>a <span class="highlight">piece of</span> bread, a <span class="highlight">glass of</span> juice</td>
+                            </tr>
+                            <tr>
+                                <td><strong>如何提问数量？</strong></td>
+                                <td><span class="highlight">How many + 复数名词？</span><br>How many <span class="highlight">oranges</span>?</td>
+                                <td>1) <span class="highlight">How much + 不可数名词？</span><br>How much <span class="highlight">juice</span>?<br>2) <span class="highlight">How many + 量词复数 + of ...？</span><br>How many <span class="highlight">glasses of</span> juice?</td>
+                            </tr>
+                            <tr>
+                                <td><strong>如何回答数量？</strong></td>
+                                <td>数字 + 复数名词<br><span class="highlight">Three oranges.</span></td>
+                                <td>1) 量词短语<br><span class="highlight">A glass of juice.</span><br>2) 数字 + 量词复数 + of<br><span class="highlight">Two glasses of juice.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>复数形式在哪里？</strong></td>
+                                <td>名词本身变复数<br>orange → orange<span class="highlight">s</span></td>
+                                <td><span class="highlight">量词</span>变复数，名词不变<br>a glass → two <span class="highlight">glasses</span> of juice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mnemonic">
+                        <p><i class="fas fa-lightbulb"></i> <strong>核心记忆点：</strong> "问可数：How many [名词复数]？问不可数：How much [不可数名词]？不可数要计数：数'量词'，[量词]加s，[名词]不变。"</p>
+                    </div>
+                </div>
+                
+                <div class="rule-box">
+                    <div class="rule-box-header">
+                        <div class="rule-box-header-left">
+                            <i class="fas fa-exchange-alt"></i> 量词的复数形式（两片、两杯、两碗……）
+                        </div>
+                        <button class="section-play-btn" data-audio="tab3-rule2">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <p><strong>核心规则：</strong> 对于不可数名词，要表达复数（两个以上）的概念时，<span class="highlight">把量词变成复数</span>，后面的"of + 不可数名词"保持不变。</p>
+                    
+                    <div class="sub-rule-title">
+                        <span>常见量词复数形式示例</span>
+                        <button class="section-play-btn" data-audio="tab3-rule2-1">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>单数形式</th>
+                                <th>复数形式</th>
+                                <th>中文意思</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>a piece of bread</td>
+                                <td><span class="highlight">two pieces</span> of bread</td>
+                                <td>一片面包 → 两片面包</td>
+                            </tr>
+                            <tr>
+                                <td>a glass of milk</td>
+                                <td><span class="highlight">three glasses</span> of milk</td>
+                                <td>一杯牛奶 → 三杯牛奶</td>
+                            </tr>
+                            <tr>
+                                <td>a bowl of rice</td>
+                                <td><span class="highlight">four bowls</span> of rice</td>
+                                <td>一碗米饭 → 四碗米饭</td>
+                            </tr>
+                            <tr>
+                                <td>a bar of chocolate</td>
+                                <td><span class="highlight">five bars</span> of chocolate</td>
+                                <td>一条巧克力 → 五条巧克力</td>
+                            </tr>
+                            <tr>
+                                <td>a pair of scissors</td>
+                                <td><span class="highlight">two pairs</span> of scissors</td>
+                                <td>一把剪刀 → 两把剪刀</td>
+                            </tr>
+                            <tr>
+                                <td>a sheet of paper</td>
+                                <td><span class="highlight">three sheets</span> of paper</td>
+                                <td>一张纸 → 三张纸</td>
+                            </tr>
+                            <tr>
+                                <td>a cup of juice</td>
+                                <td><span class="highlight">four cups</span> of juice</td>
+                                <td>一杯果汁 → 四杯果汁</td>
+                            </tr>
+                            <tr>
+                                <td>a bowl of soup</td>
+                                <td><span class="highlight">two bowls</span> of soup</td>
+                                <td>一碗汤 → 两碗汤</td>
+                            </tr>
+                            <tr>
+                                <td>a bottle of water</td>
+                                <td><span class="highlight">three bottles</span> of water</td>
+                                <td>一瓶水 → 三瓶水</td>
+                            </tr>
+                            <tr>
+                                <td>a slice of pizza</td>
+                                <td><span class="highlight">two slices</span> of pizza</td>
+                                <td>一片披萨 → 两片披萨</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mnemonic">
+                        <p><i class="fas fa-lightbulb"></i> <strong>记忆口诀：</strong> "面包牛奶数不清，要数就数'杯碗瓶'。一杯两杯加个s，后面东西不变形。"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab4">
+                <h2>
+                    <span>综合练习题</span>
+                    <div class="audio-player">
+                        <button class="play-btn" data-audio="tab4-audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-time">0:00</div>
+                    </div>
+                </h2>
+                
+                <div class="exercise">
+                    <h3><i class="fas fa-pen"></i> Part 1: 火眼金睛 (分类与判断)</h3>
+                    
+                    <div class="question" id="q1">
+                        <div class="question-number">1</div>
+                        <div class="question-title">
+                            <span>将下列单词分为"可数(C)"或"不可数(U)"：</span>
+                            <button class="question-play-btn" data-question="1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>deer, soup, paper, fly, lemonade, sheep, juice, goose</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>C: deer, fly, sheep, goose / U: soup, paper, lemonade, juice</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>C: soup, paper, juice / U: deer, fly, sheep, goose, lemonade</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>全部都是可数名词</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q2">
+                        <div class="question-number">2</div>
+                        <div class="question-title">
+                            <span>判断下列名词复数形式是否正确，错的请改正：</span>
+                            <button class="question-play-btn" data-question="2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>a) two gooses</p>
+                            <p>b) three bowls of rices</p>
+                            <p>c) many oranges</p>
+                            <p>d) a pair of scissor</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>a) ❌ geese, b) ❌ bowls of rice, c) ✅, d) ❌ a pair of scissors</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>a) ✅, b) ❌ bowls of rice, c) ✅, d) ✅</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>a) ❌ gooses, b) ✅, c) ✅, d) ❌ scissors</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3><i class="fas fa-clipboard-check"></i> Part 2: 最佳拍档 (选择与填空)</h3>
+                    
+                    <div class="question" id="q3">
+                        <div class="question-number">3</div>
+                        <div class="question-title">
+                            <span>选择 a 或 an：</span>
+                            <button class="question-play-btn" data-question="3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>I see ___ old deer and ___ unusual fly.</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>an, an</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>a, a</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>an, a</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q4">
+                        <div class="question-number">4</div>
+                        <div class="question-title">
+                            <span>选择 How many 或 How much：</span>
+                            <button class="question-play-btn" data-question="4">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>— ___ bread do you want?</p>
+                            <p>— ___ pieces of bread do you want?</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>How much, How many</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>How many, How much</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>How much, How much</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q5">
+                        <div class="question-number">5</div>
+                        <div class="question-title">
+                            <span>填空完成对话：</span>
+                            <button class="question-play-btn" data-question="5">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>A: What do you see?</p>
+                            <p>B: I see <strong>two</strong> ______ (sheep) and <strong>a bowl of</strong> ______ (soup).</p>
+                            <p>A: How many ______ (glass) of lemonade do you have?</p>
+                            <p>B: I have <strong>three</strong> ______ (glasses) of lemonade.</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>sheep, soup, glasses, glasses</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>sheeps, soups, glass, glass</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>sheep, soup, glass, glasses</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3><i class="fas fa-theater-masks"></i> Part 3: 情景小剧场 (运用输出)</h3>
+                    
+                    <div class="question" id="q6">
+                        <div class="question-number">6</div>
+                        <div class="question-title">
+                            <span>模仿课程句型，和孩子进行角色扮演。请选择正确的句子完成对话：</span>
+                            <button class="question-play-btn" data-question="6">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p><strong>情景1 (描述看到的东西)：</strong></p>
+                            <p>你： What do you see? / Are these flies?</p>
+                            <p>孩子： ________________</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>I see three geese. / No, these are deer.</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>I see three goose. / No, these are deers.</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>I see three geese. / Yes, these are flies.</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q7">
+                        <div class="question-number">7</div>
+                        <div class="question-title">
+                            <span>情景2 (询问和拥有物品)：</span>
+                            <button class="question-play-btn" data-question="7">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <p>你： How much juice do you have?</p>
+                            <p>孩子： ________________</p>
+                            <p>你： How many oranges do you have?</p>
+                            <p>孩子： ________________</p>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>I have a glass of juice. / I have four oranges.</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>I have a juice. / I have four orange.</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>I have glass of juice. / I have oranges four.</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3><i class="fas fa-images"></i> Part 4: 图片选择题</h3>
+                    
+                    <div class="question" id="q8">
+                        <div class="question-number">8</div>
+                        <div class="question-title">
+                            <span>观察图片，选择正确的量词表达：</span>
+                            <button class="question-play-btn" data-question="8">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <div class="image-option">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-scissors"></i>
+                                </div>
+                                <p>What is this?</p>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>It's a pair of scissors.</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>It's a scissors.</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>It's scissor.</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q9">
+                        <div class="question-number">9</div>
+                        <div class="question-title">
+                            <span>观察图片，选择正确的复数形式：</span>
+                            <button class="question-play-btn" data-question="9">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <div class="image-option">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-apple-alt"></i> <i class="fas fa-apple-alt"></i> <i class="fas fa-apple-alt"></i>
+                                </div>
+                                <p>There are three ___ on the table.</p>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>apples</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>apple</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>an apple</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q10">
+                        <div class="question-number">10</div>
+                        <div class="question-title">
+                            <span>观察图片，选择正确的表达：</span>
+                            <button class="question-play-btn" data-question="10">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="question-content">
+                            <div class="image-option">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-bread-slice"></i> <i class="fas fa-bread-slice"></i>
+                                </div>
+                                <p>I want to eat ___ bread.</p>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-answer="1">
+                                    <div class="option-icon">A</div>
+                                    <div>two pieces of</div>
+                                </div>
+                                <div class="option" data-answer="2">
+                                    <div class="option-icon">B</div>
+                                    <div>two</div>
+                                </div>
+                                <div class="option" data-answer="3">
+                                    <div class="option-icon">C</div>
+                                    <div>two piece of</div>
+                                </div>
+                            </div>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary">
+                    <button class="btn btn-check" id="checkAnswers">
+                        <i class="fas fa-check-circle"></i> 检查答案
+                    </button>
+                    <button class="btn btn-reset" id="resetAnswers">
+                        <i class="fas fa-redo"></i> 重置答案
+                    </button>
+                    <div id="scoreDisplay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 英语语法学习助手 | 基于 Smart Kids Level-Up 2 课程内容设计</p>
+            <p>帮助孩子理解、记忆和使用英语语法要点</p>
+        </footer>
+    </div>
+
+    <script>
+        // 语音合成状态管理
+        let speechSynthesis = window.speechSynthesis;
+        let currentUtterance = null;
+        let currentPlayBtn = null;
+        let currentTimeInterval = null;
+        let startTime = null;
+        
+        // 选项卡切换功能
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 停止当前音频播放
+                stopAudioPlayback();
+                
+                // 移除所有按钮的active类
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // 添加当前按钮的active类
+                btn.classList.add('active');
+                
+                // 隐藏所有内容
+                tabContents.forEach(content => content.classList.remove('active'));
+                // 显示对应内容
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // 音频播放功能
+        const playBtns = document.querySelectorAll('.play-btn');
+        const sectionPlayBtns = document.querySelectorAll('.section-play-btn');
+        const questionPlayBtns = document.querySelectorAll('.question-play-btn');
+        
+        // 音频内容定义
+        const audioContents = {
+            'tab1-audio': '名词单数变复数规则汇总。第一部分，规则变化：大多数名词直接加s，例如：toy变成toys。以s, x, ch, sh结尾的名词，加es，例如：bus变成buses。以辅音字母加y结尾的名词，变y为i再加es，例如：fly变成flies。以f或fe结尾，变f或fe为v再加es，例如：knife变成knives。第二部分，不规则变化：例如goose变成geese，foot变成feet，tooth变成teeth。单复数同形：例如deer，sheep，fish。特殊变化：例如child变成children，man变成men，woman变成women，mouse变成mice，person变成people。第三部分，不可数名词：没有复数形式，需要用量词来表示数量。例如：juice，soup，bread，paper。',
+            'tab2-audio': 'a和an的使用规则汇总。核心规则：看开头发音，不是看开头字母。a用于辅音音开头的单词前，例如：a pear，a fly。an用于元音音开头的单词前，例如：an orange，an onion。注意特殊情况：a university，因为u发ju，是辅音音。an hour，因为h不发音，开头音是au，是元音音。复数名词前不加a或an，例如：two geese，some oranges。不可数名词前不加a或an，除非与量词连用，例如：bread不加a，但a piece of bread是正确的。更多用a的例子：a book, a cat, a dog, a flower。更多用an的例子：an apple, an elephant, an ice cream, an umbrella。',
+            'tab3-audio': '可数名词与不可数名词加量词的多维度对比。可数名词可以一个个数，例如：a doll，an orange。不可数名词不能一个个数，是物质或整体，例如：bread，juice。可数名词表示一个时，直接用a或an加单数名词。不可数名词表示一个时，需要用a加量词加of，例如：a piece of bread。提问可数名词数量用How many加复数名词，例如：How many oranges。提问不可数名词数量用How much加不可数名词，例如：How much juice。或者用How many加量词复数加of，例如：How many glasses of juice。可数名词的复数形式在名词本身，例如：orange变成oranges。不可数名词的复数形式在量词，名词不变，例如：two glasses of juice。量词的复数形式：例如a piece of bread变成two pieces of bread，a glass of milk变成three glasses of milk，a pair of scissors变成two pairs of scissors，a sheet of paper变成three sheets of paper，a cup of juice变成four cups of juice。',
+            'tab4-audio': '综合练习题。第一部分，火眼金睛：分类与判断练习。第二部分，最佳拍档：选择与填空练习。第三部分，情景小剧场：运用输出练习。第四部分，图片选择题：观察图片选择正确答案。请认真完成所有题目，完成后可以点击检查答案按钮查看结果。',
+            
+            // 单数与复数 - 分段音频
+            'tab1-rule1': '规则变化。大多数名词直接加s，例如：toy变成toys。以s, x, ch, sh结尾的名词，加es，例如：bus变成buses。以辅音字母加y结尾的名词，变y为i再加es，例如：fly变成flies。以f或fe结尾，变f或fe为v再加es，例如：knife变成knives。',
+            'tab1-rule1-1': '规则变化第一条：直接加s。例如：toy变成toys玩具，pear变成pears梨，orange变成oranges橙子，puppet变成puppets木偶。',
+            'tab1-rule1-2': '规则变化第二条：以s, x, ch, sh结尾，加es。例如：bus变成buses公交车，box变成boxes盒子，sandwich变成sandwiches三明治，brush变成brushes刷子。',
+            'tab1-rule1-3': '规则变化第三条：以辅音字母加y结尾，变y为i再加es。例如：fly变成flies苍蝇，candy变成candies糖果，puppy变成puppies小狗，family变成families家庭。',
+            'tab1-rule1-4': '规则变化第四条：以f或fe结尾，变f或fe为v再加es。例如：knife变成knives刀，leaf变成leaves叶子，wolf变成wolves狼。',
+            'tab1-rule2': '不规则变化。这是孩子容易混淆的重点，可以将它们编成一组记忆。包括oo变成ee变化，单复数同形，和特殊变化。',
+            'tab1-rule2-1': '不规则变化第一条：oo变成ee变化。例如：goose变成geese鹅，foot变成feet脚，tooth变成teeth牙齿。',
+            'tab1-rule2-2': '不规则变化第二条：单复数同形。例如：deer鹿，单复数都是deer；sheep羊，单复数都是sheep；fish鱼，通常单复数都是fish。',
+            'tab1-rule2-3': '不规则变化第三条：特殊变化。例如：child变成children孩子，man变成men男人，woman变成women女人，mouse变成mice老鼠，person变成people人。',
+            'tab1-rule3': '不可数名词。不可数名词没有复数形式，需要用"量词"来表示数量。',
+            'tab1-rule3-1': '不可数名词第一类：液体类。例如：juice果汁，soup汤，milk牛奶，lemonade柠檬水，water水，tea茶，coffee咖啡。',
+            'tab1-rule3-2': '不可数名词第二类：物质和食材类。例如：bread面包，paper纸，rice米饭，chocolate巧克力，sugar糖，salt盐，butter黄油。',
+            'tab1-rule3-3': '不可数名词第三类：抽象概念类。例如：homework作业，music音乐，time时间，love爱，happiness幸福。',
+            
+            // a/an用法 - 分段音频
+            'tab2-rule1': '核心规则：看开头发音，不是看开头字母。',
+            'tab2-rule1-1': '单数可数名词前：a用于辅音音开头的单词前，例如：a pear，a fly。an用于元音音开头的单词前，例如：an orange，an onion。注意特殊情况：a university，因为u发ju，是辅音音。an hour，因为h不发音，开头音是au，是元音音。',
+            'tab2-rule1-2': '复数名词前：不加a或an，可用some, any, 数词等。例如：I see two geese。I have some oranges。There are many toys。',
+            'tab2-rule1-3': '不可数名词前：不加a或an，除非与量词连用。例如：I like bread。注意：不能加a bread，但可以说a piece of bread。',
+            
+            // 可数与不可数对比 - 分段音频
+            'tab3-rule1': '可数名词与不可数名词加量词的多维度对比。这个对比表格能让孩子一目了然地看到核心区别。',
+            'tab3-rule1-1': '对比表格内容：可数名词可以一个个数，不可数名词不能一个个数，是物质或整体。可数名词举例：a doll，an orange，a fly，a teddy bear。不可数名词举例：bread，juice，paper，soup，rice。可数名词表示一个时，直接用a或an加单数名词。不可数名词表示一个时，需要用a加量词加of，例如：a piece of bread。提问可数名词数量用How many加复数名词。提问不可数名词数量用How much加不可数名词，或者用How many加量词复数加of。可数名词的复数形式在名词本身，例如：orange变成oranges。不可数名词的复数形式在量词，名词不变，例如：two glasses of juice。',
+            'tab3-rule2': '量词的复数形式。核心规则：对于不可数名词，要表达复数（两个以上）的概念时，把量词变成复数，后面的"of加不可数名词"保持不变。',
+            'tab3-rule2-1': '常见量词复数形式示例：a piece of bread变成two pieces of bread一片面包变成两片面包。a glass of milk变成three glasses of milk一杯牛奶变成三杯牛奶。a bowl of rice变成four bowls of rice一碗米饭变成四碗米饭。a bar of chocolate变成five bars of chocolate一条巧克力变成五条巧克力。a pair of scissors变成two pairs of scissors一把剪刀变成两把剪刀。a sheet of paper变成three sheets of paper一张纸变成三张纸。a cup of juice变成four cups of juice一杯果汁变成四杯果汁。a bowl of soup变成two bowls of soup一碗汤变成两碗汤。a bottle of water变成three bottles of water一瓶水变成三瓶水。a slice of pizza变成two slices of pizza一片披萨变成两片披萨。'
+        };
+        
+        // 练习题音频内容定义
+        const questionAudioContents = {
+            '1': '第一题：将下列单词分为可数或不可数：deer, soup, paper, fly, lemonade, sheep, juice, goose。请选择正确的分类。',
+            '2': '第二题：判断下列名词复数形式是否正确，错的请改正：a) two gooses，b) three bowls of rices，c) many oranges，d) a pair of scissor。请选择正确的判断和改正。',
+            '3': '第三题：选择a或an：I see ___ old deer and ___ unusual fly。请选择正确的答案。',
+            '4': '第四题：选择How many或How much：第一空，___ bread do you want？第二空，___ pieces of bread do you want？请选择正确的答案。',
+            '5': '第五题：填空完成对话：A: What do you see? B: I see two ______ (sheep) and a bowl of ______ (soup)。A: How many ______ (glass) of lemonade do you have? B: I have three ______ (glasses) of lemonade。请选择正确的填空。',
+            '6': '第六题：情景小剧场，情景一：描述看到的东西。你：What do you see? Are these flies? 孩子应该回答什么？请选择正确的句子完成对话。',
+            '7': '第七题：情景二：询问和拥有物品。你：How much juice do you have? 孩子回答什么？你：How many oranges do you have? 孩子回答什么？请选择正确的句子完成对话。',
+            '8': '第八题：图片选择题。观察剪刀图片，选择正确的量词表达。图片显示一把剪刀。请选择正确的表达。',
+            '9': '第九题：图片选择题。观察三个苹果的图片，选择正确的复数形式。图片显示三个苹果在桌子上。请选择正确的复数形式。',
+            '10': '第十题：图片选择题。观察两片面包的图片，选择正确的表达。图片显示两片面包。请选择正确的表达。'
+        };
+        
+        // 播放音频函数
+        function playAudio(text, playBtn, timeDisplay) {
+            // 停止当前播放的音频
+            stopAudioPlayback();
+            
+            // 创建新的语音合成实例
+            const utterance = new SpeechSynthesisUtterance();
+            utterance.text = text;
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            
+            // 更新播放按钮状态
+            if (playBtn) {
+                playBtn.classList.add('playing');
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                currentPlayBtn = playBtn;
+            }
+            
+            // 更新播放时间显示
+            startTime = new Date();
+            if (timeDisplay) {
+                updateTimeDisplay(startTime, timeDisplay);
+            }
+            
+            // 开始播放
+            speechSynthesis.speak(utterance);
+            currentUtterance = utterance;
+            
+            // 播放结束时的处理
+            utterance.onend = function() {
+                if (currentPlayBtn) {
+                    currentPlayBtn.classList.remove('playing');
+                    currentPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+                currentUtterance = null;
+                currentPlayBtn = null;
+                if (timeDisplay) {
+                    timeDisplay.textContent = '0:00';
+                }
+                if (currentTimeInterval) {
+                    clearInterval(currentTimeInterval);
+                    currentTimeInterval = null;
+                }
+            };
+            
+            // 播放错误时的处理
+            utterance.onerror = function(event) {
+                // 不显示错误消息，只是停止播放
+                if (currentPlayBtn) {
+                    currentPlayBtn.classList.remove('playing');
+                    currentPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+                currentUtterance = null;
+                currentPlayBtn = null;
+                if (timeDisplay) {
+                    timeDisplay.textContent = '0:00';
+                }
+                if (currentTimeInterval) {
+                    clearInterval(currentTimeInterval);
+                    currentTimeInterval = null;
+                }
+            };
+        }
+        
+        // 停止音频播放
+        function stopAudioPlayback() {
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+            }
+            
+            if (currentPlayBtn) {
+                currentPlayBtn.classList.remove('playing');
+                currentPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+            
+            currentUtterance = null;
+            currentPlayBtn = null;
+            
+            // 重置所有时间显示
+            document.querySelectorAll('.audio-time').forEach(display => {
+                display.textContent = '0:00';
+            });
+            
+            if (currentTimeInterval) {
+                clearInterval(currentTimeInterval);
+                currentTimeInterval = null;
+            }
+        }
+        
+        // 更新时间显示
+        function updateTimeDisplay(startTime, timeDisplay) {
+            if (currentTimeInterval) {
+                clearInterval(currentTimeInterval);
+            }
+            
+            currentTimeInterval = setInterval(() => {
+                if (!speechSynthesis.speaking) {
+                    clearInterval(currentTimeInterval);
+                    currentTimeInterval = null;
+                    return;
+                }
+                
+                const elapsed = new Date() - startTime;
+                const seconds = Math.floor(elapsed / 1000);
+                const minutes = Math.floor(seconds / 60);
+                const displaySeconds = seconds % 60;
+                
+                if (timeDisplay) {
+                    timeDisplay.textContent = `${minutes}:${displaySeconds < 10 ? '0' : ''}${displaySeconds}`;
+                }
+            }, 500);
+        }
+        
+        // 为选项卡播放按钮添加点击事件
+        playBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const audioId = this.getAttribute('data-audio');
+                const timeDisplay = this.parentNode.querySelector('.audio-time');
+                
+                // 如果当前正在播放的是这个音频，则停止播放
+                if (currentPlayBtn === this && speechSynthesis.speaking) {
+                    stopAudioPlayback();
+                    return;
+                }
+                
+                // 播放对应音频
+                if (audioContents[audioId]) {
+                    playAudio(audioContents[audioId], this, timeDisplay);
+                }
+            });
+        });
+        
+        // 为分段播放按钮添加点击事件
+        sectionPlayBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const audioId = this.getAttribute('data-audio');
+                
+                // 如果当前正在播放的是这个音频，则停止播放
+                if (currentPlayBtn === this && speechSynthesis.speaking) {
+                    stopAudioPlayback();
+                    return;
+                }
+                
+                // 播放对应音频
+                if (audioContents[audioId]) {
+                    playAudio(audioContents[audioId], this, null);
+                }
+            });
+        });
+        
+        // 为练习题播放按钮添加点击事件
+        questionPlayBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const questionId = this.getAttribute('data-question');
+                
+                // 如果当前正在播放的是这个音频，则停止播放
+                if (currentPlayBtn === this && speechSynthesis.speaking) {
+                    stopAudioPlayback();
+                    return;
+                }
+                
+                // 播放对应音频
+                if (questionAudioContents[questionId]) {
+                    playAudio(questionAudioContents[questionId], this, null);
+                }
+            });
+        });
+        
+        // 练习题功能
+        const options = document.querySelectorAll('.option');
+        const checkAnswersBtn = document.getElementById('checkAnswers');
+        const resetAnswersBtn = document.getElementById('resetAnswers');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        
+        // 正确答案配置
+        const correctAnswers = {
+            'q1': '1',
+            'q2': '1',
+            'q3': '1',
+            'q4': '1',
+            'q5': '3',
+            'q6': '1',
+            'q7': '1',
+            'q8': '1',
+            'q9': '1',
+            'q10': '1'
+        };
+        
+        // 选项点击事件
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                // 清除同问题其他选项的选择状态
+                const question = this.closest('.question');
+                const questionOptions = question.querySelectorAll('.option');
+                questionOptions.forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.classList.remove('correct', 'wrong');
+                });
+                
+                // 设置当前选项为选中状态
+                this.classList.add('selected');
+                
+                // 清除反馈信息
+                const feedback = question.querySelector('.feedback');
+                feedback.style.display = 'none';
+                feedback.textContent = '';
+                feedback.classList.remove('correct', 'wrong');
+            });
+        });
+        
+        // 检查答案
+        checkAnswersBtn.addEventListener('click', function() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            
+            // 检查每个问题
+            Object.keys(correctAnswers).forEach(questionId => {
+                const question = document.getElementById(questionId);
+                const selectedOption = question.querySelector('.option.selected');
+                const feedback = question.querySelector('.feedback');
+                
+                if (selectedOption) {
+                    const userAnswer = selectedOption.getAttribute('data-answer');
+                    const correctAnswer = correctAnswers[questionId];
+                    
+                    if (userAnswer === correctAnswer) {
+                        selectedOption.classList.add('correct');
+                        feedback.textContent = '✓ 回答正确！太棒了！';
+                        feedback.classList.add('correct');
+                        feedback.classList.remove('wrong');
+                        score++;
+                    } else {
+                        selectedOption.classList.add('wrong');
+                        feedback.textContent = '✗ 回答错误，请再想一想。';
+                        feedback.classList.add('wrong');
+                        feedback.classList.remove('correct');
+                    }
+                    
+                    feedback.style.display = 'block';
+                } else {
+                    const feedback = question.querySelector('.feedback');
+                    feedback.textContent = '请先选择一个答案！';
+                    feedback.classList.add('wrong');
+                    feedback.classList.remove('correct');
+                    feedback.style.display = 'block';
+                }
+            });
+            
+            // 显示分数
+            const percentage = Math.round((score / totalQuestions) * 100);
+            let message = '';
+            
+            if (score === totalQuestions) {
+                message = '🎉 太棒了！全部答对！你真是个语法小天才！';
+                scoreDisplay.style.color = 'var(--accent)';
+            } else if (percentage >= 80) {
+                message = '👍 做得不错！再复习一下就能全对了！';
+                scoreDisplay.style.color = 'var(--primary)';
+            } else if (percentage >= 60) {
+                message = '💪 继续加油！已经掌握大部分知识了！';
+                scoreDisplay.style.color = 'var(--primary)';
+            } else {
+                message = '📚 再复习一下课程内容吧，你可以的！';
+                scoreDisplay.style.color = 'var(--danger)';
+            }
+            
+            scoreDisplay.innerHTML = `得分: ${score}/${totalQuestions} (${percentage}%)<br><span style="font-size:0.9rem; font-weight:normal;">${message}</span>`;
+            
+            // 播放鼓励语音
+            const encouragement = new SpeechSynthesisUtterance();
+            encouragement.text = `你完成了练习，得了${score}分，共${totalQuestions}题。${message}`;
+            encouragement.lang = 'zh-CN';
+            encouragement.rate = 0.9;
+            
+            // 先停止当前播放
+            stopAudioPlayback();
+            // 播放鼓励语音
+            speechSynthesis.speak(encouragement);
+        });
+        
+        // 重置答案
+        resetAnswersBtn.addEventListener('click', function() {
+            // 清除所有选项状态
+            options.forEach(option => {
+                option.classList.remove('selected', 'correct', 'wrong');
+            });
+            
+            // 清除所有反馈信息
+            document.querySelectorAll('.feedback').forEach(feedback => {
+                feedback.style.display = 'none';
+                feedback.textContent = '';
+                feedback.classList.remove('correct', 'wrong');
+            });
+            
+            // 清除分数显示
+            scoreDisplay.textContent = '';
+            scoreDisplay.style.color = 'var(--primary)';
+        });
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // 为每个选项卡添加进入动画
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // 观察所有规则框和表格
+            document.querySelectorAll('.rule-box, table, .exercise').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

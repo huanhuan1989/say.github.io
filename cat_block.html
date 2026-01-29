@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫的英语教学 - 交互式展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f7f7;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #5a3d5c;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7d5d7f;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .cat-icon {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin: 0 10px;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .original-text-section, .interactive-section {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-title {
+            color: #5a3d5c;
+            border-bottom: 3px solid #ffd6d6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: #ff9a9e;
+        }
+        
+        .original-text {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            border-left: 5px solid #ff9a9e;
+            white-space: pre-line;
+        }
+        
+        .sentence-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .sentence-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 18px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .sentence-item:hover {
+            transform: translateY(-5px);
+            border-color: #ff9a9e;
+            box-shadow: 0 8px 15px rgba(255, 154, 158, 0.2);
+        }
+        
+        .sentence-item.active {
+            border-color: #ff6b6b;
+            background-color: #fff5f5;
+        }
+        
+        .sentence-en {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .sentence-cn {
+            font-size: 1rem;
+            color: #666;
+            padding-left: 10px;
+            border-left: 3px solid #ddd;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-controls, .view-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .filter-btn, .view-btn {
+            padding: 10px 20px;
+            background-color: #f1f3f5;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .filter-btn.active, .view-btn.active {
+            background-color: #ff9a9e;
+            color: white;
+        }
+        
+        .filter-btn:hover, .view-btn:hover {
+            background-color: #ffd6d6;
+        }
+        
+        .search-box {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #ff9a9e;
+        }
+        
+        .display-area {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            min-height: 300px;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cat-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .display-sentence {
+            font-size: 1.8rem;
+            color: #5a3d5c;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .display-translation {
+            font-size: 1.4rem;
+            color: #7d5d7f;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .sentence-counter {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            background-color: #ff9a9e;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #ff7b81;
+            transform: translateY(-3px);
+        }
+        
+        .nav-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .data-info {
+            background-color: #e9f7fe;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 5px solid #4dabf7;
+        }
+        
+        .info-title {
+            color: #1971c2;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .info-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .info-item {
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .controls {
+                flex-direction: column;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .position-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff9a9e;
+            color: white;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cat cat-icon"></i> 关于猫可以教的英语 <i class="fas fa-cat cat-icon"></i></h1>
+            <p class="subtitle">交互式英语教学展示 - 灵活的数据展示与学习工具</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <section class="original-text-section">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> 原始文本内容</h2>
+                <div class="original-text" id="originalText">
+                    <!-- 原始文本将在这里动态生成 -->
+                </div>
+                
+                <h2 class="section-title"><i class="fas fa-list"></i> 句子列表</h2>
+                <div class="controls">
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">全部句子</button>
+                        <button class="filter-btn" data-filter="short">短句</button>
+                        <button class="filter-btn" data-filter="long">长句</button>
+                    </div>
+                    <input type="text" class="search-box" placeholder="搜索英文或中文句子...">
+                </div>
+                <div class="sentence-list" id="sentenceList">
+                    <!-- 句子列表将在这里动态生成 -->
+                </div>
+            </section>
+            
+            <section class="interactive-section">
+                <h2 class="section-title"><i class="fas fa-play-circle"></i> 交互学习区</h2>
+                
+                <div class="controls">
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="both">中英文对照</button>
+                        <button class="view-btn" data-view="english">仅英文</button>
+                        <button class="view-btn" data-view="chinese">仅中文</button>
+                    </div>
+                </div>
+                
+                <div class="display-area">
+                    <div class="cat-emoji" id="catEmoji">🐱</div>
+                    <div class="display-sentence" id="displaySentence">
+                        点击左侧句子开始学习
+                    </div>
+                    <div class="display-translation" id="displayTranslation">
+                        Click a sentence on the left to start learning
+                    </div>
+                    <div class="sentence-counter" id="sentenceCounter">
+                        0 / 13
+                    </div>
+                    
+                    <div class="navigation">
+                        <button class="nav-btn" id="prevBtn">
+                            <i class="fas fa-arrow-left"></i> 上一句
+                        </button>
+                        <button class="nav-btn" id="nextBtn">
+                            下一句 <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="data-info">
+                    <h3 class="info-title"><i class="fas fa-info-circle"></i> 数据信息</h3>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <div class="info-label">主题名称</div>
+                            <div id="topicName">cat</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">页码</div>
+                            <div id="pageNumber">1</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">句子数量</div>
+                            <div id="sentenceCount">13</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">数据状态</div>
+                            <div id="dataStatus">已加载</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>猫的英语教学展示页面 | 设计用于灵活展示和扩展英语学习数据</p>
+            <p>数据可动态添加，支持搜索、过滤和交互学习功能</p>
+        </footer>
+    </div>
+
+    <script>
+        // 数据定义
+        const requestDataList = [
+          {
+            "name": "cat",
+            "page": 1,
+            "data": `Today, let’s talk about the cat.
+              This is a cat.
+              The cat says meow meow.
+              The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.
+              Cats are gentle and quiet.
+              Many people keep a cat as a pet.
+              They are very curious.
+              They like to explore.
+              They love to climb trees.
+              They can jump high and run fast.
+              They love to sleep for much of the day.
+              They like to eat fish and meat.
+              This is a baby cat; we call it kitten.`,
+            "option": [
+              { "en": "Today, let’s talk about the cat.", "cn": "今天,让我们聊一聊猫｡" },
+              { "en": "This is a cat.", "cn": "这是一只猫｡" },
+              { "en": "The cat says meow meow.", "cn": "猫叫起来喵喵｡" },
+              { "en": "The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.", "cn": "这只猫有两只耳朵,两只圆圆的眼睛,一些长长的胡须,柔软的皮毛,四只锋利的爪子和一条长长的尾巴｡" },
+              { "en": "Cats are gentle and quiet.", "cn": "猫很温柔也很安静｡" },
+              { "en": "Many people keep a cat as a pet.", "cn": "许多人养猫作为宠物｡" },
+              { "en": "They are very curious.", "cn": "它们很好奇｡" },
+              { "en": "They like to explore.", "cn": "它们喜欢探索｡" },
+              { "en": "They love to climb trees.", "cn": "它们喜欢爬树｡" },
+              { "en": "They can jump high and run fast.", "cn": "它们能跳得高高的,跑得快快的｡" },
+              { "en": "They love to sleep for much of the day.", "cn": "它们一天中大部分时间都喜欢睡觉｡" },
+              { "en": "They like to eat fish and meat.", "cn": "它们喜欢吃鱼和肉｡" },
+              { "en": "This is a baby cat; we call it kitten.", "cn": "这是一只小猫宝宝,我们叫它小猫咪｡" }
+            ]
+          },
+          {
+            "name": "dog",
+            "page": 2,
+            "data": `Today, let’s talk about the dog.
+              This is a dog.
+              The dog says woof woof.
+              The dog has one nose, two big ears, soft fur, four paws and one tail.
+              They are very smart.
+              Many people keep a dog as a pet.
+              Dogs love to play games.
+              They love to roll in sticky mud.
+              They have a good sense of smell.
+              They love to have a walk every day.
+              They eat meat and plants.
+              This is a baby dog; we call it puppy.`,
+            "option": [
+              { "en": "Today, let’s talk about the dog.", "cn": "今天,让我们聊一聊狗｡" },
+              { "en": "This is a dog.", "cn": "这是一只狗｡" },
+              { "en": "The dog says woof woof.", "cn": "狗狗叫起来汪汪｡" },
+              { "en": "The dog has one nose, two big ears, soft fur, four paws and one tail.", "cn": "狗狗有一个鼻子,2只大耳朵、软软的毛、4个爪子和一条尾巴｡" },
+              { "en": "They are very smart.", "cn": "狗狗非常聪明｡" },
+              { "en": "Many people keep a dog as a pet.", "cn": "很多人把狗作为宠物｡" },
+              { "en": "Dogs love to play games.", "cn": "狗狗喜欢玩游戏｡" },
+              { "en": "They love to roll in sticky mud.", "cn": "它们喜欢在黏糊糊的泥浆里打滚｡" },
+              { "en": "They have a good sense of smell.", "cn": "它们嗅觉非常灵敏｡" },
+              { "en": "They love to have a walk every day.", "cn": "它们喜欢每天散步｡" },
+              { "en": "They eat meat and plants.", "cn": "它们吃肉类和植物｡" },
+              { "en": "This is a baby dog; we call it puppy.", "cn": "这是一只狗宝宝,我们可以叫它小狗狗｡" }
+            ]
+          },
+          {
+            "name": "giraffe",
+            "page": 3,
+            "data": `Today, let’s talk about the giraffe.
+              This is a giraffe.
+              The giraffe has two horns, two big eyes, one long neck, four long legs and one long tail.
+              Giraffes are the tallest animals in the world.
+              An adult giraffe can be 4 meters to 6 meters tall.
+              A baby giraffe can be 1 meter to 2 meters tall.
+              They run very fast.
+              They love to explore.
+              They live in groups in Africa.
+              They eat leaves, flowers and fruits.
+              This is a baby giraffe; we call it calf.`,
+            "option": [
+              { "en": "Today, let’s talk about the giraffe.", "cn": "今天,让我们聊一聊长颈鹿｡" },
+              { "en": "This is a giraffe.", "cn": "这是一只长颈鹿｡" },
+              { "en": "The giraffe has two horns, two big eyes, one long neck, four long legs and one long tail.", "cn": "长颈鹿有2只角,2个大大的眼睛,1个长长的脖子,4条长长的腿,1条长长的尾巴｡" },
+              { "en": "Giraffes are the tallest animals in the world.", "cn": "长颈鹿是世界上最高的动物｡" },
+              { "en": "An adult giraffe can be 4 meters to 6 meters tall.", "cn": "成年长颈鹿有4到6米高｡" },
+              { "en": "A baby giraffe can be 1 meter to 2 meters tall.", "cn": "幼年长颈鹿有1到2米高｡" },
+              { "en": "They run very fast.", "cn": "它们跑的很快｡" },
+              { "en": "They love to explore.", "cn": "它们喜欢探索｡" },
+              { "en": "They live in groups in Africa.", "cn": "它们成群的生活在非洲｡" },
+              { "en": "They eat leaves, flowers and fruits.", "cn": "它们吃树叶、花和果实｡" },
+              { "en": "This is a baby giraffe; we call it calf.", "cn": "这是一只长颈鹿宝宝,我们称它为长颈鹿幼崽｡" }
+            ]
+          }
+                "name": "cat",
+                "page": 1,
+                "data": `Today, let's talk about the cat.
+This is a cat.
+The cat says meow meow.
+They like to eat fish and meat.
+This is a baby cat; we call it kitten.
+The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.
+Cats are gentle and quiet.
+Many people keep a cat as a pet.
+They are very curious.
+They like to explore.
+They love to climb trees.
+They can jump high and run fast.
+They love to sleep for much of the day.`,
+                "option": [
+                    { 
+                        "en": "Today, let's talk about the cat.", 
+                        "cn": "今天,让我们聊一聊猫。",
+                        "position": "intro",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "This is a cat.", 
+                        "cn": "这是一只猫。",
+                        "position": "definition",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "The cat says meow meow.", 
+                        "cn": "猫叫起来喵喵。",
+                        "position": "sound",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "They like to eat fish and meat.", 
+                        "cn": "它们喜欢吃鱼和肉。",
+                        "position": "diet",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "This is a baby cat; we call it kitten.", 
+                        "cn": "这是一只小猫宝宝,我们叫它小猫咪。",
+                        "position": "definition",
+                        "length": "medium"
+                    },
+                    { 
+                        "en": "The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.", 
+                        "cn": "这只猫有两只耳朵,两只圆圆的眼睛,一些长长的胡须,柔软的皮毛,四只锋利的爪子和一条长长的尾巴。",
+                        "position": "anatomy",
+                        "length": "long"
+                    },
+                    { 
+                        "en": "Cats are gentle and quiet.", 
+                        "cn": "猫很温柔也很安静。",
+                        "position": "personality",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "Many people keep a cat as a pet.", 
+                        "cn": "许多人养猫作为宠物。",
+                        "position": "relationship",
+                        "length": "medium"
+                    },
+                    { 
+                        "en": "They are very curious.", 
+                        "cn": "它们很好奇。",
+                        "position": "personality",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "They like to explore.", 
+                        "cn": "它们喜欢探索。",
+                        "position": "behavior",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "They love to climb trees.", 
+                        "cn": "它们喜欢爬树。",
+                        "position": "behavior",
+                        "length": "short"
+                    },
+                    { 
+                        "en": "They can jump high and run fast.", 
+                        "cn": "它们能跳得高高的,跑得快快的。",
+                        "position": "ability",
+                        "length": "medium"
+                    },
+                    { 
+                        "en": "They love to sleep for much of the day.", 
+                        "cn": "它们一天中大部分时间都喜欢睡觉。",
+                        "position": "behavior",
+                        "length": "medium"
+                    }
+                ]
+            }
+        ];
+
+        // 猫表情数组
+        const catEmojis = ["🐱", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾"];
+        
+        // 当前选中的句子索引
+        let currentSentenceIndex = 0;
+        // 当前显示模式
+        let currentViewMode = "both";
+        // 当前过滤条件
+        let currentFilter = "all";
+        // 当前搜索关键词
+        let currentSearchTerm = "";
+        // 当前显示的句子列表（过滤后）
+        let filteredSentences = [];
+
+        // DOM元素
+        const originalTextElement = document.getElementById('originalText');
+        const sentenceListElement = document.getElementById('sentenceList');
+        const displaySentenceElement = document.getElementById('displaySentence');
+        const displayTranslationElement = document.getElementById('displayTranslation');
+        const sentenceCounterElement = document.getElementById('sentenceCounter');
+        const catEmojiElement = document.getElementById('catEmoji');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const searchBox = document.querySelector('.search-box');
+        const topicNameElement = document.getElementById('topicName');
+        const pageNumberElement = document.getElementById('pageNumber');
+        const sentenceCountElement = document.getElementById('sentenceCount');
+        
+        // 初始化页面
+        function initPage() {
+            const data = requestDataList[0];
+            
+            // 设置数据信息
+            topicNameElement.textContent = data.name;
+            pageNumberElement.textContent = data.page;
+            sentenceCountElement.textContent = data.option.length;
+            
+            // 渲染原始文本
+            originalTextElement.textContent = data.data;
+            
+            // 初始化句子列表
+            filteredSentences = [...data.option];
+            renderSentenceList();
+            
+            // 设置初始显示
+            updateDisplay();
+            
+            // 添加事件监听器
+            setupEventListeners();
+        }
+        
+        // 渲染句子列表
+        function renderSentenceList() {
+            sentenceListElement.innerHTML = '';
+            
+            if (filteredSentences.length === 0) {
+                sentenceListElement.innerHTML = '<div class="sentence-item" style="text-align: center; color: #999;">没有找到匹配的句子</div>';
+                return;
+            }
+            
+            filteredSentences.forEach((sentence, index) => {
+                const sentenceItem = document.createElement('div');
+                sentenceItem.className = `sentence-item ${index === currentSentenceIndex ? 'active' : ''}`;
+                sentenceItem.dataset.index = index;
+                
+                // 根据position添加对应的徽章
+                const positionBadges = {
+                    "intro": "介绍",
+                    "definition": "定义",
+                    "sound": "声音",
+                    "diet": "饮食",
+                    "anatomy": "身体",
+                    "personality": "性格",
+                    "relationship": "关系",
+                    "behavior": "行为",
+                    "ability": "能力"
+                };
+                
+                sentenceItem.innerHTML = `
+                    <div class="sentence-en">${sentence.en}</div>
+                    <div class="sentence-cn">${sentence.cn}</div>
+                    ${sentence.position && positionBadges[sentence.position] ? 
+                      `<div class="position-badge">${positionBadges[sentence.position]}</div>` : ''}
+                `;
+                
+                sentenceListElement.appendChild(sentenceItem);
+            });
+        }
+        
+        // 更新显示区域
+        function updateDisplay() {
+            if (filteredSentences.length === 0) {
+                displaySentenceElement.textContent = "没有可显示的句子";
+                displayTranslationElement.textContent = "No sentences to display";
+                sentenceCounterElement.textContent = "0 / 0";
+                catEmojiElement.textContent = "😿";
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                return;
+            }
+            
+            // 确保当前索引在有效范围内
+            if (currentSentenceIndex >= filteredSentences.length) {
+                currentSentenceIndex = filteredSentences.length - 1;
+            }
+            
+            if (currentSentenceIndex < 0) {
+                currentSentenceIndex = 0;
+            }
+            
+            const currentSentence = filteredSentences[currentSentenceIndex];
+            
+            // 根据显示模式更新内容
+            switch(currentViewMode) {
+                case "english":
+                    displaySentenceElement.textContent = currentSentence.en;
+                    displayTranslationElement.style.display = "none";
+                    break;
+                case "chinese":
+                    displaySentenceElement.textContent = currentSentence.cn;
+                    displayTranslationElement.style.display = "none";
+                    break;
+                case "both":
+                default:
+                    displaySentenceElement.textContent = currentSentence.en;
+                    displayTranslationElement.textContent = currentSentence.cn;
+                    displayTranslationElement.style.display = "block";
+                    break;
+            }
+            
+            // 更新计数器
+            sentenceCounterElement.textContent = `${currentSentenceIndex + 1} / ${filteredSentences.length}`;
+            
+            // 随机选择猫表情
+            const randomEmojiIndex = Math.floor(Math.random() * catEmojis.length);
+            catEmojiElement.textContent = catEmojis[randomEmojiIndex];
+            
+            // 更新按钮状态
+            prevBtn.disabled = currentSentenceIndex === 0;
+            nextBtn.disabled = currentSentenceIndex === filteredSentences.length - 1;
+            
+            // 更新句子列表中的活动项
+            const allSentenceItems = document.querySelectorAll('.sentence-item');
+            allSentenceItems.forEach((item, index) => {
+                if (index === currentSentenceIndex) {
+                    item.classList.add('active');
+                    // 滚动到可见区域
+                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+        
+        // 应用过滤和搜索
+        function applyFilters() {
+            const data = requestDataList[0];
+            
+            // 先根据过滤条件筛选
+            let filtered = data.option;
+            
+            if (currentFilter === "short") {
+                filtered = filtered.filter(s => s.length === "short");
+            } else if (currentFilter === "long") {
+                filtered = filtered.filter(s => s.length === "long" || s.length === "medium");
+            }
+            
+            // 再根据搜索关键词筛选
+            if (currentSearchTerm.trim() !== "") {
+                const searchTerm = currentSearchTerm.toLowerCase();
+                filtered = filtered.filter(s => 
+                    s.en.toLowerCase().includes(searchTerm) || 
+                    s.cn.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            filteredSentences = filtered;
+            currentSentenceIndex = 0;
+            renderSentenceList();
+            updateDisplay();
+        }
+        
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 句子点击事件
+            sentenceListElement.addEventListener('click', (e) => {
+                const sentenceItem = e.target.closest('.sentence-item');
+                if (sentenceItem) {
+                    const index = parseInt(sentenceItem.dataset.index);
+                    currentSentenceIndex = index;
+                    updateDisplay();
+                }
+            });
+            
+            // 上一句/下一句按钮
+            prevBtn.addEventListener('click', () => {
+                if (currentSentenceIndex > 0) {
+                    currentSentenceIndex--;
+                    updateDisplay();
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                if (currentSentenceIndex < filteredSentences.length - 1) {
+                    currentSentenceIndex++;
+                    updateDisplay();
+                }
+            });
+            
+            // 过滤按钮
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.dataset.filter;
+                    applyFilters();
+                });
+            });
+            
+            // 视图按钮
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentViewMode = btn.dataset.view;
+                    updateDisplay();
+                });
+            });
+            
+            // 搜索框
+            searchBox.addEventListener('input', (e) => {
+                currentSearchTerm = e.target.value;
+                applyFilters();
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    // 上一句
+                    if (currentSentenceIndex > 0) {
+                        currentSentenceIndex--;
+                        updateDisplay();
+                    }
+                } else if (e.key === 'ArrowRight') {
+                    // 下一句
+                    if (currentSentenceIndex < filteredSentences.length - 1) {
+                        currentSentenceIndex++;
+                        updateDisplay();
+                    }
+                }
+            });
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', initPage);
+        
+        // 示例：如何向数据列表添加新数据
+        function addNewData(newData) {
+            requestDataList.push(newData);
+            // 这里可以添加UI更新逻辑，比如显示新数据集的选项
+            console.log('新数据已添加，当前数据列表:', requestDataList);
+        }
+    </script>
+</body>
+</html>

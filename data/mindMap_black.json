@@ -1,0 +1,2627 @@
+[
+  {
+    "name": "cat",
+    "page": 1,
+    "data": `Today, let’s talk about the cat.
+      This is a cat.
+      The cat says meow meow.
+      The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.
+      Cats are gentle and quiet.
+      Many people keep a cat as a pet.
+      They are very curious.
+      They like to explore.
+      They love to climb trees.
+      They can jump high and run fast.
+      They love to sleep for much of the day.
+      They like to eat fish and meat.
+      This is a baby cat; we call it kitten.`,
+    "option": [
+      { "en": "Today, let’s talk about the cat.", "cn": "今天,让我们聊一聊猫｡" },
+      { "en": "This is a cat.", "cn": "这是一只猫｡" },
+      { "en": "The cat says meow meow.", "cn": "猫叫起来喵喵｡" },
+      { "en": "The cat has two ears, two round eyes, some long whiskers, soft fur, four sharp paws, and one long tail.", "cn": "这只猫有两只耳朵,两只圆圆的眼睛,一些长长的胡须,柔软的皮毛,四只锋利的爪子和一条长长的尾巴｡" },
+      { "en": "Cats are gentle and quiet.", "cn": "猫很温柔也很安静｡" },
+      { "en": "Many people keep a cat as a pet.", "cn": "许多人养猫作为宠物｡" },
+      { "en": "They are very curious.", "cn": "它们很好奇｡" },
+      { "en": "They like to explore.", "cn": "它们喜欢探索｡" },
+      { "en": "They love to climb trees.", "cn": "它们喜欢爬树｡" },
+      { "en": "They can jump high and run fast.", "cn": "它们能跳得高高的,跑得快快的｡" },
+      { "en": "They love to sleep for much of the day.", "cn": "它们一天中大部分时间都喜欢睡觉｡" },
+      { "en": "They like to eat fish and meat.", "cn": "它们喜欢吃鱼和肉｡" },
+      { "en": "This is a baby cat; we call it kitten.", "cn": "这是一只小猫宝宝,我们叫它小猫咪｡" }
+    ]
+  },
+  {
+    "name": "dog",
+    "page": 2,
+    "data": `Today, let’s talk about the dog.
+      This is a dog.
+      The dog says woof woof.
+      The dog has one nose, two big ears, soft fur, four paws and one tail.
+      They are very smart.
+      Many people keep a dog as a pet.
+      Dogs love to play games.
+      They love to roll in sticky mud.
+      They have a good sense of smell.
+      They love to have a walk every day.
+      They eat meat and plants.
+      This is a baby dog; we call it puppy.`,
+    "option": [
+      { "en": "Today, let’s talk about the dog.", "cn": "今天,让我们聊一聊狗｡" },
+      { "en": "This is a dog.", "cn": "这是一只狗｡" },
+      { "en": "The dog says woof woof.", "cn": "狗狗叫起来汪汪｡" },
+      { "en": "The dog has one nose, two big ears, soft fur, four paws and one tail.", "cn": "狗狗有一个鼻子,2只大耳朵、软软的毛、4个爪子和一条尾巴｡" },
+      { "en": "They are very smart.", "cn": "狗狗非常聪明｡" },
+      { "en": "Many people keep a dog as a pet.", "cn": "很多人把狗作为宠物｡" },
+      { "en": "Dogs love to play games.", "cn": "狗狗喜欢玩游戏｡" },
+      { "en": "They love to roll in sticky mud.", "cn": "它们喜欢在黏糊糊的泥浆里打滚｡" },
+      { "en": "They have a good sense of smell.", "cn": "它们嗅觉非常灵敏｡" },
+      { "en": "They love to have a walk every day.", "cn": "它们喜欢每天散步｡" },
+      { "en": "They eat meat and plants.", "cn": "它们吃肉类和植物｡" },
+      { "en": "This is a baby dog; we call it puppy.", "cn": "这是一只狗宝宝,我们可以叫它小狗狗｡" }
+    ]
+  },
+  {
+    "name": "giraffe",
+    "page": 3,
+    "data": `Today, let’s talk about the giraffe.
+      This is a giraffe.
+      The giraffe has two horns, two big eyes, one long neck, four long legs and one long tail.
+      Giraffes are the tallest animals in the world.
+      An adult giraffe can be 4 meters to 6 meters tall.
+      A baby giraffe can be 1 meter to 2 meters tall.
+      They run very fast.
+      They love to explore.
+      They live in groups in Africa.
+      They eat leaves, flowers and fruits.
+      This is a baby giraffe; we call it calf.`,
+    "option": [
+      { "en": "Today, let’s talk about the giraffe.", "cn": "今天,让我们聊一聊长颈鹿｡" },
+      { "en": "This is a giraffe.", "cn": "这是一只长颈鹿｡" },
+      { "en": "The giraffe has two horns, two big eyes, one long neck, four long legs and one long tail.", "cn": "长颈鹿有2只角,2个大大的眼睛,1个长长的脖子,4条长长的腿,1条长长的尾巴｡" },
+      { "en": "Giraffes are the tallest animals in the world.", "cn": "长颈鹿是世界上最高的动物｡" },
+      { "en": "An adult giraffe can be 4 meters to 6 meters tall.", "cn": "成年长颈鹿有4到6米高｡" },
+      { "en": "A baby giraffe can be 1 meter to 2 meters tall.", "cn": "幼年长颈鹿有1到2米高｡" },
+      { "en": "They run very fast.", "cn": "它们跑的很快｡" },
+      { "en": "They love to explore.", "cn": "它们喜欢探索｡" },
+      { "en": "They live in groups in Africa.", "cn": "它们成群的生活在非洲｡" },
+      { "en": "They eat leaves, flowers and fruits.", "cn": "它们吃树叶、花和果实｡" },
+      { "en": "This is a baby giraffe; we call it calf.", "cn": "这是一只长颈鹿宝宝,我们称它为长颈鹿幼崽｡" }
+    ]
+  },
+  {
+    "name": "shark",
+    "page": 4,
+    "data": `Today, let’s talk about the shark.
+      This is a shark.
+      The shark has two eyes, one first dorsal fin, one second dorsal fin, two pectoral fins, a tail and many sharp teeth.
+      The shark is one of the biggest fish on earth.
+      Sharks live in the ocean.
+      They like to swim in cool water.
+      Sharks can swim very fast.
+      Their tails are long and powerful.
+      They can be very dangerous.
+      Their teeth are very sharp.
+      They have about three hundred teeth.
+      They eat fish, sea lions, dolphins and sea turtles.`,
+    "option": [
+      { "en": "Today, let’s talk about the shark.", "cn": "今天,让我们聊一聊鲨鱼｡" },
+      { "en": "This is a shark.", "cn": "这是一只鲨鱼｡" },
+      { "en": "The shark has two eyes, one first dorsal fin, one second dorsal fin, two pectoral fins, a tail and many sharp teeth.", "cn": "鲨鱼有两只眼睛,一个第一背鳍,一个第二背鳍,两个胸鳍,一条尾巴和许多锋利的牙齿｡" },
+      { "en": "The shark is one of the biggest fish on earth.", "cn": "鲨鱼是地球上最大的鱼类之一｡" },
+      { "en": "Sharks live in the ocean.", "cn": "鲨鱼生活在海洋中｡" },
+      { "en": "They like to swim in cool water.", "cn": "它们喜欢在凉水中游泳｡" },
+      { "en": "Sharks can swim very fast.", "cn": "鲨鱼可以游得非常快｡" },
+      { "en": "Their tails are long and powerful.", "cn": "它们的尾巴又长又有力｡" },
+      { "en": "They can be very dangerous.", "cn": "它们可能非常危险｡" },
+      { "en": "Their teeth are very sharp.", "cn": "它们的牙齿非常锋利｡" },
+      { "en": "They have about three hundred teeth.", "cn": "它们大约有三百颗牙齿｡" },
+      { "en": "They eat fish, sea lions, dolphins and sea turtles.", "cn": "它们吃鱼类、海狮、海豚和海龟｡" }
+    ]
+  },
+  {
+    "name": "frog",
+    "page": 5,
+    "data": `Today, let’s talk about the frog.
+      This is a frog.
+      The frog says ribbit ribbit.
+      The frog has two big eyes, a long tongue, smooth skin, four long legs and a white belly.
+      Frogs can live both in water and on land.
+      They have strong back legs.
+      They are good at jumping.
+      Frogs come in different colors.
+      Green frogs, brown frogs and grey frogs.
+      Frogs are interesting and important creatures in nature.
+      They eat insects such as mosquitoes, flies and ants.`,
+    "option": [
+      { "en": "Today, let’s talk about the frog.", "cn": "今天,让我们聊一聊青蛙｡" },
+      { "en": "This is a frog.", "cn": "这是一只青蛙｡" },
+      { "en": "The frog says ribbit ribbit.", "cn": "青蛙叫起来‘呱呱’｡" },
+      { "en": "The frog has two big eyes, a long tongue, smooth skin, four long legs and a white belly.", "cn": "青蛙有两个大眼睛、一根长长的舌头、滑溜的皮肤、4条大长腿和一个白白的肚皮｡" },
+      { "en": "Frogs can live both in water and on land.", "cn": "它们可以生活在水里和陆地上｡" },
+      { "en": "They have strong back legs.", "cn": "它们有强壮的后腿｡" },
+      { "en": "They are good at jumping.", "cn": "它们擅长跳跃｡" },
+      { "en": "Frogs come in different colors.", "cn": "青蛙有不同的颜色｡" },
+      { "en": "Green frogs, brown frogs and grey frogs.", "cn": "绿色青蛙、棕色青蛙和灰色青蛙｡" },
+      { "en": "Frogs are interesting and important creatures in nature.", "cn": "青蛙在自然界中是有趣且重要的生物｡" },
+      { "en": "They eat insects such as mosquitoes, flies and ants.", "cn": "它们吃昆虫比如蚊子、苍蝇、蚂蚁｡" }
+    ]
+  },
+  {
+    "name": "flamingo",
+    "page": 6,
+    "data": `Today, let’s talk about the flamingo.
+      This is a flamingo.
+      It is a big bird.
+      The flamingo has one curved bill, one long neck, two wings, pink feathers, two long legs and two webbed feet.
+      Flamingos are pink and tall.
+      They can swim and fly.
+      They live near shallow water.
+      They like lakes, ponds and oceans.
+      They live together in big groups.
+      They stand on one leg to rest.
+      They stand on two legs to eat.
+      They love to eat snails, plants, fish and shrimps.`,
+    "option": [
+      { "en": "Today, let’s talk about the flamingo.", "cn": "今天,让我们聊一聊火烈鸟｡" },
+      { "en": "This is a flamingo.", "cn": "这是一只火烈鸟｡" },
+      { "en": "It is a big bird.", "cn": "它是一只很大的鸟｡" },
+      { "en": "The flamingo has one curved bill, one long neck, two wings, pink feathers, two long legs and two webbed feet.", "cn": "火烈鸟有一个弯曲的喙、一个长脖子、两个翅膀、粉色的羽毛、两条长腿和两个有蹼的脚｡" },
+      { "en": "Flamingos are pink and tall.", "cn": "火烈鸟是粉色的而且很高｡" },
+      { "en": "They can swim and fly.", "cn": "它们会游泳和飞翔｡" },
+      { "en": "They live near shallow water.", "cn": "它们生活在浅水区附近｡" },
+      { "en": "They like lakes, ponds and oceans.", "cn": "它们喜欢湖泊、池塘和海洋｡" },
+      { "en": "They live together in big groups.", "cn": "它们成群结队地生活在一起｡" },
+      { "en": "They stand on one leg to rest.", "cn": "它们单腿站立休息｡" },
+      { "en": "They stand on two legs to eat.", "cn": "它们用两条腿站立进食｡" },
+      { "en": "They love to eat snails, plants, fish and shrimps.", "cn": "它们喜欢吃蜗牛、植物、鱼和虾｡" }
+    ]
+  },
+  {
+    "name": "chicken",
+    "page": 7,
+    "data": `Today, let’s talk about the chicken.
+      This is a boy chicken; we call it rooster.
+      The rooster says cock-a-doodle-doo.
+      The rooster has one red comb, one red wattle, one sharp beak, two wings, two legs and one big tail.
+      This is a girl chicken; we call it hen.
+      The hen says cluck cluck.
+      The hen has a small comb, and the rooster has a big one.
+      The rooster’s tail is bigger than the hen’s.
+      Their beaks are very sharp.
+      They eat grains, grass and worms.
+      Look, this is a baby chicken; we call it chick.`,
+    "option": [
+      { "en": "Today, let’s talk about the chicken.", "cn": "今天,让我们聊一聊鸡｡" },
+      { "en": "This is a boy chicken; we call it rooster.", "cn": "这是一只雄性的鸡,我们叫它公鸡｡" },
+      { "en": "The rooster says cock-a-doodle-doo.", "cn": "公鸡说喔喔喔｡" },
+      { "en": "The rooster has one red comb, one red wattle, one sharp beak, two wings, two legs and one big tail.", "cn": "公鸡有一个红色鸡冠、一个红色垂肉、一个尖尖的嘴、两个翅膀、两个腿和一个大尾巴｡" },
+      { "en": "This is a girl chicken; we call it hen.", "cn": "这是一只雌性的鸡,我们叫它母鸡｡" },
+      { "en": "The hen says cluck cluck.", "cn": "母鸡说咯咯｡" },
+      { "en": "The hen has a small comb, and the rooster has a big one.", "cn": "母鸡有一个小小的鸡冠,公鸡有一个大大的鸡冠｡" },
+      { "en": "The rooster’s tail is bigger than the hen’s.", "cn": "公鸡的尾巴比母鸡的更大｡" },
+      { "en": "Their beaks are very sharp.", "cn": "它们的嘴特别锋利｡" },
+      { "en": "They eat grains, grass and worms.", "cn": "它们吃谷粒、草和虫子｡" },
+      { "en": "Look, this is a baby chicken; we call it chick.", "cn": "看,这是一只小鸡宝宝;我们称之为雏鸡｡" }
+    ]
+  },
+  {
+    "name": "ostrich",
+    "page": 8,
+    "data": `Today, let’s talk about the ostrich.
+      This is an ostrich.
+      The ostrich has one small head, one hard beak, one long neck, two wings, soft feathers and two long legs.
+      The ostrich is the largest bird in the world.
+      Ostrich eggs are large.
+      They live in groups in Africa.
+      They like the savanna and the desert.
+      They have wings, but can’t fly.
+      Their legs are very strong.
+      They can run very fast.
+      They eat plants, grass, bugs and lizards.`,
+    "option": [
+      { "en": "Today, let’s talk about the ostrich.", "cn": "今天,让我们聊一聊鸵鸟｡" },
+      { "en": "This is an ostrich.", "cn": "这是一只鸵鸟｡" },
+      { "en": "The ostrich has one small head, one hard beak, one long neck, two wings, soft feathers and two long legs.", "cn": "鸵鸟有一个小脑袋、坚硬的喙、长长的脖子、两个翅膀、柔软的羽毛和两条长腿｡" },
+      { "en": "The ostrich is the largest bird in the world.", "cn": "鸵鸟是世界上最大的鸟｡" },
+      { "en": "Ostrich eggs are large.", "cn": "鸵鸟蛋很大｡" },
+      { "en": "They live in groups in Africa.", "cn": "它们在非洲群居生活｡" },
+      { "en": "They like the savanna and the desert.", "cn": "它们喜欢热带草原和沙漠｡" },
+      { "en": "They have wings, but can’t fly.", "cn": "它们有翅膀,但不能飞｡" },
+      { "en": "Their legs are very strong.", "cn": "它们的腿非常强壮｡" },
+      { "en": "They can run very fast.", "cn": "它们能跑得非常快｡" },
+      { "en": "They eat plants, grass, bugs and lizards.", "cn": "它们吃植物、草、虫子和蜥蜴｡" }
+    ]
+  },
+  {
+    "name": "duck",
+    "page": 9,
+    "data": `Today, let’s talk about the duck.
+      This is a duck.
+      The duck says quack quack.
+      The duck has a yellow bill, a long neck, two wings, waterproof feathers, a tail and two webbed feet.
+      We often keep ducks on a farm.
+      The ducks are good at swimming.
+      They love to swim in lakes, ponds and rivers.
+      Their webbed feet help them swim fast.
+      The ducks like to eat grains, vegetables, worms, shrimps and insects.
+      Look, there is a baby duck swimming in the river.`,
+    "option": [
+      { "en": "Today, let’s talk about the duck.", "cn": "今天,让我们聊一聊鸭子｡" },
+      { "en": "This is a duck.", "cn": "这是一只鸭子｡" },
+      { "en": "The duck says quack quack.", "cn": "鸭子说嘎嘎｡" },
+      { "en": "The duck has a yellow bill, a long neck, two wings, waterproof feathers, a tail and two webbed feet.", "cn": "鸭子有一个黄色的嘴、一个长脖子、两个翅膀、防水的羽毛、一个尾巴和两只脚蹼｡" },
+      { "en": "We often keep ducks on a farm.", "cn": "我们一般会在农场饲养鸭子｡" },
+      { "en": "The ducks are good at swimming.", "cn": "它们擅长游泳｡" },
+      { "en": "They love to swim in lakes, ponds and rivers.", "cn": "它们喜欢在湖泊、池塘和河流里游泳｡" },
+      { "en": "Their webbed feet help them swim fast.", "cn": "它们的蹼足帮助它们游得很快｡" },
+      { "en": "The ducks like to eat grains, vegetables, worms, shrimps and insects.", "cn": "鸭子喜欢吃谷物、蔬菜、虫子、虾和昆虫｡" },
+      { "en": "Look, there is a baby duck swimming in the river.", "cn": "瞧,有一只小鸭子在河里游泳｡" }
+    ]
+  },
+  {
+    "name": "chick",
+    "page": 10,
+    "data": `Today, let’s talk about the chick.
+      Look, this is an egg.
+      A hen sits on her eggs in the nest to keep them nice and warm.
+      The egg cracks.
+      The chick hatches from the egg.
+      Look at that little chick, it is stretching its body.
+      The chick will grow into a rooster or a hen.
+      The hen will lay eggs again.`,
+    "option": [
+      { "en": "Today, let’s talk about the chick.", "cn": "今天,让我们聊一聊小鸡｡" },
+      { "en": "Look, this is an egg.", "cn": "看,这是一个鸡蛋｡" },
+      { "en": "A hen sits on her eggs in the nest to keep them nice and warm.", "cn": "一只母鸡坐在巢中的蛋上,使它们保持良好且温暖｡" },
+      { "en": "The egg cracks.", "cn": "鸡蛋裂开了｡" },
+      { "en": "The chick hatches from the egg.", "cn": "小鸡从蛋中孵化出来｡" },
+      { "en": "Look at that little chick, it is stretching its body.", "cn": "看那只小鸡,它正在伸展它的身体(伸懒腰)｡" },
+      { "en": "The chick will grow into a rooster or a hen.", "cn": "小鸡将会长成公鸡或母鸡｡" },
+      { "en": "The hen will lay eggs again.", "cn": "母鸡将再生蛋｡" }
+    ]
+  },
+  {
+    "name": "hippo",
+    "page": 11,
+    "data": `Today, let’s talk about the hippo.
+      This is a hippo.
+      The hippo has two small ears, two eyes, one big mouth and a short tail, but it is a big guy.
+      Hippos are very big land mammals.
+      They are so heavy.
+      They live in Africa.
+      They stay near swamps, lakes and rivers.
+      They like water, the water keeps hippos cool.
+      They spend almost all time in the water.
+      Their jaws can open very wide.
+      Their teeth are long and sharp.
+      Hippos eat grass and fruits.`,
+    "option": [
+      { "en": "Today, let’s talk about the hippo.", "cn": "今天,让我们聊一聊河马｡" },
+      { "en": "This is a hippo.", "cn": "这是一头河马｡" },
+      { "en": "The hippo has two small ears, two eyes, one big mouth and a short tail, but it is a big guy.", "cn": "河马有两只小耳朵、两只眼睛、一张大嘴巴和一条短尾巴,但它是个大家伙｡" },
+      { "en": "Hippos are very big land mammals.", "cn": "河马是非常大的陆地哺乳动物｡" },
+      { "en": "They are so heavy.", "cn": "它们非常重｡" },
+      { "en": "They live in Africa.", "cn": "它们生活在非洲｡" },
+      { "en": "They stay near swamps, lakes and rivers.", "cn": "它们待在沼泽、湖泊和河流附近｡" },
+      { "en": "They like water, the water keeps hippos cool.", "cn": "它们喜欢水,水使河马保持凉爽｡" },
+      { "en": "They spend almost all time in the water.", "cn": "它们几乎所有时间都在水中｡" },
+      { "en": "Their jaws can open very wide.", "cn": "它们的下颚可以张得很大｡" },
+      { "en": "Their teeth are long and sharp.", "cn": "它们的牙齿又长又锋利｡" },
+      { "en": "Hippos eat grass and fruits.", "cn": "河马吃草和水果｡" }
+    ]
+  },
+  {
+    "name": "elephant",
+    "page": 12,
+    "data": `Today, let’s talk about the elephant.
+      This is an elephant.
+      The elephant says toot toot.
+      The elephant has two eyes, two large ears, one long nose, two tusks and one long tail.
+      The elephant has a long nose, we call it trunk.
+      The elephant has two long teeth, we call them tusks.
+      Elephants are grey.
+      Elephants are the biggest animals on the land.
+      Elephants have large ears.
+      They keep cool by flapping them.
+      Elephants like to eat grass, leaves, fruits and flowers.
+      Look at the baby elephants, we call them calves.`,
+    "option": [
+      { "en": "Today, let’s talk about the elephant.", "cn": "今天,让我们聊一聊大象｡" },
+      { "en": "This is an elephant.", "cn": "这是一头大象｡" },
+      { "en": "The elephant says toot toot.", "cn": "大象的叫声是嘟嘟嘟嘟｡" },
+      { "en": "The elephant has two eyes, two large ears, one long nose, two tusks and one long tail.", "cn": "大象有两只眼睛、两只大耳朵、一个长鼻子、两根象牙和一条长尾巴｡" },
+      { "en": "The elephant has a long nose, we call it trunk.", "cn": "大象有一个长鼻子,我们称之为象鼻｡" },
+      { "en": "The elephant has two long teeth, we call them tusks.", "cn": "大象有两颗长的牙齿,我们称之为象牙｡" },
+      { "en": "Elephants are grey.", "cn": "大象是灰色的｡" },
+      { "en": "Elephants are the biggest animals on the land.", "cn": "大象是陆地上最大的动物｡" },
+      { "en": "Elephants have large ears.", "cn": "大象有大耳朵｡" },
+      { "en": "They keep cool by flapping them.", "cn": "它们通过扇动耳朵来保持凉快｡" },
+      { "en": "Elephants like to eat grass, leaves, fruits and flowers.", "cn": "大象喜欢吃草、树叶、水果和花｡" },
+      { "en": "Look at the baby elephants, we call them calves.", "cn": "看那些小象,我们称之为幼崽｡" }
+    ]
+  },
+  {
+    "name": "whale",
+    "page": 13,
+    "data": `Today, let’s talk about the whale.
+      This is a whale.
+      The Whale has one large mouth, two eyes, one or two blow holes, one back fin, two flippers and one tail.
+      Whales are large sea mammals.
+      They are the largest animals on earth.
+      They live in the ocean.
+      They can spray water from the blowhole.
+      They have a streamlined body.
+      They can swim fast and travel a long distance.
+      They communicate through sounds.
+      They eat small sea creatures, such as fish, squid and shrimps.`,
+    "option": [
+      { "en": "Today, let’s talk about the whale.", "cn": "今天,让我们聊一聊鲸鱼｡" },
+      { "en": "This is a whale.", "cn": "这是一头鲸鱼｡" },
+      { "en": "The Whale has one large mouth, two eyes, one or two blow holes, one back fin, two flippers and one tail.", "cn": "鲸鱼有一张大嘴巴、两只眼睛、一个或两个呼吸孔、一个背鳍、两个胸鳍和一条尾巴｡" },
+      { "en": "Whales are large sea mammals.", "cn": "鲸鱼是大型海洋哺乳动物｡" },
+      { "en": "They are the largest animals on earth.", "cn": "它们是地球上最大的动物｡" },
+      { "en": "They live in the ocean.", "cn": "它们生活在海洋中｡" },
+      { "en": "They can spray water from the blowhole.", "cn": "它们可以从呼吸孔喷水｡" },
+      { "en": "They have a streamlined body.", "cn": "它们的身体呈流线型｡" },
+      { "en": "They can swim fast and travel a long distance.", "cn": "它们可以快速游动并且能游的很远｡" },
+      { "en": "They communicate through sounds.", "cn": "它们通过声音进行交流｡" },
+      { "en": "They eat small sea creatures, such as fish, squid and shrimps.", "cn": "它们吃小海洋生物,如鱼、鱿鱼和虾｡" }
+    ]
+  },
+  {
+    "name": "rhino",
+    "page": 14,
+    "data": `Today, let’s talk about the rhino.
+      This is a rhino.
+      The rhino has one or two horns, two ears, one wide mouth, four legs and a tail.
+      Rhinos are grey.
+      Rhinos live on the grassland.
+      You may see a rhino in the zoo.
+      Rhinos like to roll in mud.
+      Mud can protect them from the hot sun.
+      Rhinos can run very fast.
+      But they are too big to run for long.
+      They love to eat leaves, grass and bushes.`,
+    "option": [
+      { "en": "Today, let’s talk about the rhino.", "cn": "今天,让我们聊一聊犀牛｡" },
+      { "en": "This is a rhino.", "cn": "这是一头犀牛｡" },
+      { "en": "The rhino has one or two horns, two ears, one wide mouth, four legs and a tail.", "cn": "犀牛有一到两个角、两只耳朵、一张大嘴巴、四条腿和一条尾巴｡" },
+      { "en": "Rhinos are grey.", "cn": "犀牛是灰色的｡" },
+      { "en": "Rhinos live on the grassland.", "cn": "犀牛生活在草原上｡" },
+      { "en": "You may see a rhino in the zoo.", "cn": "你可能会在动物园看到犀牛｡" },
+      { "en": "Rhinos like to roll in mud.", "cn": "犀牛喜欢在泥里打滚｡" },
+      { "en": "Mud can protect them from the hot sun.", "cn": "泥土可以保护它们免受烈日的伤害｡" },
+      { "en": "Rhinos can run very fast.", "cn": "犀牛可以跑得非常快｡" },
+      { "en": "But they are too big to run for long.", "cn": "但它们体型太大,不能跑太久｡" },
+      { "en": "They love to eat leaves, grass and bushes.", "cn": "它们喜欢吃树叶、草和灌木丛｡" }
+    ]
+  },
+  {
+    "name": "cow",
+    "page": 15,
+    "data": `Today, let’s talk about the cow.
+      This is a cow.
+      The cow says Moo moo.
+      The cow has two horns, two ears, four hooves and a tail.
+      Cows live on a farm.
+      They are farm animals.
+      There are many different kinds of cows.
+      This one is a dairy cow.
+      It is black and white.
+      Dairy cows can provide us with milk.
+      They eat hay, grass and grain.
+      Look, there is a cute baby cow, we call it calf.`,
+    "option": [
+      { "en": "Today, let’s talk about the cow.", "cn": "今天,让我们聊一聊牛｡" },
+      { "en": "This is a cow.", "cn": "这是一只牛｡" },
+      { "en": "The cow says Moo moo.", "cn": "牛叫起来是哞哞｡" },
+      { "en": "The cow has two horns, two ears, four hooves and a tail.", "cn": "这头牛有两只角、两只耳朵、四只蹄子和一条尾巴｡" },
+      { "en": "Cows live on a farm.", "cn": "牛生活在农场里｡" },
+      { "en": "They are farm animals.", "cn": "牛是农场动物｡" },
+      { "en": "There are many different kinds of cows.", "cn": "牛有很多不同的品种｡" },
+      { "en": "This one is a dairy cow.", "cn": "这一只奶牛｡" },
+      { "en": "It is black and white.", "cn": "它是黑白相间的｡" },
+      { "en": "Dairy cows can provide us with milk.", "cn": "奶牛可以给我们提供牛奶｡" },
+      { "en": "They eat hay, grass and grain.", "cn": "牛吃干草、青草和谷物｡" },
+      { "en": "Look, there is a cute baby cow, we call it calf.", "cn": "看,那里有一只可爱的牛宝宝,我们称之为小牛犊｡" }
+    ]
+  },
+  {
+    "name": "rabbit",
+    "page": 16,
+    "data": `Today, let’s talk about the rabbit.
+      This is a Rabbit.
+      The rabbit says squeak squeak.
+      The rabbit has two long ears, two big eyes and one short tail.
+      Rabbits can be white, black, grey and brown.
+      They live in a hollow tree or a cave.
+      They are very cute.
+      They can run fast and jump high.
+      They like to eat carrots, grass and vegetables.
+      Look, there is a baby rabbit; we call it bunny.`,
+    "option": [
+      { "en": "Today, let’s talk about the rabbit.", "cn": "今天,让我们聊一聊兔子｡" },
+      { "en": "This is a Rabbit.", "cn": "这是一只兔子｡" },
+      { "en": "The rabbit says squeak squeak.", "cn": "兔子说吱吱吱｡" },
+      { "en": "The rabbit has two long ears, two big eyes and one short tail.", "cn": "兔子有两只长耳朵、两只大眼睛和一条短尾巴｡" },
+      { "en": "Rabbits can be white, black, grey and brown.", "cn": "兔子可以是白色的、黑色的、灰色的和棕色的｡" },
+      { "en": "They live in a hollow tree or a cave.", "cn": "它们生活在树洞里或洞穴里｡" },
+      { "en": "They are very cute.", "cn": "它们非常可爱｡" },
+      { "en": "They can run fast and jump high.", "cn": "它们能跑得快、跳得高｡" },
+      { "en": "They like to eat carrots, grass and vegetables.", "cn": "它们喜欢吃胡萝卜、草和蔬菜｡" },
+      { "en": "Look, there is a baby rabbit; we call it bunny.", "cn": "看,那里有一只小兔宝宝,我们称它为小兔子｡" }
+    ]
+  },
+  {
+    "name": "horse",
+    "page": 17,
+    "data": `Today, let’s talk about the horse.
+      This is a horse.
+      The horse says neigh neigh.
+      The horse has a muzzle, two ears, two eyes, a mane, four long legs, four hoofs and a long tail.
+      Horses come in many colors, such as brown, black and white.
+      Most horses live on farms.
+      They live in a stable.
+      Their legs are long and strong.
+      They can run very fast.
+      They are used for transportation, work and sports.
+      They eat hay and grass, but they also like carrots and apples.
+      Look, there is a baby horse; we call it foal.`,
+    "option": [
+      { "en": "Today, let’s talk about the horse.", "cn": "今天,让我们聊一聊马｡" },
+      { "en": "This is a horse.", "cn": "这是一匹马｡" },
+      { "en": "The horse says neigh neigh.", "cn": "马的叫声是嘶嘶｡" },
+      { "en": "The horse has a muzzle, two ears, two eyes, a mane, four long legs, four hoofs and a long tail.", "cn": "马有一个口鼻、两只耳朵、两只眼睛、鬃毛、四条长腿、四个蹄子和一条长尾巴｡" },
+      { "en": "Horses come in many colors, such as brown, black and white.", "cn": "马有很多颜色,比如棕色、黑色和白色｡" },
+      { "en": "Most horses live on farms.", "cn": "大多数马生活在农场里｡" },
+      { "en": "They live in a stable.", "cn": "它们住在马厩里｡" },
+      { "en": "Their legs are long and strong.", "cn": "它们的腿又长又强壮｡" },
+      { "en": "They can run very fast.", "cn": "它们能跑得非常快｡" },
+      { "en": "They are used for transportation, work and sports.", "cn": "它们被用于交通、工作和运动｡" },
+      { "en": "They eat hay and grass, but they also like carrots and apples.", "cn": "它们吃干草和草,但也喜欢胡萝卜和苹果｡" },
+      { "en": "Look, there is a baby horse; we call it foal.", "cn": "看,那里有一只小马宝宝,我们称之为小马驹｡" }
+    ]
+  },
+  {
+    "name": "goose",
+    "page": 18,
+    "data": `Today, let’s talk about the goose.
+      This is a goose.
+      The goose has a bill, a long neck, two wings, waterproof feathers, two webbed feet and a tail.
+      Most geese are white or grey.
+      Geese are usually kept on farms.
+      They are waterfowls.
+      They love swimming.
+      They like ponds, lakes and rivers.
+      They spend most of their time in the water every day.
+      They like to eat grains, vegetables, worms, shrimps and insects.
+      Look, what a cute baby goose, we can call it gosling.`,
+    "option": [
+      { "en": "Today, let’s talk about the goose.", "cn": "今天,让我们聊一聊鹅｡" },
+      { "en": "This is a goose.", "cn": "这是一只鹅｡" },
+      { "en": "The goose has a bill, a long neck, two wings, waterproof feathers, two webbed feet and a tail.", "cn": "鹅有一个喙、一个长脖子、两个翅膀、防水的羽毛、两只蹼足和一条尾巴｡" },
+      { "en": "Most geese are white or grey.", "cn": "大多数鹅是白色或灰色的｡" },
+      { "en": "Geese are usually kept on farms.", "cn": "鹅通常被养在农场里｡" },
+      { "en": "They are waterfowls.", "cn": "它们是水禽｡" },
+      { "en": "They love swimming.", "cn": "它们喜欢游泳｡" },
+      { "en": "They like ponds, lakes and rivers.", "cn": "它们喜欢池塘、湖泊和河流｡" },
+      { "en": "They spend most of their time in the water every day.", "cn": "它们每天大部分时间都在水里｡" },
+      { "en": "They like to eat grains, vegetables, worms, shrimps and insects.", "cn": "它们喜欢吃谷物、蔬菜、虫子、虾和昆虫｡" },
+      { "en": "Look, what a cute baby goose, we can call it gosling.", "cn": "看,多可爱的小鹅啊,我们可以叫它小鹅｡" }
+    ]
+  },
+  {
+    "name": "octopus",
+    "page": 19,
+    "data": `Today, let’s talk about the octopus.
+      This is an octopus.
+      The octopus has a round head, two eyes, eight tentacles and many suckers.
+      Octopuses are mollusks.
+      Mollusks have soft bodies and no bones.
+      Octopuses live in the ocean.
+      They like to crawl along the ocean floor.
+      They have eight arms.
+      If they lose an arm, they can grow a new one.
+      Their suckers can grab things.
+      They like to eat clams and crabs.`,
+    "option": [
+      { "en": "Today, let’s talk about the octopus.", "cn": "今天,让我们聊一聊章鱼｡" },
+      { "en": "This is an octopus.", "cn": "这是一只章鱼｡" },
+      { "en": "The octopus has a round head, two eyes, eight tentacles and many suckers.", "cn": "章鱼有一个圆头、两只眼睛、八条触手和许多吸盘｡" },
+      { "en": "Octopuses are mollusks.", "cn": "章鱼是软体动物｡" },
+      { "en": "Mollusks have soft bodies and no bones.", "cn": "软体动物有柔软的身体,没有骨头｡" },
+      { "en": "Octopuses live in the ocean.", "cn": "章鱼生活在海洋中｡" },
+      { "en": "They like to crawl along the ocean floor.", "cn": "它们喜欢沿着海底爬行｡" },
+      { "en": "They have eight arms.", "cn": "它们有八条手臂｡" },
+      { "en": "If they lose an arm, they can grow a new one.", "cn": "如果它们失去一条手臂,可以长出一条新的｡" },
+      { "en": "Their suckers can grab things.", "cn": "它们的吸盘可以抓住东西｡" },
+      { "en": "They like to eat clams and crabs.", "cn": "它们喜欢吃蛤蜊和螃蟹｡" }
+    ]
+  },
+  {
+    "name": "mosquito",
+    "page": 20,
+    "data": `Today, let’s talk about the mosquito.
+      This is a mosquito.
+      The mosquito has a proboscis, two antennas, a thorax, an abdomen and six legs.
+      Mosquitoes are small flying insects.
+      There are many mosquitoes in summer.
+      They can suck blood from humans and animals.
+      If you get a mosquito bite, it will be so itchy.
+      You can put on some bite cream.
+      Hey, I can hear the buzzing noise.
+      It is a mosquito.
+      Let’s get it with an electric mosquito swatter.`,
+    "option": [
+      { "en": "Today, let’s talk about the mosquito.", "cn": "今天,让我们聊一聊蚊子｡" },
+      { "en": "This is a mosquito.", "cn": "这是一只蚊子｡" },
+      { "en": "The mosquito has a proboscis, two antennas, a thorax, an abdomen and six legs.", "cn": "蚊子有一个口器、两根触角、一个胸部、一个腹部和六条腿｡" },
+      { "en": "Mosquitoes are small flying insects.", "cn": "蚊子是小型飞虫｡" },
+      { "en": "There are many mosquitoes in summer.", "cn": "夏天有很多蚊子｡" },
+      { "en": "They can suck blood from humans and animals.", "cn": "它们可以吸食人类和动物的血液｡" },
+      { "en": "If you get a mosquito bite, it will be so itchy.", "cn": "如果你被蚊子咬了,会很痒｡" },
+      { "en": "You can put on some bite cream.", "cn": "你可以涂一些止痒膏｡" },
+      { "en": "Hey, I can hear the buzzing noise.", "cn": "嘿,我能听到嗡嗡声｡" },
+      { "en": "It is a mosquito.", "cn": "是一只蚊子｡" },
+      { "en": "Let’s get it with an electric mosquito swatter.", "cn": "让我们用电蚊拍打死它｡" }
+    ]
+  },
+  {
+    "name": "panda",
+    "page": 21,
+    "data": `Today, let’s talk about the panda.
+      This is a panda.
+      The panda has a round head, two round ears, and a chubby body.
+      The panda is black and white.
+      Panda’s fur is thick and soft.
+      Pandas are a type of bear.
+      They live in misty mountain forests of China.
+      They are China’s national treasures.
+      They are great climbers.
+      Pandas don’t hibernate in winter.
+      They just find a warm place in winter.
+      Pandas love to eat bamboo shoots and leaves, and also fruit.
+      Look, there is a cute baby panda, we call it cub.`,
+    "option": [
+      { "en": "Today, let’s talk about the panda.", "cn": "今天,让我们聊一聊熊猫｡" },
+      { "en": "This is a panda.", "cn": "这是一只熊猫｡" },
+      { "en": "The panda has a round head, two round ears, and a chubby body.", "cn": "熊猫有一个圆头、两只圆耳朵和一个胖乎乎的身体｡" },
+      { "en": "The panda is black and white.", "cn": "熊猫是黑白相间的｡" },
+      { "en": "Panda’s fur is thick and soft.", "cn": "熊猫的毛又厚又软｡" },
+      { "en": "Pandas are a type of bear.", "cn": "熊猫是熊的一种｡" },
+      { "en": "They live in misty mountain forests of China.", "cn": "它们生活在中国多雾的山林中｡" },
+      { "en": "They are China’s national treasures.", "cn": "它们是中国的国宝｡" },
+      { "en": "They are great climbers.", "cn": "它们是很棒的攀爬者｡" },
+      { "en": "Pandas don’t hibernate in winter.", "cn": "熊猫冬天不冬眠｡" },
+      { "en": "They just find a warm place in winter.", "cn": "它们冬天只需要找个温暖的地方｡" },
+      { "en": "Pandas love to eat bamboo shoots and leaves, and also fruit.", "cn": "熊猫喜欢吃竹笋和竹叶,也喜欢吃水果｡" },
+      { "en": "Look, there is a cute baby panda, we call it cub.", "cn": "看,有一只可爱的熊猫宝宝,我们称之为幼崽｡" }
+    ]
+  }
+  {
+    "name": "polar bear",
+    "page": 22,
+    "data": `Today, let’s talk about the polar bear.
+      This is a polar bear.
+      The polar bear has two round ears, thick white fur, four large paws and a short tail.
+      Polar bears are mammals.
+      Polar bears live around the Arctic Ocean.
+      The Arctic is very cold.
+      Their thick fur keeps them warm.
+      Polar bears are good swimmers.
+      They can swim very far.
+      They have sharp teeth to help them hunt and eat.
+      They eat seals and fish.
+      This is a baby polar bear; we call it cub.`,
+    "option": [
+      { "en": "Today, let’s talk about the polar bear.", "cn": "今天,让我们聊一聊北极熊｡" },
+      { "en": "This is a polar bear.", "cn": "这是一只北极熊｡" },
+      { "en": "The polar bear has two round ears, thick white fur, four large paws and a short tail.", "cn": "北极熊有两只圆耳朵、厚厚的白色皮毛、四只大爪子和一条短尾巴｡" },
+      { "en": "Polar bears are mammals.", "cn": "北极熊是哺乳动物｡" },
+      { "en": "Polar bears live around the Arctic Ocean.", "cn": "北极熊生活在北冰洋周围｡" },
+      { "en": "The Arctic is very cold.", "cn": "北极非常冷｡" },
+      { "en": "Their thick fur keeps them warm.", "cn": "它们厚厚的皮毛使它们保持温暖｡" },
+      { "en": "Polar bears are good swimmers.", "cn": "北极熊是优秀的游泳者｡" },
+      { "en": "They can swim very far.", "cn": "它们能游很远｡" },
+      { "en": "They have sharp teeth to help them hunt and eat.", "cn": "它们有锋利的牙齿帮助捕猎和进食｡" },
+      { "en": "They eat seals and fish.", "cn": "它们吃海豹和鱼｡" },
+      { "en": "This is a baby polar bear; we call it cub.", "cn": "这是一只北极熊宝宝,我们称之为幼崽｡" }
+    ]
+  },
+  {
+    "name": "penguin",
+    "page": 23,
+    "data": `Today, let’s talk about the penguin.
+      This is a penguin.
+      The penguin has a large head, a short neck, a sharp bill, a white belly, two flippers and two webbed feet.
+      Penguins live in frozen Antarctica.
+      They waddle across the ice, or slide on their bellies.
+      Penguins have special wings called flippers.
+      They use them to swim and dive.
+      They eat fish, octopuses, krill and squid.
+      Look, there is a baby penguin, we call it chick.`,
+    "option": [
+      { "en": "Today, let’s talk about the penguin.", "cn": "今天,让我们聊一聊企鹅｡" },
+      { "en": "This is a penguin.", "cn": "这是一只企鹅｡" },
+      { "en": "The penguin has a large head, a short neck, a sharp bill, a white belly, two flippers and two webbed feet.", "cn": "企鹅有一个大头、短脖子、锋利的喙、白色的腹部、两个鳍状肢和两只蹼足｡" },
+      { "en": "Penguins live in frozen Antarctica.", "cn": "企鹅生活在冰封的南极洲｡" },
+      { "en": "They waddle across the ice, or slide on their bellies.", "cn": "它们摇摇摆摆地走过冰面,或者用腹部滑行｡" },
+      { "en": "Penguins have special wings called flippers.", "cn": "企鹅有叫做鳍状肢的特殊翅膀｡" },
+      { "en": "They use them to swim and dive.", "cn": "它们用鳍状肢游泳和潜水｡" },
+      { "en": "They eat fish, octopuses, krill and squid.", "cn": "它们吃鱼、章鱼、磷虾和鱿鱼｡" },
+      { "en": "Look, there is a baby penguin, we call it chick.", "cn": "看,有一只企鹅宝宝,我们称之为幼鸟｡" }
+    ]
+  },
+  {
+    "name": "pig",
+    "page": 24,
+    "data": `Today, let’s talk about the fat pig.
+      This is a pig.
+      The pig says oink oink.
+      The fat pig has one snout, two big ears, one fat belly, four hooves and one curly tail.
+      Pigs can be pink, white and black.
+      They live on farms.
+      Pigs like to roll in the muddy puddle.
+      Do you know that pigs can swim.
+      And they are good swimmers.
+      Pigs can eat a lot of food, so they are very fat.
+      They like to eat grains, vegetables, fruits, even bones.
+      There is a baby pig, we call it piggy.`,
+    "option": [
+      { "en": "Today, let’s talk about the fat pig.", "cn": "今天,让我们聊一聊肥猪｡" },
+      { "en": "This is a pig.", "cn": "这是一只猪｡" },
+      { "en": "The pig says oink oink.", "cn": "猪叫起来是哼哼｡" },
+      { "en": "The fat pig has one snout, two big ears, one fat belly, four hooves and one curly tail.", "cn": "肥猪有一个猪嘴、两只大耳朵、一个胖肚子、四个蹄子和一条卷曲的尾巴｡" },
+      { "en": "Pigs can be pink, white and black.", "cn": "猪可以是粉色、白色和黑色的｡" },
+      { "en": "They live on farms.", "cn": "它们生活在农场里｡" },
+      { "en": "Pigs like to roll in the muddy puddle.", "cn": "猪喜欢在泥坑里打滚｡" },
+      { "en": "Do you know that pigs can swim.", "cn": "你知道猪会游泳吗｡" },
+      { "en": "And they are good swimmers.", "cn": "而且它们是优秀的游泳者｡" },
+      { "en": "Pigs can eat a lot of food, so they are very fat.", "cn": "猪能吃很多食物,所以它们很胖｡" },
+      { "en": "There is a baby pig, we call it piggy.", "cn": "有一只小猪宝宝,我们称之为小猪｡" },
+      { "en": "They like to eat grains, vegetables, fruits, even bones.", "cn": "它们喜欢吃谷物、蔬菜、水果,甚至骨头｡" }
+    ]
+  },
+  {
+    "name": "frog life cycle",
+    "page": 25,
+    "data": `Today, let’s talk about the frog life cycle.
+      This is a frog.
+      The frog can lay hundreds of eggs in ponds.
+      The eggs can grow into tadpoles.
+      Then, the tadpole’s back legs will come out.
+      The tadpole turns into a froglet after its front legs come out.
+      It finally becomes a frog, when its tail disappears.
+      The frog can lay eggs again.
+      This is called the frog’s life cycle.`,
+    "option": [
+      { "en": "Today, let’s talk about the frog life cycle.", "cn": "今天,让我们聊一聊青蛙的生命周期｡" },
+      { "en": "This is a frog.", "cn": "这是一只青蛙｡" },
+      { "en": "The frog can lay hundreds of eggs in ponds.", "cn": "青蛙可以在池塘里产下数百个卵｡" },
+      { "en": "The eggs can grow into tadpoles.", "cn": "卵可以长成蝌蚪｡" },
+      { "en": "Then, the tadpole’s back legs will come out.", "cn": "然后,蝌蚪的后腿会长出来｡" },
+      { "en": "The tadpole turns into a froglet after its front legs come out.", "cn": "蝌蚪长出前腿后变成幼蛙｡" },
+      { "en": "It finally becomes a frog, when its tail disappears.", "cn": "当尾巴消失时,它最终变成一只青蛙｡" },
+      { "en": "The frog can lay eggs again.", "cn": "青蛙可以再次产卵｡" },
+      { "en": "This is called the frog’s life cycle.", "cn": "这被称为青蛙的生命周期｡" },
+    ]
+  },
+  {
+    "name": "tiger",
+    "page": 26,
+    "data": `This is a tiger.
+      The tiger has two ears, two eyes, four strong paws, soft fur and a long tail.
+      Its body is covered with orange and black stripes.
+      Tigers live in forests and mountains.
+      They are one of the biggest cat-like animals.
+      They can run very fast.
+      They are excellent predators, strong and powerful.
+      They eat wild boars, deer, cows and sheep.
+      This is a baby tiger, we call it cub.`,
+    "option": [
+      { "en": "This is a tiger.", "cn": "这是一只老虎｡" },
+      { "en": "The tiger has two ears, two eyes, four strong paws, soft fur and a long tail.", "cn": "老虎有两只耳朵、两只眼睛、四只强壮的爪子、柔软的皮毛和一条长尾巴｡" },
+      { "en": "Its body is covered with orange and black stripes.", "cn": "它的身体覆盖着橙色和黑色的条纹｡" },
+      { "en": "Tigers live in forests and mountains.", "cn": "老虎生活在森林和山区｡" },
+      { "en": "They are one of the biggest cat-like animals.", "cn": "它们是最大的猫科动物之一｡" },
+      { "en": "They can run very fast.", "cn": "它们能跑得非常快｡" },
+      { "en": "They are excellent predators, strong and powerful.", "cn": "它们是优秀的捕食者,强壮而有力｡" },
+      { "en": "They eat wild boars, deer, cows and sheep.", "cn": "它们吃野猪、鹿、牛和羊｡" },
+      { "en": "This is a baby tiger, we call it cub.", "cn": "这是一只老虎宝宝,我们称之为幼崽｡" }
+    ]
+  },
+  {
+    "name": "lion",
+    "page": 27,
+    "data": `This is a lion.
+      The lion has two ears, two eyes, a mane, four strong paws and a long tail.
+      Lions are one of the biggest cat-like animals.
+      They mainly live in the grasslands in Africa.
+      Lions are usually brown.
+      They are big and strong animals.
+      Lions are one of the kings of the animal world.
+      They eat wild boars, deer, cows and sheep.
+      Look, there is a baby lion, we call it cub.`,
+    "option": [
+      { "en": "This is a lion.", "cn": "这是一只狮子｡" },
+      { "en": "The lion has two ears, two eyes, a mane, four strong paws and a long tail.", "cn": "狮子有两只耳朵、两只眼睛、鬃毛、四只强壮的爪子和一条长尾巴｡" },
+      { "en": "Lions are one of the biggest cat-like animals.", "cn": "狮子是最大的猫科动物之一｡" },
+      { "en": "They mainly live in the grasslands in Africa.", "cn": "它们主要生活在非洲的草原上｡" },
+      { "en": "Lions are usually brown.", "cn": "狮子通常是棕色的｡" },
+      { "en": "They are big and strong animals.", "cn": "它们是又大又强壮的动物｡" },
+      { "en": "Lions are one of the kings of the animal world.", "cn": "狮子是动物世界的国王之一｡" },
+      { "en": "They eat wild boars, deer, cows and sheep.", "cn": "它们吃野猪、鹿、牛和羊｡" },
+      { "en": "Look, there is a baby lion, we call it cub.", "cn": "看,有一只狮子宝宝,我们称之为幼崽｡" }
+    ]
+  },
+  {
+    "name": "leopard",
+    "page": 28,
+    "data": `Look, this is a beautiful leopard cub.
+      This is a leopard.
+      The leopard has two ears, two eyes, four strong paws and a long tail.
+      It has a beautiful coat with spots all over it.
+      Leopards are very fast runners.
+      They can run very quickly in the forest to catch their food.
+      They are also very good at climbing trees.
+      They can climb up high and rest there.
+      Leopards eat deer, goats, hares and also birds.`,
+    "option": [
+      { "en": "Look, this is a beautiful leopard cub.", "cn": "看,这是一只漂亮的豹子幼崽｡" },
+      { "en": "This is a leopard.", "cn": "这是一只豹子｡" },
+      { "en": "The leopard has two ears, two eyes, four strong paws and a long tail.", "cn": "豹子有两只耳朵、两只眼睛、四只强壮的爪子和一条长尾巴｡" },
+      { "en": "It has a beautiful coat with spots all over it.", "cn": "它有一件全身都是斑点的漂亮皮毛｡" },
+      { "en": "Leopards are very fast runners.", "cn": "豹子是跑得很快的动物｡" },
+      { "en": "They can run very quickly in the forest to catch their food.", "cn": "它们可以在森林里快速奔跑捕捉食物｡" },
+      { "en": "They are also very good at climbing trees.", "cn": "它们也非常擅长爬树｡" },
+      { "en": "They can climb up high and rest there.", "cn": "它们可以爬到高处休息｡" },
+      { "en": "Leopards eat deer, goats, hares and also birds.", "cn": "豹子吃鹿、山羊、野兔,也吃鸟｡" }
+    ]
+  },
+  {
+    "name": "dolphin",
+    "page": 29,
+    "data": `This is a dolphin.
+      The dolphin has a blow hole, a dorsal fin, two flippers and a tail.
+      Dolphins are mammals.
+      They are very smart.
+      Most dolphins live in oceans.
+      Some dolphins live in rivers.
+      Dolphins can jump very high.
+      Dolphins live in big groups, called pods.
+      They breathe through their blowholes.
+      They eat fish, squid, octopuses and crabs.`,
+    "option": [
+      { "en": "This is a dolphin.", "cn": "这是一只海豚｡" },
+      { "en": "The dolphin has a blow hole, a dorsal fin, two flippers and a tail.", "cn": "海豚有一个呼吸孔、一个背鳍、两个鳍状肢和一条尾巴｡" },
+      { "en": "Dolphins are mammals.", "cn": "海豚是哺乳动物｡" },
+      { "en": "They are very smart.", "cn": "它们非常聪明｡" },
+      { "en": "Most dolphins live in oceans.", "cn": "大多数海豚生活在海洋中｡" },
+      { "en": "Some dolphins live in rivers.", "cn": "有些海豚生活在河流中｡" },
+      { "en": "Dolphins can jump very high.", "cn": "海豚能跳得很高｡" },
+      { "en": "Dolphins live in big groups, called pods.", "cn": "海豚生活在大群体中,称为群｡" },
+      { "en": "They breathe through their blowholes.", "cn": "它们通过呼吸孔呼吸｡" },
+      { "en": "They eat fish, squid, octopuses and crabs.", "cn": "它们吃鱼、鱿鱼、章鱼和螃蟹｡" }
+    ]
+  },
+  {
+    "name": "kangaroo",
+    "page": 30,
+    "data": `This is a kangaroo.
+      The kangaroo has two long ears, one long snout, two front paws, two back legs and one strong tail.
+      Female kangaroos have pouches, which they carry their babies.
+      Kangaroos live in Australia.
+      They like open grasslands and deserts.
+      Kangaroos fight with their front paws and kick with their back legs.
+      They use their tails to support their bodies and keep balance.
+      They can jump 12 meters far.
+      Kangaroos eat grass and leaves.`,
+    "option": [
+      { "en": "This is a kangaroo.", "cn": "这是一只袋鼠｡" },
+      { "en": "The kangaroo has two long ears, one long snout, two front paws, two back legs and one strong tail.", "cn": "袋鼠有两只长耳朵、一个长鼻子、两只前爪、两条后腿和一条强壮的尾巴｡" },
+      { "en": "Female kangaroos have pouches, which they carry their babies.", "cn": "雌性袋鼠有育儿袋,用来装它们的宝宝｡" },
+      { "en": "Kangaroos live in Australia.", "cn": "袋鼠生活在澳大利亚｡" },
+      { "en": "They like open grasslands and deserts.", "cn": "它们喜欢开阔的草原和沙漠｡" },
+      { "en": "Kangaroos fight with their front paws and kick with their back legs.", "cn": "袋鼠用前爪打斗,用后腿踢｡" },
+      { "en": "They use their tails to support their bodies and keep balance.", "cn": "它们用尾巴支撑身体并保持平衡｡" },
+      { "en": "They can jump 12 meters far.", "cn": "它们能跳12米远｡" },
+      { "en": "Kangaroos eat grass and leaves.", "cn": "袋鼠吃草和树叶｡" }
+    ]
+  },
+  {
+    "name": "peacock",
+    "page": 31,
+    "data": `This is a baby peafowl; we call it peachick.
+      This is a male peafowl; we call it peacock.
+      The peacock has a sharp beak, a crest, some feathers and a large tail.
+      Its large tail is covered with blue and green spots.
+      It can spread out like a fan.
+      This is a female peafowl; we call it peahen.
+      Peahens are mainly brown.
+      Peafowls can fly, but not too far.
+      They eat grains, plants, insects and fruits.`,
+    "option": [
+      { "en": "This is a baby peafowl; we call it peachick.", "cn": "这是一只孔雀宝宝,我们称之为小孔雀｡" },
+      { "en": "This is a male peafowl; we call it peacock.", "cn": "这是一只雄性孔雀,我们称之为孔雀｡" },
+      { "en": "The peacock has a sharp beak, a crest, some feathers and a large tail.", "cn": "孔雀有一个锋利的喙、一个羽冠、一些羽毛和一个大尾巴｡" },
+      { "en": "Its large tail is covered with blue and green spots.", "cn": "它的大尾巴上覆盖着蓝色和绿色的斑点｡" },
+      { "en": "It can spread out like a fan.", "cn": "它可以像扇子一样展开｡" },
+      { "en": "This is a female peafowl; we call it peahen.", "cn": "这是一只雌性孔雀,我们称之为雌孔雀｡" },
+      { "en": "Peahens are mainly brown.", "cn": "雌孔雀主要是棕色的｡" },
+      { "en": "Peafowls can fly, but not too far.", "cn": "孔雀会飞,但飞不远｡" },
+      { "en": "They eat grains, plants, insects and fruits.", "cn": "它们吃谷物、植物、昆虫和水果｡" }
+    ]
+  },
+  {
+    "name": "butterfly",
+    "page": 32,
+    "data": `A butterfly starts its life as a very tiny egg.
+      Then, from the egg comes a caterpillar. As it grows, it molts.
+      After some time, the caterpillar makes a special cocoon or chrysalis around itself.
+      Finally, a beautiful butterfly emerges from the cocoon.`,
+    "option": [
+      { "en": "A butterfly starts its life as a very tiny egg.", "cn": "蝴蝶的生命始于一个非常小的卵｡" },
+      { "en": "Then, from the egg comes a caterpillar. As it grows, it molts.", "cn": "然后,从卵中钻出一只毛毛虫｡随着它长大,它会蜕皮｡" },
+      { "en": "After some time, the caterpillar makes a special cocoon or chrysalis around itself.", "cn": "过了一段时间,毛毛虫会在自己周围做一个特殊的茧或蛹｡" },
+      { "en": "Finally, a beautiful butterfly emerges from the cocoon.", "cn": "最后,一只美丽的蝴蝶从茧中钻出来｡" },
+    ]
+  },
+  {
+    "name": "butterfly-story",
+    "page": 32,
+    "data": `
+      The life cycle of a butterfly.
+      Hello kids! Today, let’s learn about the wonderful life cycle of a butterfly.
+      A butterfly starts its life as a very tiny egg. It’s so small that you might need to look very carefully to see it. Just like a little surprise waiting to hatch.
+      Then, from the egg comes a caterpillar. The caterpillar is hungry all the time and it eats a lot of leaves. It grows bigger and bigger. Sometimes, the caterpillar even molts its skin because it’s growing so fast. For example, a Monarch caterpillar has stripes and can be quite colorful.
+      After some time, the caterpillar makes a special cocoon or chrysalis around itself. Inside this cocoon, amazing changes happen. It’s like a magic transformation.
+      Finally, a beautiful butterfly emerges from the cocoon. It spreads its wings and is ready to fly. The butterfly has bright colors and patterns on its wings. It can fly from flower to flower, drinking nectar. Just like a little fairy in the garden.
+      So, that’s the life cycle of a butterfly. Isn’t it amazing?`,
+    "option": [
+      {"en": "The life cycle of a butterfly", "cn": "蝴蝶的生命周期"},
+      { "en": "Hello kids! Today, let’s learn about the wonderful life cycle of a butterfly.", "cn": "孩子们好!今天,让我们了解蝴蝶奇妙的生命周期｡" },
+      { "en": "A butterfly starts its life as a very tiny egg. It’s so small that you might need to look very carefully to see it. Just like a little surprise waiting to hatch.", "cn": "蝴蝶的生命始于一个非常小的卵｡它太小了,你可能需要非常仔细地看才能看到它｡就像一个等待孵化的小惊喜｡" },
+      { "en": "Then, from the egg comes a caterpillar. The caterpillar is hungry all the time and it eats a lot of leaves. It grows bigger and bigger. Sometimes, the caterpillar even molts its skin because it’s growing so fast. For example, a Monarch caterpillar has stripes and can be quite colorful.", "cn": "然后,从卵中钻出一只毛毛虫｡毛毛虫总是很饿,它吃很多树叶｡它长得越来越大｡有时,毛毛虫甚至会蜕皮,因为它长得太快了｡例如,帝王蝶的毛毛虫有条纹,颜色很鲜艳｡" },
+      { "en": "After some time, the caterpillar makes a special cocoon or chrysalis around itself. Inside this cocoon, amazing changes happen. It’s like a magic transformation.", "cn": "过了一段时间,毛毛虫会在自己周围做一个特殊的茧或蛹｡在这个茧里,发生了奇妙的变化｡就像魔法变身一样｡" },
+      { "en": "Finally, a beautiful butterfly emerges from the cocoon. It spreads its wings and is ready to fly. The butterfly has bright colors and patterns on its wings. It can fly from flower to flower, drinking nectar. Just like a little fairy in the garden.", "cn": "最后,一只美丽的蝴蝶从茧中钻出来｡它展开翅膀,准备飞翔｡蝴蝶的翅膀上有鲜艳的颜色和图案｡它可以从一朵花飞到另一朵花,吸食花蜜｡就像花园里的小仙女一样｡" },
+      { "en": "So, that’s the life cycle of a butterfly. Isn’t it amazing?", "cn": "这就是蝴蝶的生命周期｡是不是很神奇?" }
+    ]
+  },
+  {
+    "name": "monkey",
+    "page": 33,
+    "data": `This is a monkey.
+      The monkey has a funny face, two long arms, two long legs and one long tail.
+      Monkeys are very interesting animals.
+      Monkeys are very good climbers.
+      They can jump from tree to tree easily.
+      Their hands and feet help them hold on to branches tightly.
+      Monkeys are very smart.
+      For example, they can use tools to get food.
+      Monkeys love to eat fruits like bananas and apples.`,
+    "option": [
+      { "en": "This is a monkey.", "cn": "这是一只猴子｡" },
+      { "en": "The monkey has a funny face, two long arms, two long legs and one long tail.", "cn": "猴子有一张滑稽的脸、两只长臂、两条长腿和一条长尾巴｡" },
+      { "en": "Monkeys are very interesting animals.", "cn": "猴子是非常有趣的动物｡" },
+      { "en": "Monkeys are very good climbers.", "cn": "猴子是非常棒的攀爬者｡" },
+      { "en": "They can jump from tree to tree easily.", "cn": "它们可以轻松地从一棵树跳到另一棵树｡" },
+      { "en": "Their hands and feet help them hold on to branches tightly.", "cn": "它们的手和脚帮助它们紧紧抓住树枝｡" },
+      { "en": "Monkeys are very smart.", "cn": "猴子非常聪明｡" },
+      { "en": "For example, they can use tools to get food.", "cn": "例如,它们可以使用工具获取食物｡" },
+      { "en": "Monkeys love to eat fruits like bananas and apples.", "cn": "猴子喜欢吃香蕉和苹果之类的水果｡" }
+    ]
+  },
+  {
+    "name": "sea turtle",
+    "page": 34,
+    "data": `The life cycle of a sea turtle has four stages.
+      It takes a turtle about 30 years to reach adulthood.
+      Then the female turtle will lay eggs again.
+      The mother sea turtle comes onto the beach at night to lay eggs.
+      Baby sea turtles hatch from eggs.
+      Once they come out of the eggs, they have to quickly find their way to the ocean.`,
+    "option": [
+      { "en": "The life cycle of a sea turtle has four stages.", "cn": "海龟的生命周期有四个阶段｡" },
+      { "en": "It takes a turtle about 30 years to reach adulthood.", "cn": "海龟大约需要30年才能成年｡" },
+      { "en": "Then the female turtle will lay eggs again.", "cn": "然后雌海龟会再次产卵｡" },
+      { "en": "The mother sea turtle comes onto the beach at night to lay eggs.", "cn": "海龟妈妈晚上会爬到海滩上产卵｡" },
+      { "en": "Baby sea turtles hatch from eggs.", "cn": "小海龟从蛋中孵化出来。"},
+      { "en": "Once they come out of the eggs, they have to quickly find their way to the ocean.", "cn": "它们一旦从蛋里出来，就必须迅速找到去海洋的路。"},
+    ]
+  },
+  {
+    "name": "brown bear",
+    "page": 35,
+    "data": `The brown bear is a very big and strong animal.
+      It has a thick and furry coat which is usually brown.
+      Brown bears have big paws with sharp claws.
+      These claws help them catch food and climb trees.
+      They have a round head and small eyes.
+      Brown bears like to sleep a lot during the winter. This is called hibernation.
+      Before hibernation, they eat a lot to store fat in their bodies.
+      They eat many things like berries, nuts, fish and small animals.`,
+    "option": [
+      { "en": "The brown bear is a very big and strong animal.", "cn": "棕熊是一种非常大且强壮的动物｡" },
+      { "en": "It has a thick and furry coat which is usually brown.", "cn": "它有一件厚厚的毛茸茸的外套,通常是棕色的｡" },
+      { "en": "Brown bears have big paws with sharp claws.", "cn": "棕熊有带锋利爪子的大爪子｡" },
+      { "en": "These claws help them catch food and climb trees.", "cn": "这些爪子帮助它们捕捉食物和爬树｡" },
+      { "en": "They have a round head and small eyes.", "cn": "它们有一个圆头和小眼睛｡" },
+      { "en": "Brown bears like to sleep a lot during the winter. This is called hibernation.", "cn": "棕熊冬天喜欢睡很多觉｡这叫做冬眠｡" },
+      { "en": "Before hibernation, they eat a lot to store fat in their bodies.", "cn": "冬眠前,它们会吃很多东西,在体内储存脂肪｡" },
+      { "en": "They eat many things like berries, nuts, fish and small animals.", "cn": "它们吃很多东西,比如浆果、坚果、鱼和小动物｡" }
+    ]
+  },
+  {
+    "name": "wolf",
+    "page": 36,
+    "data": `Wolves are amazing animals. They look strong and fierce.
+      Wolves have thick fur that can be gray, black, or brown.
+      Their eyes are sharp and they have a good sense of smell and hearing.
+      Wolves usually live in groups called packs.
+      There is a leader in the pack called the alpha wolf.
+      They can run fast and are very smart when catching their prey, like deer or rabbits.
+      They work together to hunt for food.
+      Wolves howl to communicate with each other.`,
+    "option": [
+      { "en": "Wolves are amazing animals. They look strong and fierce.", "cn": "狼是神奇的动物｡它们看起来强壮而凶猛｡" },
+      { "en": "Wolves have thick fur that can be gray, black, or brown.", "cn": "狼有厚厚的皮毛,可以是灰色、黑色或棕色的｡" },
+      { "en": "Their eyes are sharp and they have a good sense of smell and hearing.", "cn": "它们的眼睛很敏锐,嗅觉和听觉都很好｡" },
+      { "en": "Wolves usually live in groups called packs.", "cn": "狼通常生活在被称为‘群’的群体中｡" },
+      { "en": "There is a leader in the pack called the alpha wolf.", "cn": "群里有一个领导者,叫做头狼｡" },
+      { "en": "They can run fast and are very smart when catching their prey, like deer or rabbits.", "cn": "它们能跑得很快,捕捉鹿或兔子等猎物时非常聪明｡" },
+      { "en": "They work together to hunt for food.", "cn": "它们一起合作捕猎食物｡" },
+      { "en": "Wolves howl to communicate with each other.", "cn": "狼通过嚎叫相互交流｡" }
+    ]
+  },
+  {
+    "name": "zebra",
+    "page": 37,
+    "data": `Zebras have black and white stripes all over their bodies.
+      Zebras are quite tall and have long legs, which help them run fast.
+      These stripes make them look really cool and different from other animals.
+      They have a tail and big ears too.
+      Zebras live in groups called herds.
+      They stay together to protect themselves from dangerous animals like lions.
+      Zebras are grass-eating animals.
+      One interesting thing about zebras is that they sleep standing up.`,
+    "option": [
+      { "en": "Zebras have black and white stripes all over their bodies.", "cn": "斑马全身都有黑白条纹｡" },
+      { "en": "Zebras are quite tall and have long legs, which help them run fast.", "cn": "斑马很高,有长腿,这帮助它们跑得很快｡" },
+      { "en": "These stripes make them look really cool and different from other animals.", "cn": "这些条纹让它们看起来很酷,和其他动物不一样｡" },
+      { "en": "They have a tail and big ears too.", "cn": "它们也有尾巴和大耳朵｡" },
+      { "en": "Zebras live in groups called herds.", "cn": "斑马生活在被称为‘群’的群体中｡" },
+      { "en": "They stay together to protect themselves from dangerous animals like lions.", "cn": "它们待在一起,保护自己免受狮子等危险动物的伤害｡" },
+      { "en": "Zebras are grass-eating animals.", "cn": "斑马是食草动物｡" },
+      { "en": "One interesting thing about zebras is that they sleep standing up.", "cn": "斑马的一个有趣之处是它们站着睡觉｡" }
+    ]
+  },
+  {
+    "name": "owl",
+    "page": 38,
+    "data": `Owls have big eyes that help them see well in the dark.
+      They also have soft feathers that make almost no sound when they fly.
+      They hunt for food like mice, insects, and other small animals.
+      Owls can turn their heads almost all the way around.
+      Owls have a round face and a flat head.
+      Most owls are active at night.
+      They have sharp claws to catch their prey.
+      This is very useful because they can look behind them without moving their bodies.`,
+    "option": [
+      { "en": "Owls have big eyes that help them see well in the dark.", "cn": "猫头鹰有大眼睛,帮助它们在黑暗中看得清楚｡" },
+      { "en": "They also have soft feathers that make almost no sound when they fly.", "cn": "它们还有柔软的羽毛,飞行时几乎没有声音｡" },
+      { "en": "They hunt for food like mice, insects, and other small animals.", "cn": "它们捕猎老鼠、昆虫和其他小动物作为食物｡" },
+      { "en": "Owls can turn their heads almost all the way around.", "cn": "猫头鹰可以把头几乎转一圈｡" },
+      { "en": "Owls have a round face and a flat head.", "cn": "猫头鹰有一张圆脸和一个扁平的头｡" },
+      { "en": "Most owls are active at night.", "cn": "大多数猫头鹰在夜间活动｡" },
+      { "en": "They have sharp claws to catch their prey.", "cn": "它们有锋利的爪子来捕捉猎物｡" },
+      { "en": "This is very useful because they can look behind them without moving their bodies.", "cn": "这非常有用,因为它们不用移动身体就能看到身后｡" }
+    ]
+  },
+  {
+    "name": "alpaca",
+    "page": 39,
+    "data": `Alpacas are really cute animals.
+      They look a bit like small camels but are much cuter.
+      They have soft and fluffy fur.
+      Their ears are pointed and they are always listening carefully.
+      Alpacas have long necks and big eyes that make them look very friendly.
+      Alpacas eat grass and other plants.
+      Alpacas are gentle and not aggressive.
+      But when they are angry or scared, they spit.`,
+    "option": [
+      { "en": "Alpacas are really cute animals.", "cn": "羊驼是非常可爱的动物｡" },
+      { "en": "They look a bit like small camels but are much cuter.", "cn": "它们看起来有点像小骆驼,但可爱多了｡" },
+      { "en": "They have soft and fluffy fur.", "cn": "它们有柔软蓬松的皮毛｡" },
+      { "en": "Their ears are pointed and they are always listening carefully.", "cn": "它们的耳朵是尖的,总是在仔细听｡" },
+      { "en": "Alpacas have long necks and big eyes that make them look very friendly.", "cn": "羊驼有长脖子和大眼睛,看起来非常友好｡" },
+      { "en": "Alpacas eat grass and other plants.", "cn": "羊驼吃草和其他植物｡" },
+      { "en": "Alpacas are gentle and not aggressive.", "cn": "羊驼很温顺,不具攻击性｡" },
+      { "en": "But when they are angry or scared, they spit.", "cn": "但当它们生气或害怕时,会吐口水｡" }
+    ]
+  },
+  {
+    "name": "camel",
+    "page": 40,
+    "data": `Camels have a big body and long legs.
+      Camels have two humps on their backs or just one, depending on the type.
+      These humps are full of fat.
+      Camels have thick fur to keep them warm and protect them from the hot sun during the day.
+      Their feet are wide and flat, which helps them walk easily on the sand.
+      Camels are known for being able to go without water for a long time.
+      They can drink a lot of water at once.
+      Camels are very useful for carrying heavy things and help people travel long distances.`,
+    "option": [
+      { "en": "Camels have a big body and long legs.", "cn": "骆驼有一个大身体和长腿｡" },
+      { "en": "Camels have two humps on their backs or just one, depending on the type.", "cn": "骆驼背上有两个驼峰或一个,取决于种类｡" },
+      { "en": "These humps are full of fat.", "cn": "这些驼峰里装满了脂肪｡" },
+      { "en": "Camels have thick fur to keep them warm and protect them from the hot sun during the day.", "cn": "骆驼有厚厚的皮毛,用来保暖,并在白天保护它们免受烈日的伤害｡" },
+      { "en": "Their feet are wide and flat, which helps them walk easily on the sand.", "cn": "它们的脚又宽又平,帮助它们在沙地上轻松行走｡" },
+      { "en": "Camels are known for being able to go without water for a long time.", "cn": "骆驼以能长时间不喝水而闻名｡" },
+      { "en": "They can drink a lot of water at once.", "cn": "它们可以一次喝很多水｡" },
+      { "en": "Camels are very useful for carrying heavy things and help people travel long distances.", "cn": "骆驼对于搬运重物非常有用,帮助人们长途旅行｡" }
+    ]
+  },
+  {
+    "name": "donkey",
+    "page": 41,
+    "data": `A donkey has four legs and a tail.
+      Donkeys are usually not very big, but they are strong.
+      They have short, thick fur that can be different colors like gray, brown, or black.
+      Donkeys have big ears that stick out.
+      They can hear very well with those ears.
+      Donkeys are very hardworking.
+      In some places, people use them to carry things or help with farm work.
+      They are also friendly and can become good friends with humans.
+      Although donkeys might not run as fast as horses, they are still very important and lovely animals.`,
+    "option": [
+      { "en": "A donkey has four legs and a tail.", "cn": "驴有四条腿和一条尾巴｡" },
+      { "en": "Donkeys are usually not very big, but they are strong.", "cn": "驴通常不是很大,但它们很强壮｡" },
+      { "en": "They have short, thick fur that can be different colors like gray, brown, or black.", "cn": "它们有短而厚的皮毛,可以是灰色、棕色或黑色等不同颜色｡" },
+      { "en": "Donkeys have big ears that stick out.", "cn": "驴有突出的大耳朵｡" },
+      { "en": "They can hear very well with those ears.", "cn": "它们用那些耳朵能听得很清楚｡" },
+      { "en": "Donkeys are very hardworking.", "cn": "驴非常勤劳｡" },
+      { "en": "In some places, people use them to carry things or help with farm work.", "cn": "在一些地方,人们用它们搬运东西或帮忙做农活｡" },
+      { "en": "They are also friendly and can become good friends with humans.", "cn": "它们也很友好,可以成为人类的好朋友｡" },
+      { "en": "Although donkeys might not run as fast as horses, they are still very important and lovely animals.", "cn": "虽然驴可能不如马跑得快,但它们仍然是非常重要和可爱的动物｡" }
+    ]
+  },
+  {
+    "name": "eagle",
+    "page": 42,
+    "data": `An eagle is a very large and powerful bird.
+      It has strong wings that allow it to fly high in the sky.
+      Eagles have sharp eyes that can see things from far away.
+      The feathers of an eagle are usually dark brown or black.
+      Eagles have a sharp beak and strong talons.
+      These help them catch their food.
+      Eagles are very good hunters.
+      They can fly very fast and catch small animals like rabbits and mice.
+      They are also very brave and confident.`,
+    "option": [
+      { "en": "An eagle is a very large and powerful bird.", "cn": "鹰是一种非常大且强大的鸟｡" },
+      { "en": "It has strong wings that allow it to fly high in the sky.", "cn": "它有强壮的翅膀,可以在天空中高飞｡" },
+      { "en": "Eagles have sharp eyes that can see things from far away.", "cn": "鹰有锐利的眼睛,可以从远处看到东西｡" },
+      { "en": "The feathers of an eagle are usually dark brown or black.", "cn": "鹰的羽毛通常是深棕色或黑色的｡" },
+      { "en": "Eagles have a sharp beak and strong talons.", "cn": "鹰有锋利的喙和强壮的爪子｡" },
+      { "en": "These help them catch their food.", "cn": "这些帮助它们捕捉食物｡" },
+      { "en": "Eagles are very good hunters.", "cn": "鹰是非常优秀的猎手｡" },
+      { "en": "They can fly very fast and catch small animals like rabbits and mice.", "cn": "它们能飞得很快,捕捉兔子和老鼠等小动物｡" },
+      { "en": "They are also very brave and confident.", "cn": "它们也非常勇敢和自信｡" }
+    ]
+  },
+  {
+    "name": "koala",
+    "page": 43,
+    "data": `The koala is a special kind of animal that lives mainly in Australia.
+      It has a soft and fluffy body.
+      Koalas are not very big, and they look quite chubby and cute.
+      They have thick, grey fur that keeps them warm.
+      Koalas have big ears and round eyes that make them look very sweet.
+      They are very good at climbing trees with their sharp claws.
+      Koalas sleep and eat in the tree.
+      They love to eat leaves from eucalyptus trees.`,
+    "option": [
+      { "en": "The koala is a special kind of animal that lives mainly in Australia.", "cn": "考拉是一种主要生活在澳大利亚的特殊动物｡" },
+      { "en": "It has a soft and fluffy body.", "cn": "它有一个柔软蓬松的身体｡" },
+      { "en": "Koalas are not very big, and they look quite chubby and cute.", "cn": "考拉不是很大,看起来胖乎乎的,很可爱｡" },
+      { "en": "They have thick, grey fur that keeps them warm.", "cn": "它们有厚厚的灰色皮毛,用来保暖｡" },
+      { "en": "Koalas have big ears and round eyes that make them look very sweet.", "cn": "考拉有大耳朵和圆眼睛,看起来非常可爱｡" },
+      { "en": "They are very good at climbing trees with their sharp claws.", "cn": "它们用锋利的爪子非常擅长爬树｡" },
+      { "en": "Koalas sleep and eat in the tree.", "cn": "考拉在树上睡觉和进食｡" },
+      { "en": "They love to eat leaves from eucalyptus trees.", "cn": "它们喜欢吃桉树的叶子｡" }
+    ]
+  },
+  {
+    "name": "sheep",
+    "page": 44,
+    "data": `A sheep is a kind of animal that we often see on farms.
+      It has a soft and fluffy coat.
+      The color of its fur can be white, black or brown.
+      Sheep have four short legs and a short tail.
+      Their ears are long and floppy, which makes them look very cute.
+      Their wool is used to make warm sweaters and blankets.
+      Sheep are very gentle animals.
+      They like to eat grass and hay.`,
+    "option": [
+      { "en": "A sheep is a kind of animal that we often see on farms.", "cn": "羊是我们经常在农场看到的一种动物｡" },
+      { "en": "It has a soft and fluffy coat.", "cn": "它有一件柔软蓬松的外套｡" },
+      { "en": "The color of its fur can be white, black or brown.", "cn": "它的皮毛颜色可以是白色、黑色或棕色｡" },
+      { "en": "Sheep have four short legs and a short tail.", "cn": "羊有四条短腿和一条短尾巴｡" },
+      { "en": "Their ears are long and floppy, which makes them look very cute.", "cn": "它们的耳朵又长又耷拉着,看起来非常可爱｡" },
+      { "en": "Their wool is used to make warm sweaters and blankets.", "cn": "它们的羊毛被用来制作温暖的毛衣和毯子｡" },
+      { "en": "Sheep are very gentle animals.", "cn": "羊是非常温顺的动物｡" },
+      { "en": "They like to eat grass and hay.", "cn": "它们喜欢吃草和干草｡" }
+    ]
+  },
+  {
+    "name": "banana",
+    "page": 45,
+    "data": `Today, let me tell you something about bananas.
+      This is a banana.
+      This is a bunch of bananas.
+      Bananas have a long and curved shape.
+      The peel is yellow when ripe.
+      When it is not ripe, its peel is green.
+      The peel is thin and easy to peel.
+      The flesh of a banana is soft and sweet.
+      Bananas are a kind of tropical fruit.
+      They grow on banana trees.
+      Bananas are one of the most popular fruits in the world.
+      Look, there is a rotten banana over there.
+      We never eat rotten bananas.`,
+    "option": [
+      { "en": "Today, let me tell you something about bananas.", "cn": "今天,让我给你讲讲香蕉｡" },
+      { "en": "This is a banana.", "cn": "这是一根香蕉｡" },
+      { "en": "This is a bunch of bananas.", "cn": "这是一串香蕉｡" },
+      { "en": "Bananas have a long and curved shape.", "cn": "香蕉是长而弯曲的形状｡" },
+      { "en": "The peel is yellow when ripe.", "cn": "成熟时果皮是黄色的｡" },
+      { "en": "When it is not ripe, its peel is green.", "cn": "未成熟时,果皮是绿色的｡" },
+      { "en": "The peel is thin and easy to peel.", "cn": "果皮很薄,容易剥开｡" },
+      { "en": "The flesh of a banana is soft and sweet.", "cn": "香蕉的果肉柔软香甜｡" },
+      { "en": "Bananas are a kind of tropical fruit.", "cn": "香蕉是一种热带水果｡" },
+      { "en": "They grow on banana trees.", "cn": "它们长在香蕉树上｡" },
+      { "en": "Bananas are one of the most popular fruits in the world.", "cn": "香蕉是世界上最受欢迎的水果之一｡" },
+      { "en": "Look, there is a rotten banana over there.", "cn": "看,那边有一根烂香蕉｡" },
+      { "en": "We never eat rotten bananas.", "cn": "我们从不吃烂香蕉｡" }
+    ]
+  },
+  {
+    "name": "watermelon",
+    "page": 46,
+    "data": `Today, let me tell you something about the watermelon.
+      This is a slice of watermelon.
+      This is a watermelon.
+      This is a cup of watermelon juice.
+      The watermelon is round or oval.
+      It grows on the watermelon vine.
+      It has dark green and light green stripes.
+      Let me cut the watermelon into slices.
+      Look, the red part is flesh.
+      Take a bite, it is juicy and sweet.
+      The black ones are seeds.
+      We never eat seeds.
+      Some watermelon flesh is yellow. Look, there is one over there.`,
+    "option": [
+      { "en": "Today, let me tell you something about the watermelon.", "cn": "今天,让我给你讲讲西瓜｡" },
+      { "en": "This is a slice of watermelon.", "cn": "这是一块西瓜｡" },
+      { "en": "This is a watermelon.", "cn": "这是一个西瓜｡" },
+      { "en": "This is a cup of watermelon juice.", "cn": "这是一杯西瓜汁｡" },
+      { "en": "The watermelon is round or oval.", "cn": "西瓜是圆形或椭圆形的｡" },
+      { "en": "It grows on the watermelon vine.", "cn": "它长在西瓜藤上｡" },
+      { "en": "It has dark green and light green stripes.", "cn": "它有深绿色和浅绿色的条纹｡" },
+      { "en": "Let me cut the watermelon into slices.", "cn": "让我把西瓜切成片｡" },
+      { "en": "Look, the red part is flesh.", "cn": "看,红色的部分是果肉｡" },
+      { "en": "Take a bite, it is juicy and sweet.", "cn": "咬一口,又多汁又甜｡" },
+      { "en": "The black ones are seeds.", "cn": "黑色的是种子｡" },
+      { "en": "We never eat seeds.", "cn": "我们从不吃种子｡" },
+      { "en": "Some watermelon flesh is yellow. Look, there is one over there.", "cn": "有些西瓜的果肉是黄色的｡看,那边有一个｡" }
+    ]
+  },
+  {
+    "name": "strawberry",
+    "page": 47,
+    "data": `Today, let me tell you something about the strawberry.
+      This is a strawberry.
+      This is a cup of strawberry juice.
+      The strawberry looks like a little heart, very cute.
+      It is red when ripe.
+      When it is not ripe, it is green.
+      It tastes juicy and sweet.
+      Strawberries grow on plants.
+      They usually ripen in spring and summer.
+      Many children like strawberries very much.
+      They are one of the most popular fruits.
+      You can make a cake with strawberries. It must be extremely delicious.`,
+    "option": [
+      { "en": "Today, let me tell you something about the strawberry.", "cn": "今天,让我给你讲讲草莓｡" },
+      { "en": "This is a strawberry.", "cn": "这是一颗草莓｡" },
+      { "en": "This is a cup of strawberry juice.", "cn": "这是一杯草莓汁｡" },
+      { "en": "The strawberry looks like a little heart, very cute.", "cn": "草莓看起来像一颗小心心,非常可爱｡" },
+      { "en": "It is red when ripe.", "cn": "成熟时它是红色的｡" },
+      { "en": "When it is not ripe, it is green.", "cn": "未成熟时,它是绿色的｡" },
+      { "en": "It tastes juicy and sweet.", "cn": "它尝起来多汁又甜｡" },
+      { "en": "Strawberries grow on plants.", "cn": "草莓长在植物上｡" },
+      { "en": "They usually ripen in spring and summer.", "cn": "它们通常在春天和夏天成熟｡" },
+      { "en": "Many children like strawberries very much.", "cn": "很多孩子非常喜欢草莓｡" },
+      { "en": "They are one of the most popular fruits.", "cn": "它们是最受欢迎的水果之一｡" },
+      { "en": "You can make a cake with strawberries. It must be extremely delicious.", "cn": "你可以用草莓做蛋糕｡一定非常好吃｡" }
+    ]
+  },
+  {
+    "name": "mango",
+    "page": 48,
+    "data": `Today, let me tell you something about the mango.
+      This is a mango.
+      This is a cup of mango juice.
+      Mango is a kind of tropical fruit.
+      It has an oval shape; it is very cute.
+      Ripe mangoes have different colors, such as golden yellow, red and even green.
+      You should peel the skin of a mango if you want to eat it.
+      The flesh is golden and soft.
+      Take a bite, it is sweet and juicy.
+      Mango has a pit inside; it is very hard.
+      You can make ice cream with mangoes.
+      That must be extremely delicious.`,
+    "option": [
+      { "en": "Today, let me tell you something about the mango.", "cn": "今天,让我给你讲讲芒果｡" },
+      { "en": "This is a mango.", "cn": "这是一个芒果｡" },
+      { "en": "This is a cup of mango juice.", "cn": "这是一杯芒果汁｡" },
+      { "en": "Mango is a kind of tropical fruit.", "cn": "芒果是一种热带水果｡" },
+      { "en": "It has an oval shape; it is very cute.", "cn": "它是椭圆形的,非常可爱｡" },
+      { "en": "Ripe mangoes have different colors, such as golden yellow, red and even green.", "cn": "成熟的芒果有不同的颜色,比如金黄色、红色甚至绿色｡" },
+      { "en": "You should peel the skin of a mango if you want to eat it.", "cn": "如果你想吃芒果,应该先剥皮｡" },
+      { "en": "The flesh is golden and soft.", "cn": "果肉是金黄色的,很柔软｡" },
+      { "en": "Take a bite, it is sweet and juicy.", "cn": "咬一口,又甜又多汁｡" },
+      { "en": "Mango has a pit inside; it is very hard.", "cn": "芒果里面有一个核,很硬｡" },
+      { "en": "You can make ice cream with mangoes.", "cn": "你可以用芒果做冰淇淋｡" },
+      { "en": "That must be extremely delicious.", "cn": "那一定非常好吃｡" }
+    ]
+  },
+  {
+    "name": "grape",
+    "page": 49,
+    "data": `Today, let me tell you something about the grape.
+      This is a single grape.
+      This is a cluster of grapes.
+      This is a cup of grape juice.
+      Grapes are these lovely little fruits.
+      They come in different colors, like purple, green and red.
+      They look like small, round balls.
+      Grapes grow on vines.
+      You can see big bunches of grapes hanging there.
+      Each bunch has many grapes together.
+      Grapes taste really sweet and delicious.
+      They are very juicy and good for your health.
+      We can also make juice from grapes.
+      That must be very delicious.`,
+    "option": [
+      { "en": "Today, let me tell you something about the grape.", "cn": "今天,让我给你讲讲葡萄｡" },
+      { "en": "This is a single grape.", "cn": "这是一颗单独的葡萄｡" },
+      { "en": "This is a cluster of grapes.", "cn": "这是一串葡萄｡" },
+      { "en": "This is a cup of grape juice.", "cn": "这是一杯葡萄汁｡" },
+      { "en": "Grapes are these lovely little fruits.", "cn": "葡萄是这些可爱的小水果｡" },
+      { "en": "They come in different colors, like purple, green and red.", "cn": "它们有不同的颜色,比如紫色、绿色和红色｡" },
+      { "en": "They look like small, round balls.", "cn": "它们看起来像小小的圆球｡" },
+      { "en": "Grapes grow on vines.", "cn": "葡萄长在藤上｡" },
+      { "en": "You can see big bunches of grapes hanging there.", "cn": "你可以看到大串的葡萄挂在那里｡" },
+      { "en": "Each bunch has many grapes together.", "cn": "每串都有很多葡萄聚在一起｡" },
+      { "en": "Grapes taste really sweet and delicious.", "cn": "葡萄尝起来非常香甜可口｡" },
+      { "en": "They are very juicy and good for your health.", "cn": "它们很多汁,对你的健康有好处｡" },
+      { "en": "We can also make juice from grapes.", "cn": "我们也可以用葡萄做果汁｡" },
+      { "en": "That must be very delicious.", "cn": "那一定非常好吃｡" }
+    ]
+  },
+  {
+    "name": "lemon",
+    "page": 50,
+    "data": `Today, let me tell you something about the lemon.
+      This is a lemon.
+      This is a cup of lemonade.
+      Lemons are a kind of fruit.
+      They are usually small and oval in shape.
+      The outside of a lemon is bright yellow.
+      Lemons have a very special smell, which is very fresh.
+      When you cut a lemon open, you can see a lot of juice inside.
+      Taste the lemon, it is very sour.
+      We can use lemon juice to make drinks.
+      For example, lemonade is a very popular drink.
+      It tastes sour and sweet.`,
+    "option": [
+      { "en": "Today, let me tell you something about the lemon.", "cn": "今天,让我给你讲讲柠檬｡" },
+      { "en": "This is a lemon.", "cn": "这是一个柠檬｡" },
+      { "en": "This is a cup of lemonade.", "cn": "这是一杯柠檬水｡" },
+      { "en": "Lemons are a kind of fruit.", "cn": "柠檬是一种水果｡" },
+      { "en": "They are usually small and oval in shape.", "cn": "它们通常是小的椭圆形｡" },
+      { "en": "The outside of a lemon is bright yellow.", "cn": "柠檬的外皮是亮黄色的｡" },
+      { "en": "Lemons have a very special smell, which is very fresh.", "cn": "柠檬有一种非常特别的气味,非常清新｡" },
+      { "en": "When you cut a lemon open, you can see a lot of juice inside.", "cn": "当你切开柠檬,可以看到里面有很多汁｡" },
+      { "en": "Taste the lemon, it is very sour.", "cn": "尝一下柠檬,它非常酸｡" },
+      { "en": "We can use lemon juice to make drinks.", "cn": "我们可以用柠檬汁做饮料｡" },
+      { "en": "For example, lemonade is a very popular drink.", "cn": "例如,柠檬水是一种非常受欢迎的饮料｡" },
+      { "en": "It tastes sour and sweet.", "cn": "它尝起来又酸又甜｡" },
+    ]
+  },
+  {
+    "name": "apple",
+    "page": 51,
+    "data": `Today, let me tell you something about the apple.
+    This is an apple.
+    This is an apple pie.
+    This is a cup of apple juice.
+    Apples are very lovely fruits.
+    They grow on apple trees.
+    Apples can be red, yellow and green.
+    If you want to eat an apple, you should wash it first.
+    Then peel the skin off with a peeler.
+    Let’s cut it in two.
+    Take a bite, it is sweet and delicious.
+    Look, that is the core.
+    The brown ones are seeds.
+    Eating apples is good for our health.`,
+    "option": [
+      { "en": "Today, let me tell you something about the apple.", "cn": "今天,让我给你讲讲苹果｡" },
+      { "en": "This is an apple.", "cn": "这是一个苹果｡" },
+      { "en": "This is an apple pie.", "cn": "这是一个苹果派｡" },
+      { "en": "This is a cup of apple juice.", "cn": "这是一杯苹果汁｡" },
+      { "en": "Apples are very lovely fruits.", "cn": "苹果是非常可爱的水果｡" },
+      { "en": "They grow on apple trees.", "cn": "它们长在苹果树上｡" },
+      { "en": "Apples can be red, yellow and green.", "cn": "苹果可以是红色、黄色和绿色的｡" },
+      { "en": "If you want to eat an apple, you should wash it first.", "cn": "如果你想吃苹果,应该先洗干净｡" },
+      { "en": "Then peel the skin off with a peeler.", "cn": "然后用削皮器把皮削掉｡" },
+      { "en": "Let’s cut it in two.", "cn": "让我们把它切成两半｡" },
+      { "en": "Take a bite, it is sweet and delicious.", "cn": "咬一口,又甜又好吃｡" },
+      { "en": "Look, that is the core.", "cn": "看,那是果核｡" },
+      { "en": "The brown ones are seeds.", "cn": "棕色的是种子｡" },
+      { "en": "Eating apples is good for our health.", "cn": "吃苹果对我们的健康有好处｡" }
+    ]
+  },
+  {
+    "name": "blueberry",
+    "page": 52,
+    "data": `Today, let me tell you something about the blueberry.
+      This is a blueberry.
+      This is a blueberry cake.
+      Blueberries are small, round fruits.
+      They have a deep blue color.
+      They grow on the bushes.
+      The skin is thin, and the flesh is juicy and sweet.
+      They sometimes taste sour.
+      They can be eaten fresh as a snack.
+      Blueberries are good for our eyes.
+      You can make muffins and cakes with blueberries.`,
+    "option": [
+      { "en": "Today, let me tell you something about the blueberry.", "cn": "今天,让我给你讲讲蓝莓｡" },
+      { "en": "This is a blueberry.", "cn": "这是一颗蓝莓｡" },
+      { "en": "This is a blueberry cake.", "cn": "这是一个蓝莓蛋糕｡" },
+      { "en": "Blueberries are small, round fruits.", "cn": "蓝莓是小而圆的水果｡" },
+      { "en": "They have a deep blue color.", "cn": "它们是深蓝色的｡" },
+      { "en": "They grow on the bushes.", "cn": "它们长在灌木丛中｡" },
+      { "en": "The skin is thin, and the flesh is juicy and sweet.", "cn": "果皮很薄,果肉多汁香甜｡" },
+      { "en": "They sometimes taste sour.", "cn": "它们有时尝起来有点酸｡" },
+      { "en": "They can be eaten fresh as a snack.", "cn": "它们可以新鲜食用,作为零食｡" },
+      { "en": "Blueberries are good for our eyes.", "cn": "蓝莓对我们的眼睛有好处｡" },
+      { "en": "You can make muffins and cakes with blueberries.", "cn": "你可以用蓝莓做松饼和蛋糕｡" }
+    ]
+  },
+  {
+    "name": "pineapple",
+    "page": 53,
+    "data": `Today, let me tell you something about the pineapple.
+      This is a pineapple.
+      This is a cup of pineapple juice.
+      The skin of pineapple is hard and spiky.
+      The green part is crown.
+      The pineapple is usually yellow.
+      It is a delicious and juicy fruit.
+      You can eat pineapple directly.
+      The taste is sweet and a little bit sour.
+      It can also be made into pineapple juice and pineapple cakes.
+      Pineapple is not only tasty but also good for our health.
+      It can help our bodies stay strong and healthy.`,
+    "option": [
+      { "en": "Today, let me tell you something about the pineapple.", "cn": "今天,让我给你讲讲菠萝｡" },
+      { "en": "This is a pineapple.", "cn": "这是一个菠萝｡" },
+      { "en": "This is a cup of pineapple juice.", "cn": "这是一杯菠萝汁｡" },
+      { "en": "The skin of pineapple is hard and spiky.", "cn": "菠萝的皮又硬又尖｡" },
+      { "en": "The green part is crown.", "cn": "绿色的部分是冠芽｡" },
+      { "en": "The pineapple is usually yellow.", "cn": "菠萝通常是黄色的｡" },
+      { "en": "It is a delicious and juicy fruit.", "cn": "它是一种美味多汁的水果｡" },
+      { "en": "You can eat pineapple directly.", "cn": "你可以直接吃菠萝｡" },
+      { "en": "The taste is sweet and a little bit sour.", "cn": "味道是甜的,有点酸｡" },
+      { "en": "It can also be made into pineapple juice and pineapple cakes.", "cn": "它也可以做成菠萝汁和菠萝蛋糕｡" },
+      { "en": "Pineapple is not only tasty but also good for our health.", "cn": "菠萝不仅好吃,对我们的健康也有好处｡" },
+      { "en": "It can help our bodies stay strong and healthy.", "cn": "它可以帮助我们的身体保持强壮和健康｡" }
+    ]
+  },
+  {
+    "name": "kiwi fruit",
+    "page": 54,
+    "data": `Today, let me tell you something about the kiwi fruit.
+      This is a kiwi fruit.
+      This is a cup of kiwi fruit juice.
+      The skin of kiwi fruit is thin, fuzzy and brown.
+      The flesh of kiwi fruit is green or yellow, and very juicy.
+      If you want to eat a kiwi fruit, you should peel off the skin.
+      Then the flesh will be exposed, and you can take a bite.
+      It tastes sweet and a little bit sour.
+      Kiwi fruit is also good for your health.
+      It is rich in vitamin C and vitamin K.
+      Eating kiwi fruits can make you strong and healthy.`,
+    "option": [
+      { "en": "Today, let me tell you something about the kiwi fruit.", "cn": "今天,让我给你讲讲猕猴桃｡" },
+      { "en": "This is a kiwi fruit.", "cn": "这是一个猕猴桃｡" },
+      { "en": "This is a cup of kiwi fruit juice.", "cn": "这是一杯猕猴桃汁｡" },
+      { "en": "The skin of kiwi fruit is thin, fuzzy and brown.", "cn": "猕猴桃的皮很薄,毛茸茸的,是棕色的｡" },
+      { "en": "The flesh of kiwi fruit is green or yellow, and very juicy.", "cn": "猕猴桃的果肉是绿色或黄色的,非常多汁｡" },
+      { "en": "If you want to eat a kiwi fruit, you should peel off the skin.", "cn": "如果你想吃猕猴桃,应该先剥皮｡" },
+      { "en": "Then the flesh will be exposed, and you can take a bite.", "cn": "然后果肉就会露出来,你可以咬一口｡" },
+      { "en": "It tastes sweet and a little bit sour.", "cn": "它尝起来又甜又有点酸｡" },
+      { "en": "Kiwi fruit is also good for your health.", "cn": "猕猴桃对你的健康也有好处｡" },
+      { "en": "It is rich in vitamin C and vitamin K.", "cn": "它富含维生素C和维生素K｡" },
+      { "en": "Eating kiwi fruits can make you strong and healthy.", "cn": "吃猕猴桃可以让你强壮和健康｡" }
+    ]
+  },
+  {
+    "name": "cherry",
+    "page": 55,
+    "data": `Today, let me tell you something about the cherry.
+      This is a cherry.
+      This is cherry-flavored ice cream.
+      Cherries grow on trees.
+      They are small and round fruits.
+      They are usually bright red and look very cute.
+      But some cherries are yellow.
+      Cherries are sweet and a little sour, but they are really yummy.
+      Cherries have seeds.
+      Cherries are rich in vitamin A and vitamin C.
+      When eating cherries, remember to spit out the seeds.
+      Eating cherries is good for our body.`,
+    "option": [
+      { "en": "Today, let me tell you something about the cherry.", "cn": "今天,让我给你讲讲樱桃｡" },
+      { "en": "This is a cherry.", "cn": "这是一颗樱桃｡" },
+      { "en": "This is cherry-flavored ice cream.", "cn": "这是樱桃味的冰淇淋｡" },
+      { "en": "Cherries grow on trees.", "cn": "樱桃长在树上｡" },
+      { "en": "They are small and round fruits.", "cn": "它们是小而圆的水果｡" },
+      { "en": "They are usually bright red and look very cute.", "cn": "它们通常是鲜红色的,看起来非常可爱｡" },
+      { "en": "But some cherries are yellow.", "cn": "但有些樱桃是黄色的｡" },
+      { "en": "Cherries are sweet and a little sour, but they are really yummy.", "cn": "樱桃又甜又有点酸,但真的很好吃｡" },
+      { "en": "Cherries have seeds.", "cn": "樱桃有种子｡" },
+      { "en": "Cherries are rich in vitamin A and vitamin C.", "cn": "樱桃富含维生素A和维生素C｡" },
+      { "en": "When eating cherries, remember to spit out the seeds.", "cn": "吃樱桃的时候,记得把种子吐出来｡" },
+      { "en": "Eating cherries is good for our body.", "cn": "吃樱桃对我们的身体有好处｡" }
+    ]
+  },
+  {
+    "name": "peach",
+    "page": 56,
+    "data": `Today, let me tell you something about the peach.
+      This is a peach.
+      This is a cup of peach juice.
+      Peaches grow on trees.
+      In the spring, the peach trees will have beautiful flowers.
+      And then, little by little, the peaches will grow and become ripe.
+      A peach is usually round and has a soft and fuzzy skin.
+      Peaches can be red, yellow and green.
+      When you cut open a peach, you can see the juicy and sweet flesh inside.
+      It tastes really delicious.
+      A peach has a hard pit inside.
+      Peaches are not only yummy but also good for our health.`,
+    "option": [
+      { "en": "Today, let me tell you something about the peach.", "cn": "今天,让我给你讲讲桃子｡" },
+      { "en": "This is a peach.", "cn": "这是一个桃子｡" },
+      { "en": "This is a cup of peach juice.", "cn": "这是一杯桃汁｡" },
+      { "en": "Peaches grow on trees.", "cn": "桃子长在树上｡" },
+      { "en": "In the spring, the peach trees will have beautiful flowers.", "cn": "春天,桃树会开出美丽的花｡" },
+      { "en": "And then, little by little, the peaches will grow and become ripe.", "cn": "然后,桃子会一点一点长大,成熟｡" },
+      { "en": "A peach is usually round and has a soft and fuzzy skin.", "cn": "桃子通常是圆的,有柔软毛茸茸的皮｡" },
+      { "en": "Peaches can be red, yellow and green.", "cn": "桃子可以是红色、黄色和绿色的｡" },
+      { "en": "When you cut open a peach, you can see the juicy and sweet flesh inside.", "cn": "当你切开桃子,可以看到里面多汁香甜的果肉｡" },
+      { "en": "It tastes really delicious.", "cn": "它尝起来真的很好吃｡" },
+      { "en": "A peach has a hard pit inside.", "cn": "桃子里面有一个硬核｡" },
+      { "en": "Peaches are not only yummy but also good for our health.", "cn": "桃子不仅好吃,对我们的健康也有好处｡" }
+    ]
+  },
+  {
+    "name": "orange",
+    "page": 57,
+    "data": `Today, let me tell you something about the orange.
+      This is an orange.
+      This is a cup of orange juice.
+      Oranges grow on trees.
+      The oranges look very beautiful hanging on the branches.
+      They are usually round and have a bright color, like a shiny ball.
+      The skin of an orange is a bit thick, but it’s very easy to peel.
+      When you open an orange, you can see many pieces inside.
+      We also call them orange segments.
+      Each piece is full of juice.
+      Oranges taste sweet and a little bit sour, but delicious.
+      We can eat oranges directly or make orange juice to drink.`,
+    "option": [
+      { "en": "Today, let me tell you something about the orange.", "cn": "今天,让我给你讲讲橙子｡" },
+      { "en": "This is an orange.", "cn": "这是一个橙子｡" },
+      { "en": "This is a cup of orange juice.", "cn": "这是一杯橙汁｡" },
+      { "en": "Oranges grow on trees.", "cn": "橙子长在树上｡" },
+      { "en": "The oranges look very beautiful hanging on the branches.", "cn": "橙子挂在树枝上看起来非常漂亮｡" },
+      { "en": "They are usually round and have a bright color, like a shiny ball.", "cn": "它们通常是圆的,颜色鲜艳,像一个闪亮的球｡" },
+      { "en": "The skin of an orange is a bit thick, but it’s very easy to peel.", "cn": "橙子的皮有点厚,但很容易剥开｡" },
+      { "en": "When you open an orange, you can see many pieces inside.", "cn": "当你打开橙子,可以看到里面有很多瓣｡" },
+      { "en": "We also call them orange segments.", "cn": "我们也叫它们橙瓣｡" },
+      { "en": "Each piece is full of juice.", "cn": "每瓣都充满了汁｡" },
+      { "en": "Oranges taste sweet and a little bit sour, but delicious.", "cn": "橙子尝起来又甜又有点酸,但很好吃｡" },
+      { "en": "We can eat oranges directly or make orange juice to drink.", "cn": "我们可以直接吃橙子,或者做橙汁喝｡" }
+    ]
+  },
+  {
+    "name": "pear",
+    "page": 58,
+    "data": `Today, let me tell you something about the pear.
+      This is a pear.
+      This is a cup of pear juice.
+      Pears grow on trees.
+      In the orchard, you can see many pear trees with pears hanging on them.
+      A pear is a kind of lovely fruit.
+      It usually has a funny shape, kind of like a teardrop.
+      Wash and peel it before eating.
+      The skin of a pear is smooth and can be green, yellow or brown.
+      When you take a bite of a pear, it tastes sweet and juicy.
+      We can eat pears directly.
+      We can make pear juice to drink.`,
+    "option": [
+      { "en": "Today, let me tell you something about the pear.", "cn": "今天,让我给你讲讲梨｡" },
+      { "en": "This is a pear.", "cn": "这是一个梨｡" },
+      { "en": "This is a cup of pear juice.", "cn": "这是一杯梨汁｡" },
+      { "en": "Pears grow on trees.", "cn": "梨长在树上｡" },
+      { "en": "In the orchard, you can see many pear trees with pears hanging on them.", "cn": "在果园里,你可以看到很多梨树上挂着梨｡" },
+      { "en": "A pear is a kind of lovely fruit.", "cn": "梨是一种可爱的水果｡" },
+      { "en": "It usually has a funny shape, kind of like a teardrop.", "cn": "它通常有一个有趣的形状,有点像泪珠｡" },
+      { "en": "Wash and peel it before eating.", "cn": "吃之前要洗干净并削皮｡" },
+      { "en": "The skin of a pear is smooth and can be green, yellow or brown.", "cn": "梨的皮很光滑,可以是绿色、黄色或棕色的｡" },
+      { "en": "When you take a bite of a pear, it tastes sweet and juicy.", "cn": "当你咬一口梨,它尝起来又甜又多汁｡" },
+      { "en": "We can eat pears directly.", "cn": "我们可以直接吃梨｡" },
+      { "en": "We can make pear juice to drink.", "cn": "我们可以做梨汁喝｡" }
+    ]
+  },
+  {
+    "name": "durian",
+    "page": 59,
+    "data": `Today, let me tell you something about the durian.
+      This is a durian.
+      This is a durian pizza.
+      Durians grow on high trees.
+      Picking durian is indeed not an easy task.
+      Durian is a very special fruit.
+      It looks big and has a hard shell with sharp spikes on it.
+      It looks like a big hedgehog.
+      When you open a durian, inside there is the soft and sweet flesh.
+      The taste of durian is very unique.
+      Some people love it very much because it’s so sweet and delicious.
+      But some people don’t like it because it has a very strong smell.`,
+    "option": [
+      { "en": "Today, let me tell you something about the durian.", "cn": "今天,让我给你讲讲榴莲｡" },
+      { "en": "This is a durian.", "cn": "这是一个榴莲｡" },
+      { "en": "This is a durian pizza.", "cn": "这是一个榴莲披萨｡" },
+      { "en": "Durians grow on high trees.", "cn": "榴莲长在高高的树上｡" },
+      { "en": "Picking durian is indeed not an easy task.", "cn": "摘榴莲确实不是一件容易的事｡" },
+      { "en": "Durian is a very special fruit.", "cn": "榴莲是一种非常特别的水果｡" },
+      { "en": "It looks big and has a hard shell with sharp spikes on it.", "cn": "它看起来很大,有一个硬壳,上面有尖刺｡" },
+      { "en": "It looks like a big hedgehog.", "cn": "它看起来像一个大刺猬｡" },
+      { "en": "When you open a durian, inside there is the soft and sweet flesh.", "cn": "当你打开榴莲,里面是柔软香甜的果肉｡" },
+      { "en": "The taste of durian is very unique.", "cn": "榴莲的味道非常独特｡" },
+      { "en": "Some people love it very much because it’s so sweet and delicious.", "cn": "有些人非常喜欢它,因为它非常香甜可口｡" },
+      { "en": "But some people don’t like it because it has a very strong smell.", "cn": "但有些人不喜欢它,因为它有很浓的气味｡" }
+    ]
+  },
+  {
+    "name": "broccoli",
+    "page": 60,
+    "data": `Today, let me tell you something about the broccoli.
+      This is a head of broccoli.
+      This is a plate of broccoli salad.
+      Broccoli looks like a small tree.
+      It is green.
+      The top part is called the broccoli crown.
+      The lower part is broccoli stalk.
+      We can boil it and it tastes delicious.
+      We can put it in a salad and mix it with other yummy vegetables.
+      It’s very healthy and good for our bodies.
+      It gives us important nutrients.
+      It’s a great vegetable that you can enjoy.`,
+    "option": [
+      { "en": "Today, let me tell you something about the broccoli.", "cn": "今天,让我给你讲讲西兰花｡" },
+      { "en": "This is a head of broccoli.", "cn": "这是一颗西兰花｡" },
+      { "en": "This is a plate of broccoli salad.", "cn": "这是一盘西兰花沙拉｡" },
+      { "en": "Broccoli looks like a small tree.", "cn": "西兰花看起来像一棵小树｡" },
+      { "en": "It is green.", "cn": "它是绿色的｡" },
+      { "en": "The top part is called the broccoli crown.", "cn": "顶部叫做西兰花冠｡" },
+      { "en": "The lower part is broccoli stalk.", "cn": "下部是西兰花茎｡" },
+      { "en": "We can boil it and it tastes delicious.", "cn": "我们可以煮它,味道很好吃｡" },
+      { "en": "We can put it in a salad and mix it with other yummy vegetables.", "cn": "我们可以把它放在沙拉里,和其他美味的蔬菜混合｡" },
+      { "en": "It’s very healthy and good for our bodies.", "cn": "它非常健康,对我们的身体有好处｡" },
+      { "en": "It gives us important nutrients.", "cn": "它给我们提供重要的营养｡" },
+      { "en": "It’s a great vegetable that you can enjoy.", "cn": "它是一种你可以享用的很棒的蔬菜｡" }
+    ]
+  },
+  {
+    "name": "cucumber",
+    "page": 61,
+    "data": `Today, let me tell you something about the cucumber.
+      This is a cucumber.
+      Those are some cucumber strips.
+      Cucumbers grow on vines.
+      It is long and green and looks very fresh.
+      Cucumber is a kind of very interesting vegetable.
+      Cucumbers are usually eaten raw.
+      They taste crispy and a little bit sweet.
+      Cucumbers are good for our health.
+      You can wash them and then just take a bite.
+      You can also use cucumbers to make salads.
+      They have a lot of water; it can make us feel hydrated.`,
+    "option": [
+      { "en": "Today, let me tell you something about the cucumber.", "cn": "今天,让我给你讲讲黄瓜｡" },
+      { "en": "This is a cucumber.", "cn": "这是一根黄瓜｡" },
+      { "en": "Those are some cucumber strips.", "cn": "那些是一些黄瓜条｡" },
+      { "en": "Cucumbers grow on vines.", "cn": "黄瓜长在藤上｡" },
+      { "en": "It is long and green and looks very fresh.", "cn": "它又长又绿,看起来很新鲜｡" },
+      { "en": "Cucumber is a kind of very interesting vegetable.", "cn": "黄瓜是一种非常有趣的蔬菜｡" },
+      { "en": "Cucumbers are usually eaten raw.", "cn": "黄瓜通常生吃｡" },
+      { "en": "They taste crispy and a little bit sweet.", "cn": "它们尝起来脆脆的,有点甜｡" },
+      { "en": "Cucumbers are good for our health.", "cn": "黄瓜对我们的健康有好处｡" },
+      { "en": "You can wash them and then just take a bite.", "cn": "你可以洗干净然后直接咬一口｡" },
+      { "en": "You can also use cucumbers to make salads.", "cn": "你也可以用黄瓜做沙拉｡" },
+      { "en": "They have a lot of water; it can make us feel hydrated.", "cn": "它们含有大量的水分,可以让我们感到补水｡" }
+    ]
+  },
+  {
+    "name": "tomato",
+    "page": 62,
+    "data": `Today, let me tell you something about the tomato.
+      This is a tomato.
+      This is a plate of scrambled eggs with tomatoes.
+      Tomatoes grow on vines.
+      Tomatoes are very cute and interesting fruit.
+      They are usually red; but some are yellow.
+      Tomatoes are round and smooth.
+      Ketchup is made from tomatoes.
+      We usually dip French fries in ketchup when eating them.
+      We can eat tomatoes in many ways.
+      We can eat them raw.
+      They taste a little sweet and sour.`,
+    "option": [
+      { "en": "Today, let me tell you something about the tomato.", "cn": "今天,让我给你讲讲西红柿｡" },
+      { "en": "This is a tomato.", "cn": "这是一个西红柿｡" },
+      { "en": "This is a plate of scrambled eggs with tomatoes.", "cn": "这是一盘西红柿炒鸡蛋｡" },
+      { "en": "Tomatoes grow on vines.", "cn": "西红柿长在藤上｡" },
+      { "en": "Tomatoes are very cute and interesting fruit.", "cn": "西红柿是非常可爱有趣的水果｡" },
+      { "en": "They are usually red; but some are yellow.", "cn": "它们通常是红色的,但有些是黄色的｡" },
+      { "en": "Tomatoes are round and smooth.", "cn": "西红柿是圆的,很光滑｡" },
+      { "en": "Ketchup is made from tomatoes.", "cn": "番茄酱是用西红柿做的｡" },
+      { "en": "We usually dip French fries in ketchup when eating them.", "cn": "我们吃薯条的时候通常蘸番茄酱｡" },
+      { "en": "We can eat tomatoes in many ways.", "cn": "我们可以用很多方式吃西红柿｡" },
+      { "en": "We can eat them raw.", "cn": "我们可以生吃它们｡" },
+      { "en": "They taste a little sweet and sour.", "cn": "它们尝起来有点甜酸｡" }
+    ]
+  },
+  {
+    "name": "potato",
+    "page": 63,
+    "data": `Today, let me tell you something about the potato.
+      This is a potato.
+      This is mashed potato.
+      Potatoes grow underground.
+      We can dig them out.
+      Potatoes are a popular vegetable all over the world.
+      They are round or oval.
+      Potatoes can be in different colors like brown, yellow and even purple.
+      We can eat potatoes in many ways.
+      You can boil, bake, mash or even make them into fries and chips.
+      French fries are very popular among children.
+      Potatoes are not just tasty, but also good for you.`,
+    "option": [
+      { "en": "Today, let me tell you something about the potato.", "cn": "今天,让我给你讲讲土豆｡" },
+      { "en": "This is a potato.", "cn": "这是一个土豆｡" },
+      { "en": "This is mashed potato.", "cn": "这是土豆泥｡" },
+      { "en": "Potatoes grow underground.", "cn": "土豆长在地下｡" },
+      { "en": "We can dig them out.", "cn": "我们可以把它们挖出来｡" },
+      { "en": "Potatoes are a popular vegetable all over the world.", "cn": "土豆是全世界都受欢迎的蔬菜｡" },
+      { "en": "They are round or oval.", "cn": "它们是圆形或椭圆形的｡" },
+      { "en": "Potatoes can be in different colors like brown, yellow and even purple.", "cn": "土豆可以有不同的颜色,比如棕色、黄色甚至紫色｡" },
+      { "en": "We can eat potatoes in many ways.", "cn": "我们可以用很多方式吃土豆｡" },
+      { "en": "You can boil, bake, mash or even make them into fries and chips.", "cn": "你可以煮、烤、捣成泥,甚至做成薯条和薯片｡" },
+      { "en": "French fries are very popular among children.", "cn": "薯条在孩子们中非常受欢迎｡" },
+      { "en": "Potatoes are not just tasty, but also good for you.", "cn": "土豆不仅好吃,对你也有好处｡" }
+    ]
+  },
+  {
+    "name": "avocado",
+    "page": 64,
+    "data": `Today, let me tell you something about the avocado.
+      This is an avocado.
+      This is avocado salad.
+      They are really special fruits.
+      Avocados grow on trees.
+      They look like pears and have a dark green skin.
+      We can cut them open and eat the soft, green part inside.
+      We can eat avocados in many ways.
+      It tastes a little bit creamy.
+      We can eat it directly.
+      Some people like to put avocados in sandwiches or salad.
+      Avocados are very good for our health.`,
+    "option": [
+      { "en": "Today, let me tell you something about the avocado.", "cn": "今天,让我给你讲讲牛油果｡" },
+      { "en": "This is an avocado.", "cn": "这是一个牛油果｡" },
+      { "en": "This is avocado salad.", "cn": "这是牛油果沙拉｡" },
+      { "en": "They are really special fruits.", "cn": "它们是非常特别的水果｡" },
+      { "en": "Avocados grow on trees.", "cn": "牛油果长在树上｡" },
+      { "en": "They look like pears and have a dark green skin.", "cn": "它们看起来像梨,有深绿色的外皮｡" },
+      { "en": "We can cut them open and eat the soft, green part inside.", "cn": "我们可以把它们切开,吃里面柔软的绿色部分｡" },
+      { "en": "We can eat avocados in many ways.", "cn": "我们可以用很多方式吃牛油果｡" },
+      { "en": "It tastes a little bit creamy.", "cn": "它尝起来有点奶油味｡" },
+      { "en": "We can eat it directly.", "cn": "我们可以直接吃它｡" },
+      { "en": "Some people like to put avocados in sandwiches or salad.", "cn": "有些人喜欢把牛油果放在三明治或沙拉里｡" },
+      { "en": "Avocados are very good for our health.", "cn": "牛油果对我们的健康非常有益｡" }
+    ]
+  },
+  {
+    "name": "eggplant",
+    "page": 65,
+    "data": `Today, let me tell you something about the eggplant.
+      This is an eggplant.
+      This is a plate of roasted eggplant.
+      Eggplants grow on the eggplant plant.
+      We also call the eggplant aubergine.
+      Eggplants have a long and slender shape.
+      Their skin is smooth and shiny, and it is usually purple.
+      We can cut them up and make yummy eggplant dishes.
+      And sometimes, we can even see eggplants in cartoons or storybooks!
+      Eggplants are also good for our bodies.
+      They have some important nutrients that help us grow strong and healthy.`,
+    "option": [
+      { "en": "Today, let me tell you something about the eggplant.", "cn": "今天,让我给你讲讲茄子｡" },
+      { "en": "This is an eggplant.", "cn": "这是一个茄子｡" },
+      { "en": "This is a plate of roasted eggplant.", "cn": "这是一盘烤茄子｡" },
+      { "en": "Eggplants grow on the eggplant plant.", "cn": "茄子长在茄子植株上｡" },
+      { "en": "We also call the eggplant aubergine.", "cn": "我们也把茄子叫做‘aubergine’｡" },
+      { "en": "Eggplants have a long and slender shape.", "cn": "茄子有着细长的形状｡" },
+      { "en": "Their skin is smooth and shiny, and it is usually purple.", "cn": "它们的表皮光滑且有光泽,通常是紫色的｡" },
+      { "en": "We can cut them up and make yummy eggplant dishes.", "cn": "我们可以把它们切碎并做成美味的茄子菜肴｡" },
+      { "en": "And sometimes, we can even see eggplants in cartoons or storybooks!", "cn": "有时候,我们甚至能在卡通片或故事书里看到茄子!" },
+      { "en": "Eggplants are also good for our bodies.", "cn": "茄子对我们的身体也有好处｡" },
+      { "en": "They have some important nutrients that help us grow strong and healthy.", "cn": "它们有一些重要的营养成分,能帮助我们变得强壮和健康｡" }
+    ]
+  },
+  {
+    "name": "spinach",
+    "page": 66,
+    "data": `Today, let me tell you something about the spinach.
+      This is a bunch of spinach.
+      This is a bowl of spinach and egg soup.
+      Spinach grows in the ground.
+      It has dark green leaves.
+      Spinach is a kind of vegetable that we often eat.
+      We can eat spinach in many ways.
+      We can make a yummy spinach soup or put it in a salad.
+      It tastes really good and is very healthy for us.
+      It gives us energy and helps us stay strong.
+      You can see spinach in the store or at the market.
+      And you can ask your parents to buy some and try it.`,
+    "option": [
+      { "en": "Today, let me tell you something about the spinach.", "cn": "今天,让我给你讲讲菠菜｡" },
+      { "en": "This is a bunch of spinach.", "cn": "这是一把菠菜｡" },
+      { "en": "This is a bowl of spinach and egg soup.", "cn": "这是一碗菠菜鸡蛋汤｡" },
+      { "en": "Spinach grows in the ground.", "cn": "菠菜生长在地里｡" },
+      { "en": "It has dark green leaves.", "cn": "它有深绿色的叶子｡" },
+      { "en": "Spinach is a kind of vegetable that we often eat.", "cn": "菠菜是我们常吃的一种蔬菜｡" },
+      { "en": "We can eat spinach in many ways.", "cn": "我们可以用很多方式吃菠菜｡" },
+      { "en": "We can make a yummy spinach soup or put it in a salad.", "cn": "我们可以做美味的菠菜汤或者把它放在沙拉里｡" },
+      { "en": "It tastes really good and is very healthy for us.", "cn": "它尝起来真的很好,而且对我们非常健康｡" },
+      { "en": "It gives us energy and helps us stay strong.", "cn": "它给我们能量并帮助我们保持强壮｡" },
+      { "en": "You can see spinach in the store or at the market.", "cn": "你可以在商店或市场看到菠菜｡" },
+      { "en": "And you can ask your parents to buy some and try it.", "cn": "并且你可以让你的父母买一些来尝尝｡" }
+    ]
+  },
+  {
+    "name": "corn",
+    "page": 67,
+    "data": `Today, let me tell you something about the corn.
+      These are corn kernels.
+      This is a corn on the cob.
+      Corn grows on the corn plant.
+      Corn is a very interesting and important food.
+      It looks like a big stick with many little kernels on it.
+      The kernels are usually yellow.
+      We can eat corn in many different ways.
+      We can boil it and eat it as it is, it tastes sweet and yummy.
+      We can also make popcorn out of it.
+      When we heat the corn kernels, they will pop and become fluffy and delicious popcorn.
+      We love to eat popcorn while watching movies.
+      Corn is also very good for our health.`,
+    "option": [
+      { "en": "Today, let me tell you something about the corn.", "cn": "今天,让我给你讲讲玉米｡" },
+      { "en": "These are corn kernels.", "cn": "这是一些玉米粒｡" },
+      { "en": "This is a corn on the cob.", "cn": "这是一根玉米棒｡" },
+      { "en": "Corn grows on the corn plant.", "cn": "玉米长在玉米植株上｡" },
+      { "en": "Corn is a very interesting and important food.", "cn": "玉米是一种非常有趣且重要的食物｡" },
+      { "en": "It looks like a big stick with many little kernels on it.", "cn": "它看起来像一根上面有许多小玉米粒的大棒子｡" },
+      { "en": "The kernels are usually yellow.", "cn": "玉米粒通常是黄色的｡" },
+      { "en": "We can eat corn in many different ways.", "cn": "我们可以用许多不同的方式吃玉米｡" },
+      { "en": "We can boil it and eat it as it is, it tastes sweet and yummy.", "cn": "我们可以把它煮熟然后直接吃,它尝起来甜甜的很好吃｡" },
+      { "en": "We can also make popcorn out of it.", "cn": "我们也可以用它来制作爆米花｡" },
+      { "en": "When we heat the corn kernels, they will pop and become fluffy and delicious popcorn.", "cn": "当我们加热玉米粒时,它们会爆开并变成蓬松美味的爆米花｡" },
+      { "en": "We love to eat popcorn while watching movies.", "cn": "我们喜欢在看电影的时候吃爆米花｡" },
+      { "en": "Corn is also very good for our health.", "cn": "玉米对我们的健康也非常有益｡" }
+    ]
+  },
+  {
+    "name": "sweet potato",
+    "page": 68,
+    "data": `Today, let me tell you something about the sweet potato.
+      This is a raw sweet potato.
+      This is a roasted sweet potato.
+      Sweet potatoes grow underground.
+      It is a kind of root vegetable.
+      It has a lovely shape and can be big or small.
+      The skin of a sweet potato is usually a little brown.
+      Inside, it is yellow, white or purple.
+      We can eat sweet potato in many different ways.
+      We can bake it in the oven.
+      When its baked, it becomes very fragrant and tastes delicious.
+      You can also boil it or make it into sweet potato porridge.
+      Sweet potato is good for our health.`,
+    "option": [
+      { "en": "Today, let me tell you something about the sweet potato.", "cn": "今天,让我给你讲讲地瓜｡" },
+      { "en": "This is a raw sweet potato.", "cn": "这是一个生地瓜｡" },
+      { "en": "This is a roasted sweet potato.", "cn": "这是一个烤地瓜｡" },
+      { "en": "Sweet potatoes grow underground.", "cn": "地瓜生长在地下｡" },
+      { "en": "It is a kind of root vegetable.", "cn": "它是一种根茎类蔬菜｡" },
+      { "en": "It has a lovely shape and can be big or small.", "cn": "它有着可爱的形状而且有大有小｡" },
+      { "en": "The skin of a sweet potato is usually a little brown.", "cn": "地瓜的皮通常有点褐色｡" },
+      { "en": "Inside, it is yellow, white or purple.", "cn": "里面是黄色、白色或紫色的｡" },
+      { "en": "We can eat sweet potato in many different ways.", "cn": "我们可以用许多不同的方式吃地瓜｡" },
+      { "en": "We can bake it in the oven.", "cn": "我们可以在烤箱里烤它｡" },
+      { "en": "When it’s baked, it becomes very fragrant and tastes delicious.", "cn": "当它被烤好时,它变得非常香并且尝起来很美味｡" },
+      { "en": "You can also boil it or make it into sweet potato porridge.", "cn": "你也可以煮它或把它做成地瓜粥｡" },
+      { "en": "Sweet potato is good for our health.", "cn": "地瓜对我们的健康有益｡" }
+    ]
+  },
+  {
+    "name": "lychee",
+    "page": 69,
+    "data": `Today, let’s talk about the lychee.
+      This is a lychee.
+      These are some lychees hanging on the tree.
+      Lychees grow on the tree.
+      They look very cute.
+      Lychee has a red and bumpy shell.
+      Peel off the shell, you will see a white flesh inside.
+      Take a bite, it is very sweet and juicy.
+      Lychee has a pit inside.
+      Don’t forget to spit it out when eating lychees.
+      Sometimes, you can make lychee juice to drink.`,
+    "option": [
+      { "en": "Today, let’s talk about the lychee.", "cn": "今天,让我们来谈谈荔枝｡" },
+      { "en": "This is a lychee.", "cn": "这是一个荔枝｡" },
+      { "en": "These are some lychees hanging on the tree.", "cn": "这些是一些挂在树上的荔枝｡" },
+      { "en": "Lychees grow on the tree.", "cn": "荔枝长在树上｡" },
+      { "en": "They look very cute.", "cn": "它们看起来非常可爱｡" },
+      { "en": "Lychee has a red and bumpy shell.", "cn": "荔枝有一个红色且凹凸不平的外壳｡" },
+      { "en": "Peel off the shell, you will see a white flesh inside.", "cn": "剥开壳,你会看到里面白色的果肉｡" },
+      { "en": "Take a bite, it is very sweet and juicy.", "cn": "咬一口,它非常甜且多汁｡" },
+      { "en": "Lychee has a pit inside.", "cn": "荔枝里面有一个核｡" },
+      { "en": "Don’t forget to spit it out when eating lychees.", "cn": "吃荔枝的时候别忘了吐出来｡" },
+      { "en": "Sometimes, you can make lychee juice to drink.", "cn": "有时候,你可以制作荔枝汁来喝｡" }
+    ]
+  },
+  {
+    "name": "hami melon",
+    "page": 70,
+    "data": `Today, let’s talk about the hami melon.
+      This is a hami melon.
+      This is a piece of hami melon.
+      Hami melon is named after Hami city in Xinjiang Province in northwest China.
+      Hami melon, we also call it cantaloupe.
+      It’s oval-shaped, like a big egg.
+      Let’s cut it in two.
+      Look, there are so many seeds.
+      Let’s scoop out the seeds, we don’t eat them.
+      Now I will cut it into slices.
+      Here you are, take a bite.
+      It is sweet, juicy and crisp.`,
+    "option": [
+      { "en": "Today, let’s talk about the hami melon.", "cn": "今天,让我们谈谈哈密瓜｡" },
+      { "en": "This is a hami melon.", "cn": "这是一个哈密瓜｡" },
+      { "en": "This is a piece of hami melon.", "cn": "这是一块哈密瓜｡" },
+      { "en": "Hami melon is named after Hami city in Xinjiang Province in northwest China.", "cn": "哈密瓜是以中国西北部新疆的哈密市命名的｡" },
+      { "en": "Hami melon, we also call it cantaloupe.", "cn": "哈密瓜,我们也叫它“cantaloupe”｡" },
+      { "en": "It’s oval-shaped, like a big egg.", "cn": "它是椭圆形的,像一个大鸡蛋｡" },
+      { "en": "Let’s cut it in two.", "cn": "让我们把它切成两半｡" },
+      { "en": "Look, there are so many seeds.", "cn": "看,有这么多籽｡" },
+      { "en": "Let’s scoop out the seeds, we don’t eat them.", "cn": "让我们把籽舀出来,我们不吃它们｡" },
+      { "en": "Now I will cut it into slices.", "cn": "现在我要把它切成片｡" },
+      { "en": "Here you are, take a bite.", "cn": "给你,咬一口｡" },
+      { "en": "It is sweet, juicy and crisp.", "cn": "它很甜、多汁且脆｡" }
+    ]
+  },
+  {
+    "name": "dragon fruit",
+    "page": 71,
+    "data": `Today, let’s talk about the dragon fruit.
+      This is a red-skinned dragon fruit.
+      This is a yellow-skinned dragon fruit.
+      Dragon fruit, we also call it pitaya.
+      The dragon fruit has a bright and colorful appearance.
+      The most common ones are the red-skinned pitayas.
+      The inside of the red-skinned dragon fruit usually has white or red flesh.
+      The white flesh is tender and juicy, while the red flesh is even more vibrant and sweet.
+      There is also a kind of yellow-skinned dragon fruit.
+      Its skin is yellow and very eye-catching. The flesh inside is usually white.
+      We can eat dragon fruits directly or make them into juice.`,
+    "option": [
+      { "en": "Today, let’s talk about the dragon fruit.", "cn": "今天,让我们谈谈火龙果｡" },
+      { "en": "This is a red-skinned dragon fruit.", "cn": "这是一个红皮火龙果｡" },
+      { "en": "This is a yellow-skinned dragon fruit.", "cn": "这是一个黄皮火龙果｡" },
+      { "en": "Dragon fruit, we also call it pitaya.", "cn": "火龙果,我们也叫它“pitaya”｡" },
+      { "en": "The dragon fruit has a bright and colorful appearance.", "cn": "火龙果有着明亮且多彩的外观｡" },
+      { "en": "The most common ones are the red-skinned pitayas.", "cn": "最常见的是红皮火龙果｡" },
+      { "en": "The inside of the red-skinned dragon fruit usually has white or red flesh.", "cn": "红皮火龙果的内部通常有白色或红色的果肉｡" },
+      { "en": "The white flesh is tender and juicy, while the red flesh is even more vibrant and sweet.", "cn": "白色的果肉鲜嫩多汁,而红色的果肉则更加鲜艳且甜美｡" },
+      { "en": "There is also a kind of yellow-skinned dragon fruit.", "cn": "也有一种黄皮火龙果｡" },
+      { "en": "Its skin is yellow and very eye-catching. The flesh inside is usually white.", "cn": "它的皮是黄色的,非常引人注目｡里面的果肉通常是白色的｡" },
+      { "en": "We can eat dragon fruits directly or make them into juice.", "cn": "我们可以直接吃火龙果,也可以把它们做成果汁｡" }
+    ]
+  },
+  {
+    "name": "raisin",
+    "page": 72,
+    "data": `Today, let’s talk about the raisin.
+      This is a bunch of selected seedless grapes.
+      Spread the grapes on the drying tray in the sun to dry out the water.
+      Then, hang the grapes in the drying room, and keep ventilated and air-dried.
+      It may take about 55 days.
+      Take out the grapes, stack and keep for 2 to 3 weeks.
+      Finally remove the stalks, we get the raisins.
+      We can eat raisins as a delicious snack.
+      They are sweet and full of flavor.
+      We can also put them in cakes, cookies, or even add them to our cereal.`,
+    "option": [
+      { "en": "Today, let’s talk about the raisin.", "cn": "今天,让我们来谈谈葡萄干｡" },
+      { "en": "This is a bunch of selected seedless grapes.", "cn": "这是一串精选的无籽葡萄｡" },
+      { "en": "Spread the grapes on the drying tray in the sun to dry out the water.", "cn": "把葡萄铺在晾晒盘上在太阳下晾晒以除去水分｡" },
+      { "en": "Then, hang the grapes in the drying room, and keep ventilated and air-dried.", "cn": "然后,把葡萄挂在干燥室里,并保持通风和风干｡" },
+      { "en": "It may take about 55 days.", "cn": "这可能需要大约55天｡" },
+      { "en": "Take out the grapes, stack and keep for 2 to 3 weeks.", "cn": "取出葡萄,堆积并保存2到3周｡" },
+      { "en": "Finally remove the stalks, we get the raisins.", "cn": "最后去掉茎梗,我们就得到了葡萄干｡" },
+      { "en": "We can eat raisins as a delicious snack.", "cn": "我们可以把葡萄干当作美味的零食来吃｡" },
+      { "en": "They are sweet and full of flavor.", "cn": "它们很甜且充满风味｡" },
+      { "en": "We can also put them in cakes, cookies, or even add them to our cereal.", "cn": "我们也可以把它们放到蛋糕、饼干里,甚至加到我们的麦片里｡" }
+    ]
+  },
+  {
+    "name": "tangerine",
+    "page": 73,
+    "data": `This is a tangerine. It’s a kind of citrus fruit.
+      Tangerines grow on trees.
+      They are usually small and cute, and their color is bright orange.
+      Tangerines are easier to peel than oranges.
+      They are juicy and sweet.
+      When eating tangerines, don’t forget to spit out the seeds if you find them.`,
+    "option": [
+      { "en": "This is a tangerine. It’s a kind of citrus fruit.", "cn": "这是一个橘子｡它是柑橘类水果的一种｡" },
+      { "en": "Tangerines grow on trees.", "cn": "橘子长在树上｡" },
+      { "en": "They are usually small and cute, and their color is bright orange.", "cn": "它们通常又小又可爱,颜色是亮橙色｡" },
+      { "en": "Tangerines are easier to peel than oranges.", "cn": "橘子比橙子更容易剥皮｡" },
+      { "en": "They are juicy and sweet.", "cn": "它们多汁又香甜｡" },
+      { "en": "When eating tangerines, don’t forget to spit out the seeds if you find them.", "cn": "吃橘子的时候,如果发现有籽,别忘了吐出来｡" }
+    ]
+  },
+  {
+    "name": "grapefruit",
+    "page": 74,
+    "data": `A grapefruit is a big and round fruit.
+      It has a thick rind that can be yellow.
+      When you cut it open, you’ll see juicy segments inside.
+      You can remove the rind with your fingers.
+      Break apart the fruit, and peel the skin.
+      Take a bite. It is both sweet and a little bit sour.`,
+    "option": [
+      { "en": "A grapefruit is a big and round fruit.", "cn": "柚子是一种又大又圆的水果｡" },
+      { "en": "It has a thick rind that can be yellow.", "cn": "它有一层厚厚的果皮,可能是黄色的｡" },
+      { "en": "When you cut it open, you’ll see juicy segments inside.", "cn": "当你把它切开时,你会看到里面多汁的瓣｡" },
+      { "en": "You can remove the rind with your fingers.", "cn": "你可以用手指去掉果皮｡" },
+      { "en": "Break apart the fruit, and peel the skin.", "cn": "把水果掰开,然后剥掉果皮｡" },
+      { "en": "Take a bite. It is both sweet and a little bit sour.", "cn": "咬一口｡它既甜又有点酸｡" }
+    ]
+  },
+  {
+    "name": "coconut",
+    "page": 75,
+    "data": `Coconuts grow on tall coconut trees in tropical regions.
+      A coconut is a big and round fruit.
+      It has a hard, brown shell on the outside.
+      When you crack open the shell, you’ll find a white layer of flesh inside.
+      This flesh is sweet and has a nice flavor. You can eat it.
+      There’s also a clear liquid inside the coconut called coconut water. It’s really nice and sweet.`,
+    "option": [
+      { "en": "Coconuts grow on tall coconut trees in tropical regions.", "cn": "椰子生长在热带地区高高的椰子树上｡" },
+      { "en": "A coconut is a big and round fruit.", "cn": "椰子是一种又大又圆的水果｡" },
+      { "en": "It has a hard, brown shell on the outside.", "cn": "它的外面有一层坚硬的棕色外壳｡" },
+      { "en": "When you crack open the shell, you’ll find a white layer of flesh inside.", "cn": "当你敲开外壳,你会发现里面有一层白色的果肉｡" },
+      { "en": "This flesh is sweet and has a nice flavor. You can eat it.", "cn": "这种果肉很甜,味道很好｡你可以生吃｡" },
+      { "en": "There’s also a clear liquid inside the coconut called coconut water. It’s really nice and sweet.", "cn": "椰子里面还有一种清澈的液体,叫做椰子水｡它真的非常好喝,很甜｡" }
+    ]
+  },
+  {
+    "name": "papaya",
+    "page": 76,
+    "data": `The papaya is a tropical fruit.
+      Papayas grow on papaya trees.
+      They are usually big and oval in shape.
+      The outside of a papaya is usually yellow or green when it’s ripe.
+      When you cut open a papaya, you’ll see the inside is full of small black seeds in the center.
+      The flesh of the papaya is soft and sweet.`,
+    "option": [
+      { "en": "The papaya is a tropical fruit.", "cn": "木瓜是一种热带水果｡" },
+      { "en": "Papayas grow on papaya trees.", "cn": "木瓜长在木瓜树上｡" },
+      { "en": "They are usually big and oval in shape.", "cn": "它们通常呈大的椭圆形｡" },
+      { "en": "The outside of a papaya is usually yellow or green when it’s ripe.", "cn": "木瓜成熟时,其外皮通常是黄色或绿色｡" },
+      { "en": "When you cut open a papaya, you’ll see the inside is full of small black seeds in the center.", "cn": "当你切开一个木瓜,你会看到里面的中心部位充满了黑色的小籽｡" },
+      { "en": "The flesh of the papaya is soft and sweet.", "cn": "木瓜的果肉柔软且香甜｡" }
+    ]
+  },
+  {
+    "name": "star fruit",
+    "page": 77,
+    "data": `The star fruit looks like a star when you cut it across.
+      That’s why it’s called the star fruit.
+      The color of the star fruit is usually yellow or green.
+      It has a smooth and shiny skin.
+      Take a bite, it’s juicy and sweet. Maybe a little sour too.
+      You can eat it fresh just like that. Or put it in a fruit salad.`,
+    "option": [
+      { "en": "The star fruit looks like a star when you cut it across.", "cn": "当你把杨桃横着切开时,它看起来像一颗星星｡" },
+      { "en": "That’s why it’s called the star fruit.", "cn": "这就是它被称为杨桃的原因｡" },
+      { "en": "The color of the star fruit is usually yellow or green.", "cn": "杨桃的颜色通常是黄色或绿色｡" },
+      { "en": "It has a smooth and shiny skin.", "cn": "它有光滑且有光泽的表皮｡" },
+      { "en": "Take a bite, it’s juicy and sweet. Maybe a little sour too.", "cn": "咬一口,它多汁又甜｡可能也有点酸｡" },
+      { "en": "You can eat it fresh just like that. Or put it in a fruit salad.", "cn": "你可以就这样新鲜地吃｡或者把它放进水果沙拉里｡" }
+    ]
+  },
+  {
+    "name": "lime",
+    "page": 78,
+    "data": `The lime is a small and green fruit.
+      If you smell it, it has a very fresh and strong smell.
+      The lime is very sour.
+      We can add some lime juice to water to make limeade.
+      It’s very refreshing on a hot day.
+      We can also use lime juice when we cook fish or make salad.`,
+    "option": [
+      { "en": "The lime is a small and green fruit.", "cn": "酸橙是一种小且绿色的水果｡" },
+      { "en": "If you smell it, it has a very fresh and strong smell.", "cn": "如果你闻它,它有非常清新且强烈的气味｡" },
+      { "en": "The lime is very sour.", "cn": "酸橙非常酸｡" },
+      { "en": "We can add some lime juice to water to make limeade.", "cn": "我们可以往水里加一些酸橙汁来制作酸橙汁汽水｡" },
+      { "en": "It’s very refreshing on a hot day.", "cn": "在炎热的日子里它非常清爽｡" },
+      { "en": "We can also use lime juice when we cook fish or make salad.", "cn": "我们在做鱼或者做沙拉时也可以用酸橙汁｡" }
+    ]
+  },
+  {
+    "name": "mangosteen",
+    "page": 79,
+    "data": `Mangosteens grow on trees in warm places.
+      Sometimes, you might see them in the market or at the store.
+      The mangosteen is a small, round fruit.
+      It has a thick, purple shell.
+      When you open it up, there are white segments that look like little petals.
+      These segments are soft and sweet.`,
+    "option": [
+      { "en": "Mangosteens grow on trees in warm places.", "cn": "山竹生长在温暖地区的树上｡" },
+      { "en": "Sometimes, you might see them in the market or at the store.", "cn": "有时,你可能会在市场或商店里看到它们｡" },
+      { "en": "The mangosteen is a small, round fruit.", "cn": "山竹是一种小而圆的水果｡" },
+      { "en": "It has a thick, purple shell.", "cn": "它有一个厚厚的、紫色的外壳｡" },
+      { "en": "When you open it up, there are white segments that look like little petals.", "cn": "当你打开它时,里面有白色的瓣状物,看起来像小花瓣｡" },
+      { "en": "These segments are soft and sweet.", "cn": "这些瓣状物柔软且甜美｡" }
+    ]
+  },
+  {
+    "name": "carrot",
+    "page": 80,
+    "data": `Carrots grow underground.
+      A carrot is a long, orange vegetable.
+      Carrots can help you see better at night.
+      Because they have vitamin A in them.
+      You can eat carrots raw. They are crunchy and sweet.
+      Sometimes, they are cut into small pieces and added to soups or stews.`,
+    "option": [
+      { "en": "Carrots grow underground.", "cn": "胡萝卜生长在地下｡" },
+      { "en": "A carrot is a long, orange vegetable.", "cn": "胡萝卜是一种长长的、橙色的蔬菜｡" },
+      { "en": "Carrots can help you see better at night.", "cn": "胡萝卜能帮助你在晚上看得更清楚｡" },
+      { "en": "Because they have vitamin A in them.", "cn": "因为它们里面含有维生素A｡" },
+      { "en": "You can eat carrots raw. They are crunchy and sweet.", "cn": "你可以生吃胡萝卜｡它们脆甜可口｡" },
+      { "en": "Sometimes, they are cut into small pieces and added to soups or stews.", "cn": "有时,它们会被切成小块加到汤或炖菜里｡" }
+    ]
+  },
+  {
+    "name": "fire engine",
+    "page": 81,
+    "data": `This is a fire engine, we also call it fire truck.
+      This is a firefighter, who helps keep people safe.
+      Look at the ladder, it can help firefighters climb very high.
+      The fire truck has a hose that can spray water very far.
+      A fire engine is a lorry that is used to put out fires.
+      Firefighters wear special suits to protect themselves.
+      The fire engine has a big water tank to put out fires.
+      Look at the axe, firefighters use the axe to break down doors.`,
+    "option": [
+      { "en": "This is a fire engine, we also call it fire truck.", "cn": "这是一辆消防车,我们也可以叫“fire truck”｡" },
+      { "en": "This is a firefighter, who helps keep people safe.", "cn": "这是一名消防员,他帮助保障人们的安全｡" },
+      { "en": "Look at the ladder, it can help firefighters climb very high.", "cn": "看那个梯子,它可以帮助消防员爬的很高｡" },
+      { "en": "The fire truck has a hose that can spray water very far.", "cn": "消防车有一根能把水喷得很远的水管｡" },
+      { "en": "A fire engine is a lorry that is used to put out fires.", "cn": "消防车是一种用于灭火的卡车｡" },
+      { "en": "Firefighters wear special suits to protect themselves.", "cn": "消防员们穿着特殊的制服来保护他们自己｡" },
+      { "en": "The fire engine has a big water tank to put out fires.", "cn": "消防车有一个大的水箱来灭火｡" },
+      { "en": "Look at the axe, firefighters use the axe to break down doors.", "cn": "看看那把斧头,消防员用那把斧头来破门｡" }
+    ]
+  },
+  {
+    "name": "ambulance",
+    "page": 82,
+    "data": `An ambulance is a very special vehicle.
+      The ambulance is usually white with red stripes and has big flashing lights on top.
+      When it is on an emergency call, the lights flash and the siren makes a loud noise.
+      Ambulances rush to the scene of accidents or where people are sick very quickly.
+      It is designed to help people who are sick or injured.
+      Inside the ambulance, there are many important things, like stretchers, bandages and first aid kits.
+      The noise let everyone know it is coming through in a hurry.
+      They are like heroes on wheels, racing to help those in need.`,
+    "option": [
+      { "en": "An ambulance is a very special vehicle.", "cn": "救护车是一种非常特别的车辆｡" },
+      { "en": "The ambulance is usually white with red stripes and has big flashing lights on top.", "cn": "救护车通常是白色带有红色条纹,顶部有大大的闪烁灯｡" },
+      { "en": "When it is on an emergency call, the lights flash and the siren makes a loud noise.", "cn": "当它接到紧急呼叫时,灯光闪烁且警笛发出响亮的声音｡" },
+      { "en": "Ambulances rush to the scene of accidents or where people are sick very quickly.", "cn": "救护车会非常迅速地赶到事故现场或病人所在的地方｡" },
+      { "en": "It is designed to help people who are sick or injured.", "cn": "它被设计用来帮助生病或受伤的人｡" },
+      { "en": "Inside the ambulance, there are many important things, like stretchers, bandages and first aid kits.", "cn": "在救护车内部,有许多重要的东西,比如担架、绷带和急救箱｡" },
+      { "en": "The noise let everyone know it is coming through in a hurry.", "cn": "响亮的声音让每个人都知道它正在驶来｡" },
+      { "en": "They are like heroes on wheels, racing to help those in need.", "cn": "它们就像轮子上的英雄,竞相去帮助那些有需要的人｡" }
+    ]
+  },
+  {
+    "name": "police car",
+    "page": 83,
+    "data": `The police car is a motor vehicle used by police.
+      The police will drive the police cars to patrol the streets to keep us safe.
+      The police car has flashing lights that blink very brightly.
+      It also has a loud siren that can be heard from far away.
+      Sometimes you might see a police car driving by on the street.
+      It might be on its way to help someone or to keep the peace.
+      The police officers inside are working hard to protect us all.
+      Remember, the police car is our friend. It helps to make our world a safer place.`,
+    "option": [
+      { "en": "The police car is a motor vehicle used by police.", "cn": "警车是警察使用的一种机动车｡" },
+      { "en": "The police will drive the police cars to patrol the streets to keep us safe.", "cn": "警察将驾驶警车在街道上巡逻以保障我们的安全｡" },
+      { "en": "The police car has flashing lights that blink very brightly.", "cn": "警车有非常明亮闪烁的闪光灯｡" },
+      { "en": "It also has a loud siren that can be heard from far away.", "cn": "它也有一个响亮的警报器,从很远的地方都能听到｡" },
+      { "en": "Sometimes you might see a police car driving by on the street.", "cn": "有时你可能会看到一辆警车在街上驶过｡" },
+      { "en": "It might be on its way to help someone or to keep the peace.", "cn": "它可能正在去帮助某人或维护和平的路上｡" },
+      { "en": "The police officers inside are working hard to protect us all.", "cn": "里面的警察们正在努力工作以保护我们所有人｡" },
+      { "en": "Remember, the police car is our friend. It helps to make our world a safer place.", "cn": "记住,警车是我们的朋友｡它有助于让我们的世界成为一个更安全的地方｡" }
+    ]
+  },
+  {
+    "name": "excavator",
+    "page": 84,
+    "data": `This is an excavator, we also call it digger.
+      This part looks like a big spoon and with teeth, it is called a bucket.
+      This is called the cab, the workers can sit in it and operate the excavator.
+      The two oval belts at the bottom are called tracks.
+      There is a long arm in front of it, we call it boom.
+      It can help us shovel away dirt and stones.
+      This is the engine, it helps to bring power to the excavator.
+      The excavator can move backwards and forwards on its tracks.`,
+    "option": [
+      { "en": "This is an excavator, we also call it digger.", "cn": "这是一台挖掘机,我们也叫它“digger”｡" },
+      { "en": "This part looks like a big spoon and with teeth, it is called a bucket.", "cn": "这部分看起来像一个带齿的大勺子,它被叫做铲斗｡" },
+      { "en": "This is called the cab, the workers can sit in it and operate the excavator.", "cn": "这被称为驾驶室,工人们可以坐在里面操作挖掘机｡" },
+      { "en": "The two oval belts at the bottom are called tracks.", "cn": "底部的这两条椭圆形的带子被称为履带｡" },
+      { "en": "There is a long arm in front of it, we call it boom.", "cn": "在它前面有一个长长的臂,我们称它为起重臂｡" },
+      { "en": "It can help us shovel away dirt and stones.", "cn": "它可以帮助我们铲走泥土和石头｡" },
+      { "en": "This is the engine, it helps to bring power to the excavator.", "cn": "这是发动机,它有助于给挖掘机带来动力｡" },
+      { "en": "The excavator can move backwards and forwards on its tracks.", "cn": "挖掘机可以依靠它的履带前后移动｡" }
+    ]
+  },
+  {
+    "name": "wheel loader",
+    "page": 85,
+    "data": `This is a wheel loader. It is very strong.
+      It has a very big bucket used to carry heavy objects.
+      The worker operates a wheel loader in the cab.
+      They can be used to pick up heavy objects that don’t fit in the bucket.
+      It moves by four big wheels.
+      Wheel loaders can pick up very heavy stones and dump them into a dump truck.
+      Some wheel loaders can switch out their bucket for two big forks.
+      Wheel loaders are very helpful at the construction sites.`,
+    "option": [
+      { "en": "This is a wheel loader. It is very strong.", "cn": "这是一台轮式装载机｡它非常强壮｡" },
+      { "en": "It has a very big bucket used to carry heavy objects.", "cn": "它有一个非常大的用来搬运重物的铲斗｡" },
+      { "en": "The worker operates a wheel loader in the cab.", "cn": "工人在驾驶室内操作轮式装载机｡" },
+      { "en": "They can be used to pick up heavy objects that don’t fit in the bucket.", "cn": "它们可以被用来搬起那些不适合放在铲斗里的重物｡" },
+      { "en": "It moves by four big wheels.", "cn": "它通过四个大轮子移动｡" },
+      { "en": "Wheel loaders can pick up very heavy stones and dump them into a dump truck.", "cn": "轮式装载机能够铲起非常重的石头并将它们倾倒进自卸卡车里｡" },
+      { "en": "Some wheel loaders can switch out their bucket for two big forks.", "cn": "一些轮式装载机可以把它们的铲斗换成两个大叉子｡" },
+      { "en": "Wheel loaders are very helpful at the construction sites.", "cn": "轮式装载机在建筑工地上非常有帮助｡" }
+    ]
+  },
+  {
+    "name": "bulldozer",
+    "page": 86,
+    "data": `This is a bulldozer.
+      The bulldozer has a very big blade attached to its front.
+      It is perfect for building roads, farms and buildings.
+      The bulldozer can even push hard soil and dirt easily.
+      It has two big tracks that allow it to move forward and backward.
+      A bulldozer is used to flatten the ground.
+      The driver of the bulldozer sits in a cab with large windows.
+      It is very strong and heavy.`,
+    "option": [
+      { "en": "This is a bulldozer.", "cn": "这是一辆推土机｡" },
+      { "en": "The bulldozer has a very big blade attached to its front.", "cn": "推土机有一个非常大的推土铲安装在它的前端｡" },
+      { "en": "It is perfect for building roads, farms and buildings.", "cn": "它非常适合修筑道路、农场和建筑物｡" },
+      { "en": "The bulldozer can even push hard soil and dirt easily.", "cn": "推土机甚至可以轻松地推硬土和泥土｡" },
+      { "en": "It has two big tracks that allow it to move forward and backward.", "cn": "它有两条大履带,这使得它能够向前和向后移动｡" },
+      { "en": "A bulldozer is used to flatten the ground.", "cn": "推土机被用来平整地面｡" },
+      { "en": "The driver of the bulldozer sits in a cab with large windows.", "cn": "推土机的司机坐在带有大窗户的驾驶室里｡" },
+      { "en": "It is very strong and heavy.", "cn": "它非常强壮且沉重｡" }
+    ]
+  },
+  {
+    "name": "road roller",
+    "page": 87,
+    "data": `This is a road roller.
+      This road roller has one big rolling drum.
+      The driver sits inside the cab and operates the road roller.
+      It helps to build nice and smooth roads for us to walk and drive on.
+      Road roller is used to firm up the ground.
+      When it rolls over the ground, it makes the ground very smooth and firm.
+      The road roller can move forward and backward very slowly.
+      The road roller plays a very important role in road building.`,
+    "option": [
+      { "en": "This is a road roller.", "cn": "这是一台压路机｡" },
+      { "en": "This road roller has one big rolling drum.", "cn": "这台压路机有一个大的碾压轮｡" },
+      { "en": "The driver sits inside the cab and operates the road roller.", "cn": "司机坐在驾驶室内操作压路机｡" },
+      { "en": "It helps to build nice and smooth roads for us to walk and drive on.", "cn": "它有助于为我们建造漂亮且平坦的道路以便我们行走和驾驶｡" },
+      { "en": "Road roller is used to firm up the ground.", "cn": "压路机被用来加固地面｡" },
+      { "en": "When it rolls over the ground, it makes the ground very smooth and firm.", "cn": "当它在地面上滚动时,它会使地面变得非常光滑和坚固｡" },
+      { "en": "The road roller can move forward and backward very slowly.", "cn": "压路机能够非常缓慢地向前和向后移动｡" },
+      { "en": "The road roller plays a very important role in road building.", "cn": "压路机在道路建设中起着非常重要的作用｡" }
+    ]
+  },
+  {
+    "name": "cement mixer",
+    "page": 88,
+    "data": `This is a cement mixer.
+      Cement mixer is used to deliver some wet cement.
+      There is a large drum on the back of the cement mixer truck.
+      The part in front of the drum is the water tank.
+      The wet cement is poured onto the delivery site from the chute.
+      It needs to spin to mix the wet cement.
+      It holds water to keep the cement wet.
+      Cement mixers are very helpful in building roads, houses and buildings.`,
+    "option": [
+      { "en": "This is a cement mixer.", "cn": "这是一台水泥搅拌车｡" },
+      { "en": "Cement mixer is used to deliver some wet cement.", "cn": "水泥搅拌机被用来运送一些湿水泥｡" },
+      { "en": "There is a large drum on the back of the cement mixer truck.", "cn": "在水泥搅拌车的背部有一个非常大的滚筒｡" },
+      { "en": "The part in front of the drum is the water tank.", "cn": "滚筒前面的部分是水箱｡" },
+      { "en": "The wet cement is poured onto the delivery site from the chute.", "cn": "湿水泥从斜槽被倾倒到交付地点｡" },
+      { "en": "It needs to spin to mix the wet cement.", "cn": "它需要旋转来搅拌湿水泥｡" },
+      { "en": "It holds water to keep the cement wet.", "cn": "它装水来保持水泥是湿的｡" },
+      { "en": "Cement mixers are very helpful in building roads, houses and buildings.", "cn": "水泥搅拌机在修建道路、房屋和建筑物方面非常有帮助｡" }
+    ]
+  },
+  {
+    "name": "dump truck",
+    "page": 89,
+    "data": `This is a dump truck.
+      It is used to carry very heavy loads and then dump them out.
+      It can carry anything, like rocks, sand or dirt.
+      This is the hydraulic ram.
+      When the hydraulic ram lifts the truck bed, the dirt will be dumped out.
+      This is the cab where the driver sits.
+      The dump truck is good for cleaning up a construction site.
+      It is also helpful in moving materials.`,
+    "option": [
+      { "en": "This is a dump truck.", "cn": "这是一辆翻斗车｡" },
+      { "en": "It is used to carry very heavy loads and then dump them out.", "cn": "它被用于运载非常重的货物然后将它们倾倒出去｡" },
+      { "en": "It can carry anything, like rocks, sand or dirt.", "cn": "它可以运载任何东西,比如石头、沙子或泥土｡" },
+      { "en": "This is the hydraulic ram.", "cn": "这是液压柱塞｡" },
+      { "en": "When the hydraulic ram lifts the truck bed, the dirt will be dumped out.", "cn": "当液压柱塞抬起卡车车斗时,泥土将会被倾卸出去｡" },
+      { "en": "This is the cab where the driver sits.", "cn": "这是驾驶员所坐的驾驶室｡" },
+      { "en": "The dump truck is good for cleaning up a construction site.", "cn": "翻斗车有利于清理一个建筑工地｡" },
+      { "en": "It is also helpful in moving materials.", "cn": "它在搬运材料方面也很有帮助｡" }
+    ]
+  },
+  {
+    "name": "garbage truck",
+    "page": 90,
+    "data": `This is a garbage truck.
+It has a large container on the back to hold all the garbage.
+The driver of the garbage truck is very hardworking.
+The garbage truck takes away all the dirty and smelly garbage.
+It is designed to collect and transport garbage.
+The garbage truck drives around the city to pick up the garbage from different places.
+They have to get up early in the morning and drive around to collect all the garbage.
+It is very important to keep our environment clean.`,
+    "option": [
+      { "en": "This is a garbage truck.", "cn": "这是一辆垃圾车｡" },
+      { "en": "It has a large container on the back to hold all the garbage.", "cn": "它在后面有一个大容器来装所有的垃圾｡" },
+      { "en": "The driver of the garbage truck is very hardworking.", "cn": "垃圾车的司机非常勤劳｡" },
+      { "en": "The garbage truck takes away all the dirty and smelly garbage.", "cn": "垃圾车带走所有又脏又臭的垃圾｡" },
+      { "en": "It is designed to collect and transport garbage.", "cn": "它被设计用于收集和运输垃圾｡" },
+      { "en": "The garbage truck drives around the city to pick up the garbage from different places.", "cn": "垃圾车在城市里到处行驶,从不同的地方收集垃圾｡" },
+      { "en": "They have to get up early in the morning and drive around to collect all the garbage.", "cn": "他们必须在清晨起床并四处行驶去收集所有垃圾｡" },
+      { "en": "It is very important to keep our environment clean.", "cn": "它对于保持我们的环境干净是非常重要的｡" }
+    ]
+  },
+  {
+    "name": "sprinkler truck",
+    "page": 91,
+    "data": `This is a sprinkler truck.
+      The tank is filled with water.
+      When the weather is dry and the road is dusty, the sprinkler truck comes out to work.
+      It’s like a big cleaning machine for the road.
+      It looks very big, and has a tank on it.
+      The sprinkler truck drives on the road and can spray water out through its special pipes.
+      It sprays water onto the road to make the dust settle down and keep the air clean.
+      The sprinkler truck is an important vehicle that helps to make our city more beautiful and clean.`,
+    "option": [
+      { "en": "This is a sprinkler truck.", "cn": "这是一辆洒水车｡" },
+      { "en": "The tank is filled with water.", "cn": "水箱装满了水｡" },
+      { "en": "When the weather is dry and the road is dusty, the sprinkler truck comes out to work.", "cn": "当天气干燥且道路布满灰尘时,洒水车就会出来工作｡" },
+      { "en": "It’s like a big cleaning machine for the road.", "cn": "它就像道路的一个大型清洁机器｡" },
+      { "en": "It looks very big, and has a tank on it.", "cn": "它看起来非常大,上面有一个水箱｡" },
+      { "en": "The sprinkler truck drives on the road and can spray water out through its special pipes.", "cn": "洒水车在路上行驶,可以通过其特殊的管道将水喷出｡" },
+      { "en": "It sprays water onto the road to make the dust settle down and keep the air clean.", "cn": "它将水喷洒到道路上,使灰尘沉降并保持空气清洁｡" },
+      { "en": "The sprinkler truck is an important vehicle that helps to make our city more beautiful and clean.", "cn": "洒水车是帮助使我们的城市更加美丽和干净的重要车辆｡" }
+    ]
+  },
+  {
+    "name": "sweeper truck",
+    "page": 92,
+    "data": `This is a sweeper truck.
+      It has big brushes on the bottom that spin very fast.
+      It’s like a big cleaning machine on wheels!
+      The sweeper truck is very important because it helps keep our streets clean.
+      It is designed to clean the roads.
+      When the sweeper truck drives, the brushes move and sweep up dirt, leaves and trash.
+      They make a funny noise as they work.
+      So, if you see a sweeper truck next time, give it a little wave!`,
+    "option": [
+      { "en": "This is a sweeper truck.", "cn": "这是一辆扫地车｡" },
+      { "en": "It has big brushes on the bottom that spin very fast.", "cn": "它底部有很大的刷子,能快速旋转｡" },
+      { "en": "It’s like a big cleaning machine on wheels!", "cn": "它就像一个带轮子的大型清洁机器!" },
+      { "en": "The sweeper truck is very important because it helps keep our streets clean.", "cn": "扫地车非常重要,因为它有助于保持我们的街道清洁｡" },
+      { "en": "It is designed to clean the roads.", "cn": "它被设计用于清扫道路｡" },
+      { "en": "When the sweeper truck drives, the brushes move and sweep up dirt, leaves and trash.", "cn": "当扫地车沿着道路行驶时,那些刷子转动并清扫所有的灰尘、树叶和垃圾｡" },
+      { "en": "They make a funny noise as they work.", "cn": "它们工作时会发出一种有趣的噪音｡" },
+      { "en": "So, if you see a sweeper truck next time, give it a little wave!", "cn": "所以,如果你下次看到一辆扫地车,就向它挥挥手!" }
+    ]
+  },
+  {
+    "name": "ice cream truck",
+    "page": 93,
+    "data": `The ice cream truck is not a normal vehicle.
+      It is a special vehicle with delicious ice creams.
+      It’s usually colorful and has pictures of delicious ice creams on it.
+      The ice cream truck has many kinds of ice creams, such as chocolate, vanilla, strawberry, mango and so on.
+      Choose your favorite flavor and share with your mum.
+      It makes you feel cool and happy in the hot day.`,
+    "option": [
+      { "en": "The ice cream truck is not a normal vehicle.", "cn": "冰淇淋车不是一辆普通的车辆｡" },
+      { "en": "It is a special vehicle with delicious ice creams.", "cn": "它是一辆装有美味冰淇淋的特殊车辆｡" },
+      { "en": "It’s usually colorful and has pictures of delicious ice creams on it.", "cn": "它通常色彩鲜艳,上面有美味冰淇淋的图片｡" },
+      { "en": "The ice cream truck has many kinds of ice creams, such as chocolate, vanilla, strawberry, mango and so on.", "cn": "这辆冰淇淋车有很多种冰淇淋,比如巧克力味的、香草味的、草莓味的、芒果味的等等｡" },
+      { "en": "Choose your favorite flavor and share with your mum.", "cn": "选择你最喜欢的口味,和你的妈妈分享｡" },
+      { "en": "It makes you feel cool and happy in the hot day.", "cn": "在炎热的日子里,它会让你感到凉爽和快乐｡" }
+    ]
+  },
+  {
+    "name": "airplane",
+    "page": 94,
+    "data": `An airplane is like a big bird that can fly high up in the sky.
+      Airplanes can take us to faraway places quickly.
+      An airplane has a long body called the fuselage.
+      An airplane has big wings that help it fly in the sky.
+      The cockpit is where the pilot drives the airplane.
+      The engines make the airplane go very fast.
+      At the back, there is a tail that keeps the airplane balanced.`,
+    "option": [
+      { "en": "An airplane is like a big bird that can fly high up in the sky.", "cn": "飞机就像一只可以在高空飞翔的大鸟｡" },
+      { "en": "Airplanes can take us to faraway places quickly.", "cn": "飞机能很快地把我们带到遥远的地方｡" },
+      { "en": "An airplane has a long body called the fuselage.", "cn": "飞机有一个长长的机身,叫做机身｡" },
+      { "en": "An airplane has big wings that help it fly in the sky.", "cn": "飞机有大翅膀帮助它在空中飞行｡" },
+      { "en": "The cockpit is where the pilot drives the airplane.", "cn": "驾驶舱是飞行员驾驶飞机的地方｡" },
+      { "en": "The engines make the airplane go very fast.", "cn": "发动机使飞机飞得很快｡" },
+      { "en": "At the back, there is a tail that keeps the airplane balanced.", "cn": "在后面,有一个尾翼可以保持飞机的平衡｡" }
+    ]
+  },
+  {
+    "name": "high-speed train",
+    "page": 95,
+    "data": `The high-speed train
+      Dear kids, let me tell you about high-speed trains.
+      A high-speed train is a very fast and cool vehicle. It looks like a long snake. It can run very quickly on special tracks.
+      The inside of a high-speed train is nice and comfortable. There are many seats for people to sit. There are also big windows so you can see the beautiful views outside.
+      High-speed trains can take us to different cities in a short time.
+      It makes our trips more fun and easier. Isn’t it amazing?`,
+    "option": [
+      { "en": "The high-speed train", "cn": "高铁"},
+      { "en": "Dear kids, let me tell you about high-speed trains.", "cn": "亲爱的孩子们,让我给你们讲讲高铁｡" },
+      { "en": "A high-speed train is a very fast and cool vehicle. It looks like a long snake. It can run very quickly on special tracks.", "cn": "高铁是一种速度非常快而且很酷的交通工具｡它看起来像一条长长的蛇｡它能在特殊的轨道上跑得非常快｡" },
+      { "en": "The inside of a high-speed train is nice and comfortable. There are many seats for people to sit. There are also big windows so you can see the beautiful views outside.", "cn": "高铁内部漂亮又舒适｡有很多座位供人们乘坐｡还有大窗户,这样你们就能看到外面美丽的景色｡" },
+      { "en": "High-speed trains can take us to different cities in a short time.", "cn": "高铁能在短时间内把我们带到不同的城市｡" },
+      { "en": "It makes our trips more fun and easier. Isn’t it amazing?", "cn": "它让我们的旅行更有趣更轻松｡难道不神奇吗?" }
+    ]
+  },
+  {
+    "name": "bus",
+    "page": 96,
+    "data": `A bus is a big vehicle that can carry many people. It has big wheels and a long body.
+      You can often see buses on the road.
+      The driver sits in the cab. He controls the bus to keep us safe.
+      The wheels help the bus move and roll along the road.
+      The seats are for us to sit on. So, we can have a rest during the trip.
+      We get on the bus from the front door.
+      We get off the bus from the back door.
+      The windows let in light and we can see outside.`,
+    "option": [
+      { "en": "A bus is a big vehicle that can carry many people. It has big wheels and a long body.", "cn": "公交车是一种大型交通工具,可以搭载很多人｡它有大轮子和长长的车身｡" },
+      { "en": "You can often see buses on the road.", "cn": "你经常能在路上看到公交车｡" },
+      { "en": "The driver sits in the cab. He controls the bus to keep us safe.", "cn": "司机坐在驾驶室里｡他控制公交车以保障我们的安全｡" },
+      { "en": "The wheels help the bus move and roll along the road.", "cn": "轮子帮助公交车移动,并沿着道路滚动｡" },
+      { "en": "The seats are for us to sit on. So, we can have a rest during the trip.", "cn": "座位是供我们乘坐的｡所以,我们在旅途中可以休息｡" },
+      { "en": "We get on the bus from the front door.", "cn": "我们从前门上车｡" },
+      { "en": "We get off the bus from the back door.", "cn": "我们从后门下车｡" },
+      { "en": "The windows let in light and we can see outside.", "cn": "窗户透光,我们可以看到外面｡" }
+    ]
+  },
+  {
+    "name": "car",
+    "page": 97,
+    "data": `A car is a vehicle that can take us to different places quickly and easily.
+      Let’s get to know the main parts of a car today!
+      Wheel: The wheels help the car move forward and turn. They are like the feet of the car.
+      Steering wheel: The steering wheel is what the driver uses to control where the car goes.
+      Engine: The engine is like the heart of the car. It gives the power to make the car go.
+      Brake: The brakes help the car stop when we need it to.
+      Seat: Seats are where we sit. They keep us comfortable during the ride.
+      License plate: The license plate is like its special name that helps us know which car it is.`,
+    "option": [
+      { "en": "A car is a vehicle that can take us to different places quickly and easily.", "cn": "汽车是一种能够快速且轻松地带我们去不同地方的交通工具｡" },
+      { "en": "Let’s get to know the main parts of a car today!", "cn": "今天让我们来了解一下汽车的主要部件!" },{ "en": "Wheel: The wheels help the car move forward and turn. They are like the feet of the car.", "cn": "车轮:车轮帮助汽车向前移动和转弯｡它们就像汽车的脚｡" },
+      { "en": "Steering wheel: The steering wheel is what the driver uses to control where the car goes.", "cn": "方向盘:方向盘是司机用来控制汽车行驶方向的｡" },
+      { "en": "Engine: The engine is like the heart of the car. It gives the power to make the car go.", "cn": "发动机:发动机就像汽车的心脏｡它提供让汽车行驶的动力｡" },
+      { "en": "Brake: The brakes help the car stop when we need it to.", "cn": "刹车:刹车在我们需要时帮助汽车停下来｡" },
+      { "en": "Seat: Seats are where we sit. They keep us comfortable during the ride.", "cn": "座椅:座椅是我们乘坐时坐的地方｡它们让我们在行程中保持舒适｡" },
+      { "en": "License plate: The license plate is like its special name that helps us know which car it is.", "cn": "车牌:车牌就像它的特殊名字,帮助我们知道是哪辆车｡" }
+    ]
+  },
+  {
+    "name": "car parts",
+    "page": 98,
+    "data": `
+      1.windshield
+      2.windshield wipers
+      3.side-view mirror
+      4.hood
+      5.tire
+      6.turn signal
+      7.headlight
+      8.bumper
+      9.wheel cover
+      10.gas tank
+      11.trunk
+      12.license plate
+      13.taillight
+      14.brake light
+      15.tailpipe
+      16.muffler`,
+    "option": [
+      { "en": "1.windshield", "cn": "挡风玻璃" },
+      { "en": "2.windshield wipers", "cn": "挡风玻璃雨刷" },
+      { "en": "3.side-view mirror", "cn": "车侧后视镜" },
+      { "en": "4.hood", "cn": "引擎盖" },
+      { "en": "5.tire", "cn": "轮胎" },
+      { "en": "6.turn signal", "cn": "转向指示灯" },
+      { "en": "7.headlight", "cn": "车前灯" },
+      { "en": "8.bumper", "cn": "保险杠" },
+      { "en": "9.wheel cover", "cn": "车轮毂" },
+      { "en": "10.gas tank", "cn": "油箱" },
+      { "en": "11.trunk", "cn": "后备箱" },
+      { "en": "12.license plate", "cn": "汽车牌照" },
+      { "en": "13.brake light", "cn": "刹车灯" },
+      { "en": "14.taillight", "cn": "尾灯" },
+      { "en": "15.tailpipe", "cn": "排气管" },
+      { "en": "16.muffler", "cn": "消音器" }
+    ]
+  },
+  {
+    "name": "car interior",
+    "page": 99,
+    "data": `1.Wing/side-view mirror
+      2.air vent
+      3.door handle
+      4.headrest
+      5.passenger seat
+      6.glove compartment
+      7.windscreen/windshield
+      8.rear-view mirror
+      9.visor
+      10.windscreen/windshield wiper
+      11.satnav
+      12.dashboard
+      13.rev counter
+      14.speedometer
+      15.fuel gauge
+      16.steering wheel
+      17.ignition
+      18.horn
+      19.milometer/odometer
+      20.gear lever/stick shift
+      21.handbrake/emergency brake
+      22.seat belt
+      23.driver’s seat
+      24.clutch
+      25.brake
+      26.accelerator`,
+    "option": [
+      { "en": "1.Wing/side-view mirror", "cn": "1 侧后视镜" },
+      { "en": "2.air vent", "cn": "2 出风口" },
+      { "en": "3.door handle", "cn": "3 门把手" },
+      { "en": "4.headrest", "cn": "4 头枕" },
+      { "en": "5.passenger seat", "cn": "5 副驾驶座" },
+      { "en": "6.glove compartment", "cn": "6 杂物箱" },
+      { "en": "7.windscreen/windshield", "cn": "7 挡风玻璃" },
+      { "en": "8.rear-view mirror", "cn": "8 后视镜" },
+      { "en": "9.visor", "cn": "9 遮阳板" },
+      { "en": "10.windscreen/windshield wiper", "cn": "10 挡风玻璃雨刮器" },
+      { "en": "11.satnav", "cn": "11 卫星导航" },
+      { "en": "12.dashboard", "cn": "12 仪表盘" },
+      { "en": "13.rev counter", "cn": "13 转速表" },
+      { "en": "14.speedometer", "cn": "14 车速表" },
+      { "en": "15.fuel gauge", "cn": "15 燃油表" },
+      { "en": "16.steering wheel", "cn": "16 方向盘" },
+      { "en": "17.ignition", "cn": "17 点火装置/启动装置" },
+      { "en": "18.horn", "cn": "18 喇叭" },
+      { "en": "19.milometer/odometer", "cn": "19 里程表" },
+      { "en": "20.gear lever/stick shift", "cn": "20 变速杆" },
+      { "en": "21.handbrake/emergency brake", "cn": "21 手刹/紧急刹车" },
+      { "en": "22.seat belt", "cn": "22 安全带" },
+      { "en": "23.driver’s seat", "cn": "23 驾驶座" },
+      { "en": "24.clutch", "cn": "24 离合器踏板" },
+      { "en": "25.brake", "cn": "25 刹车踏板" },
+      { "en": "26.accelerator", "cn": "26 油门踏板" }
+    ]
+  },
+  {
+    "name": "helicopter",
+    "page": 100,
+    "data": `Rotor blade: They spin very fast to make the helicopter fly.
+      Cockpit: The pilot sits and controls the helicopter in the cockpit.
+      Tail rotor: It helps the helicopter to turn and stay balanced.
+      Wheels or Skids: They help the helicopter land safely.
+      They can help rescue people in danger.
+      For example, if someone is lost in a mountain or hurt in an accident, a helicopter can quickly fly there and save them.
+      They can also be used to put out fires.
+      Firefighters can fly in a helicopter to reach the fire and pour water to put it out.
+      Helicopters have many uses.`,
+    "option": [
+      { "en": "Rotor blade: They spin very fast to make the helicopter fly.", "cn": "旋翼叶片:它们快速旋转以使直升机飞行｡" },
+      { "en": "Cockpit: The pilot sits and controls the helicopter in the cockpit.", "cn": "驾驶舱:飞行员坐在驾驶舱内控制直升机｡" },
+      { "en": "Tail rotor: It helps the helicopter to turn and stay balanced.", "cn": "尾桨:它帮助直升机转弯并保持平衡｡" },
+      { "en": "Wheels or Skids: They help the helicopter land safely.", "cn": "轮子或滑橇:它们帮助直升机安全着陆｡" },
+      { "en": "They can help rescue people in danger.", "cn": "它们可以帮助救援处于危险中的人｡" },
+      { "en": "For example, if someone is lost in a mountain or hurt in an accident, a helicopter can quickly fly there and save them.", "cn": "例如,如果有人在山上迷路或在事故中受伤,直升机可以迅速飞到那里并拯救他们｡" },
+      { "en": "They can also be used to put out fires.", "cn": "它们还可以用于灭火｡" },
+      { "en": "Firefighters can fly in a helicopter to reach the fire and pour water to put it out.", "cn": "消防员可以乘坐直升机到达火灾现场并倒水灭火｡" },
+      { "en": "Helicopters have many uses.", "cn": "直升机有许多用途｡" }
+    ]
+  }
+]

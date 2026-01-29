@@ -1,4 +1,5 @@
 const express = require('express')
+const { createProxyMiddleware } = require('http-proxy-middleware')
 
 const port = process.env.PORT || 8090
 
@@ -6,6 +7,16 @@ const app = express()
 
 app.set('port', port)
 app.use(express.static(`${__dirname}`))
+app.use('/', createProxyMiddleware({
+  changeOrigin: true,
+  target: 'http://11.123.253.46:5002/',
+  secure: false,
+  ws: false,
+  logLevel: 'debug',
+  headers: {
+    Referer: 'http://11.123.253.46:5002/'
+  }
+}))
 
 // 定制 404 页面 (返回404状态码)
 app.use(function(req, res) {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="#E3F2FD" rx="32"/>
+  
+  <!-- 装饰性圆点 -->
+  <circle cx="80" cy="80" r="12" fill="#42A5F5" opacity="0.3"/>
+  <circle cx="432" cy="80" r="12" fill="#42A5F5" opacity="0.3"/>
+  <circle cx="80" cy="432" r="12" fill="#42A5F5" opacity="0.3"/>
+  <circle cx="432" cy="432" r="12" fill="#42A5F5" opacity="0.3"/>
+  
+  <!-- Emoji 图标（大号） -->
+  <text x="256" y="200" font-size="120" text-anchor="middle" dominant-baseline="middle">📖</text>
+  
+  <!-- 英文单词 -->
+  <text x="256" y="280" font-size="56" font-weight="700" fill="#1976D2" 
+        text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif">spoon</text>
+  
+  <!-- 中文翻译 -->
+  <text x="256" y="340" font-size="32" fill="#1976D2" 
+        text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, SimHei, sans-serif" 
+        opacity="0.85">匙，勺子</text>
+</svg>
